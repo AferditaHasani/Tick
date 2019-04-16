@@ -50,5 +50,15 @@
     <Compile Include="TimeTracking.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tick.BO\Tick.BO.csproj">
+      <Project>{81612f74-668c-4622-be6d-ff39a49992ef}</Project>
+      <Name>Tick.BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tick.DAL\Tick.DAL.csproj">
+      <Project>{00a26bc9-f900-4bec-8d60-0a73457670d7}</Project>
+      <Name>Tick.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

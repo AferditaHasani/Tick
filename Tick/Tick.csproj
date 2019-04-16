@@ -133,6 +133,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tick.BLL\Tick.BLL.csproj">
+      <Project>{4f80291f-6b60-44da-b83c-3fa045df2e92}</Project>
+      <Name>Tick.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Tick.BO\Tick.BO.csproj">
+      <Project>{81612f74-668c-4622-be6d-ff39a49992ef}</Project>
+      <Name>Tick.BO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
