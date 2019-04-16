@@ -25,8 +25,7 @@ namespace Tick
 
         private void btnX_Click(object sender, EventArgs e)
         {
-            this.Close();
-
+            Close();
         }
 
 
