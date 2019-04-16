@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Tick
 {
-    public partial class RadForm1 : Telerik.WinControls.UI.RadForm
+    public partial class LogIn : Telerik.WinControls.UI.RadForm
     {
-        public RadForm1()
+        public LogIn()
         {
             InitializeComponent();
         }

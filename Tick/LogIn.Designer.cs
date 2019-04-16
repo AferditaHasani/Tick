@@ -1,6 +1,6 @@
 ﻿namespace Tick
 {
-    partial class RadForm1
+    partial class LogIn
     {
         /// <summary>
         /// Required designer variable.

@@ -60,14 +60,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RadForm1.cs">
+    <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RadForm1.Designer.cs">
-      <DependentUpon>RadForm1.cs</DependentUpon>
+    <Compile Include="LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RadForm1.resx">
-      <DependentUpon>RadForm1.cs</DependentUpon>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
