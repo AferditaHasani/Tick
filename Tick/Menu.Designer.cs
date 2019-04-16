@@ -33,12 +33,7 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.separator = new Bunifu.Framework.UI.BunifuSeparator();
-            this.btnExpensesChart = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnTimeCharts = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnExpensesTracking = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnTimeTracking = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lblUsername = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.dragMenuForm = new Bunifu.Framework.UI.BunifuDragControl(this.components);
@@ -46,6 +41,11 @@
             this.dragPnlMenu = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.btnMini = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnX = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnExpensesChart = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnTimeCharts = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnExpensesTracking = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnTimeTracking = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
@@ -63,44 +63,8 @@
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(186, 691);
+            this.pnlMenu.Size = new System.Drawing.Size(186, 632);
             this.pnlMenu.TabIndex = 0;
-            // 
-            // bunifuFlatButton1
-            // 
-            this.bunifuFlatButton1.Active = false;
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "    LOG OUT";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = true;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = true;
-            this.bunifuFlatButton1.IconZoom = 90D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(2, 568);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(182, 60);
-            this.bunifuFlatButton1.TabIndex = 1;
-            this.bunifuFlatButton1.Text = "    LOG OUT";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // separator
             // 
@@ -116,150 +80,6 @@
             this.separator.Vertical = true;
             this.separator.Visible = false;
             this.separator.Click += new System.EventHandler(this.BtnSeperator_Click);
-            // 
-            // btnExpensesChart
-            // 
-            this.btnExpensesChart.Active = false;
-            this.btnExpensesChart.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.btnExpensesChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
-            this.btnExpensesChart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExpensesChart.BorderRadius = 0;
-            this.btnExpensesChart.ButtonText = "   Expenses Chart";
-            this.btnExpensesChart.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExpensesChart.DisabledColor = System.Drawing.Color.Gray;
-            this.btnExpensesChart.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnExpensesChart.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnExpensesChart.Iconimage")));
-            this.btnExpensesChart.Iconimage_right = null;
-            this.btnExpensesChart.Iconimage_right_Selected = null;
-            this.btnExpensesChart.Iconimage_Selected = null;
-            this.btnExpensesChart.IconMarginLeft = 0;
-            this.btnExpensesChart.IconMarginRight = 0;
-            this.btnExpensesChart.IconRightVisible = true;
-            this.btnExpensesChart.IconRightZoom = 0D;
-            this.btnExpensesChart.IconVisible = true;
-            this.btnExpensesChart.IconZoom = 40D;
-            this.btnExpensesChart.IsTab = false;
-            this.btnExpensesChart.Location = new System.Drawing.Point(1, 381);
-            this.btnExpensesChart.Name = "btnExpensesChart";
-            this.btnExpensesChart.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
-            this.btnExpensesChart.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.btnExpensesChart.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.btnExpensesChart.selected = false;
-            this.btnExpensesChart.Size = new System.Drawing.Size(185, 56);
-            this.btnExpensesChart.TabIndex = 4;
-            this.btnExpensesChart.Text = "   Expenses Chart";
-            this.btnExpensesChart.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExpensesChart.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.btnExpensesChart.TextFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExpensesChart.Click += new System.EventHandler(this.BtnSeperator_Click);
-            // 
-            // btnTimeCharts
-            // 
-            this.btnTimeCharts.Active = false;
-            this.btnTimeCharts.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.btnTimeCharts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
-            this.btnTimeCharts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTimeCharts.BorderRadius = 0;
-            this.btnTimeCharts.ButtonText = "   Time Charts";
-            this.btnTimeCharts.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTimeCharts.DisabledColor = System.Drawing.Color.Gray;
-            this.btnTimeCharts.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnTimeCharts.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnTimeCharts.Iconimage")));
-            this.btnTimeCharts.Iconimage_right = null;
-            this.btnTimeCharts.Iconimage_right_Selected = null;
-            this.btnTimeCharts.Iconimage_Selected = null;
-            this.btnTimeCharts.IconMarginLeft = 0;
-            this.btnTimeCharts.IconMarginRight = 0;
-            this.btnTimeCharts.IconRightVisible = true;
-            this.btnTimeCharts.IconRightZoom = 0D;
-            this.btnTimeCharts.IconVisible = true;
-            this.btnTimeCharts.IconZoom = 45D;
-            this.btnTimeCharts.IsTab = false;
-            this.btnTimeCharts.Location = new System.Drawing.Point(1, 325);
-            this.btnTimeCharts.Name = "btnTimeCharts";
-            this.btnTimeCharts.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
-            this.btnTimeCharts.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.btnTimeCharts.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.btnTimeCharts.selected = false;
-            this.btnTimeCharts.Size = new System.Drawing.Size(185, 56);
-            this.btnTimeCharts.TabIndex = 3;
-            this.btnTimeCharts.Text = "   Time Charts";
-            this.btnTimeCharts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimeCharts.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.btnTimeCharts.TextFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimeCharts.Click += new System.EventHandler(this.BtnSeperator_Click);
-            // 
-            // btnExpensesTracking
-            // 
-            this.btnExpensesTracking.Active = false;
-            this.btnExpensesTracking.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.btnExpensesTracking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
-            this.btnExpensesTracking.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnExpensesTracking.BorderRadius = 0;
-            this.btnExpensesTracking.ButtonText = " Expenses Tracking";
-            this.btnExpensesTracking.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExpensesTracking.DisabledColor = System.Drawing.Color.Gray;
-            this.btnExpensesTracking.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnExpensesTracking.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnExpensesTracking.Iconimage")));
-            this.btnExpensesTracking.Iconimage_right = null;
-            this.btnExpensesTracking.Iconimage_right_Selected = null;
-            this.btnExpensesTracking.Iconimage_Selected = null;
-            this.btnExpensesTracking.IconMarginLeft = 15;
-            this.btnExpensesTracking.IconMarginRight = 0;
-            this.btnExpensesTracking.IconRightVisible = true;
-            this.btnExpensesTracking.IconRightZoom = 0D;
-            this.btnExpensesTracking.IconVisible = true;
-            this.btnExpensesTracking.IconZoom = 45D;
-            this.btnExpensesTracking.IsTab = false;
-            this.btnExpensesTracking.Location = new System.Drawing.Point(1, 268);
-            this.btnExpensesTracking.Name = "btnExpensesTracking";
-            this.btnExpensesTracking.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
-            this.btnExpensesTracking.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.btnExpensesTracking.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.btnExpensesTracking.selected = false;
-            this.btnExpensesTracking.Size = new System.Drawing.Size(185, 56);
-            this.btnExpensesTracking.TabIndex = 2;
-            this.btnExpensesTracking.Text = " Expenses Tracking";
-            this.btnExpensesTracking.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnExpensesTracking.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.btnExpensesTracking.TextFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExpensesTracking.Click += new System.EventHandler(this.BtnSeperator_Click);
-            // 
-            // btnTimeTracking
-            // 
-            this.btnTimeTracking.Active = false;
-            this.btnTimeTracking.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.btnTimeTracking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
-            this.btnTimeTracking.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTimeTracking.BorderRadius = 0;
-            this.btnTimeTracking.ButtonText = "    Time Tracking";
-            this.btnTimeTracking.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnTimeTracking.DisabledColor = System.Drawing.Color.Gray;
-            this.btnTimeTracking.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnTimeTracking.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnTimeTracking.Iconimage")));
-            this.btnTimeTracking.Iconimage_right = null;
-            this.btnTimeTracking.Iconimage_right_Selected = null;
-            this.btnTimeTracking.Iconimage_Selected = null;
-            this.btnTimeTracking.IconMarginLeft = 0;
-            this.btnTimeTracking.IconMarginRight = 0;
-            this.btnTimeTracking.IconRightVisible = true;
-            this.btnTimeTracking.IconRightZoom = 0D;
-            this.btnTimeTracking.IconVisible = true;
-            this.btnTimeTracking.IconZoom = 45D;
-            this.btnTimeTracking.IsTab = false;
-            this.btnTimeTracking.Location = new System.Drawing.Point(1, 212);
-            this.btnTimeTracking.Name = "btnTimeTracking";
-            this.btnTimeTracking.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
-            this.btnTimeTracking.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.btnTimeTracking.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.btnTimeTracking.selected = false;
-            this.btnTimeTracking.Size = new System.Drawing.Size(185, 56);
-            this.btnTimeTracking.TabIndex = 1;
-            this.btnTimeTracking.Text = "    Time Tracking";
-            this.btnTimeTracking.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTimeTracking.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.btnTimeTracking.TextFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTimeTracking.Click += new System.EventHandler(this.BtnSeperator_Click);
             // 
             // lblUsername
             // 
@@ -369,12 +189,192 @@
             this.btnX.TabIndex = 6;
             this.btnX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // bunifuFlatButton1
+            // 
+            this.bunifuFlatButton1.Active = false;
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 0;
+            this.bunifuFlatButton1.ButtonText = "    LOG OUT";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = global::Tick.Properties.Resources.logout_xxl;
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconMarginLeft = 0;
+            this.bunifuFlatButton1.IconMarginRight = 0;
+            this.bunifuFlatButton1.IconRightVisible = true;
+            this.bunifuFlatButton1.IconRightZoom = 0D;
+            this.bunifuFlatButton1.IconVisible = true;
+            this.bunifuFlatButton1.IconZoom = 90D;
+            this.bunifuFlatButton1.IsTab = false;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(2, 568);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(182, 60);
+            this.bunifuFlatButton1.TabIndex = 1;
+            this.bunifuFlatButton1.Text = "    LOG OUT";
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnExpensesChart
+            // 
+            this.btnExpensesChart.Active = false;
+            this.btnExpensesChart.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnExpensesChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
+            this.btnExpensesChart.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExpensesChart.BorderRadius = 0;
+            this.btnExpensesChart.ButtonText = "   Expenses Chart";
+            this.btnExpensesChart.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExpensesChart.DisabledColor = System.Drawing.Color.Gray;
+            this.btnExpensesChart.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnExpensesChart.Iconimage = global::Tick.Properties.Resources.EChart;
+            this.btnExpensesChart.Iconimage_right = null;
+            this.btnExpensesChart.Iconimage_right_Selected = null;
+            this.btnExpensesChart.Iconimage_Selected = null;
+            this.btnExpensesChart.IconMarginLeft = 0;
+            this.btnExpensesChart.IconMarginRight = 0;
+            this.btnExpensesChart.IconRightVisible = true;
+            this.btnExpensesChart.IconRightZoom = 0D;
+            this.btnExpensesChart.IconVisible = true;
+            this.btnExpensesChart.IconZoom = 40D;
+            this.btnExpensesChart.IsTab = false;
+            this.btnExpensesChart.Location = new System.Drawing.Point(1, 381);
+            this.btnExpensesChart.Name = "btnExpensesChart";
+            this.btnExpensesChart.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
+            this.btnExpensesChart.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnExpensesChart.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
+            this.btnExpensesChart.selected = false;
+            this.btnExpensesChart.Size = new System.Drawing.Size(185, 56);
+            this.btnExpensesChart.TabIndex = 4;
+            this.btnExpensesChart.Text = "   Expenses Chart";
+            this.btnExpensesChart.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnExpensesChart.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnExpensesChart.TextFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExpensesChart.Click += new System.EventHandler(this.BtnSeperator_Click);
+            // 
+            // btnTimeCharts
+            // 
+            this.btnTimeCharts.Active = false;
+            this.btnTimeCharts.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnTimeCharts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
+            this.btnTimeCharts.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTimeCharts.BorderRadius = 0;
+            this.btnTimeCharts.ButtonText = "   Time Charts";
+            this.btnTimeCharts.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTimeCharts.DisabledColor = System.Drawing.Color.Gray;
+            this.btnTimeCharts.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnTimeCharts.Iconimage = global::Tick.Properties.Resources.TChart;
+            this.btnTimeCharts.Iconimage_right = null;
+            this.btnTimeCharts.Iconimage_right_Selected = null;
+            this.btnTimeCharts.Iconimage_Selected = null;
+            this.btnTimeCharts.IconMarginLeft = 0;
+            this.btnTimeCharts.IconMarginRight = 0;
+            this.btnTimeCharts.IconRightVisible = true;
+            this.btnTimeCharts.IconRightZoom = 0D;
+            this.btnTimeCharts.IconVisible = true;
+            this.btnTimeCharts.IconZoom = 45D;
+            this.btnTimeCharts.IsTab = false;
+            this.btnTimeCharts.Location = new System.Drawing.Point(1, 325);
+            this.btnTimeCharts.Name = "btnTimeCharts";
+            this.btnTimeCharts.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
+            this.btnTimeCharts.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnTimeCharts.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
+            this.btnTimeCharts.selected = false;
+            this.btnTimeCharts.Size = new System.Drawing.Size(185, 56);
+            this.btnTimeCharts.TabIndex = 3;
+            this.btnTimeCharts.Text = "   Time Charts";
+            this.btnTimeCharts.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimeCharts.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnTimeCharts.TextFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimeCharts.Click += new System.EventHandler(this.BtnSeperator_Click);
+            // 
+            // btnExpensesTracking
+            // 
+            this.btnExpensesTracking.Active = false;
+            this.btnExpensesTracking.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnExpensesTracking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
+            this.btnExpensesTracking.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnExpensesTracking.BorderRadius = 0;
+            this.btnExpensesTracking.ButtonText = " Expenses Tracking";
+            this.btnExpensesTracking.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnExpensesTracking.DisabledColor = System.Drawing.Color.Gray;
+            this.btnExpensesTracking.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnExpensesTracking.Iconimage = global::Tick.Properties.Resources.dollar;
+            this.btnExpensesTracking.Iconimage_right = null;
+            this.btnExpensesTracking.Iconimage_right_Selected = null;
+            this.btnExpensesTracking.Iconimage_Selected = null;
+            this.btnExpensesTracking.IconMarginLeft = 15;
+            this.btnExpensesTracking.IconMarginRight = 0;
+            this.btnExpensesTracking.IconRightVisible = true;
+            this.btnExpensesTracking.IconRightZoom = 0D;
+            this.btnExpensesTracking.IconVisible = true;
+            this.btnExpensesTracking.IconZoom = 45D;
+            this.btnExpensesTracking.IsTab = false;
+            this.btnExpensesTracking.Location = new System.Drawing.Point(1, 268);
+            this.btnExpensesTracking.Name = "btnExpensesTracking";
+            this.btnExpensesTracking.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
+            this.btnExpensesTracking.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnExpensesTracking.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
+            this.btnExpensesTracking.selected = false;
+            this.btnExpensesTracking.Size = new System.Drawing.Size(185, 56);
+            this.btnExpensesTracking.TabIndex = 2;
+            this.btnExpensesTracking.Text = " Expenses Tracking";
+            this.btnExpensesTracking.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnExpensesTracking.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnExpensesTracking.TextFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExpensesTracking.Click += new System.EventHandler(this.BtnSeperator_Click);
+            // 
+            // btnTimeTracking
+            // 
+            this.btnTimeTracking.Active = false;
+            this.btnTimeTracking.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnTimeTracking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
+            this.btnTimeTracking.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTimeTracking.BorderRadius = 0;
+            this.btnTimeTracking.ButtonText = "    Time Tracking";
+            this.btnTimeTracking.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTimeTracking.DisabledColor = System.Drawing.Color.Gray;
+            this.btnTimeTracking.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnTimeTracking.Iconimage = global::Tick.Properties.Resources.time;
+            this.btnTimeTracking.Iconimage_right = null;
+            this.btnTimeTracking.Iconimage_right_Selected = null;
+            this.btnTimeTracking.Iconimage_Selected = null;
+            this.btnTimeTracking.IconMarginLeft = 0;
+            this.btnTimeTracking.IconMarginRight = 0;
+            this.btnTimeTracking.IconRightVisible = true;
+            this.btnTimeTracking.IconRightZoom = 0D;
+            this.btnTimeTracking.IconVisible = true;
+            this.btnTimeTracking.IconZoom = 45D;
+            this.btnTimeTracking.IsTab = false;
+            this.btnTimeTracking.Location = new System.Drawing.Point(1, 212);
+            this.btnTimeTracking.Name = "btnTimeTracking";
+            this.btnTimeTracking.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
+            this.btnTimeTracking.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnTimeTracking.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
+            this.btnTimeTracking.selected = false;
+            this.btnTimeTracking.Size = new System.Drawing.Size(185, 56);
+            this.btnTimeTracking.TabIndex = 1;
+            this.btnTimeTracking.Text = "    Time Tracking";
+            this.btnTimeTracking.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTimeTracking.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnTimeTracking.TextFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimeTracking.Click += new System.EventHandler(this.BtnSeperator_Click);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(851, 691);
+            this.ClientSize = new System.Drawing.Size(859, 632);
             this.Controls.Add(this.btnMini);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.btnX);

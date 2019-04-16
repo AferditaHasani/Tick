@@ -34,23 +34,45 @@ namespace Tick
         {
             separator1.Visible = true;
             separator.Visible = false;
+
+            pnlForSignIn.Visible = true;
+            btnSignIn.Visible = true;
+            btnLogIn.Visible = false;
+
+            pnlForSignIn.Location= new Point(361, 242);
+            pnlForLogIn.Location = new Point(361, 423);
+            btnSignIn.Location = new Point(475, 629);
         }
 
         private void btnChooseLogIn_Click(object sender, EventArgs e)
         {
-            separator.Visible = true;
-            separator1.Visible = false;
+
+            FormInLogInState();
 
         }
 
-        private void pnlForLogIn_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private void btnMini_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void FormInLogInState()
+        {
+            separator.Visible = true;
+            separator1.Visible = false;
+
+            pnlForSignIn.Visible = false;
+            btnSignIn.Visible = false;
+            btnLogIn.Visible = true;
+
+            pnlForLogIn.Location = new Point(361, 253);
+            btnLogIn.Location = new Point(475, 541);
+        }
+
+        private void LogIn_Load(object sender, EventArgs e)
+        {
+            FormInLogInState();
         }
     }
 }
