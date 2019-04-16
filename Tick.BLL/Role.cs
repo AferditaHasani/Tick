@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace Tick.BLL
 {
-    public class Class1
+    public class Role:Base
     {
+        public int RoleID { get; set; }
+        public string Name { get; set; }
     }
 }
