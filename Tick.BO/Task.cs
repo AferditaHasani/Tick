@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tick.BLL
+namespace Tick.BO
 {
     class Task:Base
     {
