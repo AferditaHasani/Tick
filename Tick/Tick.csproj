@@ -94,6 +94,22 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resourses\dollar.png" />
+    <Content Include="Resourses\EChart.png" />
+    <Content Include="Resourses\logo1.png" />
+    <Content Include="Resourses\logout-xxl.png" />
+    <Content Include="Resourses\logout.png" />
+    <Content Include="Resourses\minus-512.png" />
+    <Content Include="Resourses\minus.png" />
+    <Content Include="Resourses\minus2.png" />
+    <Content Include="Resourses\money.png" />
+    <Content Include="Resourses\Password.png" />
+    <Content Include="Resourses\Power.png" />
+    <Content Include="Resourses\TChart.png" />
+    <Content Include="Resourses\time.png" />
+    <Content Include="Resourses\username.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <VisualStudio>
