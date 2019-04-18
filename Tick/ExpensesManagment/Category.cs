@@ -11,6 +11,9 @@ namespace Tick.ExpensesManagment
 {
     public partial class Category : Telerik.WinControls.UI.RadForm
     {
+        string text="Expense";
+        private string[] expensesRow;
+        
         public Category()
         {
             InitializeComponent();
@@ -18,20 +21,21 @@ namespace Tick.ExpensesManagment
 
         private void btnAddC_Click(object sender, EventArgs e)
         {
-
+            expensesRow = new string[] { txtName.Text, text };
+            dgvCategory.Rows.Add(expensesRow);
         }
 
         private void cbxExpense_OnChange(object sender, EventArgs e)
         {
            cbxIncome.Checked = false;
-         
+           text = "Expense";
 
         }
 
         private void cbxIncome_OnChange(object sender, EventArgs e)
         {
           cbxExpense.Checked = false;
-         
+          text = "Income";
 
         }
 
@@ -40,7 +44,7 @@ namespace Tick.ExpensesManagment
             cbxExpense.Checked = true;
             if (cbxExpense.Checked == true)
                 cbxIncome.Checked = false;
-            //  cbxExpense.Checked = true;
+            text = "Expense";
         }
 
         private void lblIncome_Click(object sender, EventArgs e)
@@ -48,7 +52,7 @@ namespace Tick.ExpensesManagment
             cbxIncome.Checked = true;
             if (cbxIncome.Checked == true)
                 cbxExpense.Checked = false;
-           
+            text = "Income";
         }
 
 
@@ -65,30 +69,31 @@ namespace Tick.ExpensesManagment
 
 
 
-            FillGrid();
+            //FillGrid();
         }
 
-        private void FillGrid()
-        {
-          
-            string[] expensesRow = new string[] { "Product 1", "1000"};
-            dgvCategory.Rows.Add(expensesRow);
+        //private void FillGrid()
+        //{
 
-            expensesRow = new string[] { "Product 2", "2000"};
-            dgvCategory.Rows.Add(expensesRow);
-            expensesRow = new string[] { "Product 3", "3000"};
-            dgvCategory.Rows.Add(expensesRow);
-            expensesRow = new string[] { "4", "Product 4"};
-            dgvCategory.Rows.Add(expensesRow);
+        //    //  string[] expensesRow = new string[] { "Product 1", "1000"};
+        //    // dgvCategory.Rows.Add(expensesRow);
+
+        //    expensesRow = new string[] { "Product 2", "2000" };
+        //    dgvCategory.Rows.Add(expensesRow);
+        //    expensesRow = new string[] { "Product 3", "3000" };
+        //    dgvCategory.Rows.Add(expensesRow);
+        //    expensesRow = new string[] { "4", "Product 4" };
+        //    dgvCategory.Rows.Add(expensesRow);
 
 
-            expensesRow = new string[] { "Product 2", "2000" };
-            dgvCategory.Rows.Add(expensesRow);
-            expensesRow = new string[] { "Product 3", "3000"};
-            dgvCategory.Rows.Add(expensesRow);
-            expensesRow = new string[] { "4", "Product 4" };
-            dgvCategory.Rows.Add(expensesRow);
-        }
+        //    expensesRow = new string[] { "Product 2", "2000" };
+        //    dgvCategory.Rows.Add(expensesRow);
+        //    expensesRow = new string[] { "Product 3", "3000" };
+        //    dgvCategory.Rows.Add(expensesRow);
+        //    expensesRow = new string[] { "4", "Product 4" };
+        //    dgvCategory.Rows.Add(expensesRow);
+
+        //}
 
         private void btnAddCategory_Click(object sender, EventArgs e)
         {
