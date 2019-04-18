@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.separator = new Bunifu.Framework.UI.BunifuSeparator();
             this.lblUsername = new Bunifu.Framework.UI.BunifuCustomLabel();
@@ -41,6 +41,8 @@
             this.dragPnlMenu = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.btnMini = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnX = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnCategory = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnTasks = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLogOut = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnExpensesChart = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnTimeCharts = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -53,6 +55,8 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
+            this.pnlMenu.Controls.Add(this.btnCategory);
+            this.pnlMenu.Controls.Add(this.btnTasks);
             this.pnlMenu.Controls.Add(this.btnLogOut);
             this.pnlMenu.Controls.Add(this.separator);
             this.pnlMenu.Controls.Add(this.btnExpensesChart);
@@ -63,7 +67,7 @@
             this.pnlMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(233, 722);
+            this.pnlMenu.Size = new System.Drawing.Size(233, 752);
             this.pnlMenu.TabIndex = 0;
             // 
             // separator
@@ -145,13 +149,13 @@
             this.btnMini.IdleIconRightImage = null;
             this.btnMini.Location = new System.Drawing.Point(798, 12);
             this.btnMini.Name = "btnMini";
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties3.BorderRadius = 1;
-            stateProperties3.BorderThickness = 1;
-            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties3.IconLeftImage = null;
-            stateProperties3.IconRightImage = null;
-            this.btnMini.onHoverState = stateProperties3;
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties1.BorderRadius = 1;
+            stateProperties1.BorderThickness = 1;
+            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties1.IconLeftImage = null;
+            stateProperties1.IconRightImage = null;
+            this.btnMini.onHoverState = stateProperties1;
             this.btnMini.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnMini.Size = new System.Drawing.Size(27, 25);
             this.btnMini.TabIndex = 9;
@@ -181,18 +185,90 @@
             this.btnX.IdleIconRightImage = null;
             this.btnX.Location = new System.Drawing.Point(844, 12);
             this.btnX.Name = "btnX";
-            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties4.BorderRadius = 1;
-            stateProperties4.BorderThickness = 1;
-            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties4.IconLeftImage = null;
-            stateProperties4.IconRightImage = null;
-            this.btnX.onHoverState = stateProperties4;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties2.BorderRadius = 1;
+            stateProperties2.BorderThickness = 1;
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties2.IconLeftImage = null;
+            stateProperties2.IconRightImage = null;
+            this.btnX.onHoverState = stateProperties2;
             this.btnX.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnX.Size = new System.Drawing.Size(27, 25);
             this.btnX.TabIndex = 6;
             this.btnX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
+            // 
+            // btnCategory
+            // 
+            this.btnCategory.Active = false;
+            this.btnCategory.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
+            this.btnCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCategory.BorderRadius = 0;
+            this.btnCategory.ButtonText = "      Category";
+            this.btnCategory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCategory.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCategory.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCategory.Iconimage = global::Tick.Properties.Resources.category;
+            this.btnCategory.Iconimage_right = null;
+            this.btnCategory.Iconimage_right_Selected = null;
+            this.btnCategory.Iconimage_Selected = null;
+            this.btnCategory.IconMarginLeft = 15;
+            this.btnCategory.IconMarginRight = 0;
+            this.btnCategory.IconRightVisible = true;
+            this.btnCategory.IconRightZoom = 0D;
+            this.btnCategory.IconVisible = true;
+            this.btnCategory.IconZoom = 50D;
+            this.btnCategory.IsTab = false;
+            this.btnCategory.Location = new System.Drawing.Point(3, 373);
+            this.btnCategory.Name = "btnCategory";
+            this.btnCategory.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
+            this.btnCategory.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnCategory.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnCategory.selected = false;
+            this.btnCategory.Size = new System.Drawing.Size(229, 56);
+            this.btnCategory.TabIndex = 6;
+            this.btnCategory.Text = "      Category";
+            this.btnCategory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCategory.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnCategory.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
+            // 
+            // btnTasks
+            // 
+            this.btnTasks.Active = false;
+            this.btnTasks.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnTasks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
+            this.btnTasks.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTasks.BorderRadius = 0;
+            this.btnTasks.ButtonText = "      Tasks";
+            this.btnTasks.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnTasks.DisabledColor = System.Drawing.Color.Gray;
+            this.btnTasks.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnTasks.Iconimage = global::Tick.Properties.Resources.tasks;
+            this.btnTasks.Iconimage_right = null;
+            this.btnTasks.Iconimage_right_Selected = null;
+            this.btnTasks.Iconimage_Selected = null;
+            this.btnTasks.IconMarginLeft = 15;
+            this.btnTasks.IconMarginRight = 0;
+            this.btnTasks.IconRightVisible = true;
+            this.btnTasks.IconRightZoom = 0D;
+            this.btnTasks.IconVisible = true;
+            this.btnTasks.IconZoom = 45D;
+            this.btnTasks.IsTab = false;
+            this.btnTasks.Location = new System.Drawing.Point(3, 265);
+            this.btnTasks.Name = "btnTasks";
+            this.btnTasks.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
+            this.btnTasks.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnTasks.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnTasks.selected = false;
+            this.btnTasks.Size = new System.Drawing.Size(229, 56);
+            this.btnTasks.TabIndex = 5;
+            this.btnTasks.Text = "      Tasks";
+            this.btnTasks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTasks.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnTasks.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTasks.Click += new System.EventHandler(this.btnTasks_Click);
             // 
             // btnLogOut
             // 
@@ -218,7 +294,7 @@
             this.btnLogOut.IconVisible = true;
             this.btnLogOut.IconZoom = 90D;
             this.btnLogOut.IsTab = false;
-            this.btnLogOut.Location = new System.Drawing.Point(3, 659);
+            this.btnLogOut.Location = new System.Drawing.Point(3, 689);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
             this.btnLogOut.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -254,7 +330,7 @@
             this.btnExpensesChart.IconVisible = true;
             this.btnExpensesChart.IconZoom = 40D;
             this.btnExpensesChart.IsTab = false;
-            this.btnExpensesChart.Location = new System.Drawing.Point(1, 381);
+            this.btnExpensesChart.Location = new System.Drawing.Point(3, 485);
             this.btnExpensesChart.Name = "btnExpensesChart";
             this.btnExpensesChart.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
             this.btnExpensesChart.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
@@ -290,7 +366,7 @@
             this.btnTimeCharts.IconVisible = true;
             this.btnTimeCharts.IconZoom = 45D;
             this.btnTimeCharts.IsTab = false;
-            this.btnTimeCharts.Location = new System.Drawing.Point(1, 325);
+            this.btnTimeCharts.Location = new System.Drawing.Point(3, 429);
             this.btnTimeCharts.Name = "btnTimeCharts";
             this.btnTimeCharts.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
             this.btnTimeCharts.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
@@ -326,7 +402,7 @@
             this.btnExpensesTracking.IconVisible = true;
             this.btnExpensesTracking.IconZoom = 45D;
             this.btnExpensesTracking.IsTab = false;
-            this.btnExpensesTracking.Location = new System.Drawing.Point(1, 268);
+            this.btnExpensesTracking.Location = new System.Drawing.Point(3, 317);
             this.btnExpensesTracking.Name = "btnExpensesTracking";
             this.btnExpensesTracking.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
             this.btnExpensesTracking.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
@@ -363,7 +439,7 @@
             this.btnTimeTracking.IconVisible = true;
             this.btnTimeTracking.IconZoom = 45D;
             this.btnTimeTracking.IsTab = false;
-            this.btnTimeTracking.Location = new System.Drawing.Point(1, 212);
+            this.btnTimeTracking.Location = new System.Drawing.Point(3, 212);
             this.btnTimeTracking.Name = "btnTimeTracking";
             this.btnTimeTracking.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
             this.btnTimeTracking.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
@@ -382,7 +458,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(883, 722);
+            this.ClientSize = new System.Drawing.Size(891, 752);
             this.Controls.Add(this.btnMini);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.btnX);
@@ -421,5 +497,7 @@
         private Bunifu.Framework.UI.BunifuDragControl dragPnlContent;
         private Bunifu.Framework.UI.BunifuDragControl dragPnlMenu;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnMini;
+        private Bunifu.Framework.UI.BunifuFlatButton btnTasks;
+        private Bunifu.Framework.UI.BunifuFlatButton btnCategory;
     }
 }

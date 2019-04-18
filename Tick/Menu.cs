@@ -75,5 +75,15 @@ namespace Tick
             LogIn a = new LogIn();
             a.Show();
         }
+
+        private void btnTasks_Click(object sender, EventArgs e)
+        {
+            SeparatorClick(sender);
+        }
+
+        private void btnCategory_Click(object sender, EventArgs e)
+        {
+            SeparatorClick(sender);
+        }
     }
 }
