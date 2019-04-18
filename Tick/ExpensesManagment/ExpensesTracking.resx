@@ -117,4 +117,52 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnAddT.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAHQAAAA2CAYAAAAWCr1AAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJeSURBVHhe7Zwxa1RBFIW3TGlpF0sJuzNBA8YmREgRSBMQ
+        URBkG4mEQJIiaCBhs+8tpLCxEcFCSy3S2Fq8Kf0J/oSUlimfc++7+9zFSdBqJyfnwtfscKf5ODOzC3s7
+        rBtWPgxu+VCuRk7I7HChXI8u7piW/6v5MJjz1ejUV+V53Kwm+eCq8lf08mUhDG6brqurF0bLseHn1CYf
+        d+vecb92B8/JLDh8oQ789+GUWEmtaUuXyhyL/Pq67m6s1d2FeyQnHq3U/tN+K9aHom/6pqs5Zptkunfb
+        dff+g/SGJAskuSq0Ki+Sd2tc+NAm0y8lNyF54d7vmNTih2n8U3rZxkUes9eI5YftvTr1SOqGwV01/e0o
+        3UiypU1pKDZNp3zXLDblQ1lMNZF8kRewugvDN6ZThOqXV11MNZF86e09tYSWJ6ZzQmh8OaWaSL60r10K
+        xYBCwaBQMCgUDAoFg0LBoFAwKBQMCgWDQsGgUDAoFAwKBYNCwaBQMCgUDAoFg0LBoFAwKBQMCgWDQsGg
+        UDAoFAwKBYNCwaBQMCgUDAoFg0LBoFAwKBSMpFAXhq9UqIyzSTSRfLnkH9yjRf1QRtokmki+SAg1jKF4
+        ZjrboVMXsiCjUlKNJEP8Uu3PDi2ho0XT2ZSriqCmeexeG9r7syrPJZSmsimdVWQp7W09Tm5AMmJjbWKY
+        48SMoskaP440qacvOe8vU/QhZDJdVX42femSAUZjqTJZzL3d0g0k3mSG7DzRkMnDtQ1dlPnXUZuq1Mxc
+        kg/NXMZLjtmrqpmfW/TjJvLDA5kxdiWu/lMqWQjV6fwGgyAbY1nNYIYAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="lblDescription.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 1.2px; font-family: 'Segoe UI Semibold'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: #A1A1A1; text-align: left; }</value>
+  </data>
+  <data name="lblCategory.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 1.2px; font-family: 'Segoe UI Semibold'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: #A1A1A1; text-align: left; }</value>
+  </data>
+  <data name="txtAmount.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAOoAAAAjCAYAAACac5YyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADgSURBVHhe7d2xCQIxAIXhm0esnMARHMFKwcoRLMQ1crel
+        3XnBgIhiax58D74mufbnygxmFrRSynaapgvQh6XJXcvzuRrpOI735XIG+vEW63JQC56v19t8PJyAP6st
+        tlgvLdNXqPWD9WoD/FltUajQOaFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFC
+        AKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCgJ+hensG+vD17ZlSyr4dAh1Z2jy3TJ9rsdY/
+        K9CBj0jNrOcNwwNcDYV4O6WtFgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="lblAmount.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 1.2px; font-family: 'Segoe UI Semibold'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: #A1A1A1; text-align: left; }</value>
+  </data>
+  <metadata name="Task.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="StartTime.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="EndTime.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="WorkingTime.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

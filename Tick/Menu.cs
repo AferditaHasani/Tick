@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using Telerik.WinControls.Layouts;
+using Tick.ExpensesManagment;
 using Tick.TimeManagement;
 
 namespace Tick
@@ -58,6 +59,8 @@ namespace Tick
         private void btnExpensesTracking_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
+            ExpensesTracking et=new ExpensesTracking();
+            FillContentPanel(et);
         }
 
         private void btnTimeCharts_Click(object sender, EventArgs e)
@@ -68,6 +71,7 @@ namespace Tick
         private void btnExpensesChart_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
+    
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
