@@ -100,6 +100,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExpensesManagment\ExpensesTracking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpensesManagment\ExpensesTracking.Designer.cs">
+      <DependentUpon>ExpensesTracking.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     <Compile Include="TimeManagement\TimeTracking.Designer.cs">
       <DependentUpon>TimeTracking.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ExpensesManagment\ExpensesTracking.resx">
+      <DependentUpon>ExpensesTracking.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -198,6 +207,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-48.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
