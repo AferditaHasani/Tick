@@ -142,12 +142,12 @@
   </data>
   <data name="txtAmount.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAOoAAAAjCAYAAACac5YyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADgSURBVHhe7d2xCQIxAIXhm0esnMARHMFKwcoRLMQ1crel
-        3XnBgIhiax58D74mufbnygxmFrRSynaapgvQh6XJXcvzuRrpOI735XIG+vEW63JQC56v19t8PJyAP6st
-        tlgvLdNXqPWD9WoD/FltUajQOaFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFC
-        AKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCgJ+hensG+vD17ZlSyr4dAh1Z2jy3TJ9rsdY/
-        K9CBj0jNrOcNwwNcDYV4O6WtFgAAAABJRU5ErkJggg==
+        iVBORw0KGgoAAAANSUhEUgAAAQoAAAAjCAYAAABsH0SDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADlSURBVHhe7d2xbcJAGIZhz4NSMQEjZIRUQaJiBBcoa5y9
+        ZTrjXxyJogAfPc8nPc2d61fubjAze3qttd08zyNAWZvw3vNwWUVimqbv9XIBuPoTi/WgCrKcTl/L/vMA
+        vLhqQY/F2DPxG4r64G2zBV5ctUAogIeEAoiEAoiEAoiEAoiEAoiEAoiEAoiEAoiEAoiEAoiEAoiEAoiE
+        AoiEAoiEAoiEAoiEAoiEAoiEAoiEAoiEAoiEAoiEAoiEAoiEAogehsLbo0C5+fZoa+2jHwL8WNtw7Jm4
+        rMei/iwAxn+RMDO7v2E4A1J5jEFlstGXAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="lblAmount.BaseStylesheet" xml:space="preserve">

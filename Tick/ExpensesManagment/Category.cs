@@ -23,6 +23,15 @@ namespace Tick.ExpensesManagment
         {
             expensesRow = new string[] { txtName.Text, text };
             dgvCategory.Rows.Add(expensesRow);
+
+            Clear();
+        }
+
+        public void Clear()
+        {
+            txtName.Text = "";
+            cbxExpense.Checked = true;
+            cbxIncome.Checked = false;
         }
 
         private void cbxExpense_OnChange(object sender, EventArgs e)

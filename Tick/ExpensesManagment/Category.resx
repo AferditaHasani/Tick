@@ -117,25 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="Task.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="StartTime.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="EndTime.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="WorkingTime.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <data name="lblName.BaseStylesheet" xml:space="preserve">
+  <data name="lblIncome.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Segoe UI Semibold'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: #A1A1A1; text-align: left; }</value>
   </data>
-  <data name="lblChoose.BaseStylesheet" xml:space="preserve">
+  <data name="lblExpense.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Segoe UI Semibold'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: #A1A1A1; text-align: left; }</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="txtName.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAOoAAAAjCAYAAACac5YyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADgSURBVHhe7d2xCQIxAIXhm0esnMARHMFKwcoRLMQ1crel
+        3XnBgIhiax58D74mufbnygxmFrRSynaapgvQh6XJXcvzuRrpOI735XIG+vEW63JQC56v19t8PJyAP6st
+        tlgvLdNXqPWD9WoD/FltUajQOaFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFC
+        AKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCgJ+hensG+vD17ZlSyr4dAh1Z2jy3TJ9rsdY/
+        K9CBj0jNrOcNwwNcDYV4O6WtFgAAAABJRU5ErkJggg==
+</value>
+  </data>
   <data name="btnAddC.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAHQAAAA2CAYAAAAWCr1AAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -152,20 +150,22 @@
         kg/NXMZLjtmrqpmfW/TjJvLDA5kxdiWu/lMqWQjV6fwGgyAbY1nNYIYAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="txtName.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAOoAAAAjCAYAAACac5YyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADgSURBVHhe7d2xCQIxAIXhm0esnMARHMFKwcoRLMQ1crel
-        3XnBgIhiax58D74mufbnygxmFrRSynaapgvQh6XJXcvzuRrpOI735XIG+vEW63JQC56v19t8PJyAP6st
-        tlgvLdNXqPWD9WoD/FltUajQOaFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFC
-        AKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCAKFCgJ+hensG+vD17ZlSyr4dAh1Z2jy3TJ9rsdY/
-        K9CBj0jNrOcNwwNcDYV4O6WtFgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="lblExpense.BaseStylesheet" xml:space="preserve">
+  <data name="lblChoose.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Segoe UI Semibold'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: #A1A1A1; text-align: left; }</value>
   </data>
-  <data name="lblIncome.BaseStylesheet" xml:space="preserve">
+  <data name="lblName.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Segoe UI Semibold'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: #A1A1A1; text-align: left; }</value>
   </data>
+  <metadata name="Task.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="StartTime.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="EndTime.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="WorkingTime.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

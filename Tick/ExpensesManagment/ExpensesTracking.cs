@@ -11,6 +11,7 @@ namespace Tick.ExpensesManagment
 {
     public partial class ExpensesTracking : Telerik.WinControls.UI.RadForm
     {
+        private string[] expensesRow;
         public ExpensesTracking()
         {
             InitializeComponent();
@@ -18,7 +19,10 @@ namespace Tick.ExpensesManagment
         private void ExpensesTracking_Load(object sender, EventArgs e)
         {
             OpenTransaction();
-            
+            ddlCategory.Items.Clear();
+            ddlCategory.Items.Add("Rent");
+            ddlCategory.Items.Add("Salary");
+            ddlCategory.Items.Add("Shopping");
         }
 
         private void btnAddTransaction_Click(object sender, EventArgs e)
@@ -42,51 +46,40 @@ namespace Tick.ExpensesManagment
 
            
 
-            FillGrid();
+           // FillGrid();
         }
 
-        private void FillGrid()
-        {
+        //private void FillGrid()
+        //{
             
-            string[] expensesRow = new string[] { "Product 1", "1000", "1", "1" };
-            dgvTransaction.Rows.Add(expensesRow);
+        //    string[] expensesRow = new string[] { "Product 1", "1000", "1", "1" };
+        //    dgvTransaction.Rows.Add(expensesRow);
 
-            expensesRow = new string[] { "Product 2", "2000", "1", "1" };
-            dgvTransaction.Rows.Add(expensesRow);
-            expensesRow = new string[] { "Product 3", "3000", "1", "1" };
-            dgvTransaction.Rows.Add(expensesRow);
-            expensesRow = new string[] { "4", "Product 4", "4000", "1", "1" };
-            dgvTransaction.Rows.Add(expensesRow);
+        //    expensesRow = new string[] { "Product 2", "2000", "1", "1" };
+        //    dgvTransaction.Rows.Add(expensesRow);
+        //    expensesRow = new string[] { "Product 3", "3000", "1", "1" };
+        //    dgvTransaction.Rows.Add(expensesRow);
+        //    expensesRow = new string[] { "4", "Product 4", "4000", "1", "1" };
+        //    dgvTransaction.Rows.Add(expensesRow);
          
 
-            expensesRow = new string[] { "Product 2", "2000", "1", "1" };
-            dgvTransaction.Rows.Add(expensesRow);
-            expensesRow = new string[] { "Product 3", "3000", "1", "1" };
-            dgvTransaction.Rows.Add(expensesRow);
-            expensesRow = new string[] { "4", "Product 4", "4000", "1", "1" };
-            dgvTransaction.Rows.Add(expensesRow);
+        //    expensesRow = new string[] { "Product 2", "2000", "1", "1" };
+        //    dgvTransaction.Rows.Add(expensesRow);
+        //    expensesRow = new string[] { "Product 3", "3000", "1", "1" };
+        //    dgvTransaction.Rows.Add(expensesRow);
+        //    expensesRow = new string[] { "4", "Product 4", "4000", "1", "1" };
+        //    dgvTransaction.Rows.Add(expensesRow);
            
-
-            expensesRow = new string[] { "Product 2", "2000", "1", "1" };
-            dgvTransaction.Rows.Add(expensesRow);
-            expensesRow = new string[] { "Product 3", "3000", "1", "1" };
-            dgvTransaction.Rows.Add(expensesRow);
-            expensesRow = new string[] { "4", "Product 4", "4000", "1", "1" };
-            dgvTransaction.Rows.Add(expensesRow);
-
-
-            expensesRow = new string[] { "Product 2", "2000", "1", "1" };
-            dgvTransaction.Rows.Add(expensesRow);
-            expensesRow = new string[] { "Product 3", "3000", "1", "1" };
-            dgvTransaction.Rows.Add(expensesRow);
-            expensesRow = new string[] { "4", "Product 4", "4000", "1", "1" };
-            dgvTransaction.Rows.Add(expensesRow);
-        }
+            
+        //}
 
         private void btnAddT_Click(object sender, EventArgs e)
         {
-          
-            
+            expensesRow = new string[] { txtAmount.Text, ddlCategory.SelectedItem.ToString(),txtDescription.Text };
+            dgvTransaction.Rows.Add(expensesRow);
+
+            Clear();
+           // OpenTransaction();
         }
 
         private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
@@ -104,6 +97,12 @@ namespace Tick.ExpensesManagment
                 e.Handled = true;
             }
             
+        }
+
+        public void Clear()
+        {
+            txtAmount.Text = "";
+            txtDescription.Text = "";
         }
     }
 }
