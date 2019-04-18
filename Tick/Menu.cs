@@ -88,6 +88,8 @@ namespace Tick
         private void btnCategory_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
+            Category ct = new Category();
+            FillContentPanel(ct);
         }
     }
 }

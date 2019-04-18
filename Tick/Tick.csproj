@@ -106,6 +106,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExpensesManagment\Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpensesManagment\Category.Designer.cs">
+      <DependentUpon>Category.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExpensesManagment\ExpensesTracking.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     <Compile Include="TimeManagement\TimeTracking.Designer.cs">
       <DependentUpon>TimeTracking.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ExpensesManagment\Category.resx">
+      <DependentUpon>Category.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExpensesManagment\ExpensesTracking.resx">
       <DependentUpon>ExpensesTracking.cs</DependentUpon>
     </EmbeddedResource>
