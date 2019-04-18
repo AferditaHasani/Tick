@@ -31,5 +31,10 @@ namespace Tick.TimeManagement
 
 
         }
+
+        private void ddTask_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
