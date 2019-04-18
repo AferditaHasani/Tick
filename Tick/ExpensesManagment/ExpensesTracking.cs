@@ -14,9 +14,10 @@ namespace Tick.ExpensesManagment
         public ExpensesTracking()
         {
             InitializeComponent();
-       
-          // OpenTransaction();
-
+        }
+        private void ExpensesTracking_Load(object sender, EventArgs e)
+        {
+            OpenTransaction();
         }
 
         private void btnAddTransaction_Click(object sender, EventArgs e)
@@ -29,40 +30,38 @@ namespace Tick.ExpensesManagment
 
         }
 
-        private void lblDescription_Click(object sender, EventArgs e)
+        private void OpenTransaction()
         {
+          pnlGridViewEx.Controls.Add(dgvTransaction);
+           
+            pnlGridViewEx.Visible = true;
+            pnlAddTransaction.Visible = false;
 
+            pnlGridViewEx.Location = new Point(12, 80);
+
+          FillGrid();
         }
 
-        private void lblCategory_Click(object sender, EventArgs e)
+        private void FillGrid()
         {
+            //dgvTransaction.Visible = true;
+            string[] expensesRow = new string[] { "Product 1", "1000", "1", "1" };
+            dgvTransaction.Rows.Add(expensesRow);
 
+            expensesRow = new string[] { "Product 2", "2000", "1", "1" };
+            dgvTransaction.Rows.Add(expensesRow);
+            expensesRow = new string[] { "Product 3", "3000", "1", "1" };
+            dgvTransaction.Rows.Add(expensesRow);
+            expensesRow = new string[] { "4", "Product 4", "4000", "1", "1" };
+            dgvTransaction.Rows.Add(expensesRow);
+         
+
+            expensesRow = new string[] { "Product 2", "2000", "1", "1" };
+            dgvTransaction.Rows.Add(expensesRow);
+            expensesRow = new string[] { "Product 3", "3000", "1", "1" };
+            dgvTransaction.Rows.Add(expensesRow);
+            expensesRow = new string[] { "4", "Product 4", "4000", "1", "1" };
+            dgvTransaction.Rows.Add(expensesRow);
         }
-
-        //private void OpenTransaction()
-        //{
-        //    //pnlGridViewEx.Controls.Add(dgvTransaction);
-        //    pnlGridViewEx.Visible = false;
-        //    pnlAddTransaction.Visible = false;
-
-        //    pnlGridViewEx.Location = new Point(12, 80);
-
-        //    FillGrid();
-        //}
-
-        //private void FillGrid()
-        //{
-        //    dgvTransaction.Visible = true;
-        //    string[] expensesRow = new string[] { "Product 1", "1000", "1", "1" };
-        //    dgvTransaction.Rows.Add(expensesRow);
-
-        //    expensesRow = new string[] { "Product 2", "2000", "1", "1" };
-        //    dgvTransaction.Rows.Add(expensesRow);
-        //    expensesRow = new string[] { "Product 3", "3000", "1", "1" };
-        //    dgvTransaction.Rows.Add(expensesRow);
-        //    expensesRow = new string[] { "4", "Product 4", "4000", "1", "1" };
-        //    dgvTransaction.Rows.Add(expensesRow);
-
-        //}
     }
 }

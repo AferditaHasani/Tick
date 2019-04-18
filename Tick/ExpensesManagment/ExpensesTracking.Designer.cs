@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExpensesTracking));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -37,10 +39,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExpensesTracking));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.btnAddTransaction = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnlAddTransaction = new System.Windows.Forms.Panel();
+            this.btnAddT = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.txtDescription = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.ddlCategory = new Bunifu.UI.WinForms.BunifuDropdown();
             this.lblDescription = new Bunifu.UI.WinForms.BunifuLabel();
@@ -52,7 +53,6 @@
             this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WorkingTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAddT = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pnlGridViewEx = new System.Windows.Forms.Panel();
             this.pnlAddTransaction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).BeginInit();
@@ -111,6 +111,40 @@
             this.pnlAddTransaction.Name = "pnlAddTransaction";
             this.pnlAddTransaction.Size = new System.Drawing.Size(624, 274);
             this.pnlAddTransaction.TabIndex = 2;
+            // 
+            // btnAddT
+            // 
+            this.btnAddT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddT.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddT.BackgroundImage")));
+            this.btnAddT.ButtonText = "ADD";
+            this.btnAddT.ButtonTextMarginLeft = 0;
+            this.btnAddT.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnAddT.DisabledFillColor = System.Drawing.Color.DimGray;
+            this.btnAddT.DisabledForecolor = System.Drawing.Color.White;
+            this.btnAddT.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
+            this.btnAddT.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnAddT.IconPadding = 10;
+            this.btnAddT.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnAddT.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
+            this.btnAddT.IdleBorderRadius = 15;
+            this.btnAddT.IdleBorderThickness = 2;
+            this.btnAddT.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnAddT.IdleIconLeftImage = null;
+            this.btnAddT.IdleIconRightImage = null;
+            this.btnAddT.Location = new System.Drawing.Point(487, 205);
+            this.btnAddT.Name = "btnAddT";
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties1.BorderRadius = 1;
+            stateProperties1.BorderThickness = 2;
+            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            stateProperties1.IconLeftImage = null;
+            stateProperties1.IconRightImage = null;
+            this.btnAddT.onHoverState = stateProperties1;
+            this.btnAddT.Size = new System.Drawing.Size(116, 54);
+            this.btnAddT.TabIndex = 12;
+            this.btnAddT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtDescription
             // 
@@ -174,7 +208,6 @@
             this.lblDescription.Text = "Description:";
             this.lblDescription.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblDescription.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.lblDescription.Click += new System.EventHandler(this.lblDescription_Click);
             // 
             // lblCategory
             // 
@@ -192,7 +225,6 @@
             this.lblCategory.Text = "Category:";
             this.lblCategory.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblCategory.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            this.lblCategory.Click += new System.EventHandler(this.lblCategory_Click);
             // 
             // txtAmount
             // 
@@ -268,14 +300,14 @@
             this.dgvTransaction.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvTransaction.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvTransaction.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.dgvTransaction.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.dgvTransaction.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTransaction.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvTransaction.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(15);
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
@@ -298,10 +330,10 @@
             this.dgvTransaction.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvTransaction.DoubleBuffered = true;
             this.dgvTransaction.EnableHeadersVisualStyles = false;
-            this.dgvTransaction.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.dgvTransaction.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dgvTransaction.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.dgvTransaction.Location = new System.Drawing.Point(40, 294);
+            this.dgvTransaction.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.dgvTransaction.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.dgvTransaction.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.dgvTransaction.Location = new System.Drawing.Point(3, 3);
             this.dgvTransaction.Name = "dgvTransaction";
             this.dgvTransaction.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -328,7 +360,7 @@
             this.dgvTransaction.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.DimGray;
             this.dgvTransaction.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.dgvTransaction.RowTemplate.Height = 60;
-            this.dgvTransaction.Size = new System.Drawing.Size(500, 259);
+            this.dgvTransaction.Size = new System.Drawing.Size(618, 630);
             this.dgvTransaction.TabIndex = 2;
             // 
             // Task
@@ -379,48 +411,14 @@
             this.WorkingTime.HeaderText = "Description";
             this.WorkingTime.Name = "WorkingTime";
             // 
-            // btnAddT
-            // 
-            this.btnAddT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddT.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddT.BackgroundImage")));
-            this.btnAddT.ButtonText = "ADD";
-            this.btnAddT.ButtonTextMarginLeft = 0;
-            this.btnAddT.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.btnAddT.DisabledFillColor = System.Drawing.Color.DimGray;
-            this.btnAddT.DisabledForecolor = System.Drawing.Color.White;
-            this.btnAddT.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.btnAddT.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAddT.IconPadding = 10;
-            this.btnAddT.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAddT.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.btnAddT.IdleBorderRadius = 15;
-            this.btnAddT.IdleBorderThickness = 2;
-            this.btnAddT.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.btnAddT.IdleIconLeftImage = null;
-            this.btnAddT.IdleIconRightImage = null;
-            this.btnAddT.Location = new System.Drawing.Point(487, 205);
-            this.btnAddT.Name = "btnAddT";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties1.BorderRadius = 1;
-            stateProperties1.BorderThickness = 2;
-            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            stateProperties1.IconLeftImage = null;
-            stateProperties1.IconRightImage = null;
-            this.btnAddT.onHoverState = stateProperties1;
-            this.btnAddT.Size = new System.Drawing.Size(116, 54);
-            this.btnAddT.TabIndex = 12;
-            this.btnAddT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // pnlGridViewEx
             // 
             this.pnlGridViewEx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlGridViewEx.BackColor = System.Drawing.Color.Gainsboro;
-            this.pnlGridViewEx.Location = new System.Drawing.Point(12, 371);
+            this.pnlGridViewEx.BackColor = System.Drawing.Color.Transparent;
+            this.pnlGridViewEx.Location = new System.Drawing.Point(12, 80);
             this.pnlGridViewEx.Name = "pnlGridViewEx";
-            this.pnlGridViewEx.Size = new System.Drawing.Size(624, 345);
+            this.pnlGridViewEx.Size = new System.Drawing.Size(624, 636);
             this.pnlGridViewEx.TabIndex = 3;
             // 
             // ExpensesTracking
@@ -428,7 +426,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(656, 757);
+            this.ClientSize = new System.Drawing.Size(664, 787);
             this.Controls.Add(this.pnlGridViewEx);
             this.Controls.Add(this.pnlAddTransaction);
             this.Controls.Add(this.btnAddTransaction);
@@ -443,6 +441,7 @@
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "ExpensesTracking";
+            this.Load += new System.EventHandler(this.ExpensesTracking_Load);
             this.pnlAddTransaction.ResumeLayout(false);
             this.pnlAddTransaction.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).EndInit();
