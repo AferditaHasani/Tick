@@ -17,29 +17,17 @@ namespace Tick
     public partial class LogIn : Telerik.WinControls.UI.RadForm
     {
         private Menu menu;
-        public LogIn(Menu m)
+        public LogIn()
         {
             InitializeComponent();
-            menu = m;
+           
         }
 
         private UserBLL userBLL = new UserBLL();
         public User activeUser = new User();
         private User user;
 
-       private void EnableButtonsOfMenu(string username)
-       {
-           menu.btnLogIn.Visible = false;
-           menu.btnLogOut.Visible = true;
-           menu.btnLogOut.Location = menu.btnLogIn.Location;
-            menu.btnTimeTracking.Enabled = true;
-          menu.btnTasks.Enabled = true;
-          menu.btnExpensesTracking.Enabled = true;
-          menu.btnCategory.Enabled = true;
-          menu.btnTimeCharts.Enabled = true;
-          menu.btnExpensesChart.Enabled = true;
-          menu.lblUsername.Text = username;
-       }
+     
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
@@ -49,11 +37,9 @@ namespace Tick
             
             if (userBLL.GetLogIn(user))
             {
-                
-
-               
-                EnableButtonsOfMenu(user.Username);
-                this.Close();
+                menu = new Menu(user.Name);
+                menu.Show();
+                this.Hide();
 
             }
             else
@@ -77,9 +63,9 @@ namespace Tick
             btnSignIn.Visible = true;
             btnLogIn.Visible = false;
 
-            pnlForSignIn.Location= new Point(361, 242);
-            pnlForLogIn.Location = new Point(361, 423);
-            btnSignIn.Location = new Point(475, 629);
+            pnlForSignIn.Location= new Point(70, 269);
+            pnlForLogIn.Location = new Point(70, 438);
+            btnSignIn.Location = new Point(177, 649);
         }
 
         private void btnChooseLogIn_Click(object sender, EventArgs e)
@@ -104,8 +90,8 @@ namespace Tick
             btnSignIn.Visible = false;
             btnLogIn.Visible = true;
 
-            pnlForLogIn.Location = new Point(361, 253);
-            btnLogIn.Location = new Point(475, 541);
+            pnlForLogIn.Location = new Point(70, 263);
+            btnLogIn.Location = new Point(187, 611);
         }
 
         private void LogIn_Load(object sender, EventArgs e)
@@ -117,9 +103,10 @@ namespace Tick
         {
             if (SaveSigIn())
             {
-              
 
-                EnableButtonsOfMenu(user.Username);
+                menu=new Menu(user.Name);
+                menu.Show();
+                this.Hide();
             }
             else
             {

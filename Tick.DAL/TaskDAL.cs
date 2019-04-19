@@ -40,5 +40,33 @@ namespace Tick.DAL
                 return false;
             }
         }
+
+        //public List<Task> GetAll()
+        //{
+        //    try
+        //    {
+        //        using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+        //        {
+        //            String sql = "dbo.usp_Task_GetAll";
+        //            using (SqlCommand command = new SqlCommand(sql, conn))
+        //            {
+        //                conn.Open();
+        //                command.CommandType = CommandType.StoredProcedure;
+        //              while
+
+
+
+        //                var result = command.ExecuteNonQuery();
+        //                return result >= 0;
+        //            }
+        //        }
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        MessageBox.Show(e.Message);
+        //        return false;
+        //    }
+        //}
+
     }
 }

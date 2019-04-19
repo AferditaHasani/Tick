@@ -30,33 +30,35 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogIn));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.dragLogIn = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.dragpnlSide = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.pnlSide = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.btnChooseSigIn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnChooseLogIn = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.separator = new Bunifu.Framework.UI.BunifuSeparator();
-            this.pnlForLogIn = new System.Windows.Forms.Panel();
-            this.txtUsername = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.txtPassword = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.separator1 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSignIn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnLogIn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pnlForSignIn = new System.Windows.Forms.Panel();
             this.txtName = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.txtLastname = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.btnSignIn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnLogIn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.separator1 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.pnlForLogIn = new System.Windows.Forms.Panel();
+            this.txtUsername = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.txtPassword = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
+            this.separator = new Bunifu.Framework.UI.BunifuSeparator();
+            this.btnChooseLogIn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnChooseSigIn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnMini = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnX = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pbLogIn = new System.Windows.Forms.PictureBox();
             this.pnlSide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
-            this.pnlForLogIn.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.pnlForSignIn.SuspendLayout();
+            this.pnlForLogIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogIn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
@@ -88,7 +90,7 @@
             this.pnlSide.Location = new System.Drawing.Point(0, 0);
             this.pnlSide.Name = "pnlSide";
             this.pnlSide.Quality = 10;
-            this.pnlSide.Size = new System.Drawing.Size(299, 788);
+            this.pnlSide.Size = new System.Drawing.Size(299, 744);
             this.pnlSide.TabIndex = 0;
             // 
             // pbLogo
@@ -102,209 +104,101 @@
             this.pbLogo.TabIndex = 5;
             this.pbLogo.TabStop = false;
             // 
-            // btnChooseSigIn
+            // panel1
             // 
-            this.btnChooseSigIn.Active = false;
-            this.btnChooseSigIn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnChooseSigIn.BackColor = System.Drawing.Color.Transparent;
-            this.btnChooseSigIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnChooseSigIn.BorderRadius = 0;
-            this.btnChooseSigIn.ButtonText = "  SIGN IN";
-            this.btnChooseSigIn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChooseSigIn.DisabledColor = System.Drawing.Color.Gray;
-            this.btnChooseSigIn.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnChooseSigIn.Iconimage = null;
-            this.btnChooseSigIn.Iconimage_right = null;
-            this.btnChooseSigIn.Iconimage_right_Selected = null;
-            this.btnChooseSigIn.Iconimage_Selected = null;
-            this.btnChooseSigIn.IconMarginLeft = 0;
-            this.btnChooseSigIn.IconMarginRight = 0;
-            this.btnChooseSigIn.IconRightVisible = true;
-            this.btnChooseSigIn.IconRightZoom = 0D;
-            this.btnChooseSigIn.IconVisible = true;
-            this.btnChooseSigIn.IconZoom = 90D;
-            this.btnChooseSigIn.IsTab = false;
-            this.btnChooseSigIn.Location = new System.Drawing.Point(475, 141);
-            this.btnChooseSigIn.Name = "btnChooseSigIn";
-            this.btnChooseSigIn.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnChooseSigIn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnChooseSigIn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.btnChooseSigIn.selected = false;
-            this.btnChooseSigIn.Size = new System.Drawing.Size(86, 50);
-            this.btnChooseSigIn.TabIndex = 0;
-            this.btnChooseSigIn.Text = "  SIGN IN";
-            this.btnChooseSigIn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChooseSigIn.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.btnChooseSigIn.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChooseSigIn.Click += new System.EventHandler(this.btnChooseSigIn_Click);
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.panel1.Controls.Add(this.btnSignIn);
+            this.panel1.Controls.Add(this.btnLogIn);
+            this.panel1.Controls.Add(this.pnlForSignIn);
+            this.panel1.Controls.Add(this.separator1);
+            this.panel1.Controls.Add(this.pnlForLogIn);
+            this.panel1.Controls.Add(this.separator);
+            this.panel1.Controls.Add(this.btnChooseLogIn);
+            this.panel1.Controls.Add(this.btnChooseSigIn);
+            this.panel1.Controls.Add(this.btnMini);
+            this.panel1.Controls.Add(this.btnX);
+            this.panel1.Controls.Add(this.pbLogIn);
+            this.panel1.Location = new System.Drawing.Point(297, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(565, 740);
+            this.panel1.TabIndex = 1;
             // 
-            // btnChooseLogIn
+            // btnSignIn
             // 
-            this.btnChooseLogIn.Active = false;
-            this.btnChooseLogIn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnChooseLogIn.BackColor = System.Drawing.Color.Transparent;
-            this.btnChooseLogIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnChooseLogIn.BorderRadius = 0;
-            this.btnChooseLogIn.ButtonText = "  LOG IN";
-            this.btnChooseLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnChooseLogIn.DisabledColor = System.Drawing.Color.Gray;
-            this.btnChooseLogIn.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnChooseLogIn.Iconimage = null;
-            this.btnChooseLogIn.Iconimage_right = null;
-            this.btnChooseLogIn.Iconimage_right_Selected = null;
-            this.btnChooseLogIn.Iconimage_Selected = null;
-            this.btnChooseLogIn.IconMarginLeft = 0;
-            this.btnChooseLogIn.IconMarginRight = 0;
-            this.btnChooseLogIn.IconRightVisible = true;
-            this.btnChooseLogIn.IconRightZoom = 0D;
-            this.btnChooseLogIn.IconVisible = true;
-            this.btnChooseLogIn.IconZoom = 90D;
-            this.btnChooseLogIn.IsTab = false;
-            this.btnChooseLogIn.Location = new System.Drawing.Point(588, 141);
-            this.btnChooseLogIn.Name = "btnChooseLogIn";
-            this.btnChooseLogIn.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnChooseLogIn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnChooseLogIn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.btnChooseLogIn.selected = false;
-            this.btnChooseLogIn.Size = new System.Drawing.Size(75, 50);
-            this.btnChooseLogIn.TabIndex = 1;
-            this.btnChooseLogIn.Text = "  LOG IN";
-            this.btnChooseLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnChooseLogIn.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.btnChooseLogIn.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChooseLogIn.Click += new System.EventHandler(this.btnChooseLogIn_Click);
+            this.btnSignIn.BackColor = System.Drawing.Color.Transparent;
+            this.btnSignIn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSignIn.BackgroundImage")));
+            this.btnSignIn.ButtonText = "SIGN IN";
+            this.btnSignIn.ButtonTextMarginLeft = 0;
+            this.btnSignIn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnSignIn.DisabledFillColor = System.Drawing.Color.DimGray;
+            this.btnSignIn.DisabledForecolor = System.Drawing.Color.White;
+            this.btnSignIn.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
+            this.btnSignIn.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnSignIn.IconPadding = 10;
+            this.btnSignIn.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnSignIn.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
+            this.btnSignIn.IdleBorderRadius = 15;
+            this.btnSignIn.IdleBorderThickness = 2;
+            this.btnSignIn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnSignIn.IdleIconLeftImage = null;
+            this.btnSignIn.IdleIconRightImage = null;
+            this.btnSignIn.Location = new System.Drawing.Point(40, 628);
+            this.btnSignIn.Name = "btnSignIn";
+            stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties13.BorderRadius = 1;
+            stateProperties13.BorderThickness = 2;
+            stateProperties13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            stateProperties13.IconLeftImage = null;
+            stateProperties13.IconRightImage = null;
+            this.btnSignIn.onHoverState = stateProperties13;
+            this.btnSignIn.Size = new System.Drawing.Size(184, 54);
+            this.btnSignIn.TabIndex = 21;
+            this.btnSignIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             // 
-            // separator
+            // btnLogIn
             // 
-            this.separator.BackColor = System.Drawing.Color.Transparent;
-            this.separator.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.separator.LineThickness = 5;
-            this.separator.Location = new System.Drawing.Point(572, 141);
-            this.separator.Name = "separator";
-            this.separator.Size = new System.Drawing.Size(10, 50);
-            this.separator.TabIndex = 14;
-            this.separator.Transparency = 255;
-            this.separator.Vertical = true;
-            this.separator.Visible = false;
-            // 
-            // pnlForLogIn
-            // 
-            this.pnlForLogIn.Controls.Add(this.txtUsername);
-            this.pnlForLogIn.Controls.Add(this.txtPassword);
-            this.pnlForLogIn.Location = new System.Drawing.Point(361, 413);
-            this.pnlForLogIn.Name = "pnlForLogIn";
-            this.pnlForLogIn.Size = new System.Drawing.Size(431, 165);
-            this.pnlForLogIn.TabIndex = 3;
-            // 
-            // txtUsername
-            // 
-            this.txtUsername.AcceptsReturn = false;
-            this.txtUsername.AcceptsTab = false;
-            this.txtUsername.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtUsername.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtUsername.BackColor = System.Drawing.Color.Transparent;
-            this.txtUsername.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtUsername.BackgroundImage")));
-            this.txtUsername.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.txtUsername.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.txtUsername.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.txtUsername.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.txtUsername.BorderRadius = 15;
-            this.txtUsername.BorderThickness = 2;
-            this.txtUsername.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtUsername.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsername.DefaultText = "";
-            this.txtUsername.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.txtUsername.HideSelection = true;
-            this.txtUsername.IconLeft = global::Tick.Properties.Resources.username1;
-            this.txtUsername.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.txtUsername.IconPadding = 10;
-            this.txtUsername.IconRight = null;
-            this.txtUsername.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txtUsername.Location = new System.Drawing.Point(16, 12);
-            this.txtUsername.MaxLength = 32767;
-            this.txtUsername.MinimumSize = new System.Drawing.Size(100, 35);
-            this.txtUsername.Modified = false;
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.PasswordChar = '\0';
-            this.txtUsername.ReadOnly = false;
-            this.txtUsername.SelectedText = "";
-            this.txtUsername.SelectionLength = 0;
-            this.txtUsername.SelectionStart = 0;
-            this.txtUsername.ShortcutsEnabled = true;
-            this.txtUsername.Size = new System.Drawing.Size(379, 44);
-            this.txtUsername.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.txtUsername.TabIndex = 1;
-            this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtUsername.TextMarginLeft = 5;
-            this.txtUsername.TextPlaceholder = "Username";
-            this.txtUsername.UseSystemPasswordChar = false;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.AcceptsReturn = false;
-            this.txtPassword.AcceptsTab = false;
-            this.txtPassword.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txtPassword.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txtPassword.BackColor = System.Drawing.Color.Transparent;
-            this.txtPassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtPassword.BackgroundImage")));
-            this.txtPassword.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.txtPassword.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.txtPassword.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.txtPassword.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
-            this.txtPassword.BorderRadius = 15;
-            this.txtPassword.BorderThickness = 2;
-            this.txtPassword.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txtPassword.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.DefaultText = "";
-            this.txtPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.txtPassword.HideSelection = true;
-            this.txtPassword.IconLeft = global::Tick.Properties.Resources.Password2;
-            this.txtPassword.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.txtPassword.IconPadding = 10;
-            this.txtPassword.IconRight = null;
-            this.txtPassword.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txtPassword.Location = new System.Drawing.Point(16, 106);
-            this.txtPassword.MaxLength = 32767;
-            this.txtPassword.MinimumSize = new System.Drawing.Size(100, 35);
-            this.txtPassword.Modified = false;
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.PasswordChar = '●';
-            this.txtPassword.ReadOnly = false;
-            this.txtPassword.SelectedText = "";
-            this.txtPassword.SelectionLength = 0;
-            this.txtPassword.SelectionStart = 0;
-            this.txtPassword.ShortcutsEnabled = true;
-            this.txtPassword.Size = new System.Drawing.Size(379, 44);
-            this.txtPassword.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.txtPassword.TabIndex = 2;
-            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txtPassword.TextMarginLeft = 5;
-            this.txtPassword.TextPlaceholder = "Password";
-            this.txtPassword.UseSystemPasswordChar = false;
-            // 
-            // separator1
-            // 
-            this.separator1.BackColor = System.Drawing.Color.Transparent;
-            this.separator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.separator1.LineThickness = 5;
-            this.separator1.Location = new System.Drawing.Point(459, 141);
-            this.separator1.Name = "separator1";
-            this.separator1.Size = new System.Drawing.Size(10, 50);
-            this.separator1.TabIndex = 16;
-            this.separator1.Transparency = 255;
-            this.separator1.Vertical = true;
-            this.separator1.Visible = false;
+            this.btnLogIn.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogIn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogIn.BackgroundImage")));
+            this.btnLogIn.ButtonText = "LOGIN";
+            this.btnLogIn.ButtonTextMarginLeft = 0;
+            this.btnLogIn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnLogIn.DisabledFillColor = System.Drawing.Color.DimGray;
+            this.btnLogIn.DisabledForecolor = System.Drawing.Color.White;
+            this.btnLogIn.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
+            this.btnLogIn.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnLogIn.IconPadding = 10;
+            this.btnLogIn.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnLogIn.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
+            this.btnLogIn.IdleBorderRadius = 15;
+            this.btnLogIn.IdleBorderThickness = 2;
+            this.btnLogIn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnLogIn.IdleIconLeftImage = null;
+            this.btnLogIn.IdleIconRightImage = null;
+            this.btnLogIn.Location = new System.Drawing.Point(326, 628);
+            this.btnLogIn.Name = "btnLogIn";
+            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties14.BorderRadius = 1;
+            stateProperties14.BorderThickness = 2;
+            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            stateProperties14.IconLeftImage = null;
+            stateProperties14.IconRightImage = null;
+            this.btnLogIn.onHoverState = stateProperties14;
+            this.btnLogIn.Size = new System.Drawing.Size(184, 54);
+            this.btnLogIn.TabIndex = 23;
+            this.btnLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
             // pnlForSignIn
             // 
             this.pnlForSignIn.Controls.Add(this.txtName);
             this.pnlForSignIn.Controls.Add(this.txtLastname);
-            this.pnlForSignIn.Location = new System.Drawing.Point(361, 242);
+            this.pnlForSignIn.Location = new System.Drawing.Point(70, 267);
             this.pnlForSignIn.Name = "pnlForSignIn";
             this.pnlForSignIn.Size = new System.Drawing.Size(431, 165);
-            this.pnlForSignIn.TabIndex = 2;
+            this.pnlForSignIn.TabIndex = 19;
             // 
             // txtName
             // 
@@ -394,73 +288,200 @@
             this.txtLastname.TextPlaceholder = "LastName";
             this.txtLastname.UseSystemPasswordChar = false;
             // 
-            // btnSignIn
+            // separator1
             // 
-            this.btnSignIn.BackColor = System.Drawing.Color.Transparent;
-            this.btnSignIn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSignIn.BackgroundImage")));
-            this.btnSignIn.ButtonText = "SIGN IN";
-            this.btnSignIn.ButtonTextMarginLeft = 0;
-            this.btnSignIn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.btnSignIn.DisabledFillColor = System.Drawing.Color.DimGray;
-            this.btnSignIn.DisabledForecolor = System.Drawing.Color.White;
-            this.btnSignIn.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.btnSignIn.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnSignIn.IconPadding = 10;
-            this.btnSignIn.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnSignIn.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.btnSignIn.IdleBorderRadius = 15;
-            this.btnSignIn.IdleBorderThickness = 2;
-            this.btnSignIn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.btnSignIn.IdleIconLeftImage = null;
-            this.btnSignIn.IdleIconRightImage = null;
-            this.btnSignIn.Location = new System.Drawing.Point(361, 629);
-            this.btnSignIn.Name = "btnSignIn";
-            stateProperties17.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties17.BorderRadius = 1;
-            stateProperties17.BorderThickness = 2;
-            stateProperties17.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            stateProperties17.IconLeftImage = null;
-            stateProperties17.IconRightImage = null;
-            this.btnSignIn.onHoverState = stateProperties17;
-            this.btnSignIn.Size = new System.Drawing.Size(184, 54);
-            this.btnSignIn.TabIndex = 4;
-            this.btnSignIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
+            this.separator1.BackColor = System.Drawing.Color.Transparent;
+            this.separator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
+            this.separator1.LineThickness = 5;
+            this.separator1.Location = new System.Drawing.Point(177, 178);
+            this.separator1.Name = "separator1";
+            this.separator1.Size = new System.Drawing.Size(10, 50);
+            this.separator1.TabIndex = 27;
+            this.separator1.Transparency = 255;
+            this.separator1.Vertical = true;
+            this.separator1.Visible = false;
             // 
-            // btnLogIn
+            // pnlForLogIn
             // 
-            this.btnLogIn.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogIn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLogIn.BackgroundImage")));
-            this.btnLogIn.ButtonText = "LOGIN";
-            this.btnLogIn.ButtonTextMarginLeft = 0;
-            this.btnLogIn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.btnLogIn.DisabledFillColor = System.Drawing.Color.DimGray;
-            this.btnLogIn.DisabledForecolor = System.Drawing.Color.White;
-            this.btnLogIn.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.btnLogIn.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnLogIn.IconPadding = 10;
-            this.btnLogIn.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnLogIn.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.btnLogIn.IdleBorderRadius = 15;
-            this.btnLogIn.IdleBorderThickness = 2;
-            this.btnLogIn.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.btnLogIn.IdleIconLeftImage = null;
-            this.btnLogIn.IdleIconRightImage = null;
-            this.btnLogIn.Location = new System.Drawing.Point(647, 629);
-            this.btnLogIn.Name = "btnLogIn";
-            stateProperties18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties18.BorderRadius = 1;
-            stateProperties18.BorderThickness = 2;
-            stateProperties18.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            stateProperties18.IconLeftImage = null;
-            stateProperties18.IconRightImage = null;
-            this.btnLogIn.onHoverState = stateProperties18;
-            this.btnLogIn.Size = new System.Drawing.Size(184, 54);
-            this.btnLogIn.TabIndex = 5;
-            this.btnLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
+            this.pnlForLogIn.Controls.Add(this.txtUsername);
+            this.pnlForLogIn.Controls.Add(this.txtPassword);
+            this.pnlForLogIn.Location = new System.Drawing.Point(70, 438);
+            this.pnlForLogIn.Name = "pnlForLogIn";
+            this.pnlForLogIn.Size = new System.Drawing.Size(431, 165);
+            this.pnlForLogIn.TabIndex = 20;
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.AcceptsReturn = false;
+            this.txtUsername.AcceptsTab = false;
+            this.txtUsername.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtUsername.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtUsername.BackColor = System.Drawing.Color.Transparent;
+            this.txtUsername.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtUsername.BackgroundImage")));
+            this.txtUsername.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.txtUsername.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.txtUsername.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.txtUsername.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.txtUsername.BorderRadius = 15;
+            this.txtUsername.BorderThickness = 2;
+            this.txtUsername.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtUsername.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsername.DefaultText = "";
+            this.txtUsername.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.txtUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.txtUsername.HideSelection = true;
+            this.txtUsername.IconLeft = global::Tick.Properties.Resources.username1;
+            this.txtUsername.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.txtUsername.IconPadding = 10;
+            this.txtUsername.IconRight = null;
+            this.txtUsername.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.txtUsername.Location = new System.Drawing.Point(16, 12);
+            this.txtUsername.MaxLength = 32767;
+            this.txtUsername.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtUsername.Modified = false;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.PasswordChar = '\0';
+            this.txtUsername.ReadOnly = false;
+            this.txtUsername.SelectedText = "";
+            this.txtUsername.SelectionLength = 0;
+            this.txtUsername.SelectionStart = 0;
+            this.txtUsername.ShortcutsEnabled = true;
+            this.txtUsername.Size = new System.Drawing.Size(379, 44);
+            this.txtUsername.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txtUsername.TabIndex = 1;
+            this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtUsername.TextMarginLeft = 5;
+            this.txtUsername.TextPlaceholder = "Username";
+            this.txtUsername.UseSystemPasswordChar = false;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.AcceptsReturn = false;
+            this.txtPassword.AcceptsTab = false;
+            this.txtPassword.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtPassword.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtPassword.BackColor = System.Drawing.Color.Transparent;
+            this.txtPassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtPassword.BackgroundImage")));
+            this.txtPassword.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.txtPassword.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.txtPassword.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.txtPassword.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
+            this.txtPassword.BorderRadius = 15;
+            this.txtPassword.BorderThickness = 2;
+            this.txtPassword.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtPassword.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.DefaultText = "";
+            this.txtPassword.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.txtPassword.HideSelection = true;
+            this.txtPassword.IconLeft = global::Tick.Properties.Resources.Password2;
+            this.txtPassword.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.txtPassword.IconPadding = 10;
+            this.txtPassword.IconRight = null;
+            this.txtPassword.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.txtPassword.Location = new System.Drawing.Point(16, 106);
+            this.txtPassword.MaxLength = 32767;
+            this.txtPassword.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtPassword.Modified = false;
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '●';
+            this.txtPassword.ReadOnly = false;
+            this.txtPassword.SelectedText = "";
+            this.txtPassword.SelectionLength = 0;
+            this.txtPassword.SelectionStart = 0;
+            this.txtPassword.ShortcutsEnabled = true;
+            this.txtPassword.Size = new System.Drawing.Size(379, 44);
+            this.txtPassword.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txtPassword.TabIndex = 2;
+            this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtPassword.TextMarginLeft = 5;
+            this.txtPassword.TextPlaceholder = "Password";
+            this.txtPassword.UseSystemPasswordChar = false;
+            // 
+            // separator
+            // 
+            this.separator.BackColor = System.Drawing.Color.Transparent;
+            this.separator.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
+            this.separator.LineThickness = 5;
+            this.separator.Location = new System.Drawing.Point(290, 178);
+            this.separator.Name = "separator";
+            this.separator.Size = new System.Drawing.Size(10, 50);
+            this.separator.TabIndex = 26;
+            this.separator.Transparency = 255;
+            this.separator.Vertical = true;
+            this.separator.Visible = false;
+            // 
+            // btnChooseLogIn
+            // 
+            this.btnChooseLogIn.Active = false;
+            this.btnChooseLogIn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnChooseLogIn.BackColor = System.Drawing.Color.Transparent;
+            this.btnChooseLogIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnChooseLogIn.BorderRadius = 0;
+            this.btnChooseLogIn.ButtonText = "  LOG IN";
+            this.btnChooseLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChooseLogIn.DisabledColor = System.Drawing.Color.Gray;
+            this.btnChooseLogIn.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnChooseLogIn.Iconimage = null;
+            this.btnChooseLogIn.Iconimage_right = null;
+            this.btnChooseLogIn.Iconimage_right_Selected = null;
+            this.btnChooseLogIn.Iconimage_Selected = null;
+            this.btnChooseLogIn.IconMarginLeft = 0;
+            this.btnChooseLogIn.IconMarginRight = 0;
+            this.btnChooseLogIn.IconRightVisible = true;
+            this.btnChooseLogIn.IconRightZoom = 0D;
+            this.btnChooseLogIn.IconVisible = true;
+            this.btnChooseLogIn.IconZoom = 90D;
+            this.btnChooseLogIn.IsTab = false;
+            this.btnChooseLogIn.Location = new System.Drawing.Point(306, 178);
+            this.btnChooseLogIn.Name = "btnChooseLogIn";
+            this.btnChooseLogIn.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnChooseLogIn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnChooseLogIn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnChooseLogIn.selected = false;
+            this.btnChooseLogIn.Size = new System.Drawing.Size(75, 50);
+            this.btnChooseLogIn.TabIndex = 18;
+            this.btnChooseLogIn.Text = "  LOG IN";
+            this.btnChooseLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChooseLogIn.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnChooseLogIn.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChooseLogIn.Click += new System.EventHandler(this.btnChooseLogIn_Click);
+            // 
+            // btnChooseSigIn
+            // 
+            this.btnChooseSigIn.Active = false;
+            this.btnChooseSigIn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnChooseSigIn.BackColor = System.Drawing.Color.Transparent;
+            this.btnChooseSigIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnChooseSigIn.BorderRadius = 0;
+            this.btnChooseSigIn.ButtonText = "  SIGN IN";
+            this.btnChooseSigIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnChooseSigIn.DisabledColor = System.Drawing.Color.Gray;
+            this.btnChooseSigIn.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnChooseSigIn.Iconimage = null;
+            this.btnChooseSigIn.Iconimage_right = null;
+            this.btnChooseSigIn.Iconimage_right_Selected = null;
+            this.btnChooseSigIn.Iconimage_Selected = null;
+            this.btnChooseSigIn.IconMarginLeft = 0;
+            this.btnChooseSigIn.IconMarginRight = 0;
+            this.btnChooseSigIn.IconRightVisible = true;
+            this.btnChooseSigIn.IconRightZoom = 0D;
+            this.btnChooseSigIn.IconVisible = true;
+            this.btnChooseSigIn.IconZoom = 90D;
+            this.btnChooseSigIn.IsTab = false;
+            this.btnChooseSigIn.Location = new System.Drawing.Point(193, 178);
+            this.btnChooseSigIn.Name = "btnChooseSigIn";
+            this.btnChooseSigIn.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnChooseSigIn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnChooseSigIn.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnChooseSigIn.selected = false;
+            this.btnChooseSigIn.Size = new System.Drawing.Size(86, 50);
+            this.btnChooseSigIn.TabIndex = 17;
+            this.btnChooseSigIn.Text = "  SIGN IN";
+            this.btnChooseSigIn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnChooseSigIn.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnChooseSigIn.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChooseSigIn.Click += new System.EventHandler(this.btnChooseSigIn_Click);
             // 
             // btnMini
             // 
@@ -483,18 +504,18 @@
             this.btnMini.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
             this.btnMini.IdleIconLeftImage = null;
             this.btnMini.IdleIconRightImage = null;
-            this.btnMini.Location = new System.Drawing.Point(739, 12);
+            this.btnMini.Location = new System.Drawing.Point(450, 13);
             this.btnMini.Name = "btnMini";
-            stateProperties19.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties19.BorderRadius = 1;
-            stateProperties19.BorderThickness = 1;
-            stateProperties19.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties19.IconLeftImage = null;
-            stateProperties19.IconRightImage = null;
-            this.btnMini.onHoverState = stateProperties19;
+            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties15.BorderRadius = 1;
+            stateProperties15.BorderThickness = 1;
+            stateProperties15.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties15.IconLeftImage = null;
+            stateProperties15.IconRightImage = null;
+            this.btnMini.onHoverState = stateProperties15;
             this.btnMini.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnMini.Size = new System.Drawing.Size(27, 25);
-            this.btnMini.TabIndex = 10;
+            this.btnMini.TabIndex = 25;
             this.btnMini.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnMini.Click += new System.EventHandler(this.btnMini_Click);
             // 
@@ -518,18 +539,18 @@
             this.btnX.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
             this.btnX.IdleIconLeftImage = null;
             this.btnX.IdleIconRightImage = null;
-            this.btnX.Location = new System.Drawing.Point(788, 12);
+            this.btnX.Location = new System.Drawing.Point(499, 13);
             this.btnX.Name = "btnX";
-            stateProperties20.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties20.BorderRadius = 1;
-            stateProperties20.BorderThickness = 1;
-            stateProperties20.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties20.IconLeftImage = null;
-            stateProperties20.IconRightImage = null;
-            this.btnX.onHoverState = stateProperties20;
+            stateProperties16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties16.BorderRadius = 1;
+            stateProperties16.BorderThickness = 1;
+            stateProperties16.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties16.IconLeftImage = null;
+            stateProperties16.IconRightImage = null;
+            this.btnX.onHoverState = stateProperties16;
             this.btnX.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnX.Size = new System.Drawing.Size(27, 25);
-            this.btnX.TabIndex = 5;
+            this.btnX.TabIndex = 24;
             this.btnX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
@@ -537,31 +558,23 @@
             // 
             this.pbLogIn.BackColor = System.Drawing.Color.Transparent;
             this.pbLogIn.Image = global::Tick.Properties.Resources.Power;
-            this.pbLogIn.Location = new System.Drawing.Point(525, 34);
+            this.pbLogIn.Location = new System.Drawing.Point(243, 71);
             this.pbLogIn.Name = "pbLogIn";
             this.pbLogIn.Size = new System.Drawing.Size(76, 72);
             this.pbLogIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbLogIn.TabIndex = 4;
+            this.pbLogIn.TabIndex = 22;
             this.pbLogIn.TabStop = false;
             // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(853, 788);
-            this.Controls.Add(this.btnSignIn);
-            this.Controls.Add(this.btnLogIn);
-            this.Controls.Add(this.pnlForSignIn);
-            this.Controls.Add(this.separator1);
-            this.Controls.Add(this.pnlForLogIn);
-            this.Controls.Add(this.separator);
-            this.Controls.Add(this.btnChooseLogIn);
-            this.Controls.Add(this.btnChooseSigIn);
-            this.Controls.Add(this.btnMini);
-            this.Controls.Add(this.btnX);
-            this.Controls.Add(this.pbLogIn);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
+            this.ClientSize = new System.Drawing.Size(864, 744);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlSide);
+            this.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(250, 0);
             this.Name = "LogIn";
@@ -574,8 +587,9 @@
             this.Load += new System.EventHandler(this.LogIn_Load);
             this.pnlSide.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
-            this.pnlForLogIn.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.pnlForSignIn.ResumeLayout(false);
+            this.pnlForLogIn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogIn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
@@ -585,23 +599,24 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuDragControl dragLogIn;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtPassword;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtUsername;
         private Bunifu.Framework.UI.BunifuGradientPanel pnlSide;
-        private System.Windows.Forms.PictureBox pbLogIn;
         private System.Windows.Forms.PictureBox pbLogo;
-        protected internal Bunifu.UI.WinForms.BunifuButton.BunifuButton btnLogIn;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnX;
         private Bunifu.Framework.UI.BunifuDragControl dragpnlSide;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnMini;
-        private Bunifu.Framework.UI.BunifuSeparator separator;
-        private Bunifu.Framework.UI.BunifuFlatButton btnChooseLogIn;
-        private Bunifu.Framework.UI.BunifuFlatButton btnChooseSigIn;
-        private System.Windows.Forms.Panel pnlForLogIn;
-        private Bunifu.Framework.UI.BunifuSeparator separator1;
+        private System.Windows.Forms.Panel panel1;
+        protected internal Bunifu.UI.WinForms.BunifuButton.BunifuButton btnSignIn;
+        protected internal Bunifu.UI.WinForms.BunifuButton.BunifuButton btnLogIn;
         private System.Windows.Forms.Panel pnlForSignIn;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtName;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtLastname;
-        protected internal Bunifu.UI.WinForms.BunifuButton.BunifuButton btnSignIn;
+        private Bunifu.Framework.UI.BunifuSeparator separator1;
+        private System.Windows.Forms.Panel pnlForLogIn;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtUsername;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtPassword;
+        private Bunifu.Framework.UI.BunifuSeparator separator;
+        private Bunifu.Framework.UI.BunifuFlatButton btnChooseLogIn;
+        private Bunifu.Framework.UI.BunifuFlatButton btnChooseSigIn;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnMini;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnX;
+        private System.Windows.Forms.PictureBox pbLogIn;
     }
 }

@@ -30,10 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.pnlMenu = new System.Windows.Forms.Panel();
-            this.btnLogIn = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCategory = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnTasks = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnLogOut = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -56,7 +55,6 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
-            this.pnlMenu.Controls.Add(this.btnLogIn);
             this.pnlMenu.Controls.Add(this.btnCategory);
             this.pnlMenu.Controls.Add(this.btnTasks);
             this.pnlMenu.Controls.Add(this.btnLogOut);
@@ -71,44 +69,6 @@
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(233, 788);
             this.pnlMenu.TabIndex = 0;
-            // 
-            // btnLogIn
-            // 
-            this.btnLogIn.Active = true;
-            this.btnLogIn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.btnLogIn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnLogIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.btnLogIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnLogIn.BorderRadius = 0;
-            this.btnLogIn.ButtonText = "    LOG IN";
-            this.btnLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLogIn.DisabledColor = System.Drawing.Color.Gray;
-            this.btnLogIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
-            this.btnLogIn.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnLogIn.Iconimage = global::Tick.Properties.Resources.logout_xxl;
-            this.btnLogIn.Iconimage_right = null;
-            this.btnLogIn.Iconimage_right_Selected = null;
-            this.btnLogIn.Iconimage_Selected = null;
-            this.btnLogIn.IconMarginLeft = 0;
-            this.btnLogIn.IconMarginRight = 0;
-            this.btnLogIn.IconRightVisible = true;
-            this.btnLogIn.IconRightZoom = 0D;
-            this.btnLogIn.IconVisible = true;
-            this.btnLogIn.IconZoom = 90D;
-            this.btnLogIn.IsTab = false;
-            this.btnLogIn.Location = new System.Drawing.Point(3, 725);
-            this.btnLogIn.Name = "btnLogIn";
-            this.btnLogIn.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.btnLogIn.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.btnLogIn.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnLogIn.selected = true;
-            this.btnLogIn.Size = new System.Drawing.Size(227, 60);
-            this.btnLogIn.TabIndex = 7;
-            this.btnLogIn.Text = "    LOG IN";
-            this.btnLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLogIn.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.btnLogIn.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             // 
             // btnCategory
             // 
@@ -206,7 +166,7 @@
             this.btnLogOut.IconVisible = true;
             this.btnLogOut.IconZoom = 90D;
             this.btnLogOut.IsTab = false;
-            this.btnLogOut.Location = new System.Drawing.Point(3, 659);
+            this.btnLogOut.Location = new System.Drawing.Point(3, 725);
             this.btnLogOut.Name = "btnLogOut";
             this.btnLogOut.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
             this.btnLogOut.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
@@ -218,7 +178,6 @@
             this.btnLogOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogOut.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.btnLogOut.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogOut.Visible = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // separator
@@ -398,7 +357,7 @@
             this.pnlContent.BackColor = System.Drawing.Color.Transparent;
             this.pnlContent.Location = new System.Drawing.Point(239, 43);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(632, 715);
+            this.pnlContent.Size = new System.Drawing.Size(660, 715);
             this.pnlContent.TabIndex = 8;
             // 
             // dragMenuForm
@@ -443,15 +402,15 @@
             this.btnMini.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
             this.btnMini.IdleIconLeftImage = null;
             this.btnMini.IdleIconRightImage = null;
-            this.btnMini.Location = new System.Drawing.Point(798, 12);
+            this.btnMini.Location = new System.Drawing.Point(826, 12);
             this.btnMini.Name = "btnMini";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties1.BorderRadius = 1;
-            stateProperties1.BorderThickness = 1;
-            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties1.IconLeftImage = null;
-            stateProperties1.IconRightImage = null;
-            this.btnMini.onHoverState = stateProperties1;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties3.BorderRadius = 1;
+            stateProperties3.BorderThickness = 1;
+            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties3.IconLeftImage = null;
+            stateProperties3.IconRightImage = null;
+            this.btnMini.onHoverState = stateProperties3;
             this.btnMini.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnMini.Size = new System.Drawing.Size(27, 25);
             this.btnMini.TabIndex = 9;
@@ -479,15 +438,15 @@
             this.btnX.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
             this.btnX.IdleIconLeftImage = null;
             this.btnX.IdleIconRightImage = null;
-            this.btnX.Location = new System.Drawing.Point(844, 12);
+            this.btnX.Location = new System.Drawing.Point(872, 12);
             this.btnX.Name = "btnX";
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties2.BorderRadius = 1;
-            stateProperties2.BorderThickness = 1;
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties2.IconLeftImage = null;
-            stateProperties2.IconRightImage = null;
-            this.btnX.onHoverState = stateProperties2;
+            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties4.BorderRadius = 1;
+            stateProperties4.BorderThickness = 1;
+            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties4.IconLeftImage = null;
+            stateProperties4.IconRightImage = null;
+            this.btnX.onHoverState = stateProperties4;
             this.btnX.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnX.Size = new System.Drawing.Size(27, 25);
             this.btnX.TabIndex = 6;
@@ -499,7 +458,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(923, 788);
+            this.ClientSize = new System.Drawing.Size(939, 788);
             this.Controls.Add(this.btnMini);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.btnX);
@@ -540,6 +499,5 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnMini;
         public Bunifu.Framework.UI.BunifuFlatButton btnTasks;
         public Bunifu.Framework.UI.BunifuFlatButton btnCategory;
-        public Bunifu.Framework.UI.BunifuFlatButton btnLogIn;
     }
 }

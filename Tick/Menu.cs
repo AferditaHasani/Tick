@@ -14,22 +14,23 @@ namespace Tick
 {
     public partial class Menu : Telerik.WinControls.UI.RadForm
     {
-        private LogIn a ;
-       
         public Menu()
         {
             InitializeComponent();
+            LogIn l = new LogIn();
+          
             this.Bounds = Screen.PrimaryScreen.Bounds;
 
-            btnTimeTracking.Enabled = false;
-            btnTasks.Enabled = false;
-            btnExpensesTracking.Enabled = false;
-            btnCategory.Enabled = false;
-            btnTimeCharts.Enabled = false;
-            btnExpensesChart.Enabled = false;
+            l.Owner = this;
+            l.Show();
+        }
 
+        public Menu(string user)
+        {
+            InitializeComponent();
+            this.Bounds = Screen.PrimaryScreen.Bounds;
+            lblUsername.Text = user;
 
-            a =  new LogIn(this);
         }
 
        
@@ -135,25 +136,8 @@ namespace Tick
             FillContentPanel(ct);
         }
 
-        private void btnLogIn_Click(object sender, EventArgs e)
-        {
-            
-            
-            a.Show();
-           
-        }
+     
 
-        //private void Menu_Shown(object sender, EventArgs e)
-        //{
-        //    if (a.logInSuccess)
-        //    {
-        //        btnTimeTracking.Enabled = true;
-        //        btnTasks.Enabled = true;
-        //        btnExpensesTracking.Enabled = true;
-        //        btnCategory.Enabled = true;
-        //        btnTimeCharts.Enabled = true;
-        //        btnExpensesChart.Enabled = true;
-        //    }
-        //}
+   
     }
 }
