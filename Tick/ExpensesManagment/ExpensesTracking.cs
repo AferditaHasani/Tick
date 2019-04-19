@@ -20,6 +20,7 @@ namespace Tick.ExpensesManagment
         {
             OpenTransaction();
             ddlCategory.Items.Clear();
+            
             ddlCategory.Items.Add("Rent");
             ddlCategory.Items.Add("Salary");
             ddlCategory.Items.Add("Shopping");
