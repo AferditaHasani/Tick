@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tick.BO
 {
-    class Task:Base
+   public class Task:Base
     {
         public int TaskID { get; set; }
         public string Name { get; set; }

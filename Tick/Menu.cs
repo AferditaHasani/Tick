@@ -14,12 +14,30 @@ namespace Tick
 {
     public partial class Menu : Telerik.WinControls.UI.RadForm
     {
+        private LogIn a ;
+       
         public Menu()
         {
             InitializeComponent();
             this.Bounds = Screen.PrimaryScreen.Bounds;
+
+            btnTimeTracking.Enabled = false;
+            btnTasks.Enabled = false;
+            btnExpensesTracking.Enabled = false;
+            btnCategory.Enabled = false;
+            btnTimeCharts.Enabled = false;
+            btnExpensesChart.Enabled = false;
+
+
+            a =  new LogIn(this);
         }
-      
+
+       
+        ExpensesTracking et = new ExpensesTracking();
+        TimeTracking t = new TimeTracking();
+        Category ct = new Category();
+        private Tasks tsk = new Tasks();
+
         //Metoda e cila vendos nje vije para objektit i cili  e therret
         private void SeparatorClick(object sender)
         {
@@ -34,6 +52,31 @@ namespace Tick
             f.Parent = pnlContent;
             f.Dock = DockStyle.Fill;
             f.Show();
+
+            switch (f)
+            {
+                case ExpensesTracking _:
+                    t.Hide();
+                    ct.Hide();
+                    tsk.Hide();
+                    break;
+                case TimeTracking _:
+                    et.Hide();
+                    ct.Hide();
+                    tsk.Hide();
+                    break;
+                case Tasks _:
+                    et.Hide();
+                    ct.Hide();
+                    t.Hide();
+                    break;
+                case Category _:
+                    et.Hide();
+                    t.Hide();
+                    tsk.Hide();
+                    break;
+            }
+
         }
 
         private void btnMini_Click(object sender, EventArgs e)
@@ -51,7 +94,7 @@ namespace Tick
         private void btnTimeTracking_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
-            TimeTracking t = new TimeTracking();
+         
             FillContentPanel(t);
 
         }
@@ -59,7 +102,7 @@ namespace Tick
         private void btnExpensesTracking_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
-            ExpensesTracking et=new ExpensesTracking();
+          
             FillContentPanel(et);
         }
 
@@ -76,20 +119,41 @@ namespace Tick
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-            LogIn a = new LogIn();
-            a.Show();
+          
         }
 
         private void btnTasks_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
+            FillContentPanel(tsk);
         }
 
         private void btnCategory_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
-            Category ct = new Category();
+           
             FillContentPanel(ct);
         }
+
+        private void btnLogIn_Click(object sender, EventArgs e)
+        {
+            
+            
+            a.Show();
+           
+        }
+
+        //private void Menu_Shown(object sender, EventArgs e)
+        //{
+        //    if (a.logInSuccess)
+        //    {
+        //        btnTimeTracking.Enabled = true;
+        //        btnTasks.Enabled = true;
+        //        btnExpensesTracking.Enabled = true;
+        //        btnCategory.Enabled = true;
+        //        btnTimeCharts.Enabled = true;
+        //        btnExpensesChart.Enabled = true;
+        //    }
+        //}
     }
 }

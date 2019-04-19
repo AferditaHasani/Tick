@@ -18,7 +18,7 @@ namespace Tick.TimeManagement
 
         private void btnAddTimeTracking_Click(object sender, EventArgs e)
         {
-            string[] row = new string[] {  "Product 1", "1000" };
+            string[] row = new string[] { "Product 1", "1000" };
             dgvWorkUnits.Rows.Add(row);
             row = new string[] { "Product 2", "2000" };
             dgvWorkUnits.Rows.Add(row);
@@ -26,14 +26,23 @@ namespace Tick.TimeManagement
             dgvWorkUnits.Rows.Add(row);
             row = new string[] { "4", "Product 4", "4000" };
             dgvWorkUnits.Rows.Add(row);
+            if (pnlAddWorkUnit.Size!= new Size(328, 756))
+            {
+                pnlAddWorkUnit.Size = new Size(328, 756);
 
-          
+                dgvWorkUnits.Size = new Size(dgvWorkUnits.Width - 318, 683);
+                pnlAddWorkUnit.Location = new Point(dgvWorkUnits.Width + 2, 12);
 
-
+            }
+           
         }
 
-        private void ddTask_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
+            pnlAddWorkUnit.Size = new Size(10, 756);
+
+            dgvWorkUnits.Size = new Size(dgvWorkUnits.Width + 318, 683);
+            pnlAddWorkUnit.Location = new Point(dgvWorkUnits.Width + 2, 12);
 
         }
     }
