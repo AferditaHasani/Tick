@@ -413,7 +413,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(728, 788);
+            this.ClientSize = new System.Drawing.Size(744, 788);
             this.Controls.Add(this.pnlAddTask);
             this.Controls.Add(this.dgvTasks);
             this.Controls.Add(this.btnAddTask);

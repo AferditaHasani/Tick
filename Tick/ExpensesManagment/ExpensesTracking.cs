@@ -18,7 +18,13 @@ namespace Tick.ExpensesManagment
         }
         private void ExpensesTracking_Load(object sender, EventArgs e)
         {
-            OpenTransaction();
+            pnlAddTransaction.Visible = false;
+            dgvTransaction.Visible = true;
+            dgvTransaction.Size = new Size(708, 697);
+            expensesRow = new string[] { "", "Amount", "Category", "Description"};
+            dgvTransaction.Rows.Add(expensesRow);
+
+          //  OpenTransaction();
             ddlCategory.Items.Clear();
             
             ddlCategory.Items.Add("Rent");
@@ -29,30 +35,26 @@ namespace Tick.ExpensesManagment
         private void btnAddTransaction_Click(object sender, EventArgs e)
         {
             pnlAddTransaction.Visible = true;
-            pnlGridViewEx.Visible = true;
+            dgvTransaction.Size = new Size(680, 697);
 
-            pnlAddTransaction.Location = new Point(12, 80);
-            pnlGridViewEx.Location = new Point(12, 371);
+
 
         }
 
-        private void OpenTransaction()
-        {
-            pnlGridViewEx.Controls.Add(dgvTransaction);
-           
-            pnlGridViewEx.Visible = true;
-            pnlAddTransaction.Visible = false;
+        //private void OpenTransaction()
+        //{
 
-            pnlGridViewEx.Location = new Point(12, 80);
+        //    pnlAddTransaction.Visible = false;
 
-           
 
-           // FillGrid();
-        }
+
+
+        //   // FillGrid();
+        //}
 
         //private void FillGrid()
         //{
-            
+
         //    string[] expensesRow = new string[] { "Product 1", "1000", "1", "1" };
         //    dgvTransaction.Rows.Add(expensesRow);
 
@@ -62,7 +64,7 @@ namespace Tick.ExpensesManagment
         //    dgvTransaction.Rows.Add(expensesRow);
         //    expensesRow = new string[] { "4", "Product 4", "4000", "1", "1" };
         //    dgvTransaction.Rows.Add(expensesRow);
-         
+
 
         //    expensesRow = new string[] { "Product 2", "2000", "1", "1" };
         //    dgvTransaction.Rows.Add(expensesRow);
@@ -70,8 +72,8 @@ namespace Tick.ExpensesManagment
         //    dgvTransaction.Rows.Add(expensesRow);
         //    expensesRow = new string[] { "4", "Product 4", "4000", "1", "1" };
         //    dgvTransaction.Rows.Add(expensesRow);
-           
-            
+
+
         //}
 
         private void btnAddT_Click(object sender, EventArgs e)
@@ -104,6 +106,27 @@ namespace Tick.ExpensesManagment
         {
             txtAmount.Text = "";
             txtDescription.Text = "";
+        }
+
+      
+
+       
+
+        private void btnSaveTransaction_Click(object sender, EventArgs e)
+        {
+            expensesRow = new string[] { "", txtAmount.Text, ddlCategory.SelectedItem.ToString(), txtDescription.Text };
+            dgvTransaction.Rows.Add(expensesRow);
+
+            Clear();
+
+        }
+
+        private void btnCancelTransaction_Click(object sender, EventArgs e)
+        {
+
+            pnlAddTransaction.Visible = false;
+
+            dgvTransaction.Size = new Size(817, 697);
         }
     }
 }

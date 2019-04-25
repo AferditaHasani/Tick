@@ -18,8 +18,25 @@ namespace Tick.ExpensesManagment
         {
             InitializeComponent();
         }
-      
-        private void btnAddC_Click(object sender, EventArgs e)
+
+
+        private void btnAddCategory_Click(object sender, EventArgs e)
+        {
+            pnlAddCategory.Visible = true;
+            dgvCategory.Size=new Size(680,697);
+
+           
+
+        }
+        private void btnCancelCategory_Click(object sender, EventArgs e)
+        {
+            pnlAddCategory.Visible = false;
+
+            dgvCategory.Size = new Size(817, 697);
+         
+
+        }
+        private void btnSaveCategory_Click(object sender, EventArgs e)
         {
             if (cbxExpense.Checked == true)
             {
@@ -31,12 +48,13 @@ namespace Tick.ExpensesManagment
             }
 
 
-            categoryRow = new string[] { txtName.Text, text };
-         
+            categoryRow = new string[] {"", txtName.Text, text };
+
             dgvCategory.Rows.Add(categoryRow);
 
             Clear();
         }
+
 
         public void Clear()
         {
@@ -77,48 +95,51 @@ namespace Tick.ExpensesManagment
 
 
 
-        private void OpenCategory()
-        {
-            pnlAddCategory.Visible = false;
-            pnlGridViewCategory.Controls.Add(dgvCategory);
+        //private void OpenCategory()
+        //{
+        //    pnlAddCategory.Visible = false;
+        // //   pnlGridViewCategory.Controls.Add(dgvCategory);
 
-            pnlGridViewCategory.Visible = true;
-            pnlAddCategory.Visible = false;
+        //   // pnlGridViewCategory.Visible = true;
+        //    pnlAddCategory.Visible = false;
 
-            pnlGridViewCategory.Location = new Point(12, 80);
+        //   // pnlGridViewCategory.Location = new Point(12, 80);
 
 
 
-            FillGrid();
-        }
+        //    //FillGrid();
+        //}
 
-        private void FillGrid()
-        {
+        //private void FillGrid()
+        //{
 
-            //  string[] categoryRow = new string[] { "Product 1", "1000"};
-            // dgvCategory.Rows.Add(categoryRow);
+        //    //  string[] categoryRow = new string[] { "Product 1", "1000"};
+        //    // dgvCategory.Rows.Add(categoryRow);
 
-            categoryRow = new string[] { "Salary", "Income" };
-            dgvCategory.Rows.Add(categoryRow);
-            categoryRow = new string[] { "Rent", "Expense" };
-            dgvCategory.Rows.Add(categoryRow);
-            categoryRow = new string[] { "Shopping", "Expense" };
-            dgvCategory.Rows.Add(categoryRow);
+        //    categoryRow = new string[] { "Salary", "Income" };
+        //    dgvCategory.Rows.Add(categoryRow);
+        //    categoryRow = new string[] { "Rent", "Expense" };
+        //    dgvCategory.Rows.Add(categoryRow);
+        //    categoryRow = new string[] { "Shopping", "Expense" };
+        //    dgvCategory.Rows.Add(categoryRow);
 
-        }
+        //}
 
-        private void btnAddCategory_Click(object sender, EventArgs e)
-        {
-            pnlAddCategory.Visible = true;
-            pnlGridViewCategory.Visible = true;
-
-            pnlAddCategory.Location = new Point(12, 80);
-            pnlGridViewCategory.Location = new Point(12, 320);
-        }
 
         private void Category_Load(object sender, EventArgs e)
         {
-            OpenCategory();
+           // OpenCategory();
+           pnlAddCategory.Visible = false;
+           dgvCategory.Visible = true;
+           dgvCategory.Size = new Size(708, 697);
+            categoryRow = new string[] { "","Name", "IsExpense" };
+            dgvCategory.Rows.Add(categoryRow);
+
         }
+
+
+
+
+
     }
 }
