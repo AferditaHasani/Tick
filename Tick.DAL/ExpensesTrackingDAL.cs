@@ -18,20 +18,20 @@ namespace Tick.DAL
             {
                 using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
                 {
-                    String sql = "dbo.usp_ExpensesTracking_Insert";
+                    String sql = "dbo.usp_ETracking_Insert";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.Add("@prmAmound", SqlDbType.VarChar).Value = model.Amount;
+                        command.Parameters.Add("@prmCategory", SqlDbType.VarChar).Value = model.CategoryID;
                         command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = model.Description;
-                        command.Parameters.Add("@prmInsBy", SqlDbType.VarChar).Value = 1;
-                        command.Parameters.Add("@prmRole", SqlDbType.VarChar).Value = 2;
+                        command.Parameters.Add("@prmInsBy", SqlDbType.Int).Value = model.InsertBy;
 
 
 
-                        model.ETrackingID = command.ExecuteNonQuery();
-                        return model.ETrackingID > 0;
+                        var result = command.ExecuteNonQuery();
+                        return result >= 0;
                     }
                 }
             }
@@ -41,27 +41,57 @@ namespace Tick.DAL
                 return false;
             }
         }
-        public bool GetTransaction(ExpensesTracking model)
+
+        public DataTable GetAll()
         {
             try
             {
                 using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
                 {
-                    String sql = "dbo.usp_Transaction_Get";
+                    String sql = "dbo.usp_ETracking_GetAll";
+                    using (SqlCommand command = new SqlCommand(sql, conn))
+                    {
+                        conn.Open();
+
+
+
+                        SqlDataAdapter sqlDataAdap = new SqlDataAdapter(command);
+
+                        DataTable dtRecord = new DataTable();
+                        sqlDataAdap.Fill(dtRecord);
+
+
+                        return dtRecord;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
+            }
+        }
+
+        public bool Update(ExpensesTracking model)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                {
+                    String sql = "dbo.usp_ETracking_Update";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
-
-                        command.Parameters.Add("@prmAmount", SqlDbType.VarChar).Value = model.Amount;
+                        command.Parameters.Add("@prmAmound", SqlDbType.VarChar).Value = model.Amount;
+                        command.Parameters.Add("@prmCategory", SqlDbType.VarChar).Value = model.CategoryID;
                         command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = model.Description;
+                        command.Parameters.Add("@prmLUB", SqlDbType.Int).Value = 1;
 
-                        int count = 0;
-                        foreach (var item in command.ExecuteReader())
-                        {
-                            count++;
-                        }
-                        return count >= 1;
+
+
+                        var result = command.ExecuteNonQuery();
+                        return result >= 0;
                     }
                 }
             }
@@ -71,5 +101,34 @@ namespace Tick.DAL
                 return false;
             }
         }
+
+        public bool Delete(ExpensesTracking model)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                {
+                    String sql = "dbo.usp_ETracking_Delete";
+                    using (SqlCommand command = new SqlCommand(sql, conn))
+                    {
+                        conn.Open();
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add("@prmETrackingID", SqlDbType.Int).Value = model.ETrackingID;
+
+
+
+
+                        var result = command.ExecuteNonQuery();
+                        return result >= 0;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return false;
+            }
+        }
+
     }
 }
