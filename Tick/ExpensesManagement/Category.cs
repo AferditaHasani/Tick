@@ -56,9 +56,7 @@ namespace Tick.ExpensesManagement
 
             Clear();
         }
-
-
-
+        
         public void Clear()
         {
             txtName.Text = "";
@@ -96,8 +94,7 @@ namespace Tick.ExpensesManagement
                 cbxExpense.Checked = false;
            
         }
-
-
+        
         public void DisplayToDGrid()
         {
             try
@@ -213,8 +210,9 @@ namespace Tick.ExpensesManagement
                 DataGridViewRow row = this.dgvCategory.Rows[e.RowIndex];
                 cat.CategoryID = int.Parse(row.Cells["CategoryID"].Value.ToString());
                 cat.Name = row.Cells["Name"].Value.ToString();
+                txtName.Text = cat.Name;
                
-             
+
                 cat.IsExpenses =(bool)row.Cells["IsExpenses"].Value;
             }
 

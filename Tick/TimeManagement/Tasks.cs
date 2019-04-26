@@ -234,6 +234,7 @@ namespace Tick.TimeManagement
 
                 dgvTasks.Size = new Size(dgvTasks.Width - 258, 683);
                 pnlAddTask.Location = new Point(dgvTasks.Width + 2, 12);
+                pnlAddTask.BorderStyle =BorderStyle.FixedSingle;
 
             }
         }
@@ -245,6 +246,7 @@ namespace Tick.TimeManagement
             dgvTasks.Size = new Size(dgvTasks.Width + 258, 683);
             pnlAddTask.Location = new Point(dgvTasks.Width + 2, 12);
             tsk = new Task();
+            pnlAddTask.BorderStyle = BorderStyle.None; 
         }
 
         private void btnDeleteTask_Click(object sender, EventArgs e)
