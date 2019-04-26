@@ -16,15 +16,12 @@ namespace Tick.ExpensesManagement
             pnlAddTransaction.Visible = false;
             dgvTransaction.Visible = true;
             dgvTransaction.Size = new Size(708, 697);
-            expensesRow = new string[] { "", "Amount", "Category", "Description"};
-            dgvTransaction.Rows.Add(expensesRow);
+
+   
 
           //  OpenTransaction();
-            ddlCategory.Items.Clear();
-            
-            ddlCategory.Items.Add("Rent");
-            ddlCategory.Items.Add("Salary");
-            ddlCategory.Items.Add("Shopping");
+          
+           
         }
 
         private void btnAddTransaction_Click(object sender, EventArgs e)

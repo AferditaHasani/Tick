@@ -26,7 +26,7 @@ namespace Tick.DAL
                         command.Parameters.Add("@prmAmound", SqlDbType.VarChar).Value = model.Amount;
                         command.Parameters.Add("@prmCategory", SqlDbType.VarChar).Value = model.CategoryID;
                         command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = model.Description;
-                        command.Parameters.Add("@prmInsBy", SqlDbType.Int).Value = model.InsertBy;
+                        command.Parameters.Add("@prmInsBy", SqlDbType.Int).Value = 1;
 
 
 
