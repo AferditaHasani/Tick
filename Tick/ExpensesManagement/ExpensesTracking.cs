@@ -27,7 +27,6 @@ namespace Tick.ExpensesManagement
 
 
 
-            //  OpenTransaction();
 
 
         }
@@ -142,10 +141,9 @@ namespace Tick.ExpensesManagement
                     return;
                 }
 
-
-                // tsk.Name = txtTaskName.Text;
-                // tsk.Description = rtxtTaskDescription.Text;
-                //tsk.Color = $"{color[0]},{color[1]},{color[2]},{color[3]}";
+                transaction.Amount = decimal.Parse(txtAmount.Text);
+                transaction.CategoryID = (int)ddlCategory.SelectedValue;
+                transaction.Description = txtDescription.Text;
                 var saved = eTracking_service.Update(transaction);
 
                 MessageBox.Show(saved ? "Updated Successfully" : "Updating failed , please try again");
@@ -218,13 +216,13 @@ namespace Tick.ExpensesManagement
         {
             Delete();
             transaction = null;
-            //DisplayToDGrid();
+            DisplayToDGrid();
         }
 
         private void dgvTransaction_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             transaction = new BO.ExpensesTracking();
-           // OpenAddTaskPannel();
+         
             if (e.RowIndex >= 0)
             {
 
@@ -243,7 +241,7 @@ namespace Tick.ExpensesManagement
         {
 
             transaction = new BO.ExpensesTracking();
-          //  OpenAddTaskPannel();
+        
             if (e.RowIndex >= 0)
             {
 

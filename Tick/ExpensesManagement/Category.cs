@@ -9,6 +9,7 @@ namespace Tick.ExpensesManagement
     public partial class Category : Telerik.WinControls.UI.RadForm
     {
         bool isExpense=true;
+        private string text;
      
         private CategoryBLL categoryBLL_service = new CategoryBLL();
         BO.Category cat= new BO.Category();
@@ -16,9 +17,7 @@ namespace Tick.ExpensesManagement
         public Category()
         {
             InitializeComponent();
-        
         }
-
 
         private void btnAddCategory_Click(object sender, EventArgs e)
         {
@@ -26,7 +25,6 @@ namespace Tick.ExpensesManagement
             dgvCategory.Size=new Size(680,697);
 
             cat = null;
-
         }
         private void btnCancelCategory_Click(object sender, EventArgs e)
         {
@@ -41,10 +39,12 @@ namespace Tick.ExpensesManagement
             if (cbxExpense.Checked == true)
             {
                 isExpense = true;
+                text = "Expense";
             }
             else
             {
                 isExpense = false;
+                text = "Income";
             }
             if (cat == null)
                 Save();
@@ -192,18 +192,14 @@ namespace Tick.ExpensesManagement
             }
         }
 
-
-
-
-
         private void Category_Load(object sender, EventArgs e)
         {
-            // OpenCategory();
+     
             DisplayToDGrid();
             pnlAddCategory.Visible = false;
            dgvCategory.Visible = true;
            dgvCategory.Size = new Size(708, 697);
-         
+
         }
 
         private void dgvCategory_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -220,9 +216,6 @@ namespace Tick.ExpensesManagement
                
              
                 cat.IsExpenses =(bool)row.Cells["IsExpenses"].Value;
-
-
-
             }
 
         }
@@ -262,6 +255,12 @@ namespace Tick.ExpensesManagement
                 MessageBox.Show(e.Message);
             }
             cat = null;
+        }
+
+        private void btnDeleteCategory_Click(object sender, EventArgs e)
+        {
+            Delete();
+            DisplayToDGrid();
         }
     }
 }

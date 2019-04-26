@@ -115,8 +115,9 @@ namespace Tick.DAL
                     {
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add("@prmExpensesID", SqlDbType.Int).Value = model.ETrackingID;
                         command.Parameters.Add("@prmAmount", SqlDbType.VarChar).Value = model.Amount;
-                        command.Parameters.Add("@prmCategory", SqlDbType.VarChar).Value = model.CategoryID;
+                        command.Parameters.Add("@prmCategoryID", SqlDbType.VarChar).Value = model.CategoryID;
                         command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = model.Description;
                         command.Parameters.Add("@prmLUB", SqlDbType.Int).Value = 1;
 
