@@ -230,6 +230,34 @@ namespace Tick.TimeManagement
             tsk = new Task();
         }
 
-      
+        private void btnDeleteTask_Click(object sender, EventArgs e)
+        {
+            Delete();
+            DisplayToDGrid();
+            CloseAddTaskPannel();
+            ClearTxt();
+        }
+
+        private void Delete()
+        {
+            try
+            {
+
+                if (tsk == null)
+                {
+                    MessageBox.Show("No record to delete");
+                    return;
+                }
+               
+                var deleted = taskBLL_service.Delete(tsk);
+
+                MessageBox.Show(deleted ? "Deleted Successfully" : "Deleting failed , please try again");
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
     }
 }

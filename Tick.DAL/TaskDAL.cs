@@ -80,7 +80,6 @@ namespace Tick.DAL
                     String sql = "dbo.usp_Task_Update";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
-                        MessageBox.Show($"ID {model.TaskID}   {model.Name}   {model.Description} {model.Color} ");
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.Add("@prmTasID", SqlDbType.Int).Value = model.TaskID;
@@ -102,5 +101,36 @@ namespace Tick.DAL
                 return false;
             }
         }
+
+        public bool Delete(Task model)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                {
+                    String sql = "dbo.usp_Task_Delete";
+                    using (SqlCommand command = new SqlCommand(sql, conn))
+                    {
+                        conn.Open();
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add("@prmTasID", SqlDbType.Int).Value = model.TaskID;
+                    
+
+
+
+                        var result = command.ExecuteNonQuery();
+                        return result >= 0;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return false;
+            }
+        }
+
+
+
     }
 }

@@ -32,5 +32,9 @@ namespace Tick.BLL
         {
             return taskDAL_db.Update(tsk);
         }
+        public bool Delete(Task tsk)
+        {
+            return taskDAL_db.Delete(tsk);
+        }
     }
 }
