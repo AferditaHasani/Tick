@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using Tick.DAL;
 using Tick.BO;
 
@@ -22,9 +23,16 @@ namespace Tick.BLL
             return categoryDAL_db.Add(category);
         }
 
-        public bool GetCategory(Category category)
+        public DataTable GetAll()
         {
-            return categoryDAL_db.GetCategory(category);
+            return categoryDAL_db.GetAll();
         }
+
+        public bool Update(Category category)
+        {
+            return categoryDAL_db.Update(category);
+        }
+
+
     }
 }

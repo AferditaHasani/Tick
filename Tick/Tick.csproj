@@ -112,16 +112,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExpensesManagment\Category.cs">
+    <Compile Include="ExpensesManagement\Category.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExpensesManagment\Category.Designer.cs">
+    <Compile Include="ExpensesManagement\Category.Designer.cs">
       <DependentUpon>Category.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExpensesManagment\ExpensesTracking.cs">
+    <Compile Include="ExpensesManagement\ExpensesTracking.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ExpensesManagment\ExpensesTracking.Designer.cs">
+    <Compile Include="ExpensesManagement\ExpensesTracking.Designer.cs">
       <DependentUpon>ExpensesTracking.cs</DependentUpon>
     </Compile>
     <Compile Include="LogIn.cs">
@@ -142,10 +142,10 @@
     <Compile Include="TimeManagement\TimeTracking.Designer.cs">
       <DependentUpon>TimeTracking.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ExpensesManagment\Category.resx">
+    <EmbeddedResource Include="ExpensesManagement\Category.resx">
       <DependentUpon>Category.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ExpensesManagment\ExpensesTracking.resx">
+    <EmbeddedResource Include="ExpensesManagement\ExpensesTracking.resx">
       <DependentUpon>ExpensesTracking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">

@@ -436,6 +436,8 @@
             this.dgvCategory.RowTemplate.Height = 60;
             this.dgvCategory.Size = new System.Drawing.Size(817, 697);
             this.dgvCategory.TabIndex = 3;
+            this.dgvCategory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategory_CellContentClick);
+            this.dgvCategory.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCategory_RowHeaderMouseClick);
             // 
             // ID
             // 
@@ -460,14 +462,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(752, 788);
+            this.ClientSize = new System.Drawing.Size(760, 788);
             this.Controls.Add(this.dgvCategory);
             this.Controls.Add(this.pnlAddCategory);
             this.Controls.Add(this.btnAddCategory);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-      
+            this.Name = "Category";
             // 
             // 
             // 
