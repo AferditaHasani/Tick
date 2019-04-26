@@ -11,24 +11,26 @@ using Tick.BO;
 
 namespace Tick.DAL
 {
-   public class TimeTrackingDAL
+    public class TimeTrackingDAL
     {
         public bool Add(BO.TimeTracking model)
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                using (SqlConnection conn = new SqlConnection(
+                    @"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
+                )
                 {
                     String sql = "dbo.usp_TimeTracking_Insert";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
-                        //command.Parameters.Add("@prmName", SqlDbType.VarChar).Value = model.Name;
+                        command.Parameters.Add("@prmTaskID", SqlDbType.Int).Value = model.TaskID;
                         command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = model.Description;
-                       // command.Parameters.Add("@prmColor", SqlDbType.VarChar).Value = model.Color;
-                        command.Parameters.Add("@prmInsBy", SqlDbType.Int).Value = model.InsertBy;
-
+                        command.Parameters.Add("@prmDate", SqlDbType.DateTime).Value = model.Date;
+                        command.Parameters.Add("@prmStartTime", SqlDbType.Time).Value = model.StartTime;
+                        command.Parameters.Add("@prmEndTime", SqlDbType.Time).Value = model.EndTime;
 
 
                         var result = command.ExecuteNonQuery();
@@ -47,9 +49,11 @@ namespace Tick.DAL
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                using (SqlConnection conn = new SqlConnection(
+                    @"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
+                )
                 {
-                    String sql = "dbo.usp_TimeTracking_GetAll";
+                    String sql = "dbo.usp_TimeTrackin_GetAll";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         conn.Open();
@@ -77,19 +81,23 @@ namespace Tick.DAL
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                using (SqlConnection conn = new SqlConnection(
+                    @"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
+                )
                 {
                     String sql = "dbo.usp_TimeTracking_Update";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.Add("@prmTasID", SqlDbType.Int).Value = model.TaskID;
-                       // command.Parameters.Add("@prmName", SqlDbType.VarChar).Value = model.Name;
-                        command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = model.Description;
-                     //   command.Parameters.Add("@prmColor", SqlDbType.VarChar).Value = model.Color;
-                        command.Parameters.Add("@prmLUB", SqlDbType.Int).Value = 1;
 
+                        command.Parameters.Add("@prmTTrackingID", SqlDbType.Int).Value = model.TTrackingID;
+
+                        command.Parameters.Add("@prmTaskID", SqlDbType.Int).Value = model.TaskID;
+                        command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = model.Description;
+                        command.Parameters.Add("@prmDate", SqlDbType.DateTime).Value = model.Date;
+                        command.Parameters.Add("@prmStartTime", SqlDbType.VarChar).Value = model.StartTime;
+                        command.Parameters.Add("@prmEndTime", SqlDbType.VarChar).Value = model.EndTime;
 
 
                         var result = command.ExecuteNonQuery();
@@ -108,14 +116,16 @@ namespace Tick.DAL
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                using (SqlConnection conn = new SqlConnection(
+                    @"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
+                )
                 {
-                    String sql = "dbo.usp_TimeTracking_Delete";
+                    String sql = "dbo.usp_TimeTrackin_Delete";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.Add("@prmTasID", SqlDbType.Int).Value = model.TaskID;
+                        command.Parameters.Add("@prmTTID", SqlDbType.Int).Value = model.TTrackingID;
 
 
 
@@ -132,5 +142,38 @@ namespace Tick.DAL
             }
         }
 
+        public DataTable GetComboBox()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(
+                    @"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
+                )
+                {
+                    String sql = "dbo.usp_Task_GetComboBox";
+                    using (SqlCommand command = new SqlCommand(sql, conn))
+                    {
+                        conn.Open();
+
+
+                        SqlDataReader reader;
+
+                        reader = command.ExecuteReader();
+                        DataTable dt = new DataTable();
+                        dt.Columns.Add("TaskID", typeof(int));
+                        dt.Columns.Add("Name", typeof(string));
+                        dt.Load(reader);
+
+
+                        return dt;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
+            }
+        }
     }
 }

@@ -38,9 +38,8 @@ namespace Tick
             if (userBLL.GetLogIn(user))
             {
                 menu = new Menu(user.Name);
-                this.Hide();
+                this.Close();
 
-                menu.Closed += (s, args) => this.Close();
                 menu.Show();
 
             }

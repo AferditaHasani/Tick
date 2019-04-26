@@ -35,7 +35,7 @@ namespace Tick.TimeManagement
         }
         private void ClearTxt()
         {
-            //cbTaskColor.Value = new Color();
+            
             ddTask.Text = "";
             rtxtTimeDescription.Text = "";
             ddStartHour.Text = "";
@@ -69,7 +69,7 @@ namespace Tick.TimeManagement
                 }
 
 
-               // time.TaskID=txtTaskName.Text;
+                time.TaskID = (int)ddTask.SelectedValue;
                 time.Description = rtxtTimeDescription.Text;
                 time.Date = dpTimeTrackingDate.Value;
                 time.StartTime = ddStartHour.Text+":"+ddStartMinute.Text;
@@ -85,16 +85,22 @@ namespace Tick.TimeManagement
                 MessageBox.Show(e.Message);
             }
         }
+        public void FillCombo()
+        {
 
+            ddTask.ValueMember = "CategoryID";
+            ddTask.DisplayMember = "Name";
+            ddTask.DataSource = timeBLL_service.GetComboBox();
+        }
         public void DisplayToDGrid()
         {
             try
             {
-               // dgvTime.Refresh();
+                dgvWorkUnits.Refresh();
                 DataTable t = timeBLL_service.GetAll();
                 if (t != null)
                 {
-                   // dgvTasks.DataSource = t;
+                   dgvWorkUnits.DataSource = t;
                 }
                 else
                 {
@@ -139,11 +145,12 @@ namespace Tick.TimeManagement
                 BO.TimeTracking t = new BO.TimeTracking
                 {
 
-                    //Name = txtTaskName.Text,
-                    //Description = rtxtTaskDescription.Text,
-                    //Color = $"{color[0]},{color[1]},{color[2]},{color[3]}",
-                    //InsertBy = 1,
-                    //InsertDate = DateTime.Now
+                   TaskID=(int) ddTask.SelectedValue ,
+                  Description=  rtxtTimeDescription.Text,
+                  StartTime = ddStartHour.Text + ":" + ddStartMinute.Text,
+                  EndTime = ddEndHour.Text + ":" + ddEndMinute.Text,
+                   InsertBy = 1,
+                    InsertDate = DateTime.Now
 
 
                 };
@@ -162,17 +169,26 @@ namespace Tick.TimeManagement
             if (e.RowIndex >= 0)
             {
 
-                //DataGridViewRow row = this.dgvWorkUnits.Rows[e.RowIndex];
-                //time.TaskID = int.Parse(row.Cells["TaskID"].Value.ToString());
-                //time.Name = row.Cells["Name"].Value.ToString();
-                //time.Description = row.Cells["Description"].Value.ToString();
+                DataGridViewRow row = this.dgvWorkUnits.Rows[e.RowIndex];
+                time.TTrackingID = int.Parse(row.Cells["TTrackingID"].Value.ToString());
+                time.TaskID = int.Parse(row.Cells["TaskID"].Value.ToString());
                
-                //txtTaskName.Text = tsk.Name;
-                //rtxtTaskDescription.Text = tsk.Description;
-              
+                time.Description = row.Cells["Description"].Value.ToString();
+              //  time.Date = new  DateTime(row.Cells["Date"].Value.ToString());
+                time.StartTime= row.Cells["StartTime"].Value.ToString();
+                time.EndTime = row.Cells["EndTime"].Value.ToString();
+
+                ddTask.SelectedValue = time.TaskID;
+                rtxtTimeDescription.Text = time.Description;
+                string[] tt = time.StartTime.Split(':');
+                ddStartHour.Text = tt[0];
+                ddStartMinute.Text = tt[1];
+
+                tt = time.EndTime.Split(':');
+                ddEndHour.Text = tt[0];
+                ddEndMinute.Text = tt[1];
 
 
-              
             }
         }
         private void dgvdgvWorkUnits_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -183,13 +199,22 @@ namespace Tick.TimeManagement
             {
 
                 DataGridViewRow row = this.dgvWorkUnits.Rows[e.RowIndex];
-                //time.TaskID = int.Parse(row.Cells["TaskID"].Value.ToString());
-               
-                //time.Description = row.Cells["Description"].Value.ToString();
-             
-                //txtTaskName.Text = time.Name;
-                //rtxtTaskDescription.Text = time.Description;
-               }
+                time.TaskID = int.Parse(row.Cells["TaskID"].Value.ToString());
+
+                time.Description = row.Cells["Description"].Value.ToString();
+                time.StartTime = row.Cells["StartTime"].Value.ToString();
+                time.EndTime = row.Cells["EndTime"].Value.ToString();
+
+                ddTask.SelectedValue = time.TaskID;
+                rtxtTimeDescription.Text = time.Description;
+                string[] tt = time.StartTime.Split(':');
+                ddStartHour.Text = tt[0];
+                ddStartMinute.Text = tt[1];
+
+                tt = time.EndTime.Split(':');
+                ddEndHour.Text = tt[0];
+                ddEndMinute.Text = tt[1];
+            }
         }
 
         private void OpenAddTimePannel()
@@ -236,6 +261,15 @@ namespace Tick.TimeManagement
         }
         private void TimeTracking_Load(object sender, EventArgs e)
         {
+            DisplayToDGrid();
+            FillCombo();
+       
+        }
+
+        private void btnDeleteTimeTracking_Click(object sender, EventArgs e)
+        {
+          
+            Delete();
             DisplayToDGrid();
         }
     }

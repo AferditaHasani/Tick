@@ -37,5 +37,9 @@ namespace Tick.BLL
         {
             return timeDAL_db.Delete(model);
         }
+        public DataTable GetComboBox()
+        {
+            return timeDAL_db.GetComboBox();
+        }
     }
 }
