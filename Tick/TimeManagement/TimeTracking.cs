@@ -36,9 +36,12 @@ namespace Tick.TimeManagement
         private void ClearTxt()
         {
             //cbTaskColor.Value = new Color();
-            //cbTaskColor.Text = "";
-            //rtxtTaskDescription.Text = "";
-            //txtTaskName.Text = "";
+            ddTask.Text = "";
+            rtxtTimeDescription.Text = "";
+            ddStartHour.Text = "";
+            ddStartMinute.Text = "";
+            ddEndHour.Text = "";
+            ddEndMinute.Text = "";
         }
 
         private void btnSaveTimeTracking_Click(object sender, EventArgs e)
@@ -64,11 +67,14 @@ namespace Tick.TimeManagement
                     MessageBox.Show("Error");
                     return;
                 }
-               
 
-               // tsk.Name = txtTaskName.Text;
-               // tsk.Description = rtxtTaskDescription.Text;
-                //tsk.Color = $"{color[0]},{color[1]},{color[2]},{color[3]}";
+
+               // time.TaskID=txtTaskName.Text;
+                time.Description = rtxtTimeDescription.Text;
+                time.Date = dpTimeTrackingDate.Value;
+                time.StartTime = ddStartHour.Text+":"+ddStartMinute.Text;
+                time.StartTime=ddEndHour.Text + ":"+ddEndMinute.Text ;
+
                 var saved = timeBLL_service.Update(time);
 
                 MessageBox.Show(saved ? "Updated Successfully" : "Updating failed , please try again");
