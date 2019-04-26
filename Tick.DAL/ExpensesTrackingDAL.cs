@@ -18,15 +18,16 @@ namespace Tick.DAL
             {
                 using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
                 {
-                    String sql = "dbo.usp_ETracking_Insert";
+                    String sql = "dbo.usp_ExpensesTracking_Insert";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.Add("@prmAmound", SqlDbType.VarChar).Value = model.Amount;
-                        command.Parameters.Add("@prmCategory", SqlDbType.VarChar).Value = model.CategoryID;
+                        command.Parameters.Add("@prmUserID", SqlDbType.Int).Value = 1;
+                        command.Parameters.Add("@prmAmount", SqlDbType.VarChar).Value = model.Amount;
+                        command.Parameters.Add("@prmCategoryID", SqlDbType.VarChar).Value = model.CategoryID;
                         command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = model.Description;
-                        command.Parameters.Add("@prmInsBy", SqlDbType.Int).Value = 1;
+                        command.Parameters.Add("@prmInsertBy", SqlDbType.Int).Value = 1;
 
 
 
@@ -114,7 +115,7 @@ namespace Tick.DAL
                     {
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.Add("@prmAmound", SqlDbType.VarChar).Value = model.Amount;
+                        command.Parameters.Add("@prmAmount", SqlDbType.VarChar).Value = model.Amount;
                         command.Parameters.Add("@prmCategory", SqlDbType.VarChar).Value = model.CategoryID;
                         command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = model.Description;
                         command.Parameters.Add("@prmLUB", SqlDbType.Int).Value = 1;

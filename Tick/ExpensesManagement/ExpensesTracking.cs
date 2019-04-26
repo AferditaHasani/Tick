@@ -37,19 +37,11 @@ namespace Tick.ExpensesManagement
             pnlAddTransaction.Visible = true;
             dgvTransaction.Size = new Size(680, 697);
 
-
+            transaction = null;
 
         }
+        
 
-     
-
-        private void btnAddT_Click(object sender, EventArgs e)
-        {
-       
-
-            Clear();
-           // OpenTransaction();
-        }
 
         private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -108,7 +100,7 @@ namespace Tick.ExpensesManagement
                     Description = txtDescription.Text,
                     CategoryID = (int)ddlCategory.SelectedValue
                 };
-                return transaction;
+                return expenses;
             }
             catch (Exception e)
             {
@@ -136,6 +128,7 @@ namespace Tick.ExpensesManagement
             DisplayToDGrid();
 
             Clear();
+            transaction = null;
 
         }
         private void Update()
@@ -167,11 +160,13 @@ namespace Tick.ExpensesManagement
         {
             try
             {
-                // dgvTime.Refresh();
+                 dgvTransaction.Refresh();
                 DataTable t = eTracking_service.GetAll();
                 if (t != null)
                 {
-                    // dgvTasks.DataSource = t;
+                    dgvTransaction.DataSource = t;
+                    dgvTransaction.Columns["Amount"].DefaultCellStyle.Alignment =
+                        DataGridViewContentAlignment.MiddleRight;
                 }
                 else
                 {
@@ -194,6 +189,7 @@ namespace Tick.ExpensesManagement
             pnlAddTransaction.Visible = false;
 
             dgvTransaction.Size = new Size(817, 697);
+            transaction = null;
         }
 
         private void Delete()
@@ -221,6 +217,7 @@ namespace Tick.ExpensesManagement
         private void btnDeleteTransaction_Click(object sender, EventArgs e)
         {
             Delete();
+            transaction = null;
             //DisplayToDGrid();
         }
 
