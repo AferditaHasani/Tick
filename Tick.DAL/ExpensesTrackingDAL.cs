@@ -71,6 +71,37 @@ namespace Tick.DAL
                 return null;
             }
         }
+        public DataTable GetComboBox()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                {
+                    String sql = "dbo.usp_GetComboBox";
+                    using (SqlCommand command = new SqlCommand(sql, conn))
+                    {
+                        conn.Open();
+
+
+                        SqlDataReader reader;
+
+                        reader = command.ExecuteReader();
+                        DataTable dt = new DataTable();
+                        dt.Columns.Add("CategoryID", typeof(int));
+                        dt.Columns.Add("Name", typeof(string));
+                        dt.Load(reader);
+
+
+                        return dt;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
+            }
+        }
 
         public bool Update(ExpensesTracking model)
         {

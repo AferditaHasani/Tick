@@ -18,9 +18,9 @@ namespace Tick.BLL
             ETrackingDAL_db = new ExpensesTrackingDAL();
         }
 
-        public bool Insert(ExpensesTracking task)
+        public bool Insert(ExpensesTracking track)
         {
-            return ETrackingDAL_db.Add(task);
+            return ETrackingDAL_db.Add(track);
         }
 
         public DataTable GetAll()
@@ -35,6 +35,10 @@ namespace Tick.BLL
         public bool Delete(ExpensesTracking tsk)
         {
             return ETrackingDAL_db.Delete(tsk);
+        }
+        public DataTable GetComboBox()
+        {
+            return ETrackingDAL_db.GetComboBox();
         }
 
     }
