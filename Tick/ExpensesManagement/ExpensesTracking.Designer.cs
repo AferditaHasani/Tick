@@ -430,6 +430,7 @@
             this.dgvTransaction.RowTemplate.Height = 60;
             this.dgvTransaction.Size = new System.Drawing.Size(656, 675);
             this.dgvTransaction.TabIndex = 5;
+            this.dgvTransaction.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellContentClick);
             this.dgvTransaction.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellContentClick);
             this.dgvTransaction.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvTransaction_RowHeaderMouseClick);
             // 
