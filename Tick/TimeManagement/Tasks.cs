@@ -17,7 +17,7 @@ namespace Tick.TimeManagement
         public Tasks()
         {
             InitializeComponent();
-            DisplayToDGrid();
+           
         }
 
         private TaskBLL taskBLL_service = new TaskBLL ();
@@ -258,6 +258,11 @@ namespace Tick.TimeManagement
             {
                 MessageBox.Show(e.Message);
             }
+        }
+
+        private void Tasks_Load(object sender, EventArgs e)
+        {
+            DisplayToDGrid();
         }
     }
 }

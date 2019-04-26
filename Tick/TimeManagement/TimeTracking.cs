@@ -15,7 +15,7 @@ namespace Tick.TimeManagement
         public TimeTracking()
         {
             InitializeComponent();
-            DisplayToDGrid();
+       
         }
         private TimeTrackingBLL timeBLL_service = new TimeTrackingBLL();
         BO.TimeTracking time = new BO.TimeTracking();
@@ -208,5 +208,9 @@ namespace Tick.TimeManagement
             time = new BO.TimeTracking();
         }
 
+        private void TimeTracking_Load(object sender, EventArgs e)
+        {
+            DisplayToDGrid();
+        }
     }
 }

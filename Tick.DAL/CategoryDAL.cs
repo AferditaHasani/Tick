@@ -26,7 +26,7 @@ namespace Tick.DAL
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.Add("@prmName", SqlDbType.VarChar).Value = model.Name;
                         command.Parameters.Add("@prmIsExpenses", SqlDbType.VarChar).Value = model.IsExpenses;
-                        command.Parameters.Add("@prmInsBy", SqlDbType.VarChar).Value = 1;
+                        command.Parameters.Add("@prmInsertBy", SqlDbType.VarChar).Value = 1;
 
 
                         var result = command.ExecuteNonQuery();
