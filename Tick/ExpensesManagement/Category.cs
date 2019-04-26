@@ -1,21 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
-using Telerik.WinControls;
-using Tick.BO;
 using Tick.BLL;
 
-
-namespace Tick.ExpensesManagment
+namespace Tick.ExpensesManagement
 {
     public partial class Category : Telerik.WinControls.UI.RadForm
     {
         bool isExpense=true;
-       
         private string[] categoryRow;
         private CategoryBLL categoryBLL_service = new CategoryBLL();
         BO.Category cat= new BO.Category();
@@ -23,6 +16,7 @@ namespace Tick.ExpensesManagment
         public Category()
         {
             InitializeComponent();
+            DisplayToDGrid();
         }
 
 
@@ -52,14 +46,17 @@ namespace Tick.ExpensesManagment
             {
                 isExpense = false;
             }
+            if (cat == null)
+                Save();
+            else
+                Update();
 
 
-         categoryRow = new string[] {"", txtName.Text, isExpense.ToString() };
-
-         dgvCategory.Rows.Add(categoryRow);
+            DisplayToDGrid();
 
             Clear();
         }
+
 
 
         public void Clear()
@@ -139,6 +136,31 @@ namespace Tick.ExpensesManagment
                 var saved = categoryBLL_service.Insert(cat);
 
                 MessageBox.Show(saved ? "Saved Successfully" : "Saving failed , please try again");
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
+        private void Update()
+        {
+            try
+            {
+
+                if (cat == null)
+                {
+                    MessageBox.Show("Error");
+                    return;
+                }
+
+
+                cat.Name = txtName.Text;
+                cat.IsExpenses = isExpense;
+                var saved = categoryBLL_service.Update(cat);
+
+                MessageBox.Show(saved ? "Updated Successfully" : "Updating failed , please try again");
 
             }
             catch (Exception e)

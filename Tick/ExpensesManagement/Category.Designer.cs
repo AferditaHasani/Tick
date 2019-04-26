@@ -1,4 +1,4 @@
-﻿namespace Tick.ExpensesManagment
+﻿namespace Tick.ExpensesManagement
 {
     partial class Category
     {

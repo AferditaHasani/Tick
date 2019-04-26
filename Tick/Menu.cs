@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using Telerik.WinControls.Layouts;
-using Tick.ExpensesManagment;
+using Tick.ExpensesManagement;
 using Tick.TimeManagement;
 
 namespace Tick
