@@ -203,7 +203,7 @@ namespace Tick.ExpensesManagement
             pnlAddCategory.Visible = false;
            dgvCategory.Visible = true;
            dgvCategory.Size = new Size(708, 697);
-         
+
         }
 
         private void dgvCategory_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -262,6 +262,12 @@ namespace Tick.ExpensesManagement
                 MessageBox.Show(e.Message);
             }
             cat = null;
+        }
+
+        private void btnDeleteCategory_Click(object sender, EventArgs e)
+        {
+            Delete();
+            DisplayToDGrid();
         }
     }
 }

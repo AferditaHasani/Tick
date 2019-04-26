@@ -221,7 +221,7 @@ namespace Tick.ExpensesManagement
         private void btnDeleteTransaction_Click(object sender, EventArgs e)
         {
             Delete();
-            //DisplayToDGrid();
+            DisplayToDGrid();
         }
 
         private void dgvTransaction_CellContentClick(object sender, DataGridViewCellEventArgs e)
