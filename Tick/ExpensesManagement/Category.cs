@@ -25,7 +25,7 @@ namespace Tick.ExpensesManagement
             pnlAddCategory.Visible = true;
             dgvCategory.Size=new Size(680,697);
 
-           
+            cat = null;
 
         }
         private void btnCancelCategory_Click(object sender, EventArgs e)
@@ -64,6 +64,7 @@ namespace Tick.ExpensesManagement
             txtName.Text = "";
             cbxExpense.Checked = true;
             cbxIncome.Checked = false;
+            cat = null;
         }
 
         private void cbxExpense_OnChange(object sender, EventArgs e)
@@ -106,6 +107,7 @@ namespace Tick.ExpensesManagement
                 if (t != null)
                 {
                     dgvCategory.DataSource = t;
+                    
                 }
                 else
                 {
@@ -201,9 +203,7 @@ namespace Tick.ExpensesManagement
             pnlAddCategory.Visible = false;
            dgvCategory.Visible = true;
            dgvCategory.Size = new Size(708, 697);
-            categoryRow = new string[] { "","Name", "IsExpense" };
-            dgvCategory.Rows.Add(categoryRow);
-
+          
         }
 
         private void dgvCategory_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -260,6 +260,7 @@ namespace Tick.ExpensesManagement
             {
                 MessageBox.Show(e.Message);
             }
+            cat = null;
         }
     }
 }
