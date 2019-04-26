@@ -9,7 +9,7 @@ namespace Tick.ExpensesManagement
     public partial class Category : Telerik.WinControls.UI.RadForm
     {
         bool isExpense=true;
-        private string[] categoryRow;
+     
         private CategoryBLL categoryBLL_service = new CategoryBLL();
         BO.Category cat= new BO.Category();
 
@@ -203,7 +203,7 @@ namespace Tick.ExpensesManagement
             pnlAddCategory.Visible = false;
            dgvCategory.Visible = true;
            dgvCategory.Size = new Size(708, 697);
-          
+         
         }
 
         private void dgvCategory_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -217,6 +217,7 @@ namespace Tick.ExpensesManagement
                 DataGridViewRow row = this.dgvCategory.Rows[e.RowIndex];
                 cat.CategoryID = int.Parse(row.Cells["CategoryID"].Value.ToString());
                 cat.Name = row.Cells["Name"].Value.ToString();
+               
              
                 cat.IsExpenses =(bool)row.Cells["IsExpenses"].Value;
 
