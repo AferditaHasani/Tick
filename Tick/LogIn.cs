@@ -38,8 +38,10 @@ namespace Tick
             if (userBLL.GetLogIn(user))
             {
                 menu = new Menu(user.Name);
-                menu.Show();
                 this.Hide();
+
+                menu.Closed += (s, args) => this.Close();
+                menu.Show();
 
             }
             else
@@ -63,8 +65,8 @@ namespace Tick
             btnSignIn.Visible = true;
             btnLogIn.Visible = false;
 
-            pnlForSignIn.Location= new Point(70, 269);
-            pnlForLogIn.Location = new Point(70, 438);
+            pnlForSignIn.Location= new Point(79, 269);
+            pnlForLogIn.Location = new Point(79, 438);
             btnSignIn.Location = new Point(177, 649);
         }
 
@@ -90,7 +92,7 @@ namespace Tick
             btnSignIn.Visible = false;
             btnLogIn.Visible = true;
 
-            pnlForLogIn.Location = new Point(70, 263);
+            pnlForLogIn.Location = new Point(79, 313);
             btnLogIn.Location = new Point(187, 611);
         }
 
@@ -105,8 +107,10 @@ namespace Tick
             {
 
                 menu=new Menu(user.Name);
-                menu.Show();
                 this.Hide();
+              
+                menu.Closed += (s, args) => this.Close();
+                menu.Show();
             }
             else
             {

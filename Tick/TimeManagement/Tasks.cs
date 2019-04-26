@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Windows;
 using Telerik.WinControls;
 using Tick.BLL;
 using Tick.BO;
@@ -16,54 +17,95 @@ namespace Tick.TimeManagement
         public Tasks()
         {
             InitializeComponent();
+            DisplayToDGrid();
         }
 
         private TaskBLL taskBLL_service = new TaskBLL ();
-
-
-
-
+        Task tsk = new Task();
 
 
         private void btnAddTask_Click(object sender, EventArgs e)
         {
-            if (pnlAddTask.Size != new Size(328, 756))
-            {
-                pnlAddTask.Size = new Size(328, 756);
-
-                dgvTasks.Size = new Size(dgvTasks.Width - 318, 683);
-                pnlAddTask.Location = new Point(dgvTasks.Width + 2, 12);
-
-            }
+            OpenAddTaskPannel();
         }
         private void btnCancelTask_Click(object sender, EventArgs e)
         {
-            pnlAddTask.Size = new Size(10, 756);
-
-            dgvTasks.Size = new Size(dgvTasks.Width + 318, 683);
-            pnlAddTask.Location = new Point(dgvTasks.Width + 2, 12);
+            CloseAddTaskPannel();
         }
 
 
 
         private void btnSaveTask_Click(object sender, EventArgs e)
         {
-            Save();
+            if (tsk == null)
+                Save();
+            else
+                Update();
+
+            
+            DisplayToDGrid();
+            CloseAddTaskPannel();
         }
 
-
-        public void Save()
+        private void Update()
         {
             try
             {
-                var task = Get();
-                if (task == null)
+                
+                if (tsk == null)
                 {
                     MessageBox.Show("Error");
                     return;
                 }
 
-                var saved = taskBLL_service.Insert(task);
+                var saved = taskBLL_service.Update(tsk);
+
+                MessageBox.Show(saved ? "Updated Successfully" : "Updating failed , please try again");
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+      
+        public void DisplayToDGrid()
+        {
+            try
+            {
+                dgvTasks.Refresh();
+                DataTable t= taskBLL_service.GetAll();
+                if (t!=null)
+                {
+                    dgvTasks.DataSource = t;
+                }
+                else
+                {
+                    MessageBox.Show("No records");
+
+                }
+              
+            }
+            catch (Exception e)
+            {
+
+                MessageBox.Show(e.Message);
+            }
+          
+        }
+
+        public void Save()
+        {
+            try
+            {
+                tsk = Get();
+                if (tsk == null)
+                {
+                    MessageBox.Show("Error");
+                    return;
+                }
+
+                var saved = taskBLL_service.Insert(tsk);
 
                 MessageBox.Show(saved ? "Saved Successfully" : "Saving failed , please try again");
 
@@ -78,12 +120,13 @@ namespace Tick.TimeManagement
         {
             try
             {
+                int[] color = GetArgb(cbTaskColor.Value.ToString());
                Task task = new Task
                 {
                     
                     Name = txtTaskName.Text,
                     Description= rtxtTaskDescription.Text,
-                    Color=cbTaskColor.Text,
+                    Color=$"{color[0]},{color[1]},{color[2]},{color[3]}",
                     InsertBy = 1,
                     InsertDate = DateTime.Now
                   
@@ -95,6 +138,88 @@ namespace Tick.TimeManagement
             {
                 return null;
             }
+        }
+
+        private void dgvTasks_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            tsk = new Task();
+            OpenAddTaskPannel();
+            if (e.RowIndex>=0)
+            {
+               
+                DataGridViewRow row = this.dgvTasks.Rows[e.RowIndex];
+                tsk.TaskID =int.Parse( row.Cells["TaskID"].Value.ToString());
+                tsk.Name = row.Cells["Name"].Value.ToString();
+                tsk.Description= row.Cells["Description"].Value.ToString();
+                tsk.Color= row.Cells["Color"].Value.ToString();
+                txtTaskName.Text = tsk.Name;
+                rtxtTaskDescription.Text = tsk.Description;
+                string[] colors = tsk.Color.Split(',');
+
+
+                cbTaskColor.Value = Color.FromArgb(int.Parse(colors[0]), int.Parse(colors[1]), int.Parse(colors[2]), int.Parse(colors[3]));
+            }
+        }
+
+        
+
+        private void dgvTasks_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            tsk = new Task();
+            OpenAddTaskPannel();
+            if (e.RowIndex >= 0)
+            {
+
+                DataGridViewRow row = this.dgvTasks.Rows[e.RowIndex];
+                tsk.TaskID = int.Parse(row.Cells["TaskID"].Value.ToString());
+                tsk.Name = row.Cells["Name"].Value.ToString();
+                tsk.Description = row.Cells["Description"].Value.ToString();
+                tsk.Color = row.Cells["Color"].Value.ToString();
+                txtTaskName.Text = tsk.Name;
+                rtxtTaskDescription.Text = tsk.Description;
+                string[] colors = tsk.Color.Split(',');
+
+
+                cbTaskColor.Value = Color.FromArgb(int.Parse(colors[0]), int.Parse(colors[1]), int.Parse(colors[2]), int.Parse(colors[3]));
+            }
+        }
+
+
+        private int[] GetArgb(string color)
+        {
+            int[] result = new int[4];
+            string[] temp = color.Split('[');
+            temp = temp[1].Split(']');
+            temp = temp[0].Split(',');
+            for (int i = 0; i < temp.Length; i++)
+            {
+                string[] t = temp[i].Split('=');
+                result[i] = int.Parse(t[1]);
+            }
+
+            return result;
+        }
+
+        private void OpenAddTaskPannel()
+        {
+
+            if (pnlAddTask.Size != new Size(328, 756))
+            {
+                pnlAddTask.Size = new Size(328, 756);
+
+                dgvTasks.Size = new Size(dgvTasks.Width - 258, 683);
+                pnlAddTask.Location = new Point(dgvTasks.Width + 2, 12);
+
+            }
+        }
+
+        private void CloseAddTaskPannel()
+        {
+            pnlAddTask.Size = new Size(10, 756);
+
+            dgvTasks.Size = new Size(dgvTasks.Width + 258, 683);
+            pnlAddTask.Location = new Point(dgvTasks.Width + 2, 12);
+            tsk = new Task();
         }
     }
 }

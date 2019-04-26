@@ -30,15 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogIn));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties13 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.dragLogIn = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.dragpnlSide = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.pnlSide = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlLogInContent = new System.Windows.Forms.Panel();
             this.btnSignIn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnLogIn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pnlForSignIn = new System.Windows.Forms.Panel();
@@ -54,9 +54,10 @@
             this.btnMini = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnX = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pbLogIn = new System.Windows.Forms.PictureBox();
+            this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.pnlSide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pnlLogInContent.SuspendLayout();
             this.pnlForSignIn.SuspendLayout();
             this.pnlForLogIn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogIn)).BeginInit();
@@ -90,7 +91,7 @@
             this.pnlSide.Location = new System.Drawing.Point(0, 0);
             this.pnlSide.Name = "pnlSide";
             this.pnlSide.Quality = 10;
-            this.pnlSide.Size = new System.Drawing.Size(299, 744);
+            this.pnlSide.Size = new System.Drawing.Size(299, 745);
             this.pnlSide.TabIndex = 0;
             // 
             // pbLogo
@@ -104,24 +105,24 @@
             this.pbLogo.TabIndex = 5;
             this.pbLogo.TabStop = false;
             // 
-            // panel1
+            // pnlLogInContent
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.panel1.Controls.Add(this.btnSignIn);
-            this.panel1.Controls.Add(this.btnLogIn);
-            this.panel1.Controls.Add(this.pnlForSignIn);
-            this.panel1.Controls.Add(this.separator1);
-            this.panel1.Controls.Add(this.pnlForLogIn);
-            this.panel1.Controls.Add(this.separator);
-            this.panel1.Controls.Add(this.btnChooseLogIn);
-            this.panel1.Controls.Add(this.btnChooseSigIn);
-            this.panel1.Controls.Add(this.btnMini);
-            this.panel1.Controls.Add(this.btnX);
-            this.panel1.Controls.Add(this.pbLogIn);
-            this.panel1.Location = new System.Drawing.Point(297, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(565, 740);
-            this.panel1.TabIndex = 1;
+            this.pnlLogInContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.pnlLogInContent.Controls.Add(this.btnSignIn);
+            this.pnlLogInContent.Controls.Add(this.btnLogIn);
+            this.pnlLogInContent.Controls.Add(this.pnlForSignIn);
+            this.pnlLogInContent.Controls.Add(this.separator1);
+            this.pnlLogInContent.Controls.Add(this.pnlForLogIn);
+            this.pnlLogInContent.Controls.Add(this.separator);
+            this.pnlLogInContent.Controls.Add(this.btnChooseLogIn);
+            this.pnlLogInContent.Controls.Add(this.btnChooseSigIn);
+            this.pnlLogInContent.Controls.Add(this.btnMini);
+            this.pnlLogInContent.Controls.Add(this.btnX);
+            this.pnlLogInContent.Controls.Add(this.pbLogIn);
+            this.pnlLogInContent.Location = new System.Drawing.Point(297, 1);
+            this.pnlLogInContent.Name = "pnlLogInContent";
+            this.pnlLogInContent.Size = new System.Drawing.Size(579, 743);
+            this.pnlLogInContent.TabIndex = 1;
             // 
             // btnSignIn
             // 
@@ -145,17 +146,18 @@
             this.btnSignIn.IdleIconRightImage = null;
             this.btnSignIn.Location = new System.Drawing.Point(40, 628);
             this.btnSignIn.Name = "btnSignIn";
-            stateProperties13.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties13.BorderRadius = 1;
-            stateProperties13.BorderThickness = 2;
-            stateProperties13.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            stateProperties13.IconLeftImage = null;
-            stateProperties13.IconRightImage = null;
-            this.btnSignIn.onHoverState = stateProperties13;
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties1.BorderRadius = 1;
+            stateProperties1.BorderThickness = 2;
+            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            stateProperties1.IconLeftImage = null;
+            stateProperties1.IconRightImage = null;
+            this.btnSignIn.onHoverState = stateProperties1;
             this.btnSignIn.Size = new System.Drawing.Size(184, 54);
             this.btnSignIn.TabIndex = 21;
             this.btnSignIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
+            this.btnSignIn.Enter += new System.EventHandler(this.btnSignIn_Click);
             // 
             // btnLogIn
             // 
@@ -179,23 +181,24 @@
             this.btnLogIn.IdleIconRightImage = null;
             this.btnLogIn.Location = new System.Drawing.Point(326, 628);
             this.btnLogIn.Name = "btnLogIn";
-            stateProperties14.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties14.BorderRadius = 1;
-            stateProperties14.BorderThickness = 2;
-            stateProperties14.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            stateProperties14.IconLeftImage = null;
-            stateProperties14.IconRightImage = null;
-            this.btnLogIn.onHoverState = stateProperties14;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties2.BorderRadius = 1;
+            stateProperties2.BorderThickness = 2;
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            stateProperties2.IconLeftImage = null;
+            stateProperties2.IconRightImage = null;
+            this.btnLogIn.onHoverState = stateProperties2;
             this.btnLogIn.Size = new System.Drawing.Size(184, 54);
             this.btnLogIn.TabIndex = 23;
             this.btnLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
+            this.btnLogIn.Enter += new System.EventHandler(this.btnLogIn_Click);
             // 
             // pnlForSignIn
             // 
             this.pnlForSignIn.Controls.Add(this.txtName);
             this.pnlForSignIn.Controls.Add(this.txtLastname);
-            this.pnlForSignIn.Location = new System.Drawing.Point(70, 267);
+            this.pnlForSignIn.Location = new System.Drawing.Point(79, 267);
             this.pnlForSignIn.Name = "pnlForSignIn";
             this.pnlForSignIn.Size = new System.Drawing.Size(431, 165);
             this.pnlForSignIn.TabIndex = 19;
@@ -305,7 +308,7 @@
             // 
             this.pnlForLogIn.Controls.Add(this.txtUsername);
             this.pnlForLogIn.Controls.Add(this.txtPassword);
-            this.pnlForLogIn.Location = new System.Drawing.Point(70, 438);
+            this.pnlForLogIn.Location = new System.Drawing.Point(79, 438);
             this.pnlForLogIn.Name = "pnlForLogIn";
             this.pnlForLogIn.Size = new System.Drawing.Size(431, 165);
             this.pnlForLogIn.TabIndex = 20;
@@ -504,15 +507,15 @@
             this.btnMini.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
             this.btnMini.IdleIconLeftImage = null;
             this.btnMini.IdleIconRightImage = null;
-            this.btnMini.Location = new System.Drawing.Point(450, 13);
+            this.btnMini.Location = new System.Drawing.Point(483, 11);
             this.btnMini.Name = "btnMini";
-            stateProperties15.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties15.BorderRadius = 1;
-            stateProperties15.BorderThickness = 1;
-            stateProperties15.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties15.IconLeftImage = null;
-            stateProperties15.IconRightImage = null;
-            this.btnMini.onHoverState = stateProperties15;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties3.BorderRadius = 1;
+            stateProperties3.BorderThickness = 1;
+            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties3.IconLeftImage = null;
+            stateProperties3.IconRightImage = null;
+            this.btnMini.onHoverState = stateProperties3;
             this.btnMini.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnMini.Size = new System.Drawing.Size(27, 25);
             this.btnMini.TabIndex = 25;
@@ -539,15 +542,15 @@
             this.btnX.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
             this.btnX.IdleIconLeftImage = null;
             this.btnX.IdleIconRightImage = null;
-            this.btnX.Location = new System.Drawing.Point(499, 13);
+            this.btnX.Location = new System.Drawing.Point(532, 11);
             this.btnX.Name = "btnX";
-            stateProperties16.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties16.BorderRadius = 1;
-            stateProperties16.BorderThickness = 1;
-            stateProperties16.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties16.IconLeftImage = null;
-            stateProperties16.IconRightImage = null;
-            this.btnX.onHoverState = stateProperties16;
+            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties4.BorderRadius = 1;
+            stateProperties4.BorderThickness = 1;
+            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties4.IconLeftImage = null;
+            stateProperties4.IconRightImage = null;
+            this.btnX.onHoverState = stateProperties4;
             this.btnX.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.btnX.Size = new System.Drawing.Size(27, 25);
             this.btnX.TabIndex = 24;
@@ -558,20 +561,27 @@
             // 
             this.pbLogIn.BackColor = System.Drawing.Color.Transparent;
             this.pbLogIn.Image = global::Tick.Properties.Resources.Power;
-            this.pbLogIn.Location = new System.Drawing.Point(243, 71);
+            this.pbLogIn.Location = new System.Drawing.Point(249, 71);
             this.pbLogIn.Name = "pbLogIn";
             this.pbLogIn.Size = new System.Drawing.Size(76, 72);
             this.pbLogIn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLogIn.TabIndex = 22;
             this.pbLogIn.TabStop = false;
             // 
+            // bunifuDragControl1
+            // 
+            this.bunifuDragControl1.Fixed = true;
+            this.bunifuDragControl1.Horizontal = true;
+            this.bunifuDragControl1.TargetControl = this.pnlLogInContent;
+            this.bunifuDragControl1.Vertical = true;
+            // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.ClientSize = new System.Drawing.Size(864, 744);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(878, 745);
+            this.Controls.Add(this.pnlLogInContent);
             this.Controls.Add(this.pnlSide);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
@@ -587,7 +597,7 @@
             this.Load += new System.EventHandler(this.LogIn_Load);
             this.pnlSide.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
-            this.panel1.ResumeLayout(false);
+            this.pnlLogInContent.ResumeLayout(false);
             this.pnlForSignIn.ResumeLayout(false);
             this.pnlForLogIn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogIn)).EndInit();
@@ -602,7 +612,7 @@
         private Bunifu.Framework.UI.BunifuGradientPanel pnlSide;
         private System.Windows.Forms.PictureBox pbLogo;
         private Bunifu.Framework.UI.BunifuDragControl dragpnlSide;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlLogInContent;
         protected internal Bunifu.UI.WinForms.BunifuButton.BunifuButton btnSignIn;
         protected internal Bunifu.UI.WinForms.BunifuButton.BunifuButton btnLogIn;
         private System.Windows.Forms.Panel pnlForSignIn;
@@ -618,5 +628,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnMini;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnX;
         private System.Windows.Forms.PictureBox pbLogIn;
+        private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
     }
 }

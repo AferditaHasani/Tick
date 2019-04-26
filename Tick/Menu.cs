@@ -17,12 +17,7 @@ namespace Tick
         public Menu()
         {
             InitializeComponent();
-            LogIn l = new LogIn();
-          
-            this.Bounds = Screen.PrimaryScreen.Bounds;
-
-            l.Owner = this;
-            l.Show();
+           
         }
 
         public Menu(string user)

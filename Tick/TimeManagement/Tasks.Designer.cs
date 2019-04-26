@@ -45,9 +45,6 @@
             this.btnDeleteTask = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSaveTask = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dgvTasks = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.TaskName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Description = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Color = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAddTask = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnlAddTask.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbTaskColor)).BeginInit();
@@ -308,11 +305,6 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.dgvTasks.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTasks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTasks.ColumnHeadersVisible = false;
-            this.dgvTasks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.TaskName,
-            this.Description,
-            this.Color});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -356,21 +348,9 @@
             this.dgvTasks.RowTemplate.Height = 60;
             this.dgvTasks.Size = new System.Drawing.Size(656, 675);
             this.dgvTasks.TabIndex = 4;
-            // 
-            // TaskName
-            // 
-            this.TaskName.HeaderText = "Name";
-            this.TaskName.Name = "TaskName";
-            // 
-            // Description
-            // 
-            this.Description.HeaderText = "Description";
-            this.Description.Name = "Description";
-            // 
-            // Color
-            // 
-            this.Color.HeaderText = "Color";
-            this.Color.Name = "Color";
+            this.dgvTasks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTasks_CellContentClick);
+            this.dgvTasks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTasks_CellContentClick);
+            this.dgvTasks.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvTasks_RowHeaderMouseClick);
             // 
             // btnAddTask
             // 
@@ -413,7 +393,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(728, 788);
+            this.ClientSize = new System.Drawing.Size(736, 788);
             this.Controls.Add(this.pnlAddTask);
             this.Controls.Add(this.dgvTasks);
             this.Controls.Add(this.btnAddTask);
@@ -447,11 +427,8 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnSaveTask;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvTasks;
         private new string Name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Description;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Color;
         private Bunifu.Framework.UI.BunifuFlatButton btnAddTask;
         private System.Windows.Forms.RichTextBox rtxtTaskDescription;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TaskName;
         private Telerik.WinControls.UI.RadColorBox cbTaskColor;
     }
 }

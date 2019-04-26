@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 
@@ -22,5 +23,14 @@ namespace Tick.BLL
             return taskDAL_db.Add(task);
         }
 
+        public DataTable GetAll()
+        {
+            return taskDAL_db.GetAll();
+        }
+
+        public bool Update(Task tsk)
+        {
+            return taskDAL_db.Update(tsk);
+        }
     }
 }
