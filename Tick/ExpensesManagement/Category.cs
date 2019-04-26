@@ -238,5 +238,27 @@ namespace Tick.ExpensesManagement
                 cat.IsExpenses = (bool)row.Cells["IsExpenses"].Value;
             }
         }
+
+        private void Delete()
+        {
+            try
+            {
+
+                if (cat == null)
+                {
+                    MessageBox.Show("No record to delete");
+                    return;
+                }
+
+                var deleted = categoryBLL_service.Delete(cat);
+
+                MessageBox.Show(deleted ? "Deleted Successfully" : "Deleting failed , please try again");
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
     }
 }

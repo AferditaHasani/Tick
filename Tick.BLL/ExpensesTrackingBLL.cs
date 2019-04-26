@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,20 +11,31 @@ namespace Tick.BLL
 {
    public class ExpensesTrackingBLL
     {
-        private ExpensesTrackingDAL expensesTrackingDAL_db;
+        private ExpensesTrackingDAL ETrackingDAL_db;
 
         public ExpensesTrackingBLL()
         {
-            expensesTrackingDAL_db = new ExpensesTrackingDAL();
+            ETrackingDAL_db = new ExpensesTrackingDAL();
         }
 
-        public bool Insert(ExpensesTracking eTracking)
+        public bool Insert(ExpensesTracking task)
         {
-            return expensesTrackingDAL_db.Add(eTracking);
+            return ETrackingDAL_db.Add(task);
         }
-        public bool GetTransaction(ExpensesTracking user)
+
+        public DataTable GetAll()
         {
-            return expensesTrackingDAL_db.GetTransaction(user);
+            return ETrackingDAL_db.GetAll();
         }
+
+        public bool Update(ExpensesTracking tsk)
+        {
+            return ETrackingDAL_db.Update(tsk);
+        }
+        public bool Delete(ExpensesTracking tsk)
+        {
+            return ETrackingDAL_db.Delete(tsk);
+        }
+
     }
 }

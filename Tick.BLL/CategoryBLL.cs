@@ -32,6 +32,10 @@ namespace Tick.BLL
         {
             return categoryDAL_db.Update(category);
         }
+        public bool Delete(Category category)
+        {
+            return categoryDAL_db.Delete(category);
+        }
 
 
     }

@@ -79,7 +79,7 @@ namespace Tick.DAL
             {
                 using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
                 {
-                    String sql = "dbo.usp_Task_Update";
+                    String sql = "dbo.usp_Category_Update";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         MessageBox.Show($"ID {model.CategoryID}   {model.Name}   {model.IsExpenses} ");
@@ -103,6 +103,32 @@ namespace Tick.DAL
                 return false;
             }
         }
+        public bool Delete(Category model)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                {
+                    String sql = "dbo.usp_Category_Delete";
+                    using (SqlCommand command = new SqlCommand(sql, conn))
+                    {
+                        conn.Open();
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add("@prmCategoryID", SqlDbType.Int).Value = model.CategoryID;
 
+
+
+
+                        var result = command.ExecuteNonQuery();
+                        return result >= 0;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return false;
+            }
+        }
     }
 }
