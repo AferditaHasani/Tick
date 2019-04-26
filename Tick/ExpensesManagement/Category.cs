@@ -16,7 +16,7 @@ namespace Tick.ExpensesManagement
         public Category()
         {
             InitializeComponent();
-            DisplayToDGrid();
+        
         }
 
 
@@ -196,8 +196,9 @@ namespace Tick.ExpensesManagement
 
         private void Category_Load(object sender, EventArgs e)
         {
-           // OpenCategory();
-           pnlAddCategory.Visible = false;
+            // OpenCategory();
+            DisplayToDGrid();
+            pnlAddCategory.Visible = false;
            dgvCategory.Visible = true;
            dgvCategory.Size = new Size(708, 697);
             categoryRow = new string[] { "","Name", "IsExpense" };
