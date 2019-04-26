@@ -117,42 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnAddT.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAHQAAAA2CAYAAAAWCr1AAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJeSURBVHhe7Zwxa1RBFIW3TGlpF0sJuzNBA8YmREgRSBMQ
-        URBkG4mEQJIiaCBhs+8tpLCxEcFCSy3S2Fq8Kf0J/oSUlimfc++7+9zFSdBqJyfnwtfscKf5ODOzC3s7
-        rBtWPgxu+VCuRk7I7HChXI8u7piW/6v5MJjz1ejUV+V53Kwm+eCq8lf08mUhDG6brqurF0bLseHn1CYf
-        d+vecb92B8/JLDh8oQ789+GUWEmtaUuXyhyL/Pq67m6s1d2FeyQnHq3U/tN+K9aHom/6pqs5Zptkunfb
-        dff+g/SGJAskuSq0Ki+Sd2tc+NAm0y8lNyF54d7vmNTih2n8U3rZxkUes9eI5YftvTr1SOqGwV01/e0o
-        3UiypU1pKDZNp3zXLDblQ1lMNZF8kRewugvDN6ZThOqXV11MNZF86e09tYSWJ6ZzQmh8OaWaSL60r10K
-        xYBCwaBQMCgUDAoFg0LBoFAwKBQMCgWDQsGgUDAoFAwKBYNCwaBQMCgUDAoFg0LBoFAwKBQMCgWDQsGg
-        UDAoFAwKBYNCwaBQMCgUDAoFg0LBoFAwKBSMpFAXhq9UqIyzSTSRfLnkH9yjRf1QRtokmki+SAg1jKF4
-        ZjrboVMXsiCjUlKNJEP8Uu3PDi2ho0XT2ZSriqCmeexeG9r7syrPJZSmsimdVWQp7W09Tm5AMmJjbWKY
-        48SMoskaP440qacvOe8vU/QhZDJdVX42femSAUZjqTJZzL3d0g0k3mSG7DzRkMnDtQ1dlPnXUZuq1Mxc
-        kg/NXMZLjtmrqpmfW/TjJvLDA5kxdiWu/lMqWQjV6fwGgyAbY1nNYIYAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="lblDescription.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Segoe UI Semibold'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: #A1A1A1; text-align: left; }</value>
   </data>
   <data name="lblCategory.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Segoe UI Semibold'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: #A1A1A1; text-align: left; }</value>
   </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="txtAmount.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQoAAAAjCAYAAABsH0SDAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADlSURBVHhe7d2xbcJAGIZhz4NSMQEjZIRUQaJiBBcoa5y9
-        ZTrjXxyJogAfPc8nPc2d61fubjAze3qttd08zyNAWZvw3vNwWUVimqbv9XIBuPoTi/WgCrKcTl/L/vMA
-        vLhqQY/F2DPxG4r64G2zBV5ctUAogIeEAoiEAoiEAoiEAoiEAoiEAoiEAoiEAoiEAoiEAoiEAoiEAoiE
-        AoiEAoiEAoiEAoiEAoiEAoiEAoiEAoiEAoiEAoiEAoiEAoiEAogehsLbo0C5+fZoa+2jHwL8WNtw7Jm4
-        rMei/iwAxn+RMDO7v2E4A1J5jEFlstGXAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAALkAAAAjCAYAAADIUKt5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADVSURBVHhe7dyxCcJAAIXhzCNWTuAIjmClYOUIKcQ1LtnS
+        LubIgYhin+f34GvuUv6kvM7sb1ZK2Y/j2EOCuedDS3tZDXwYhsd8OUGKt9Dng1r/dLvdp/PpAqtWO26h
+        9y3xV+T1g+1mB6tWOxY50UROPJETT+TEEznxRE48kRNP5MQTOfFETjyRE0/kxBM58UROPJETT+TEEznx
+        RE48kRNP5MQTOfFETjyRE0/kxBM58UROvJ+RewuRBF/fQiylHNshxJi7vrbEl7XQ6x8dVu8jcLPcdd0T
+        RjbDEDY0jAsAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="lblAmount.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 1.2px; font-family: 'Segoe UI Semibold'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: #A1A1A1; text-align: left; }</value>
   </data>
+  <metadata name="ID.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <metadata name="Task.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

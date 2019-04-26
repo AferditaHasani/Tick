@@ -93,6 +93,8 @@
     <Compile Include="AppData\User.cs">
       <DependentUpon>TickDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="CategoryDAL.cs" />
+    <Compile Include="ExpensesTrackingDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaskDAL.cs" />
     <Compile Include="UserDAL.cs" />

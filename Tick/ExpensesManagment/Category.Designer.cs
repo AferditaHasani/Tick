@@ -29,34 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Category));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAddCategory = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnlAddCategory = new System.Windows.Forms.Panel();
+            this.btnSaveCategory = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnDeleteCategory = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnCancelCategory = new Bunifu.Framework.UI.BunifuFlatButton();
             this.lblIncome = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblExpense = new Bunifu.UI.WinForms.BunifuLabel();
             this.cbxIncome = new Bunifu.Framework.UI.BunifuCheckbox();
             this.cbxExpense = new Bunifu.Framework.UI.BunifuCheckbox();
             this.txtName = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.btnAddC = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.lblChoose = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblName = new Bunifu.UI.WinForms.BunifuLabel();
-            this.pnlGridViewCategory = new System.Windows.Forms.Panel();
             this.dgvCategory = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.Task = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WorkingTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsExpense = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlAddCategory.SuspendLayout();
-            this.pnlGridViewCategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
@@ -99,30 +93,146 @@
             // 
             // pnlAddCategory
             // 
-            this.pnlAddCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlAddCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlAddCategory.Controls.Add(this.btnSaveCategory);
+            this.pnlAddCategory.Controls.Add(this.btnDeleteCategory);
+            this.pnlAddCategory.Controls.Add(this.btnCancelCategory);
             this.pnlAddCategory.Controls.Add(this.lblIncome);
             this.pnlAddCategory.Controls.Add(this.lblExpense);
             this.pnlAddCategory.Controls.Add(this.cbxIncome);
             this.pnlAddCategory.Controls.Add(this.cbxExpense);
             this.pnlAddCategory.Controls.Add(this.txtName);
-            this.pnlAddCategory.Controls.Add(this.btnAddC);
             this.pnlAddCategory.Controls.Add(this.lblChoose);
             this.pnlAddCategory.Controls.Add(this.lblName);
-            this.pnlAddCategory.Location = new System.Drawing.Point(12, 70);
+            this.pnlAddCategory.Location = new System.Drawing.Point(540, 10);
             this.pnlAddCategory.Name = "pnlAddCategory";
-            this.pnlAddCategory.Size = new System.Drawing.Size(616, 218);
+            this.pnlAddCategory.Size = new System.Drawing.Size(349, 750);
             this.pnlAddCategory.TabIndex = 3;
+            // 
+            // btnSaveCategory
+            // 
+            this.btnSaveCategory.Active = false;
+            this.btnSaveCategory.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnSaveCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSaveCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnSaveCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSaveCategory.BorderRadius = 0;
+            this.btnSaveCategory.ButtonText = "Save";
+            this.btnSaveCategory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveCategory.DisabledColor = System.Drawing.Color.Gray;
+            this.btnSaveCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveCategory.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnSaveCategory.Iconimage = global::Tick.Properties.Resources.save;
+            this.btnSaveCategory.Iconimage_right = null;
+            this.btnSaveCategory.Iconimage_right_Selected = null;
+            this.btnSaveCategory.Iconimage_Selected = null;
+            this.btnSaveCategory.IconMarginLeft = 0;
+            this.btnSaveCategory.IconMarginRight = 0;
+            this.btnSaveCategory.IconRightVisible = true;
+            this.btnSaveCategory.IconRightZoom = 0D;
+            this.btnSaveCategory.IconVisible = true;
+            this.btnSaveCategory.IconZoom = 50D;
+            this.btnSaveCategory.IsTab = false;
+            this.btnSaveCategory.Location = new System.Drawing.Point(233, 89);
+            this.btnSaveCategory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSaveCategory.Name = "btnSaveCategory";
+            this.btnSaveCategory.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnSaveCategory.OnHovercolor = System.Drawing.Color.DimGray;
+            this.btnSaveCategory.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnSaveCategory.selected = false;
+            this.btnSaveCategory.Size = new System.Drawing.Size(104, 47);
+            this.btnSaveCategory.TabIndex = 21;
+            this.btnSaveCategory.Text = "Save";
+            this.btnSaveCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSaveCategory.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnSaveCategory.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveCategory.Click += new System.EventHandler(this.btnSaveCategory_Click);
+            // 
+            // btnDeleteCategory
+            // 
+            this.btnDeleteCategory.Active = false;
+            this.btnDeleteCategory.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnDeleteCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDeleteCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnDeleteCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDeleteCategory.BorderRadius = 0;
+            this.btnDeleteCategory.ButtonText = "Delete";
+            this.btnDeleteCategory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteCategory.DisabledColor = System.Drawing.Color.Gray;
+            this.btnDeleteCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteCategory.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnDeleteCategory.Iconimage = global::Tick.Properties.Resources.delete;
+            this.btnDeleteCategory.Iconimage_right = null;
+            this.btnDeleteCategory.Iconimage_right_Selected = null;
+            this.btnDeleteCategory.Iconimage_Selected = null;
+            this.btnDeleteCategory.IconMarginLeft = 0;
+            this.btnDeleteCategory.IconMarginRight = 0;
+            this.btnDeleteCategory.IconRightVisible = true;
+            this.btnDeleteCategory.IconRightZoom = 0D;
+            this.btnDeleteCategory.IconVisible = true;
+            this.btnDeleteCategory.IconZoom = 50D;
+            this.btnDeleteCategory.IsTab = false;
+            this.btnDeleteCategory.Location = new System.Drawing.Point(123, 89);
+            this.btnDeleteCategory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDeleteCategory.Name = "btnDeleteCategory";
+            this.btnDeleteCategory.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnDeleteCategory.OnHovercolor = System.Drawing.Color.DimGray;
+            this.btnDeleteCategory.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnDeleteCategory.selected = false;
+            this.btnDeleteCategory.Size = new System.Drawing.Size(104, 47);
+            this.btnDeleteCategory.TabIndex = 20;
+            this.btnDeleteCategory.Text = "Delete";
+            this.btnDeleteCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDeleteCategory.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnDeleteCategory.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnCancelCategory
+            // 
+            this.btnCancelCategory.Active = false;
+            this.btnCancelCategory.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnCancelCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCancelCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnCancelCategory.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCancelCategory.BorderRadius = 0;
+            this.btnCancelCategory.ButtonText = "Cancel";
+            this.btnCancelCategory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelCategory.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCancelCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelCategory.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCancelCategory.Iconimage = global::Tick.Properties.Resources.cancel;
+            this.btnCancelCategory.Iconimage_right = null;
+            this.btnCancelCategory.Iconimage_right_Selected = null;
+            this.btnCancelCategory.Iconimage_Selected = null;
+            this.btnCancelCategory.IconMarginLeft = 0;
+            this.btnCancelCategory.IconMarginRight = 0;
+            this.btnCancelCategory.IconRightVisible = true;
+            this.btnCancelCategory.IconRightZoom = 0D;
+            this.btnCancelCategory.IconVisible = true;
+            this.btnCancelCategory.IconZoom = 50D;
+            this.btnCancelCategory.IsTab = false;
+            this.btnCancelCategory.Location = new System.Drawing.Point(11, 89);
+            this.btnCancelCategory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCancelCategory.Name = "btnCancelCategory";
+            this.btnCancelCategory.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnCancelCategory.OnHovercolor = System.Drawing.Color.DimGray;
+            this.btnCancelCategory.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnCancelCategory.selected = false;
+            this.btnCancelCategory.Size = new System.Drawing.Size(104, 47);
+            this.btnCancelCategory.TabIndex = 19;
+            this.btnCancelCategory.Text = "Cancel";
+            this.btnCancelCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCancelCategory.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnCancelCategory.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelCategory.Click += new System.EventHandler(this.btnCancelCategory_Click);
             // 
             // lblIncome
             // 
-            this.lblIncome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblIncome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblIncome.AutoEllipsis = false;
             this.lblIncome.CursorType = null;
             this.lblIncome.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIncome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblIncome.Location = new System.Drawing.Point(308, 103);
+            this.lblIncome.Location = new System.Drawing.Point(270, 294);
             this.lblIncome.Name = "lblIncome";
             this.lblIncome.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblIncome.Size = new System.Drawing.Size(58, 23);
@@ -134,13 +244,12 @@
             // 
             // lblExpense
             // 
-            this.lblExpense.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblExpense.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblExpense.AutoEllipsis = false;
             this.lblExpense.CursorType = null;
             this.lblExpense.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExpense.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblExpense.Location = new System.Drawing.Point(158, 103);
+            this.lblExpense.Location = new System.Drawing.Point(140, 300);
             this.lblExpense.Name = "lblExpense";
             this.lblExpense.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblExpense.Size = new System.Drawing.Size(63, 23);
@@ -152,12 +261,13 @@
             // 
             // cbxIncome
             // 
+            this.cbxIncome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbxIncome.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.cbxIncome.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.cbxIncome.Checked = false;
             this.cbxIncome.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.cbxIncome.ForeColor = System.Drawing.Color.White;
-            this.cbxIncome.Location = new System.Drawing.Point(282, 103);
+            this.cbxIncome.Location = new System.Drawing.Point(244, 297);
             this.cbxIncome.Name = "cbxIncome";
             this.cbxIncome.Size = new System.Drawing.Size(20, 20);
             this.cbxIncome.TabIndex = 16;
@@ -165,12 +275,13 @@
             // 
             // cbxExpense
             // 
+            this.cbxExpense.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbxExpense.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.cbxExpense.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
             this.cbxExpense.Checked = true;
             this.cbxExpense.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.cbxExpense.ForeColor = System.Drawing.Color.White;
-            this.cbxExpense.Location = new System.Drawing.Point(132, 103);
+            this.cbxExpense.Location = new System.Drawing.Point(114, 300);
             this.cbxExpense.Name = "cbxExpense";
             this.cbxExpense.Size = new System.Drawing.Size(20, 20);
             this.cbxExpense.TabIndex = 15;
@@ -180,8 +291,7 @@
             // 
             this.txtName.AcceptsReturn = false;
             this.txtName.AcceptsTab = false;
-            this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
             this.txtName.BackColor = System.Drawing.Color.Transparent;
@@ -202,7 +312,7 @@
             this.txtName.IconPadding = 10;
             this.txtName.IconRight = null;
             this.txtName.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txtName.Location = new System.Drawing.Point(132, 24);
+            this.txtName.Location = new System.Drawing.Point(105, 233);
             this.txtName.MaxLength = 32767;
             this.txtName.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtName.Modified = false;
@@ -213,7 +323,7 @@
             this.txtName.SelectionLength = 0;
             this.txtName.SelectionStart = 0;
             this.txtName.ShortcutsEnabled = true;
-            this.txtName.Size = new System.Drawing.Size(234, 35);
+            this.txtName.Size = new System.Drawing.Size(223, 35);
             this.txtName.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtName.TabIndex = 14;
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -221,50 +331,14 @@
             this.txtName.TextPlaceholder = "";
             this.txtName.UseSystemPasswordChar = false;
             // 
-            // btnAddC
-            // 
-            this.btnAddC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddC.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddC.BackgroundImage")));
-            this.btnAddC.ButtonText = "ADD";
-            this.btnAddC.ButtonTextMarginLeft = 0;
-            this.btnAddC.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.btnAddC.DisabledFillColor = System.Drawing.Color.DimGray;
-            this.btnAddC.DisabledForecolor = System.Drawing.Color.White;
-            this.btnAddC.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddC.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.btnAddC.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAddC.IconPadding = 10;
-            this.btnAddC.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAddC.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.btnAddC.IdleBorderRadius = 15;
-            this.btnAddC.IdleBorderThickness = 2;
-            this.btnAddC.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.btnAddC.IdleIconLeftImage = null;
-            this.btnAddC.IdleIconRightImage = null;
-            this.btnAddC.Location = new System.Drawing.Point(467, 142);
-            this.btnAddC.Name = "btnAddC";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties1.BorderRadius = 1;
-            stateProperties1.BorderThickness = 2;
-            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            stateProperties1.IconLeftImage = null;
-            stateProperties1.IconRightImage = null;
-            this.btnAddC.onHoverState = stateProperties1;
-            this.btnAddC.Size = new System.Drawing.Size(116, 54);
-            this.btnAddC.TabIndex = 13;
-            this.btnAddC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAddC.Click += new System.EventHandler(this.btnAddC_Click);
-            // 
             // lblChoose
             // 
-            this.lblChoose.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblChoose.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblChoose.AutoEllipsis = false;
             this.lblChoose.CursorType = null;
             this.lblChoose.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChoose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblChoose.Location = new System.Drawing.Point(58, 100);
+            this.lblChoose.Location = new System.Drawing.Point(40, 297);
             this.lblChoose.Name = "lblChoose";
             this.lblChoose.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblChoose.Size = new System.Drawing.Size(33, 23);
@@ -275,13 +349,12 @@
             // 
             // lblName
             // 
-            this.lblName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblName.AutoEllipsis = false;
             this.lblName.CursorType = null;
             this.lblName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblName.Location = new System.Drawing.Point(41, 36);
+            this.lblName.Location = new System.Drawing.Point(23, 245);
             this.lblName.Name = "lblName";
             this.lblName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblName.Size = new System.Drawing.Size(50, 23);
@@ -289,16 +362,6 @@
             this.lblName.Text = "Name:";
             this.lblName.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // pnlGridViewCategory
-            // 
-            this.pnlGridViewCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlGridViewCategory.Controls.Add(this.dgvCategory);
-            this.pnlGridViewCategory.Location = new System.Drawing.Point(12, 70);
-            this.pnlGridViewCategory.Name = "pnlGridViewCategory";
-            this.pnlGridViewCategory.Size = new System.Drawing.Size(624, 706);
-            this.pnlGridViewCategory.TabIndex = 4;
             // 
             // dgvCategory
             // 
@@ -327,44 +390,43 @@
             this.dgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategory.ColumnHeadersVisible = false;
             this.dgvCategory.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Task,
-            this.StartTime,
-            this.EndTime,
-            this.WorkingTime});
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(15);
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCategory.DefaultCellStyle = dataGridViewCellStyle7;
+            this.ID,
+            this.Name,
+            this.IsExpense});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(15);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCategory.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvCategory.DoubleBuffered = true;
             this.dgvCategory.EnableHeadersVisualStyles = false;
             this.dgvCategory.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.dgvCategory.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.dgvCategory.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.dgvCategory.Location = new System.Drawing.Point(3, 3);
+            this.dgvCategory.Location = new System.Drawing.Point(12, 63);
             this.dgvCategory.Name = "dgvCategory";
             this.dgvCategory.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCategory.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCategory.RowHeadersWidth = 5;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(15);
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dgvCategory.RowsDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(15);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dgvCategory.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCategory.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.dgvCategory.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvCategory.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
@@ -372,70 +434,40 @@
             this.dgvCategory.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.DimGray;
             this.dgvCategory.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.dgvCategory.RowTemplate.Height = 60;
-            this.dgvCategory.Size = new System.Drawing.Size(618, 688);
+            this.dgvCategory.Size = new System.Drawing.Size(817, 697);
             this.dgvCategory.TabIndex = 3;
             // 
-            // Task
+            // ID
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(15);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.Task.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Task.HeaderText = "Amount";
-            this.Task.Name = "Task";
+            this.ID.FillWeight = 7.614213F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
             // 
-            // StartTime
+            // Name
             // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(15);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.StartTime.DefaultCellStyle = dataGridViewCellStyle4;
-            this.StartTime.HeaderText = "Date";
-            this.StartTime.Name = "StartTime";
+            this.Name.FillWeight = 146.1929F;
+            this.Name.HeaderText = "Name";
+            this.Name.Name = "Name";
             // 
-            // EndTime
+            // IsExpense
             // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(15);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.EndTime.DefaultCellStyle = dataGridViewCellStyle5;
-            this.EndTime.HeaderText = "Category";
-            this.EndTime.Name = "EndTime";
-            // 
-            // WorkingTime
-            // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(15);
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.WorkingTime.DefaultCellStyle = dataGridViewCellStyle6;
-            this.WorkingTime.HeaderText = "Description";
-            this.WorkingTime.Name = "WorkingTime";
+            this.IsExpense.FillWeight = 146.1929F;
+            this.IsExpense.HeaderText = "IsExpense";
+            this.IsExpense.Name = "IsExpense";
             // 
             // Category
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(648, 788);
-            this.Controls.Add(this.pnlGridViewCategory);
+            this.ClientSize = new System.Drawing.Size(752, 788);
+            this.Controls.Add(this.dgvCategory);
             this.Controls.Add(this.pnlAddCategory);
             this.Controls.Add(this.btnAddCategory);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Category";
+      
             // 
             // 
             // 
@@ -444,7 +476,6 @@
             this.Load += new System.EventHandler(this.Category_Load);
             this.pnlAddCategory.ResumeLayout(false);
             this.pnlAddCategory.PerformLayout();
-            this.pnlGridViewCategory.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
@@ -455,19 +486,19 @@
 
         private Bunifu.Framework.UI.BunifuFlatButton btnAddCategory;
         private System.Windows.Forms.Panel pnlAddCategory;
-        private System.Windows.Forms.Panel pnlGridViewCategory;
         private Bunifu.UI.WinForms.BunifuLabel lblChoose;
         private Bunifu.UI.WinForms.BunifuLabel lblName;
-        protected internal Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAddC;
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtName;
         private Bunifu.UI.WinForms.BunifuLabel lblIncome;
         private Bunifu.UI.WinForms.BunifuLabel lblExpense;
         private Bunifu.Framework.UI.BunifuCheckbox cbxIncome;
         private Bunifu.Framework.UI.BunifuCheckbox cbxExpense;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvCategory;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Task;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StartTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EndTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn WorkingTime;
+        private Bunifu.Framework.UI.BunifuFlatButton btnCancelCategory;
+        private Bunifu.Framework.UI.BunifuFlatButton btnDeleteCategory;
+        private Bunifu.Framework.UI.BunifuFlatButton btnSaveCategory;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IsExpense;
     }
 }

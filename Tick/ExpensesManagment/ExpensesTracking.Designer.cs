@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExpensesTracking));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -39,7 +38,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlAddTransaction = new System.Windows.Forms.Panel();
-            this.btnAddT = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnSaveTransaction = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnDeleteTransaction = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnCancelTransaction = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txtDescription = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.ddlCategory = new Bunifu.UI.WinForms.BunifuDropdown();
             this.lblDescription = new Bunifu.UI.WinForms.BunifuLabel();
@@ -47,11 +48,11 @@
             this.txtAmount = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.lblAmount = new Bunifu.UI.WinForms.BunifuLabel();
             this.dgvTransaction = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.pnlGridViewEx = new System.Windows.Forms.Panel();
-            this.btnAddTransaction = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Task = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WorkingTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAddTransaction = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pnlAddTransaction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -59,74 +60,153 @@
             // 
             // pnlAddTransaction
             // 
-            this.pnlAddTransaction.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlAddTransaction.Controls.Add(this.btnAddT);
+            this.pnlAddTransaction.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlAddTransaction.Controls.Add(this.btnSaveTransaction);
+            this.pnlAddTransaction.Controls.Add(this.btnDeleteTransaction);
+            this.pnlAddTransaction.Controls.Add(this.btnCancelTransaction);
             this.pnlAddTransaction.Controls.Add(this.txtDescription);
             this.pnlAddTransaction.Controls.Add(this.ddlCategory);
             this.pnlAddTransaction.Controls.Add(this.lblDescription);
             this.pnlAddTransaction.Controls.Add(this.lblCategory);
             this.pnlAddTransaction.Controls.Add(this.txtAmount);
             this.pnlAddTransaction.Controls.Add(this.lblAmount);
-            this.pnlAddTransaction.Controls.Add(this.dgvTransaction);
-            this.pnlAddTransaction.Location = new System.Drawing.Point(12, 80);
+            this.pnlAddTransaction.Location = new System.Drawing.Point(540, 10);
             this.pnlAddTransaction.Name = "pnlAddTransaction";
-            this.pnlAddTransaction.Size = new System.Drawing.Size(656, 274);
+            this.pnlAddTransaction.Size = new System.Drawing.Size(349, 750);
             this.pnlAddTransaction.TabIndex = 2;
             // 
-            // btnAddT
+            // btnSaveTransaction
             // 
-            this.btnAddT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddT.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddT.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddT.BackgroundImage")));
-            this.btnAddT.ButtonText = "ADD";
-            this.btnAddT.ButtonTextMarginLeft = 0;
-            this.btnAddT.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.btnAddT.DisabledFillColor = System.Drawing.Color.DimGray;
-            this.btnAddT.DisabledForecolor = System.Drawing.Color.White;
-            this.btnAddT.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddT.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.btnAddT.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAddT.IconPadding = 10;
-            this.btnAddT.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btnAddT.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.btnAddT.IdleBorderRadius = 15;
-            this.btnAddT.IdleBorderThickness = 2;
-            this.btnAddT.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.btnAddT.IdleIconLeftImage = null;
-            this.btnAddT.IdleIconRightImage = null;
-            this.btnAddT.Location = new System.Drawing.Point(519, 205);
-            this.btnAddT.Name = "btnAddT";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties1.BorderRadius = 1;
-            stateProperties1.BorderThickness = 2;
-            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            stateProperties1.IconLeftImage = null;
-            stateProperties1.IconRightImage = null;
-            this.btnAddT.onHoverState = stateProperties1;
-            this.btnAddT.Size = new System.Drawing.Size(116, 54);
-            this.btnAddT.TabIndex = 12;
-            this.btnAddT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAddT.Click += new System.EventHandler(this.btnAddT_Click);
+            this.btnSaveTransaction.Active = false;
+            this.btnSaveTransaction.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnSaveTransaction.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSaveTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnSaveTransaction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnSaveTransaction.BorderRadius = 0;
+            this.btnSaveTransaction.ButtonText = "Save";
+            this.btnSaveTransaction.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveTransaction.DisabledColor = System.Drawing.Color.Gray;
+            this.btnSaveTransaction.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveTransaction.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnSaveTransaction.Iconimage = global::Tick.Properties.Resources.save;
+            this.btnSaveTransaction.Iconimage_right = null;
+            this.btnSaveTransaction.Iconimage_right_Selected = null;
+            this.btnSaveTransaction.Iconimage_Selected = null;
+            this.btnSaveTransaction.IconMarginLeft = 0;
+            this.btnSaveTransaction.IconMarginRight = 0;
+            this.btnSaveTransaction.IconRightVisible = true;
+            this.btnSaveTransaction.IconRightZoom = 0D;
+            this.btnSaveTransaction.IconVisible = true;
+            this.btnSaveTransaction.IconZoom = 50D;
+            this.btnSaveTransaction.IsTab = false;
+            this.btnSaveTransaction.Location = new System.Drawing.Point(251, 47);
+            this.btnSaveTransaction.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSaveTransaction.Name = "btnSaveTransaction";
+            this.btnSaveTransaction.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnSaveTransaction.OnHovercolor = System.Drawing.Color.DimGray;
+            this.btnSaveTransaction.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnSaveTransaction.selected = false;
+            this.btnSaveTransaction.Size = new System.Drawing.Size(104, 47);
+            this.btnSaveTransaction.TabIndex = 22;
+            this.btnSaveTransaction.Text = "Save";
+            this.btnSaveTransaction.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSaveTransaction.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnSaveTransaction.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveTransaction.Click += new System.EventHandler(this.btnSaveTransaction_Click);
+            // 
+            // btnDeleteTransaction
+            // 
+            this.btnDeleteTransaction.Active = false;
+            this.btnDeleteTransaction.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnDeleteTransaction.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDeleteTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnDeleteTransaction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDeleteTransaction.BorderRadius = 0;
+            this.btnDeleteTransaction.ButtonText = "Delete";
+            this.btnDeleteTransaction.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteTransaction.DisabledColor = System.Drawing.Color.Gray;
+            this.btnDeleteTransaction.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteTransaction.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnDeleteTransaction.Iconimage = global::Tick.Properties.Resources.delete;
+            this.btnDeleteTransaction.Iconimage_right = null;
+            this.btnDeleteTransaction.Iconimage_right_Selected = null;
+            this.btnDeleteTransaction.Iconimage_Selected = null;
+            this.btnDeleteTransaction.IconMarginLeft = 0;
+            this.btnDeleteTransaction.IconMarginRight = 0;
+            this.btnDeleteTransaction.IconRightVisible = true;
+            this.btnDeleteTransaction.IconRightZoom = 0D;
+            this.btnDeleteTransaction.IconVisible = true;
+            this.btnDeleteTransaction.IconZoom = 50D;
+            this.btnDeleteTransaction.IsTab = false;
+            this.btnDeleteTransaction.Location = new System.Drawing.Point(123, 47);
+            this.btnDeleteTransaction.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDeleteTransaction.Name = "btnDeleteTransaction";
+            this.btnDeleteTransaction.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnDeleteTransaction.OnHovercolor = System.Drawing.Color.DimGray;
+            this.btnDeleteTransaction.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnDeleteTransaction.selected = false;
+            this.btnDeleteTransaction.Size = new System.Drawing.Size(104, 47);
+            this.btnDeleteTransaction.TabIndex = 21;
+            this.btnDeleteTransaction.Text = "Delete";
+            this.btnDeleteTransaction.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnDeleteTransaction.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnDeleteTransaction.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnCancelTransaction
+            // 
+            this.btnCancelTransaction.Active = false;
+            this.btnCancelTransaction.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnCancelTransaction.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnCancelTransaction.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnCancelTransaction.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCancelTransaction.BorderRadius = 0;
+            this.btnCancelTransaction.ButtonText = "Cancel";
+            this.btnCancelTransaction.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelTransaction.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCancelTransaction.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelTransaction.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCancelTransaction.Iconimage = global::Tick.Properties.Resources.cancel;
+            this.btnCancelTransaction.Iconimage_right = null;
+            this.btnCancelTransaction.Iconimage_right_Selected = null;
+            this.btnCancelTransaction.Iconimage_Selected = null;
+            this.btnCancelTransaction.IconMarginLeft = 0;
+            this.btnCancelTransaction.IconMarginRight = 0;
+            this.btnCancelTransaction.IconRightVisible = true;
+            this.btnCancelTransaction.IconRightZoom = 0D;
+            this.btnCancelTransaction.IconVisible = true;
+            this.btnCancelTransaction.IconZoom = 50D;
+            this.btnCancelTransaction.IsTab = false;
+            this.btnCancelTransaction.Location = new System.Drawing.Point(-7, 47);
+            this.btnCancelTransaction.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCancelTransaction.Name = "btnCancelTransaction";
+            this.btnCancelTransaction.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnCancelTransaction.OnHovercolor = System.Drawing.Color.DimGray;
+            this.btnCancelTransaction.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnCancelTransaction.selected = false;
+            this.btnCancelTransaction.Size = new System.Drawing.Size(104, 47);
+            this.btnCancelTransaction.TabIndex = 20;
+            this.btnCancelTransaction.Text = "Cancel";
+            this.btnCancelTransaction.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCancelTransaction.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnCancelTransaction.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelTransaction.Click += new System.EventHandler(this.btnCancelTransaction_Click);
             // 
             // txtDescription
             // 
-            this.txtDescription.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.txtDescription.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.txtDescription.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.txtDescription.Location = new System.Drawing.Point(149, 154);
+            this.txtDescription.Location = new System.Drawing.Point(151, 304);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(266, 105);
+            this.txtDescription.Size = new System.Drawing.Size(185, 105);
             this.txtDescription.TabIndex = 11;
             // 
             // ddlCategory
             // 
-            this.ddlCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ddlCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ddlCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.ddlCategory.BorderRadius = 1;
             this.ddlCategory.Color = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
@@ -149,21 +229,20 @@
             this.ddlCategory.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.ddlCategory.ItemHeight = 26;
             this.ddlCategory.ItemHighLightColor = System.Drawing.Color.Thistle;
-            this.ddlCategory.Location = new System.Drawing.Point(149, 86);
+            this.ddlCategory.Location = new System.Drawing.Point(151, 236);
             this.ddlCategory.Name = "ddlCategory";
-            this.ddlCategory.Size = new System.Drawing.Size(266, 32);
+            this.ddlCategory.Size = new System.Drawing.Size(185, 32);
             this.ddlCategory.TabIndex = 8;
             this.ddlCategory.Text = null;
             // 
             // lblDescription
             // 
-            this.lblDescription.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblDescription.AutoEllipsis = false;
             this.lblDescription.CursorType = null;
             this.lblDescription.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblDescription.Location = new System.Drawing.Point(16, 163);
+            this.lblDescription.Location = new System.Drawing.Point(18, 313);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblDescription.Size = new System.Drawing.Size(91, 23);
@@ -174,13 +253,12 @@
             // 
             // lblCategory
             // 
-            this.lblCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblCategory.AutoEllipsis = false;
             this.lblCategory.CursorType = null;
             this.lblCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblCategory.Location = new System.Drawing.Point(33, 95);
+            this.lblCategory.Location = new System.Drawing.Point(35, 245);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblCategory.Size = new System.Drawing.Size(74, 23);
@@ -193,8 +271,7 @@
             // 
             this.txtAmount.AcceptsReturn = false;
             this.txtAmount.AcceptsTab = false;
-            this.txtAmount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtAmount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtAmount.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtAmount.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
             this.txtAmount.BackColor = System.Drawing.Color.Transparent;
@@ -215,7 +292,7 @@
             this.txtAmount.IconPadding = 10;
             this.txtAmount.IconRight = null;
             this.txtAmount.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txtAmount.Location = new System.Drawing.Point(149, 11);
+            this.txtAmount.Location = new System.Drawing.Point(151, 161);
             this.txtAmount.MaxLength = 4000;
             this.txtAmount.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtAmount.Modified = false;
@@ -226,7 +303,7 @@
             this.txtAmount.SelectionLength = 0;
             this.txtAmount.SelectionStart = 0;
             this.txtAmount.ShortcutsEnabled = true;
-            this.txtAmount.Size = new System.Drawing.Size(266, 35);
+            this.txtAmount.Size = new System.Drawing.Size(185, 35);
             this.txtAmount.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtAmount.TabIndex = 4;
             this.txtAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -237,13 +314,12 @@
             // 
             // lblAmount
             // 
-            this.lblAmount.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblAmount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lblAmount.AutoEllipsis = false;
             this.lblAmount.CursorType = null;
             this.lblAmount.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblAmount.Location = new System.Drawing.Point(41, 23);
+            this.lblAmount.Location = new System.Drawing.Point(43, 173);
             this.lblAmount.Name = "lblAmount";
             this.lblAmount.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblAmount.Size = new System.Drawing.Size(66, 23);
@@ -279,6 +355,7 @@
             this.dgvTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvTransaction.ColumnHeadersVisible = false;
             this.dgvTransaction.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID,
             this.Task,
             this.EndTime,
             this.WorkingTime});
@@ -296,7 +373,7 @@
             this.dgvTransaction.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.dgvTransaction.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.dgvTransaction.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.dgvTransaction.Location = new System.Drawing.Point(3, 3);
+            this.dgvTransaction.Location = new System.Drawing.Point(12, 63);
             this.dgvTransaction.Name = "dgvTransaction";
             this.dgvTransaction.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -323,18 +400,58 @@
             this.dgvTransaction.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.DimGray;
             this.dgvTransaction.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.dgvTransaction.RowTemplate.Height = 60;
-            this.dgvTransaction.Size = new System.Drawing.Size(650, 674);
+            this.dgvTransaction.Size = new System.Drawing.Size(817, 697);
             this.dgvTransaction.TabIndex = 2;
             // 
-            // pnlGridViewEx
+            // ID
             // 
-            this.pnlGridViewEx.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlGridViewEx.BackColor = System.Drawing.Color.Transparent;
-            this.pnlGridViewEx.Location = new System.Drawing.Point(12, 80);
-            this.pnlGridViewEx.Name = "pnlGridViewEx";
-            this.pnlGridViewEx.Size = new System.Drawing.Size(656, 677);
-            this.pnlGridViewEx.TabIndex = 3;
+            this.ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ID.FillWeight = 10.15228F;
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.Width = 5;
+            // 
+            // Task
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(15);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.Task.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Task.FillWeight = 129.9492F;
+            this.Task.HeaderText = "Amount";
+            this.Task.Name = "Task";
+            // 
+            // EndTime
+            // 
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(15);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.EndTime.DefaultCellStyle = dataGridViewCellStyle4;
+            this.EndTime.FillWeight = 129.9492F;
+            this.EndTime.HeaderText = "Category";
+            this.EndTime.Name = "EndTime";
+            // 
+            // WorkingTime
+            // 
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(15);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.WorkingTime.DefaultCellStyle = dataGridViewCellStyle5;
+            this.WorkingTime.FillWeight = 129.9492F;
+            this.WorkingTime.HeaderText = "Description";
+            this.WorkingTime.Name = "WorkingTime";
             // 
             // btnAddTransaction
             // 
@@ -372,54 +489,15 @@
             this.btnAddTransaction.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTransaction.Click += new System.EventHandler(this.btnAddTransaction_Click);
             // 
-            // Task
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(15);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.Task.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Task.HeaderText = "Amount";
-            this.Task.Name = "Task";
-            // 
-            // EndTime
-            // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(15);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.EndTime.DefaultCellStyle = dataGridViewCellStyle4;
-            this.EndTime.HeaderText = "Category";
-            this.EndTime.Name = "EndTime";
-            // 
-            // WorkingTime
-            // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(15);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.WorkingTime.DefaultCellStyle = dataGridViewCellStyle5;
-            this.WorkingTime.HeaderText = "Description";
-            this.WorkingTime.Name = "WorkingTime";
-            // 
             // ExpensesTracking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(688, 788);
-            this.Controls.Add(this.pnlGridViewEx);
+            this.ClientSize = new System.Drawing.Size(744, 788);
             this.Controls.Add(this.pnlAddTransaction);
             this.Controls.Add(this.btnAddTransaction);
+            this.Controls.Add(this.dgvTransaction);
             this.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -451,8 +529,10 @@
         private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtAmount;
         private Bunifu.UI.WinForms.BunifuLabel lblAmount;
         private WindowsFormsControlLibrary1.BunifuCustomTextbox txtDescription;
-        protected internal Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAddT;
-        private System.Windows.Forms.Panel pnlGridViewEx;
+        private Bunifu.Framework.UI.BunifuFlatButton btnCancelTransaction;
+        private Bunifu.Framework.UI.BunifuFlatButton btnDeleteTransaction;
+        private Bunifu.Framework.UI.BunifuFlatButton btnSaveTransaction;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Task;
         private System.Windows.Forms.DataGridViewTextBoxColumn EndTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn WorkingTime;
