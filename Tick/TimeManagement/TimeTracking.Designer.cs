@@ -44,22 +44,22 @@
             this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.WorkingTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlAddWorkUnit = new System.Windows.Forms.Panel();
+            this.rtxtTimeDescription = new System.Windows.Forms.RichTextBox();
+            this.btnCancel = new Bunifu.Framework.UI.BunifuFlatButton();
             this.ddEndMinute = new Bunifu.UI.WinForms.BunifuDropdown();
             this.ddEndHour = new Bunifu.UI.WinForms.BunifuDropdown();
             this.lblEndTime = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.ddStartMinute = new Bunifu.UI.WinForms.BunifuDropdown();
             this.ddStartHour = new Bunifu.UI.WinForms.BunifuDropdown();
             this.lblStartTime = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.dpTimeTrackingDate = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.lblTimeTrackingDate = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblDescription = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblTask = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.ddTask = new Bunifu.UI.WinForms.BunifuDropdown();
-            this.btnCancel = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.dpTimeTrackingDate = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.btnDeleteTimeTracking = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSaveTimeTracking = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.ddTask = new Bunifu.UI.WinForms.BunifuDropdown();
             this.btnAddTimeTracking = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.rtxtTimeDescription = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkUnits)).BeginInit();
             this.pnlAddWorkUnit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -140,6 +140,9 @@
             this.dgvWorkUnits.RowTemplate.Height = 60;
             this.dgvWorkUnits.Size = new System.Drawing.Size(634, 675);
             this.dgvWorkUnits.TabIndex = 1;
+            this.dgvWorkUnits.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWorkUnits_CellContentClick);
+            this.dgvWorkUnits.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWorkUnits_CellContentClick);
+            this.dgvWorkUnits.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvdgvWorkUnits_RowHeaderMouseClick);
             // 
             // Task
             // 
@@ -213,6 +216,55 @@
             this.pnlAddWorkUnit.Name = "pnlAddWorkUnit";
             this.pnlAddWorkUnit.Size = new System.Drawing.Size(10, 748);
             this.pnlAddWorkUnit.TabIndex = 2;
+            // 
+            // rtxtTimeDescription
+            // 
+            this.rtxtTimeDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.rtxtTimeDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.rtxtTimeDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.rtxtTimeDescription.Location = new System.Drawing.Point(36, 231);
+            this.rtxtTimeDescription.Name = "rtxtTimeDescription";
+            this.rtxtTimeDescription.Size = new System.Drawing.Size(258, 96);
+            this.rtxtTimeDescription.TabIndex = 18;
+            this.rtxtTimeDescription.Text = "";
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Active = false;
+            this.btnCancel.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCancel.BorderRadius = 0;
+            this.btnCancel.ButtonText = "Cancel";
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCancel.Iconimage = global::Tick.Properties.Resources.cancel;
+            this.btnCancel.Iconimage_right = null;
+            this.btnCancel.Iconimage_right_Selected = null;
+            this.btnCancel.Iconimage_Selected = null;
+            this.btnCancel.IconMarginLeft = 0;
+            this.btnCancel.IconMarginRight = 0;
+            this.btnCancel.IconRightVisible = true;
+            this.btnCancel.IconRightZoom = 0D;
+            this.btnCancel.IconVisible = true;
+            this.btnCancel.IconZoom = 50D;
+            this.btnCancel.IsTab = false;
+            this.btnCancel.Location = new System.Drawing.Point(16, 22);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnCancel.OnHovercolor = System.Drawing.Color.DimGray;
+            this.btnCancel.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnCancel.selected = false;
+            this.btnCancel.Size = new System.Drawing.Size(101, 47);
+            this.btnCancel.TabIndex = 15;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCancel.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnCancel.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // ddEndMinute
             // 
@@ -540,6 +592,34 @@
             this.lblStartTime.TabIndex = 8;
             this.lblStartTime.Text = "Start Time";
             // 
+            // dpTimeTrackingDate
+            // 
+            this.dpTimeTrackingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.dpTimeTrackingDate.BorderRadius = 5;
+            this.dpTimeTrackingDate.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpTimeTrackingDate.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dpTimeTrackingDate.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.dpTimeTrackingDate.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.dpTimeTrackingDate.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dpTimeTrackingDate.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dpTimeTrackingDate.Color = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dpTimeTrackingDate.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thick;
+            this.dpTimeTrackingDate.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.dpTimeTrackingDate.DisabledColor = System.Drawing.Color.Gray;
+            this.dpTimeTrackingDate.DisplayWeekNumbers = false;
+            this.dpTimeTrackingDate.DPHeight = 0;
+            this.dpTimeTrackingDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dpTimeTrackingDate.FillDatePicker = false;
+            this.dpTimeTrackingDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dpTimeTrackingDate.Icon = ((System.Drawing.Image)(resources.GetObject("dpTimeTrackingDate.Icon")));
+            this.dpTimeTrackingDate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
+            this.dpTimeTrackingDate.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.dpTimeTrackingDate.Location = new System.Drawing.Point(36, 378);
+            this.dpTimeTrackingDate.MinimumSize = new System.Drawing.Size(258, 35);
+            this.dpTimeTrackingDate.Name = "dpTimeTrackingDate";
+            this.dpTimeTrackingDate.Size = new System.Drawing.Size(258, 35);
+            this.dpTimeTrackingDate.TabIndex = 7;
+            // 
             // lblTimeTrackingDate
             // 
             this.lblTimeTrackingDate.AutoSize = true;
@@ -569,107 +649,6 @@
             this.lblTask.Size = new System.Drawing.Size(40, 21);
             this.lblTask.TabIndex = 4;
             this.lblTask.Text = "Task";
-            // 
-            // ddTask
-            // 
-            this.ddTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ddTask.BorderRadius = 5;
-            this.ddTask.Color = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.ddTask.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.ddTask.DisabledColor = System.Drawing.Color.Gray;
-            this.ddTask.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ddTask.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
-            this.ddTask.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddTask.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.ddTask.FillDropDown = false;
-            this.ddTask.FillIndicator = false;
-            this.ddTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ddTask.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.ddTask.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.ddTask.FormattingEnabled = true;
-            this.ddTask.Icon = null;
-            this.ddTask.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.ddTask.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.ddTask.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ddTask.ItemBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.ddTask.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.ddTask.ItemHeight = 26;
-            this.ddTask.ItemHighLightColor = System.Drawing.Color.DimGray;
-            this.ddTask.Items.AddRange(new object[] {
-            "one",
-            "two",
-            "three"});
-            this.ddTask.Location = new System.Drawing.Point(36, 139);
-            this.ddTask.Name = "ddTask";
-            this.ddTask.Size = new System.Drawing.Size(258, 32);
-            this.ddTask.TabIndex = 0;
-            this.ddTask.Text = " ";
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Active = false;
-            this.btnCancel.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCancel.BorderRadius = 0;
-            this.btnCancel.ButtonText = "Cancel";
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.DisabledColor = System.Drawing.Color.Gray;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnCancel.Iconimage = global::Tick.Properties.Resources.cancel;
-            this.btnCancel.Iconimage_right = null;
-            this.btnCancel.Iconimage_right_Selected = null;
-            this.btnCancel.Iconimage_Selected = null;
-            this.btnCancel.IconMarginLeft = 0;
-            this.btnCancel.IconMarginRight = 0;
-            this.btnCancel.IconRightVisible = true;
-            this.btnCancel.IconRightZoom = 0D;
-            this.btnCancel.IconVisible = true;
-            this.btnCancel.IconZoom = 50D;
-            this.btnCancel.IsTab = false;
-            this.btnCancel.Location = new System.Drawing.Point(16, 22);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.btnCancel.OnHovercolor = System.Drawing.Color.DimGray;
-            this.btnCancel.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.btnCancel.selected = false;
-            this.btnCancel.Size = new System.Drawing.Size(101, 47);
-            this.btnCancel.TabIndex = 15;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCancel.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.btnCancel.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // dpTimeTrackingDate
-            // 
-            this.dpTimeTrackingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.dpTimeTrackingDate.BorderRadius = 5;
-            this.dpTimeTrackingDate.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpTimeTrackingDate.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dpTimeTrackingDate.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.dpTimeTrackingDate.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.dpTimeTrackingDate.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dpTimeTrackingDate.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dpTimeTrackingDate.Color = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dpTimeTrackingDate.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thick;
-            this.dpTimeTrackingDate.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.dpTimeTrackingDate.DisabledColor = System.Drawing.Color.Gray;
-            this.dpTimeTrackingDate.DisplayWeekNumbers = false;
-            this.dpTimeTrackingDate.DPHeight = 0;
-            this.dpTimeTrackingDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dpTimeTrackingDate.FillDatePicker = false;
-            this.dpTimeTrackingDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dpTimeTrackingDate.Icon = ((System.Drawing.Image)(resources.GetObject("dpTimeTrackingDate.Icon")));
-            this.dpTimeTrackingDate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.dpTimeTrackingDate.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.dpTimeTrackingDate.Location = new System.Drawing.Point(36, 378);
-            this.dpTimeTrackingDate.MinimumSize = new System.Drawing.Size(258, 35);
-            this.dpTimeTrackingDate.Name = "dpTimeTrackingDate";
-            this.dpTimeTrackingDate.Size = new System.Drawing.Size(258, 35);
-            this.dpTimeTrackingDate.TabIndex = 7;
             // 
             // btnDeleteTimeTracking
             // 
@@ -744,6 +723,42 @@
             this.btnSaveTimeTracking.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSaveTimeTracking.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.btnSaveTimeTracking.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveTimeTracking.Click += new System.EventHandler(this.btnSaveTimeTracking_Click);
+            // 
+            // ddTask
+            // 
+            this.ddTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.ddTask.BorderRadius = 5;
+            this.ddTask.Color = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.ddTask.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.ddTask.DisabledColor = System.Drawing.Color.Gray;
+            this.ddTask.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ddTask.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
+            this.ddTask.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddTask.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.ddTask.FillDropDown = false;
+            this.ddTask.FillIndicator = false;
+            this.ddTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ddTask.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ddTask.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.ddTask.FormattingEnabled = true;
+            this.ddTask.Icon = null;
+            this.ddTask.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
+            this.ddTask.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.ddTask.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.ddTask.ItemBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.ddTask.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.ddTask.ItemHeight = 26;
+            this.ddTask.ItemHighLightColor = System.Drawing.Color.DimGray;
+            this.ddTask.Items.AddRange(new object[] {
+            "one",
+            "two",
+            "three"});
+            this.ddTask.Location = new System.Drawing.Point(36, 139);
+            this.ddTask.Name = "ddTask";
+            this.ddTask.Size = new System.Drawing.Size(258, 32);
+            this.ddTask.TabIndex = 0;
+            this.ddTask.Text = " ";
             // 
             // btnAddTimeTracking
             // 
@@ -781,23 +796,12 @@
             this.btnAddTimeTracking.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddTimeTracking.Click += new System.EventHandler(this.btnAddTimeTracking_Click);
             // 
-            // rtxtTimeDescription
-            // 
-            this.rtxtTimeDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.rtxtTimeDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rtxtTimeDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.rtxtTimeDescription.Location = new System.Drawing.Point(36, 231);
-            this.rtxtTimeDescription.Name = "rtxtTimeDescription";
-            this.rtxtTimeDescription.Size = new System.Drawing.Size(258, 96);
-            this.rtxtTimeDescription.TabIndex = 18;
-            this.rtxtTimeDescription.Text = "";
-            // 
             // TimeTracking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(688, 772);
+            this.ClientSize = new System.Drawing.Size(704, 788);
             this.Controls.Add(this.pnlAddWorkUnit);
             this.Controls.Add(this.dgvWorkUnits);
             this.Controls.Add(this.btnAddTimeTracking);

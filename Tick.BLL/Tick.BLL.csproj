@@ -45,6 +45,7 @@
     <Compile Include="ExpensesTrackingBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaskBLL.cs" />
+    <Compile Include="TimeTrackingBLL.cs" />
     <Compile Include="UserBLL.cs" />
   </ItemGroup>
   <ItemGroup>

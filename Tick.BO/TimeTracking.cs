@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tick.BO
 {
-    class TimeTracking :Base
+   public class TimeTracking :Base
     {
         public int TTrackingID { get; set; }
         public int TaskID { get; set; }

@@ -97,6 +97,7 @@
     <Compile Include="ExpensesTrackingDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaskDAL.cs" />
+    <Compile Include="TimeTrackingDAL.cs" />
     <Compile Include="UserDAL.cs" />
   </ItemGroup>
   <ItemGroup>
