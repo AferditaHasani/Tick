@@ -91,6 +91,23 @@ namespace Tick.TimeManagement
                 if (t!=null)
                 {
                     dgvTasks.DataSource = t;
+
+                    dgvTasks.Columns["Color"].Visible = false;
+                    dgvTasks.Columns["TaskID"].Width = 100;
+                    for (int i = 0; i < dgvTasks.RowCount-1; i++)
+                    {
+                        DataGridViewRow row = dgvTasks.Rows[i];
+                        string c =  row.Cells["Color"].Value.ToString();
+
+                        string[] colors = c.Split(',');
+                        dgvTasks.Rows[i].HeaderCell.Style.BackColor =
+                            Color.FromArgb( int.Parse(colors[1]), int.Parse(colors[2]), int.Parse(colors[3]));
+                           
+
+
+                         }
+
+
                 }
                 else
                 {

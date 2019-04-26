@@ -176,7 +176,7 @@ namespace Tick.TimeManagement
             if (e.RowIndex >= 0)
             {
 
-                //DataGridViewRow row = this.dgvWorkUnits.Rows[e.RowIndex];
+                DataGridViewRow row = this.dgvWorkUnits.Rows[e.RowIndex];
                 //time.TaskID = int.Parse(row.Cells["TaskID"].Value.ToString());
                
                 //time.Description = row.Cells["Description"].Value.ToString();
@@ -207,7 +207,27 @@ namespace Tick.TimeManagement
             pnlAddWorkUnit.Location = new Point(dgvWorkUnits.Width + 2, 12);
             time = new BO.TimeTracking();
         }
+        private void Delete()
+        {
+            try
+            {
 
+                if (time == null)
+                {
+                    MessageBox.Show("No record to delete");
+                    return;
+                }
+
+                var deleted = timeBLL_service.Delete(time);
+
+                MessageBox.Show(deleted ? "Deleted Successfully" : "Deleting failed , please try again");
+
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
         private void TimeTracking_Load(object sender, EventArgs e)
         {
             DisplayToDGrid();
