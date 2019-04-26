@@ -27,14 +27,22 @@ namespace Tick.TimeManagement
         private void btnAddTask_Click(object sender, EventArgs e)
         {
             OpenAddTaskPannel();
+            tsk = null;
+            ClearTxt();
         }
         private void btnCancelTask_Click(object sender, EventArgs e)
         {
             CloseAddTaskPannel();
+            ClearTxt();
         }
 
-
-
+        private void ClearTxt()
+        {
+            cbTaskColor.Value = new Color ();
+            cbTaskColor.Text = "";
+            rtxtTaskDescription.Text = "";
+            txtTaskName.Text = "";
+        }
         private void btnSaveTask_Click(object sender, EventArgs e)
         {
             if (tsk == null)
@@ -45,6 +53,7 @@ namespace Tick.TimeManagement
             
             DisplayToDGrid();
             CloseAddTaskPannel();
+            ClearTxt();
         }
 
         private void Update()
@@ -57,7 +66,11 @@ namespace Tick.TimeManagement
                     MessageBox.Show("Error");
                     return;
                 }
+                int[] color = GetArgb(cbTaskColor.Value.ToString());
 
+                tsk.Name =txtTaskName.Text;
+                tsk.Description = rtxtTaskDescription.Text;
+                tsk.Color = $"{color[0]},{color[1]},{color[2]},{color[3]}";
                 var saved = taskBLL_service.Update(tsk);
 
                 MessageBox.Show(saved ? "Updated Successfully" : "Updating failed , please try again");
@@ -160,9 +173,6 @@ namespace Tick.TimeManagement
                 cbTaskColor.Value = Color.FromArgb(int.Parse(colors[0]), int.Parse(colors[1]), int.Parse(colors[2]), int.Parse(colors[3]));
             }
         }
-
-        
-
         private void dgvTasks_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             tsk = new Task();
@@ -183,8 +193,6 @@ namespace Tick.TimeManagement
                 cbTaskColor.Value = Color.FromArgb(int.Parse(colors[0]), int.Parse(colors[1]), int.Parse(colors[2]), int.Parse(colors[3]));
             }
         }
-
-
         private int[] GetArgb(string color)
         {
             int[] result = new int[4];
@@ -221,5 +229,7 @@ namespace Tick.TimeManagement
             pnlAddTask.Location = new Point(dgvTasks.Width + 2, 12);
             tsk = new Task();
         }
+
+      
     }
 }

@@ -80,6 +80,7 @@ namespace Tick.DAL
                     String sql = "dbo.usp_Task_Update";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
+                        MessageBox.Show($"ID {model.TaskID}   {model.Name}   {model.Description} {model.Color} ");
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.Add("@prmTasID", SqlDbType.Int).Value = model.TaskID;
