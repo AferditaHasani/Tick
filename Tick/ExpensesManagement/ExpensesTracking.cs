@@ -27,7 +27,6 @@ namespace Tick.ExpensesManagement
 
 
 
-            //  OpenTransaction();
 
 
         }
@@ -217,13 +216,13 @@ namespace Tick.ExpensesManagement
         {
             Delete();
             transaction = null;
-            //DisplayToDGrid();
+            DisplayToDGrid();
         }
 
         private void dgvTransaction_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             transaction = new BO.ExpensesTracking();
-           // OpenAddTaskPannel();
+         
             if (e.RowIndex >= 0)
             {
 
@@ -242,7 +241,7 @@ namespace Tick.ExpensesManagement
         {
 
             transaction = new BO.ExpensesTracking();
-          //  OpenAddTaskPannel();
+        
             if (e.RowIndex >= 0)
             {
 
