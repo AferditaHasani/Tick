@@ -28,169 +28,40 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle43 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle44 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle45 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TimeTracking));
-            this.dgvWorkUnits = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.Task = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.WorkingTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlAddWorkUnit = new System.Windows.Forms.Panel();
             this.rtxtTimeDescription = new System.Windows.Forms.RichTextBox();
-            this.btnCancel = new Bunifu.Framework.UI.BunifuFlatButton();
             this.ddEndMinute = new Bunifu.UI.WinForms.BunifuDropdown();
             this.ddEndHour = new Bunifu.UI.WinForms.BunifuDropdown();
             this.lblEndTime = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.ddStartMinute = new Bunifu.UI.WinForms.BunifuDropdown();
             this.ddStartHour = new Bunifu.UI.WinForms.BunifuDropdown();
             this.lblStartTime = new Bunifu.Framework.UI.BunifuCustomLabel();
-            this.dpTimeTrackingDate = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.lblTimeTrackingDate = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblDescription = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.lblTask = new Bunifu.Framework.UI.BunifuCustomLabel();
+            this.ddTask = new Bunifu.UI.WinForms.BunifuDropdown();
+            this.dgvWorkUnits = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.pnlSearchByDate = new System.Windows.Forms.Panel();
+            this.dtpDataGridTime = new Syncfusion.Windows.Forms.Tools.DateTimePickerAdv();
+            this.btnPreviousDay = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnNextDay = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnCancel = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.dpTimeTrackingDate = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.btnDeleteTimeTracking = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnSaveTimeTracking = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.ddTask = new Bunifu.UI.WinForms.BunifuDropdown();
             this.btnAddTimeTracking = new Bunifu.Framework.UI.BunifuFlatButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvWorkUnits)).BeginInit();
             this.pnlAddWorkUnit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWorkUnits)).BeginInit();
+            this.pnlSearchByDate.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtpDataGridTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dgvWorkUnits
-            // 
-            dataGridViewCellStyle37.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle37.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle37.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle37.Padding = new System.Windows.Forms.Padding(15);
-            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dgvWorkUnits.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle37;
-            this.dgvWorkUnits.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvWorkUnits.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvWorkUnits.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.dgvWorkUnits.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvWorkUnits.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvWorkUnits.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle38.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle38.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            dataGridViewCellStyle38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle38.Padding = new System.Windows.Forms.Padding(15);
-            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dgvWorkUnits.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle38;
-            this.dgvWorkUnits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvWorkUnits.ColumnHeadersVisible = false;
-            this.dgvWorkUnits.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Task,
-            this.StartTime,
-            this.EndTime,
-            this.WorkingTime});
-            dataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle43.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle43.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            dataGridViewCellStyle43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle43.Padding = new System.Windows.Forms.Padding(15);
-            dataGridViewCellStyle43.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle43.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvWorkUnits.DefaultCellStyle = dataGridViewCellStyle43;
-            this.dgvWorkUnits.DoubleBuffered = true;
-            this.dgvWorkUnits.EnableHeadersVisualStyles = false;
-            this.dgvWorkUnits.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.dgvWorkUnits.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.dgvWorkUnits.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dgvWorkUnits.Location = new System.Drawing.Point(12, 85);
-            this.dgvWorkUnits.Name = "dgvWorkUnits";
-            this.dgvWorkUnits.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle44.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle44.Font = new System.Drawing.Font("Segoe UI", 8.25F);
-            dataGridViewCellStyle44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle44.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle44.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvWorkUnits.RowHeadersDefaultCellStyle = dataGridViewCellStyle44;
-            this.dgvWorkUnits.RowHeadersWidth = 10;
-            dataGridViewCellStyle45.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle45.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle45.Padding = new System.Windows.Forms.Padding(15);
-            dataGridViewCellStyle45.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle45.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dgvWorkUnits.RowsDefaultCellStyle = dataGridViewCellStyle45;
-            this.dgvWorkUnits.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.dgvWorkUnits.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvWorkUnits.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dgvWorkUnits.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(5);
-            this.dgvWorkUnits.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.DimGray;
-            this.dgvWorkUnits.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dgvWorkUnits.RowTemplate.Height = 60;
-            this.dgvWorkUnits.Size = new System.Drawing.Size(634, 675);
-            this.dgvWorkUnits.TabIndex = 1;
-            this.dgvWorkUnits.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWorkUnits_CellContentClick);
-            this.dgvWorkUnits.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWorkUnits_CellContentClick);
-            this.dgvWorkUnits.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvdgvWorkUnits_RowHeaderMouseClick);
-            // 
-            // Task
-            // 
-            dataGridViewCellStyle39.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle39.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle39.Padding = new System.Windows.Forms.Padding(15);
-            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.Task.DefaultCellStyle = dataGridViewCellStyle39;
-            this.Task.HeaderText = "Task";
-            this.Task.Name = "Task";
-            // 
-            // StartTime
-            // 
-            dataGridViewCellStyle40.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle40.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle40.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle40.Padding = new System.Windows.Forms.Padding(15);
-            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.StartTime.DefaultCellStyle = dataGridViewCellStyle40;
-            this.StartTime.HeaderText = "StartTime";
-            this.StartTime.Name = "StartTime";
-            // 
-            // EndTime
-            // 
-            dataGridViewCellStyle41.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle41.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle41.Padding = new System.Windows.Forms.Padding(15);
-            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.EndTime.DefaultCellStyle = dataGridViewCellStyle41;
-            this.EndTime.HeaderText = "EndTime";
-            this.EndTime.Name = "EndTime";
-            // 
-            // WorkingTime
-            // 
-            dataGridViewCellStyle42.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle42.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle42.Padding = new System.Windows.Forms.Padding(15);
-            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.WorkingTime.DefaultCellStyle = dataGridViewCellStyle42;
-            this.WorkingTime.HeaderText = "WorkingTime";
-            this.WorkingTime.Name = "WorkingTime";
             // 
             // pnlAddWorkUnit
             // 
@@ -212,9 +83,9 @@
             this.pnlAddWorkUnit.Controls.Add(this.btnDeleteTimeTracking);
             this.pnlAddWorkUnit.Controls.Add(this.btnSaveTimeTracking);
             this.pnlAddWorkUnit.Controls.Add(this.ddTask);
-            this.pnlAddWorkUnit.Location = new System.Drawing.Point(652, 12);
+            this.pnlAddWorkUnit.Location = new System.Drawing.Point(666, 12);
             this.pnlAddWorkUnit.Name = "pnlAddWorkUnit";
-            this.pnlAddWorkUnit.Size = new System.Drawing.Size(24, 748);
+            this.pnlAddWorkUnit.Size = new System.Drawing.Size(10, 748);
             this.pnlAddWorkUnit.TabIndex = 2;
             // 
             // rtxtTimeDescription
@@ -227,44 +98,6 @@
             this.rtxtTimeDescription.Size = new System.Drawing.Size(258, 96);
             this.rtxtTimeDescription.TabIndex = 18;
             this.rtxtTimeDescription.Text = "";
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.Active = false;
-            this.btnCancel.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCancel.BorderRadius = 0;
-            this.btnCancel.ButtonText = "Cancel";
-            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancel.DisabledColor = System.Drawing.Color.Gray;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnCancel.Iconimage = global::Tick.Properties.Resources.cancel;
-            this.btnCancel.Iconimage_right = null;
-            this.btnCancel.Iconimage_right_Selected = null;
-            this.btnCancel.Iconimage_Selected = null;
-            this.btnCancel.IconMarginLeft = 0;
-            this.btnCancel.IconMarginRight = 0;
-            this.btnCancel.IconRightVisible = true;
-            this.btnCancel.IconRightZoom = 0D;
-            this.btnCancel.IconVisible = true;
-            this.btnCancel.IconZoom = 50D;
-            this.btnCancel.IsTab = false;
-            this.btnCancel.Location = new System.Drawing.Point(16, 22);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.btnCancel.OnHovercolor = System.Drawing.Color.DimGray;
-            this.btnCancel.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.btnCancel.selected = false;
-            this.btnCancel.Size = new System.Drawing.Size(101, 47);
-            this.btnCancel.TabIndex = 15;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnCancel.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.btnCancel.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // ddEndMinute
             // 
@@ -592,34 +425,6 @@
             this.lblStartTime.TabIndex = 8;
             this.lblStartTime.Text = "Start Time";
             // 
-            // dpTimeTrackingDate
-            // 
-            this.dpTimeTrackingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.dpTimeTrackingDate.BorderRadius = 5;
-            this.dpTimeTrackingDate.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpTimeTrackingDate.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dpTimeTrackingDate.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.dpTimeTrackingDate.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.dpTimeTrackingDate.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dpTimeTrackingDate.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dpTimeTrackingDate.Color = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dpTimeTrackingDate.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thick;
-            this.dpTimeTrackingDate.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.dpTimeTrackingDate.DisabledColor = System.Drawing.Color.Gray;
-            this.dpTimeTrackingDate.DisplayWeekNumbers = false;
-            this.dpTimeTrackingDate.DPHeight = 0;
-            this.dpTimeTrackingDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dpTimeTrackingDate.FillDatePicker = false;
-            this.dpTimeTrackingDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dpTimeTrackingDate.Icon = ((System.Drawing.Image)(resources.GetObject("dpTimeTrackingDate.Icon")));
-            this.dpTimeTrackingDate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.dpTimeTrackingDate.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.dpTimeTrackingDate.Location = new System.Drawing.Point(36, 378);
-            this.dpTimeTrackingDate.MinimumSize = new System.Drawing.Size(258, 35);
-            this.dpTimeTrackingDate.Name = "dpTimeTrackingDate";
-            this.dpTimeTrackingDate.Size = new System.Drawing.Size(258, 35);
-            this.dpTimeTrackingDate.TabIndex = 7;
-            // 
             // lblTimeTrackingDate
             // 
             this.lblTimeTrackingDate.AutoSize = true;
@@ -649,6 +454,294 @@
             this.lblTask.Size = new System.Drawing.Size(40, 21);
             this.lblTask.TabIndex = 4;
             this.lblTask.Text = "Task";
+            // 
+            // ddTask
+            // 
+            this.ddTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.ddTask.BorderRadius = 5;
+            this.ddTask.Color = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.ddTask.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.ddTask.DisabledColor = System.Drawing.Color.Gray;
+            this.ddTask.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ddTask.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
+            this.ddTask.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddTask.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.ddTask.FillDropDown = false;
+            this.ddTask.FillIndicator = false;
+            this.ddTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ddTask.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.ddTask.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.ddTask.FormattingEnabled = true;
+            this.ddTask.Icon = null;
+            this.ddTask.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
+            this.ddTask.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.ddTask.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.ddTask.ItemBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.ddTask.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.ddTask.ItemHeight = 26;
+            this.ddTask.ItemHighLightColor = System.Drawing.Color.DimGray;
+            this.ddTask.Items.AddRange(new object[] {
+            "one",
+            "two",
+            "three"});
+            this.ddTask.Location = new System.Drawing.Point(36, 139);
+            this.ddTask.Name = "ddTask";
+            this.ddTask.Size = new System.Drawing.Size(258, 32);
+            this.ddTask.TabIndex = 0;
+            this.ddTask.Text = " ";
+            // 
+            // dgvWorkUnits
+            // 
+            this.dgvWorkUnits.AllowUserToAddRows = false;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle26.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle26.Padding = new System.Windows.Forms.Padding(15);
+            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dgvWorkUnits.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle26;
+            this.dgvWorkUnits.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvWorkUnits.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvWorkUnits.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.dgvWorkUnits.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvWorkUnits.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dgvWorkUnits.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle27.Padding = new System.Windows.Forms.Padding(15);
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dgvWorkUnits.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
+            this.dgvWorkUnits.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvWorkUnits.ColumnHeadersVisible = false;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle28.Padding = new System.Windows.Forms.Padding(15);
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvWorkUnits.DefaultCellStyle = dataGridViewCellStyle28;
+            this.dgvWorkUnits.DoubleBuffered = true;
+            this.dgvWorkUnits.EnableHeadersVisualStyles = false;
+            this.dgvWorkUnits.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.dgvWorkUnits.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.dgvWorkUnits.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dgvWorkUnits.Location = new System.Drawing.Point(12, 115);
+            this.dgvWorkUnits.Name = "dgvWorkUnits";
+            this.dgvWorkUnits.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle29.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle29.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            dataGridViewCellStyle29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle29.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvWorkUnits.RowHeadersDefaultCellStyle = dataGridViewCellStyle29;
+            this.dgvWorkUnits.RowHeadersWidth = 10;
+            dataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle30.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle30.Padding = new System.Windows.Forms.Padding(15);
+            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dgvWorkUnits.RowsDefaultCellStyle = dataGridViewCellStyle30;
+            this.dgvWorkUnits.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.dgvWorkUnits.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvWorkUnits.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dgvWorkUnits.RowTemplate.DefaultCellStyle.Padding = new System.Windows.Forms.Padding(5);
+            this.dgvWorkUnits.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.DimGray;
+            this.dgvWorkUnits.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dgvWorkUnits.RowTemplate.Height = 60;
+            this.dgvWorkUnits.Size = new System.Drawing.Size(634, 645);
+            this.dgvWorkUnits.TabIndex = 1;
+            this.dgvWorkUnits.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWorkUnits_CellContentClick);
+            this.dgvWorkUnits.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWorkUnits_CellContentClick);
+            this.dgvWorkUnits.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvdgvWorkUnits_RowHeaderMouseClick);
+            // 
+            // pnlSearchByDate
+            // 
+            this.pnlSearchByDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlSearchByDate.Controls.Add(this.btnPreviousDay);
+            this.pnlSearchByDate.Controls.Add(this.btnNextDay);
+            this.pnlSearchByDate.Controls.Add(this.dtpDataGridTime);
+            this.pnlSearchByDate.Location = new System.Drawing.Point(64, 70);
+            this.pnlSearchByDate.Name = "pnlSearchByDate";
+            this.pnlSearchByDate.Size = new System.Drawing.Size(490, 40);
+            this.pnlSearchByDate.TabIndex = 3;
+            // 
+            // dtpDataGridTime
+            // 
+            this.dtpDataGridTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.dtpDataGridTime.Border3DStyle = System.Windows.Forms.Border3DStyle.Flat;
+            this.dtpDataGridTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dtpDataGridTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.dtpDataGridTime.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDataGridTime.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
+            this.dtpDataGridTime.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.dtpDataGridTime.CalendarSize = new System.Drawing.Size(399, 220);
+            this.dtpDataGridTime.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.dtpDataGridTime.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dtpDataGridTime.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dtpDataGridTime.DropDownImage = null;
+            this.dtpDataGridTime.DropDownNormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.dtpDataGridTime.DropDownPressedColor = System.Drawing.Color.DimGray;
+            this.dtpDataGridTime.DropDownSelectedColor = System.Drawing.Color.DimGray;
+            this.dtpDataGridTime.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDataGridTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dtpDataGridTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDataGridTime.Location = new System.Drawing.Point(44, 3);
+            this.dtpDataGridTime.MaxValue = new System.DateTime(2019, 5, 3, 0, 0, 0, 0);
+            this.dtpDataGridTime.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
+            this.dtpDataGridTime.MinValue = new System.DateTime(((long)(0)));
+            this.dtpDataGridTime.Name = "dtpDataGridTime";
+            this.dtpDataGridTime.ShowCheckBox = false;
+            this.dtpDataGridTime.ShowUpDownOnFocus = true;
+            this.dtpDataGridTime.Size = new System.Drawing.Size(399, 33);
+            this.dtpDataGridTime.StretchDropDownImage = true;
+            this.dtpDataGridTime.Style = Syncfusion.Windows.Forms.VisualStyle.Office2016DarkGray;
+            this.dtpDataGridTime.TabIndex = 4;
+            this.dtpDataGridTime.Value = new System.DateTime(2019, 5, 3, 0, 0, 0, 0);
+            // 
+            // btnPreviousDay
+            // 
+            this.btnPreviousDay.Active = false;
+            this.btnPreviousDay.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnPreviousDay.BackColor = System.Drawing.Color.Transparent;
+            this.btnPreviousDay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPreviousDay.BorderRadius = 0;
+            this.btnPreviousDay.ButtonText = "";
+            this.btnPreviousDay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPreviousDay.DisabledColor = System.Drawing.Color.Gray;
+            this.btnPreviousDay.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnPreviousDay.Iconimage = global::Tick.Properties.Resources.Previous;
+            this.btnPreviousDay.Iconimage_right = null;
+            this.btnPreviousDay.Iconimage_right_Selected = null;
+            this.btnPreviousDay.Iconimage_Selected = null;
+            this.btnPreviousDay.IconMarginLeft = 0;
+            this.btnPreviousDay.IconMarginRight = 0;
+            this.btnPreviousDay.IconRightVisible = true;
+            this.btnPreviousDay.IconRightZoom = 0D;
+            this.btnPreviousDay.IconVisible = true;
+            this.btnPreviousDay.IconZoom = 80D;
+            this.btnPreviousDay.IsTab = false;
+            this.btnPreviousDay.Location = new System.Drawing.Point(4, 3);
+            this.btnPreviousDay.Name = "btnPreviousDay";
+            this.btnPreviousDay.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnPreviousDay.OnHovercolor = System.Drawing.Color.Gray;
+            this.btnPreviousDay.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnPreviousDay.selected = false;
+            this.btnPreviousDay.Size = new System.Drawing.Size(34, 32);
+            this.btnPreviousDay.TabIndex = 5;
+            this.btnPreviousDay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPreviousDay.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnPreviousDay.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnNextDay
+            // 
+            this.btnNextDay.Active = false;
+            this.btnNextDay.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnNextDay.BackColor = System.Drawing.Color.Transparent;
+            this.btnNextDay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnNextDay.BorderRadius = 0;
+            this.btnNextDay.ButtonText = "";
+            this.btnNextDay.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNextDay.DisabledColor = System.Drawing.Color.Gray;
+            this.btnNextDay.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnNextDay.Iconimage = global::Tick.Properties.Resources.Next;
+            this.btnNextDay.Iconimage_right = null;
+            this.btnNextDay.Iconimage_right_Selected = null;
+            this.btnNextDay.Iconimage_Selected = null;
+            this.btnNextDay.IconMarginLeft = 0;
+            this.btnNextDay.IconMarginRight = 0;
+            this.btnNextDay.IconRightVisible = true;
+            this.btnNextDay.IconRightZoom = 0D;
+            this.btnNextDay.IconVisible = true;
+            this.btnNextDay.IconZoom = 80D;
+            this.btnNextDay.IsTab = false;
+            this.btnNextDay.Location = new System.Drawing.Point(449, 3);
+            this.btnNextDay.Name = "btnNextDay";
+            this.btnNextDay.Normalcolor = System.Drawing.Color.Transparent;
+            this.btnNextDay.OnHovercolor = System.Drawing.Color.Gray;
+            this.btnNextDay.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnNextDay.selected = false;
+            this.btnNextDay.Size = new System.Drawing.Size(34, 32);
+            this.btnNextDay.TabIndex = 4;
+            this.btnNextDay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnNextDay.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnNextDay.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Active = false;
+            this.btnCancel.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCancel.BorderRadius = 0;
+            this.btnCancel.ButtonText = "Cancel";
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCancel.Iconimage = global::Tick.Properties.Resources.cancel;
+            this.btnCancel.Iconimage_right = null;
+            this.btnCancel.Iconimage_right_Selected = null;
+            this.btnCancel.Iconimage_Selected = null;
+            this.btnCancel.IconMarginLeft = 0;
+            this.btnCancel.IconMarginRight = 0;
+            this.btnCancel.IconRightVisible = true;
+            this.btnCancel.IconRightZoom = 0D;
+            this.btnCancel.IconVisible = true;
+            this.btnCancel.IconZoom = 50D;
+            this.btnCancel.IsTab = false;
+            this.btnCancel.Location = new System.Drawing.Point(16, 22);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnCancel.OnHovercolor = System.Drawing.Color.DimGray;
+            this.btnCancel.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnCancel.selected = false;
+            this.btnCancel.Size = new System.Drawing.Size(101, 47);
+            this.btnCancel.TabIndex = 15;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCancel.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnCancel.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // dpTimeTrackingDate
+            // 
+            this.dpTimeTrackingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.dpTimeTrackingDate.BorderRadius = 5;
+            this.dpTimeTrackingDate.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpTimeTrackingDate.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dpTimeTrackingDate.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.dpTimeTrackingDate.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.dpTimeTrackingDate.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dpTimeTrackingDate.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dpTimeTrackingDate.Color = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dpTimeTrackingDate.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thick;
+            this.dpTimeTrackingDate.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.dpTimeTrackingDate.DisabledColor = System.Drawing.Color.Gray;
+            this.dpTimeTrackingDate.DisplayWeekNumbers = false;
+            this.dpTimeTrackingDate.DPHeight = 0;
+            this.dpTimeTrackingDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dpTimeTrackingDate.FillDatePicker = false;
+            this.dpTimeTrackingDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dpTimeTrackingDate.Icon = ((System.Drawing.Image)(resources.GetObject("dpTimeTrackingDate.Icon")));
+            this.dpTimeTrackingDate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
+            this.dpTimeTrackingDate.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.dpTimeTrackingDate.Location = new System.Drawing.Point(36, 378);
+            this.dpTimeTrackingDate.MinimumSize = new System.Drawing.Size(258, 35);
+            this.dpTimeTrackingDate.Name = "dpTimeTrackingDate";
+            this.dpTimeTrackingDate.Size = new System.Drawing.Size(258, 35);
+            this.dpTimeTrackingDate.TabIndex = 7;
             // 
             // btnDeleteTimeTracking
             // 
@@ -726,41 +819,6 @@
             this.btnSaveTimeTracking.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveTimeTracking.Click += new System.EventHandler(this.btnSaveTimeTracking_Click);
             // 
-            // ddTask
-            // 
-            this.ddTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ddTask.BorderRadius = 5;
-            this.ddTask.Color = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.ddTask.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
-            this.ddTask.DisabledColor = System.Drawing.Color.Gray;
-            this.ddTask.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ddTask.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
-            this.ddTask.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ddTask.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
-            this.ddTask.FillDropDown = false;
-            this.ddTask.FillIndicator = false;
-            this.ddTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ddTask.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.ddTask.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.ddTask.FormattingEnabled = true;
-            this.ddTask.Icon = null;
-            this.ddTask.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.ddTask.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.ddTask.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ddTask.ItemBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.ddTask.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.ddTask.ItemHeight = 26;
-            this.ddTask.ItemHighLightColor = System.Drawing.Color.DimGray;
-            this.ddTask.Items.AddRange(new object[] {
-            "one",
-            "two",
-            "three"});
-            this.ddTask.Location = new System.Drawing.Point(36, 139);
-            this.ddTask.Name = "ddTask";
-            this.ddTask.Size = new System.Drawing.Size(258, 32);
-            this.ddTask.TabIndex = 0;
-            this.ddTask.Text = " ";
-            // 
             // btnAddTimeTracking
             // 
             this.btnAddTimeTracking.Active = false;
@@ -802,7 +860,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(704, 788);
+            this.ClientSize = new System.Drawing.Size(720, 788);
+            this.Controls.Add(this.pnlSearchByDate);
             this.Controls.Add(this.pnlAddWorkUnit);
             this.Controls.Add(this.dgvWorkUnits);
             this.Controls.Add(this.btnAddTimeTracking);
@@ -815,9 +874,11 @@
             this.RootElement.ApplyShapeToControl = true;
             this.Text = "TimeTracking";
             this.Load += new System.EventHandler(this.TimeTracking_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvWorkUnits)).EndInit();
             this.pnlAddWorkUnit.ResumeLayout(false);
             this.pnlAddWorkUnit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvWorkUnits)).EndInit();
+            this.pnlSearchByDate.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtpDataGridTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
 
@@ -826,11 +887,6 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuFlatButton btnAddTimeTracking;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvWorkUnits;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Task;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StartTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EndTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn WorkingTime;
         private System.Windows.Forms.Panel pnlAddWorkUnit;
         private Bunifu.UI.WinForms.BunifuDropdown ddTask;
         private Bunifu.Framework.UI.BunifuFlatButton btnSaveTimeTracking;
@@ -847,5 +903,10 @@
         private Bunifu.Framework.UI.BunifuCustomLabel lblEndTime;
         private Bunifu.Framework.UI.BunifuFlatButton btnCancel;
         private System.Windows.Forms.RichTextBox rtxtTimeDescription;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvWorkUnits;
+        private System.Windows.Forms.Panel pnlSearchByDate;
+        private Bunifu.Framework.UI.BunifuFlatButton btnNextDay;
+        private Syncfusion.Windows.Forms.Tools.DateTimePickerAdv dtpDataGridTime;
+        private Bunifu.Framework.UI.BunifuFlatButton btnPreviousDay;
     }
 }

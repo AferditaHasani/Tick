@@ -17,10 +17,10 @@ namespace Tick.TimeManagement
         public Tasks()
         {
             InitializeComponent();
-           
+
         }
 
-        private TaskBLL taskBLL_service = new TaskBLL ();
+        private TaskBLL taskBLL_service = new TaskBLL();
         Task tsk = new Task();
 
 
@@ -38,7 +38,7 @@ namespace Tick.TimeManagement
 
         private void ClearTxt()
         {
-            cbTaskColor.Value = new Color ();
+            cbTaskColor.Value = new Color();
             cbTaskColor.Text = "";
             rtxtTaskDescription.Text = "";
             txtTaskName.Text = "";
@@ -50,7 +50,7 @@ namespace Tick.TimeManagement
             else
                 Update();
 
-            
+
             DisplayToDGrid();
             CloseAddTaskPannel();
             ClearTxt();
@@ -60,7 +60,7 @@ namespace Tick.TimeManagement
         {
             try
             {
-                
+
                 if (tsk == null)
                 {
                     MessageBox.Show("Error");
@@ -68,7 +68,7 @@ namespace Tick.TimeManagement
                 }
                 int[] color = GetArgb(cbTaskColor.Value.ToString());
 
-                tsk.Name =txtTaskName.Text;
+                tsk.Name = txtTaskName.Text;
                 tsk.Description = rtxtTaskDescription.Text;
                 tsk.Color = $"{color[0]},{color[1]},{color[2]},{color[3]}";
                 var saved = taskBLL_service.Update(tsk);
@@ -81,47 +81,59 @@ namespace Tick.TimeManagement
                 MessageBox.Show(e.Message);
             }
         }
-      
+
         public void DisplayToDGrid()
         {
             try
             {
                 dgvTasks.Refresh();
-                DataTable t= taskBLL_service.GetAll();
-                if (t!=null)
+                DataTable t = taskBLL_service.GetAll();
+                if (t != null)
                 {
                     dgvTasks.DataSource = t;
 
                     dgvTasks.Columns["Color"].Visible = false;
-                    dgvTasks.Columns["TaskID"].Width = 100;
-                    for (int i = 0; i < dgvTasks.RowCount-1; i++)
+                    dgvTasks.Columns["TaskID"].Width = 70;
+                    dgvTasks.Columns["TaskID"].HeaderText = "ID";
+
+
+
+                    this.dgvTasks.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; 
+                    this.dgvTasks.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+                    this.dgvTasks.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+
+
+
+                    for (int i = 0; i < dgvTasks.RowCount; i++)
                     {
                         DataGridViewRow row = dgvTasks.Rows[i];
-                        string c =  row.Cells["Color"].Value.ToString();
+                        string c = row.Cells["Color"].Value.ToString();
 
                         string[] colors = c.Split(',');
                         dgvTasks.Rows[i].HeaderCell.Style.BackColor =
-                            Color.FromArgb( int.Parse(colors[1]), int.Parse(colors[2]), int.Parse(colors[3]));
-                           
+                            Color.FromArgb(int.Parse(colors[1]), int.Parse(colors[2]), int.Parse(colors[3]));
 
 
-                         }
 
+                    }
 
                 }
+
+
                 else
+
                 {
                     MessageBox.Show("No records");
 
                 }
-              
+
             }
             catch (Exception e)
             {
 
                 MessageBox.Show(e.Message);
             }
-          
+
         }
 
         public void Save()
@@ -151,16 +163,16 @@ namespace Tick.TimeManagement
             try
             {
                 int[] color = GetArgb(cbTaskColor.Value.ToString());
-               Task task = new Task
+                Task task = new Task
                 {
-                    
+
                     Name = txtTaskName.Text,
-                    Description= rtxtTaskDescription.Text,
-                    Color=$"{color[0]},{color[1]},{color[2]},{color[3]}",
+                    Description = rtxtTaskDescription.Text,
+                    Color = $"{color[0]},{color[1]},{color[2]},{color[3]}",
                     InsertBy = 1,
                     InsertDate = DateTime.Now
-                  
-                   
+
+
                 };
                 return task;
             }
@@ -174,14 +186,14 @@ namespace Tick.TimeManagement
         {
             tsk = new Task();
             OpenAddTaskPannel();
-            if (e.RowIndex>=0)
+            if (e.RowIndex >= 0)
             {
-               
+
                 DataGridViewRow row = this.dgvTasks.Rows[e.RowIndex];
-                tsk.TaskID =int.Parse( row.Cells["TaskID"].Value.ToString());
+                tsk.TaskID = int.Parse(row.Cells["TaskID"].Value.ToString());
                 tsk.Name = row.Cells["Name"].Value.ToString();
-                tsk.Description= row.Cells["Description"].Value.ToString();
-                tsk.Color= row.Cells["Color"].Value.ToString();
+                tsk.Description = row.Cells["Description"].Value.ToString();
+                tsk.Color = row.Cells["Color"].Value.ToString();
                 txtTaskName.Text = tsk.Name;
                 rtxtTaskDescription.Text = tsk.Description;
                 string[] colors = tsk.Color.Split(',');
@@ -228,25 +240,25 @@ namespace Tick.TimeManagement
         private void OpenAddTaskPannel()
         {
 
-            if (pnlAddTask.Size != new Size(328, 756))
+            if (pnlAddTask.Size != new Size(328, 683))
             {
-                pnlAddTask.Size = new Size(328, 756);
+                pnlAddTask.Size = new Size(328, 683);
 
-                dgvTasks.Size = new Size(dgvTasks.Width - 258, 683);
-                pnlAddTask.Location = new Point(dgvTasks.Width + 2, 12);
-                pnlAddTask.BorderStyle =BorderStyle.FixedSingle;
+                dgvTasks.Size = new Size(dgvTasks.Width - 255, 683);
+                pnlAddTask.Location = new Point(dgvTasks.Width + 20, 12);
+                pnlAddTask.BorderStyle = BorderStyle.FixedSingle;
 
             }
         }
 
         private void CloseAddTaskPannel()
         {
-            pnlAddTask.Size = new Size(10, 756);
+            pnlAddTask.Size = new Size(10, 683);
 
-            dgvTasks.Size = new Size(dgvTasks.Width + 258, 683);
-            pnlAddTask.Location = new Point(dgvTasks.Width + 2, 12);
+            dgvTasks.Size = new Size(dgvTasks.Width + 255, 683);
+            pnlAddTask.Location = new Point(dgvTasks.Width + 20, 12);
             tsk = new Task();
-            pnlAddTask.BorderStyle = BorderStyle.None; 
+            pnlAddTask.BorderStyle = BorderStyle.None;
         }
 
         private void btnDeleteTask_Click(object sender, EventArgs e)
@@ -267,7 +279,7 @@ namespace Tick.TimeManagement
                     MessageBox.Show("No record to delete");
                     return;
                 }
-               
+
                 var deleted = taskBLL_service.Delete(tsk);
 
                 MessageBox.Show(deleted ? "Deleted Successfully" : "Deleting failed , please try again");
