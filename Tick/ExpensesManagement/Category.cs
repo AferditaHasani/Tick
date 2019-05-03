@@ -58,7 +58,7 @@ namespace Tick.ExpensesManagement
 
             Clear();
         }
-
+        
         public void Clear()
         {
             txtName.Text = "";
@@ -97,20 +97,6 @@ namespace Tick.ExpensesManagement
            
         }
 
-        private int[] GetArgb(string color)
-        {
-            int[] result = new int[4];
-            string[] temp = color.Split('[');
-            temp = temp[1].Split(']');
-            temp = temp[0].Split(',');
-            for (int i = 0; i < temp.Length; i++)
-            {
-                string[] t = temp[i].Split('=');
-                result[i] = int.Parse(t[1]);
-            }
-
-            return result;
-        }
 
         public void DisplayToDGrid()
         {
@@ -227,8 +213,9 @@ namespace Tick.ExpensesManagement
                 DataGridViewRow row = this.dgvCategory.Rows[e.RowIndex];
                 cat.CategoryID = int.Parse(row.Cells["CategoryID"].Value.ToString());
                 cat.Name = row.Cells["Name"].Value.ToString();
+                txtName.Text = cat.Name;
                
-             
+
                 cat.IsExpenses =(bool)row.Cells["IsExpenses"].Value;
             }
 
