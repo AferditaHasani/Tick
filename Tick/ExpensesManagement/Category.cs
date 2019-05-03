@@ -26,6 +26,7 @@ namespace Tick.ExpensesManagement
 
             cat = null;
         }
+
         private void btnCancelCategory_Click(object sender, EventArgs e)
         {
             pnlAddCategory.Visible = false;
@@ -34,6 +35,7 @@ namespace Tick.ExpensesManagement
          
 
         }
+
         private void btnSaveCategory_Click(object sender, EventArgs e)
         {
             if (cbxExpense.Checked == true)
@@ -56,8 +58,6 @@ namespace Tick.ExpensesManagement
 
             Clear();
         }
-
-
 
         public void Clear()
         {
@@ -97,6 +97,20 @@ namespace Tick.ExpensesManagement
            
         }
 
+        private int[] GetArgb(string color)
+        {
+            int[] result = new int[4];
+            string[] temp = color.Split('[');
+            temp = temp[1].Split(']');
+            temp = temp[0].Split(',');
+            for (int i = 0; i < temp.Length; i++)
+            {
+                string[] t = temp[i].Split('=');
+                result[i] = int.Parse(t[1]);
+            }
+
+            return result;
+        }
 
         public void DisplayToDGrid()
         {
