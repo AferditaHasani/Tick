@@ -13,7 +13,7 @@ namespace Tick.BO
         public int UserID { get; set; }
         public string Description { get; set; }
         public DateTime Date { get; set; }
-        public String StartTime { get; set; }
-        public String EndTime { get; set; }
+        public DateTime StartTime { get; set; }
+        public DateTime EndTime { get; set; }
     }
 }

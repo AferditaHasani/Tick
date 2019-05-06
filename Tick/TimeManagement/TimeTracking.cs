@@ -72,8 +72,8 @@ namespace Tick.TimeManagement
                 time.TaskID = (int)ddTask.SelectedValue;
                 time.Description = rtxtTimeDescription.Text;
                 time.Date = dpTimeTrackingDate.Value;
-                time.StartTime = ddStartHour.Text+":"+ddStartMinute.Text;
-                time.StartTime=ddEndHour.Text + ":"+ddEndMinute.Text ;
+                //time.StartTime = ddStartHour.Text+":"+ddStartMinute.Text;
+                //time.StartTime=ddEndHour.Text + ":"+ddEndMinute.Text ;
 
                 var saved = timeBLL_service.Update(time);
 
@@ -145,10 +145,12 @@ namespace Tick.TimeManagement
                 BO.TimeTracking t = new BO.TimeTracking
                 {
 
-                   TaskID=(int) ddTask.SelectedValue ,
-                  Description=  rtxtTimeDescription.Text,
-                  StartTime = ddStartHour.Text + ":" + ddStartMinute.Text,
-                  EndTime = ddEndHour.Text + ":" + ddEndMinute.Text,
+                    TaskID = (int)ddTask.SelectedValue,
+                    Description = rtxtTimeDescription.Text,
+                    Date= dpTimeTrackingDate.Value,
+                   
+                  ////  StartTime = new DateTime(null,null,null, int.Parse(ddStartHour.Text),),// ddStartHour.Text + ":" + ddStartMinute.Text,
+                 // EndTime = ddEndHour.Text + ":" + ddEndMinute.Text,
                    InsertBy = 1,
                     InsertDate = DateTime.Now
 
@@ -175,18 +177,18 @@ namespace Tick.TimeManagement
                
                 time.Description = row.Cells["Description"].Value.ToString();
               //  time.Date = new  DateTime(row.Cells["Date"].Value.ToString());
-                time.StartTime= row.Cells["StartTime"].Value.ToString();
-                time.EndTime = row.Cells["EndTime"].Value.ToString();
+               // time.StartTime= row.Cells["StartTime"].Value.ToString();
+               // time.EndTime = row.Cells["EndTime"].Value.ToString();
 
                 ddTask.SelectedValue = time.TaskID;
                 rtxtTimeDescription.Text = time.Description;
-                string[] tt = time.StartTime.Split(':');
-                ddStartHour.Text = tt[0];
-                ddStartMinute.Text = tt[1];
+                //string[] tt = time.StartTime.Split(':');
+                //ddStartHour.Text = tt[0];
+                //ddStartMinute.Text = tt[1];
 
-                tt = time.EndTime.Split(':');
-                ddEndHour.Text = tt[0];
-                ddEndMinute.Text = tt[1];
+                //tt = time.EndTime.Split(':');
+                //ddEndHour.Text = tt[0];
+                //ddEndMinute.Text = tt[1];
 
 
             }
@@ -202,18 +204,18 @@ namespace Tick.TimeManagement
                 time.TaskID = int.Parse(row.Cells["TaskID"].Value.ToString());
 
                 time.Description = row.Cells["Description"].Value.ToString();
-                time.StartTime = row.Cells["StartTime"].Value.ToString();
-                time.EndTime = row.Cells["EndTime"].Value.ToString();
+                //time.StartTime = row.Cells["StartTime"].Value.ToString();
+               // time.EndTime = row.Cells["EndTime"].Value.ToString();
 
                 ddTask.SelectedValue = time.TaskID;
                 rtxtTimeDescription.Text = time.Description;
-                string[] tt = time.StartTime.Split(':');
-                ddStartHour.Text = tt[0];
-                ddStartMinute.Text = tt[1];
+               // string[] tt = time.StartTime.Split(':');
+                //ddStartHour.Text = tt[0];
+                //ddStartMinute.Text = tt[1];
 
-                tt = time.EndTime.Split(':');
-                ddEndHour.Text = tt[0];
-                ddEndMinute.Text = tt[1];
+                //tt = time.EndTime.Split(':');
+                //ddEndHour.Text = tt[0];
+                //ddEndMinute.Text = tt[1];
             }
         }
 
