@@ -26,7 +26,9 @@ namespace Tick.DAL
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.Add("@prmName", SqlDbType.VarChar).Value = model.Name;
                         command.Parameters.Add("@prmIsExpenses", SqlDbType.VarChar).Value = model.IsExpenses;
+                        command.Parameters.Add("@prmColor", SqlDbType.VarChar).Value = model.Color;
                         command.Parameters.Add("@prmInsertBy", SqlDbType.VarChar).Value = 1;
+
 
 
                         var result = command.ExecuteNonQuery();
@@ -88,6 +90,7 @@ namespace Tick.DAL
                         command.Parameters.Add("@prmCategoryID", SqlDbType.Int).Value = model.CategoryID;
                         command.Parameters.Add("@prmName", SqlDbType.VarChar).Value = model.Name;
                         command.Parameters.Add("@prmIsExpenses", SqlDbType.VarChar).Value = model.IsExpenses;
+                        command.Parameters.Add("@prmColor", SqlDbType.VarChar).Value = model.Color;
                         command.Parameters.Add("@prmLUB", SqlDbType.Int).Value = 1;
 
 
@@ -115,9 +118,6 @@ namespace Tick.DAL
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.Add("@prmCategoryID", SqlDbType.Int).Value = model.CategoryID;
-
-
-
 
                         var result = command.ExecuteNonQuery();
                         return result >= 0;

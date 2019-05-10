@@ -306,6 +306,7 @@
             this.txtAmount.UseSystemPasswordChar = false;
             this.txtAmount.TextChange += new System.EventHandler(this.txtAmount_TextChange);
             this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
+            this.txtAmount.Leave += new System.EventHandler(this.txtAmount_Leave);
             // 
             // lblAmount
             // 
@@ -440,7 +441,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(768, 788);
+            this.ClientSize = new System.Drawing.Size(776, 788);
             this.Controls.Add(this.dgvTransaction);
             this.Controls.Add(this.pnlAddTransaction);
             this.Controls.Add(this.btnAddTransaction);
