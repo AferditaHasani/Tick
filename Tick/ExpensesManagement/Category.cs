@@ -9,7 +9,7 @@ namespace Tick.ExpensesManagement
     public partial class Category : Telerik.WinControls.UI.RadForm
     {
         bool isExpense=true;
-        private string text;
+      
      
         private CategoryBLL categoryBLL_service = new CategoryBLL();
         BO.Category cat= new BO.Category();
@@ -37,12 +37,12 @@ namespace Tick.ExpensesManagement
             if (cbxExpense.Checked == true)
             {
                 isExpense = true;
-                text = "Expense";
+               
             }
             else
             {
                 isExpense = false;
-                text = "Income";
+              
             }
             if (cat == null)
                 Save();
@@ -96,6 +96,8 @@ namespace Tick.ExpensesManagement
                     dgvCategory.DataSource = t;
 
                     dgvCategory.Columns["Color"].Visible = false;
+                
+
 
                     for (int i = 0; i < dgvCategory.RowCount; i++)
                     {
@@ -104,7 +106,10 @@ namespace Tick.ExpensesManagement
 
                         string[] colors = c.Split(',');
                         dgvCategory.Rows[i].HeaderCell.Style.BackColor =
-                        Color.FromArgb(int.Parse(colors[1]), int.Parse(colors[2]), int.Parse(colors[3]));       
+                            Color.FromArgb(int.Parse(colors[1]), int.Parse(colors[2]), int.Parse(colors[3]));
+
+                      
+
                     }
                 }
                 else
@@ -170,12 +175,15 @@ namespace Tick.ExpensesManagement
             try
             {
                 int[] color = GetArgb(cbTaskColor.Value.ToString());
+
                 BO.Category category = new BO.Category
                 {
                     Name=txtName.Text,
                     IsExpenses = isExpense,
                     InsertBy = 1,
-                    InsertDate = DateTime.Now
+                    InsertDate = DateTime.Now,
+                    Color = $"{color[0]},{color[1]},{color[2]},{color[3]}"
+
                 };
                 return category;
             }
