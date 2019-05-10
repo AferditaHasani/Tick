@@ -11,6 +11,6 @@ namespace Tick.BO
         public int CategoryID { get; set; }
         public bool IsExpenses { get; set; }
         public string Name { get; set; }
-     
+        public string Color { get; set; }
     }
 }

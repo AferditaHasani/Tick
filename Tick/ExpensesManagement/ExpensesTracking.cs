@@ -24,24 +24,15 @@ namespace Tick.ExpensesManagement
             dgvTransaction.Size = new Size(708, 697);
             FillCombo();
             DisplayToDGrid();
-
-
-
-
-
         }
 
         private void btnAddTransaction_Click(object sender, EventArgs e)
         {
             pnlAddTransaction.Visible = true;
             dgvTransaction.Size = new Size(680, 697);
-
             transaction = null;
-
         }
         
-
-
         private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar)
@@ -50,13 +41,11 @@ namespace Tick.ExpensesManagement
             {
                 e.Handled = true;
             }
-
-           
+       
             if (e.KeyChar == '.' && (sender as TextBox).Text.IndexOf('.') > -1)
             {
                 e.Handled = true;
-            }
-            
+            }            
         }
 
         public void Clear()
@@ -76,12 +65,10 @@ namespace Tick.ExpensesManagement
                     MessageBox.Show("Error");
                     return;
                 }
-
                 var saved = eTracking_service.Insert(transaction);
-
                 MessageBox.Show(saved ? "Saved Successfully" : "Saving failed , please try again");
-
             }
+
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
@@ -94,7 +81,6 @@ namespace Tick.ExpensesManagement
              
                 BO.ExpensesTracking expenses = new BO.ExpensesTracking()
                 {
-
                     Amount =decimal.Parse(txtAmount.Text),
                     Description = txtDescription.Text,
                     CategoryID = (int)ddlCategory.SelectedValue
@@ -123,69 +109,61 @@ namespace Tick.ExpensesManagement
             else
                 Update();
 
-
             DisplayToDGrid();
-
             Clear();
             transaction = null;
-
         }
+
         private void Update()
         {
             try
-            {
-
+            {           
                 if (transaction == null)
                 {
                     MessageBox.Show("Error");
                     return;
-                }
-
+                }            
                 transaction.Amount = decimal.Parse(txtAmount.Text);
                 transaction.CategoryID = (int)ddlCategory.SelectedValue;
                 transaction.Description = txtDescription.Text;
                 var saved = eTracking_service.Update(transaction);
-
                 MessageBox.Show(saved ? "Updated Successfully" : "Updating failed , please try again");
-
             }
+
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
             }
         }
+
         public void DisplayToDGrid()
         {
             try
             {
-                 dgvTransaction.Refresh();
+                dgvTransaction.Refresh();
                 DataTable t = eTracking_service.GetAll();
                 if (t != null)
                 {
                     dgvTransaction.DataSource = t;
                     dgvTransaction.Columns["Amount"].DefaultCellStyle.Alignment =
-                        DataGridViewContentAlignment.MiddleRight;
+                    DataGridViewContentAlignment.MiddleRight;
                 }
+
                 else
                 {
                     MessageBox.Show("No records");
-
-                }
-
+                }            
             }
+
             catch (Exception e)
             {
-
                 MessageBox.Show(e.Message);
             }
-
         }
 
         private void btnCancelTransaction_Click(object sender, EventArgs e)
         {
-
             pnlAddTransaction.Visible = false;
-
             dgvTransaction.Size = new Size(817, 697);
             transaction = null;
         }
@@ -194,18 +172,16 @@ namespace Tick.ExpensesManagement
         {
             try
             {
-
                 if (transaction == null)
                 {
                     MessageBox.Show("No record to delete");
                     return;
                 }
-
                 var deleted = eTracking_service.Delete(transaction);
-
                 MessageBox.Show(deleted ? "Deleted Successfully" : "Deleting failed , please try again");
 
             }
+
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
@@ -231,30 +207,46 @@ namespace Tick.ExpensesManagement
                 transaction.Amount =decimal.Parse(row.Cells["Amount"].Value.ToString());
                 ddlCategory.DisplayMember = row.Cells["Category"].Value.ToString();
                 transaction.CategoryID = (int)ddlCategory.SelectedValue;
-
                 transaction.Description = row.Cells["Description"].Value.ToString();
-               }
-
+            }
         }
 
         private void dgvTransaction_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-
             transaction = new BO.ExpensesTracking();
         
             if (e.RowIndex >= 0)
             {
-
                 DataGridViewRow row = this.dgvTransaction.Rows[e.RowIndex];
                 transaction.ETrackingID = int.Parse(row.Cells["ExpensesTrackingID"].Value.ToString());
                 transaction.Amount = decimal.Parse(row.Cells["Amount"].Value.ToString());
                 ddlCategory.DisplayMember = row.Cells["Category"].Value.ToString();
                 transaction.CategoryID = (int)ddlCategory.SelectedValue;
-
                 transaction.Description = row.Cells["Description"].Value.ToString();
-
             }
+        }
 
+        private void txtAmount_TextChange(object sender, EventArgs e)
+        {
+            string enteredText = (sender as TextBox).Text;
+            int cursorPosition = (sender as TextBox).SelectionStart;
+
+            string[] splitByDecimal = enteredText.Split('.');
+
+            if (splitByDecimal.Length > 1 && splitByDecimal[1].Length > 2)
+            {
+                (sender as TextBox).Text = enteredText.Remove(enteredText.Length - 1);
+                (sender as TextBox).SelectionStart = cursorPosition - 1;
+            }
+        }
+
+        private void txtAmount_Leave(object sender, EventArgs e)
+        {
+            Double value;
+            if (Double.TryParse(txtAmount.Text, out value))
+                txtAmount.Text = String.Format(System.Globalization.CultureInfo.CurrentUICulture, "{0:C2}", value);
+            else
+                txtAmount.Text = String.Empty;
         }
     }
 }
