@@ -107,9 +107,6 @@ namespace Tick.ExpensesManagement
                         string[] colors = c.Split(',');
                         dgvCategory.Rows[i].HeaderCell.Style.BackColor =
                             Color.FromArgb(int.Parse(colors[1]), int.Parse(colors[2]), int.Parse(colors[3]));
-
-                      
-
                     }
                 }
                 else
@@ -151,6 +148,7 @@ namespace Tick.ExpensesManagement
         {
             try
             {
+               
                 if (cat == null)
                 {
                     MessageBox.Show("Error");
@@ -205,6 +203,7 @@ namespace Tick.ExpensesManagement
         private void dgvCategory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             cat = new BO.Category();
+            dgvCategory.Size = new Size(680, 697);
             pnlAddCategory.Visible = true;
             if (e.RowIndex >= 0)
             {
@@ -238,6 +237,7 @@ namespace Tick.ExpensesManagement
         private void dgvCategory_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             cat = new BO.Category();
+            dgvCategory.Size = new Size(680, 697);
             pnlAddCategory.Visible = true;
             if (e.RowIndex >= 0)
             {
