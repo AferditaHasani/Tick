@@ -92,15 +92,19 @@ namespace Tick.TimeManagement
                 {
                     dgvTasks.DataSource = t;
 
-                    dgvTasks.Columns["Color"].Visible = false;
-                    dgvTasks.Columns["TaskID"].Width = 70;
-                    dgvTasks.Columns["TaskID"].HeaderText = "ID";
+
+                    dgvTasks.Columns["Color"].Visible = false;     
+                    dgvTasks.Columns["TaskID"].Width = 70;         
+                    dgvTasks.Columns["TaskID"].HeaderText = "ID";  
+                   
 
 
 
-                    this.dgvTasks.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter; 
+
+                    this.dgvTasks.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                     this.dgvTasks.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
                     this.dgvTasks.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+
 
 
 

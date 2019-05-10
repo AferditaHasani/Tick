@@ -21,6 +21,7 @@ namespace Tick.DAL
                     @"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
                 )
                 {
+                   
                     String sql = "dbo.usp_TimeTracking_Insert";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
@@ -28,9 +29,9 @@ namespace Tick.DAL
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.Add("@prmTaskID", SqlDbType.Int).Value = model.TaskID;
                         command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = model.Description;
-                        command.Parameters.Add("@prmDate", SqlDbType.DateTime).Value = model.Date;
-                        command.Parameters.Add("@prmStartTime", SqlDbType.Time).Value = model.StartTime;
-                        command.Parameters.Add("@prmEndTime", SqlDbType.Time).Value = model.EndTime;
+                       command.Parameters.Add("@prmDate", SqlDbType.DateTime).Value = model.Date;
+                       command.Parameters.Add("@prmStartTime", SqlDbType.Time).Value = model.StartTime.TimeOfDay;
+                        command.Parameters.Add("@prmEndTime", SqlDbType.Time).Value = model.EndTime.TimeOfDay;
 
 
                         var result = command.ExecuteNonQuery();
@@ -45,7 +46,7 @@ namespace Tick.DAL
             }
         }
 
-        public DataTable GetAll()
+        public DataTable GetByDate(DateTime dt)
         {
             try
             {
@@ -53,12 +54,13 @@ namespace Tick.DAL
                     @"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
                 )
                 {
-                    String sql = "dbo.usp_TimeTrackin_GetAll";
+                    String sql = "dbo.usp_TimeTrackin_ByDate";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         conn.Open();
 
-
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add("@prmDate", SqlDbType.DateTime).Value = dt;
 
                         SqlDataAdapter sqlDataAdap = new SqlDataAdapter(command);
 
@@ -96,8 +98,8 @@ namespace Tick.DAL
                         command.Parameters.Add("@prmTaskID", SqlDbType.Int).Value = model.TaskID;
                         command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = model.Description;
                         command.Parameters.Add("@prmDate", SqlDbType.DateTime).Value = model.Date;
-                        command.Parameters.Add("@prmStartTime", SqlDbType.VarChar).Value = model.StartTime;
-                        command.Parameters.Add("@prmEndTime", SqlDbType.VarChar).Value = model.EndTime;
+                        command.Parameters.Add("@prmStartTime", SqlDbType.Time).Value = model.StartTime.TimeOfDay;
+                        command.Parameters.Add("@prmEndTime", SqlDbType.Time).Value = model.EndTime.TimeOfDay;
 
 
                         var result = command.ExecuteNonQuery();

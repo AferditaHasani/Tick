@@ -10,6 +10,8 @@ using Telerik.WinControls.Layouts;
 using Tick.ExpensesManagement;
 using Tick.TimeManagement;
 
+
+
 namespace Tick
 {
     public partial class Menu : Telerik.WinControls.UI.RadForm
@@ -32,7 +34,8 @@ namespace Tick
         ExpensesTracking et = new ExpensesTracking();
         TimeTracking t = new TimeTracking();
         Category ct = new Category();
-        private Tasks tsk = new Tasks();
+        Tasks tsk = new Tasks();
+
 
         //Metoda e cila vendos nje vije para objektit i cili  e therret
         private void SeparatorClick(object sender)
@@ -121,7 +124,10 @@ namespace Tick
         private void btnTasks_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
+
+
             FillContentPanel(tsk);
+
         }
 
         private void btnCategory_Click(object sender, EventArgs e)

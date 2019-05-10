@@ -23,9 +23,9 @@ namespace Tick.BLL
             return timeDAL_db.Add(model);
         }
 
-        public DataTable GetAll()
+        public DataTable GetByDate(DateTime dt)
         {
-            return timeDAL_db.GetAll();
+            return timeDAL_db.GetByDate(dt);
         }
 
         public bool Update(TimeTracking model)
