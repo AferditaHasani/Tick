@@ -35,6 +35,7 @@ namespace Tick
         TimeTracking t = new TimeTracking();
         Category ct = new Category();
         Tasks tsk = new Tasks();
+        private TimeCharts tch = new TimeCharts();
 
 
         //Metoda e cila vendos nje vije para objektit i cili  e therret
@@ -58,21 +59,31 @@ namespace Tick
                     t.Hide();
                     ct.Hide();
                     tsk.Hide();
+                    tch.Hide();
                     break;
                 case TimeTracking _:
                     et.Hide();
                     ct.Hide();
                     tsk.Hide();
+                    tch.Hide();
                     break;
                 case Tasks _:
                     et.Hide();
                     ct.Hide();
                     t.Hide();
+                    tch.Hide();
                     break;
                 case Category _:
                     et.Hide();
                     t.Hide();
                     tsk.Hide();
+                    tch.Hide();
+                    break;
+                case TimeCharts _:
+                    et.Hide();
+                    t.Hide();
+                    tsk.Hide();
+                    ct.Hide();
                     break;
             }
 
@@ -108,6 +119,7 @@ namespace Tick
         private void btnTimeCharts_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
+            FillContentPanel(tch);
         }
 
         private void btnExpensesChart_Click(object sender, EventArgs e)
