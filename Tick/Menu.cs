@@ -53,6 +53,8 @@ namespace Tick
             f.Dock = DockStyle.Fill;
             f.Show();
 
+
+
             switch (f)
             {
                 case ExpensesTracking _:
@@ -80,12 +82,18 @@ namespace Tick
                     tch.Hide();
                     break;
                 case TimeCharts _:
+
+                    TimeCharts tc=(TimeCharts)f;
+
+                tc.FillLineChart(tc.dtpDataGridTime.Value);
+                    tc.FillPieChart(tc.dtpDataGridTime.Value);
                     et.Hide();
                     t.Hide();
                     tsk.Hide();
                     ct.Hide();
                     break;
             }
+   
 
         }
 

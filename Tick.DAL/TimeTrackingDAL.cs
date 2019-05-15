@@ -210,5 +210,38 @@ namespace Tick.DAL
                 return null;
             }
         }
+
+        public DataTable GetForPie(DateTime dt)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(
+                    @"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
+                )
+                {
+                    String sql = "dbo.usp_TimeTrackin_PieChart";
+                    using (SqlCommand command = new SqlCommand(sql, conn))
+                    {
+                        conn.Open();
+
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add("@prmDate", SqlDbType.DateTime).Value = dt;
+
+                        SqlDataAdapter sqlDataAdap = new SqlDataAdapter(command);
+
+                        DataTable dtRecord = new DataTable();
+                        sqlDataAdap.Fill(dtRecord);
+
+
+                        return dtRecord;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+                return null;
+            }
+        }
     }
 }
