@@ -147,8 +147,7 @@ namespace Tick.ExpensesManagement
         private void Update()
         {
             try
-            {
-               
+            {             
                 if (cat == null)
                 {
                     MessageBox.Show("Error");
