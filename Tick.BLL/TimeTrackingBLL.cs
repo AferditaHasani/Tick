@@ -41,5 +41,13 @@ namespace Tick.BLL
         {
             return timeDAL_db.GetComboBox();
         }
+        public DataTable GetByMonth(DateTime dt)
+        {
+            return timeDAL_db.GetByMonth(dt);
+        }
+        public DataTable GetForPie(DateTime dt)
+        {
+            return timeDAL_db.GetForPie(dt);
+        }
     }
 }

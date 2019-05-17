@@ -462,6 +462,7 @@
             this.dgvCategory.RowTemplate.Height = 60;
             this.dgvCategory.Size = new System.Drawing.Size(656, 675);
             this.dgvCategory.TabIndex = 5;
+            this.dgvCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategory_CellContentClick);
             this.dgvCategory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategory_CellContentClick);
             this.dgvCategory.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCategory_RowHeaderMouseClick);
             this.dgvCategory.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCategory_RowHeaderMouseClick);
@@ -471,7 +472,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(808, 788);
+            this.ClientSize = new System.Drawing.Size(816, 788);
             this.Controls.Add(this.dgvCategory);
             this.Controls.Add(this.pnlAddCategory);
             this.Controls.Add(this.btnAddCategory);

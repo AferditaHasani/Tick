@@ -147,6 +147,31 @@ namespace Tick.ExpensesManagement
                     dgvTransaction.DataSource = t;
                     dgvTransaction.Columns["Amount"].DefaultCellStyle.Alignment =
                     DataGridViewContentAlignment.MiddleRight;
+
+
+                    dgvTransaction.Columns["CategoryID"].Visible = false;
+                    dgvTransaction.Columns["Color"].Visible = false;
+                    dgvTransaction.Columns["ETrackingID"].Width = 70;
+                    dgvTransaction.Columns["ETrackingID"].HeaderText = "ID";
+
+
+                    this.dgvTransaction.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    this.dgvTransaction.Columns["Description"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+                  
+
+
+                    //for (int i = 0; i < dgvTransaction.RowCount; i++)
+                    //{
+                    //    DataGridViewRow row = dgvTransaction.Rows[i];
+                    //    string c = row.Cells["Color"].Value.ToString();
+
+                    //    string[] colors = c.Split(',');
+                    //    dgvTransaction.Rows[i].HeaderCell.Style.BackColor =
+                    //        Color.FromArgb(int.Parse(colors[1]), int.Parse(colors[2]), int.Parse(colors[3]));
+
+
+
+                    //}
                 }
 
                 else
@@ -242,11 +267,11 @@ namespace Tick.ExpensesManagement
 
         private void txtAmount_Leave(object sender, EventArgs e)
         {
-            Double value;
-            if (Double.TryParse(txtAmount.Text, out value))
-                txtAmount.Text = String.Format(System.Globalization.CultureInfo.CurrentUICulture, "{0:C2}", value);
-            else
-                txtAmount.Text = String.Empty;
+            //Double value;
+            //if (Double.TryParse(txtAmount.Text, out value))
+            //    txtAmount.Text = String.Format("{0:C2}", value);
+            //else
+            //    txtAmount.Text = String.Empty;
         }
     }
 }
