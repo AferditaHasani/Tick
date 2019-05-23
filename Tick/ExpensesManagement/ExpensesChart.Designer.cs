@@ -1,4 +1,15 @@
-﻿namespace Tick.ExpensesManagement
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
+using Telerik.WinControls;
+using Tick.BLL;
+namespace Tick.ExpensesManagement
 {
     partial class ExpensesChart
     {
@@ -97,6 +108,7 @@
             this.ExpensesPiechart.Text = "TimePieChart";
             // 
             // pnlSearchByDate
+
             // 
             this.pnlSearchByDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pnlSearchByDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
