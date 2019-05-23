@@ -75,7 +75,7 @@
             this.pnlAddTransaction.Controls.Add(this.lblAmount);
             this.pnlAddTransaction.Location = new System.Drawing.Point(608, 12);
             this.pnlAddTransaction.Name = "pnlAddTransaction";
-            this.pnlAddTransaction.Size = new System.Drawing.Size(349, 750);
+            this.pnlAddTransaction.Size = new System.Drawing.Size(349, 675);
             this.pnlAddTransaction.TabIndex = 2;
             // 
             // lblDate
@@ -148,7 +148,7 @@
             this.btnSaveTransaction.IconVisible = true;
             this.btnSaveTransaction.IconZoom = 50D;
             this.btnSaveTransaction.IsTab = false;
-            this.btnSaveTransaction.Location = new System.Drawing.Point(251, 47);
+            this.btnSaveTransaction.Location = new System.Drawing.Point(250, 8);
             this.btnSaveTransaction.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSaveTransaction.Name = "btnSaveTransaction";
             this.btnSaveTransaction.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
@@ -187,7 +187,7 @@
             this.btnDeleteTransaction.IconVisible = true;
             this.btnDeleteTransaction.IconZoom = 50D;
             this.btnDeleteTransaction.IsTab = false;
-            this.btnDeleteTransaction.Location = new System.Drawing.Point(123, 47);
+            this.btnDeleteTransaction.Location = new System.Drawing.Point(122, 8);
             this.btnDeleteTransaction.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeleteTransaction.Name = "btnDeleteTransaction";
             this.btnDeleteTransaction.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
@@ -226,7 +226,7 @@
             this.btnCancelTransaction.IconVisible = true;
             this.btnCancelTransaction.IconZoom = 50D;
             this.btnCancelTransaction.IsTab = false;
-            this.btnCancelTransaction.Location = new System.Drawing.Point(-7, 47);
+            this.btnCancelTransaction.Location = new System.Drawing.Point(-8, 8);
             this.btnCancelTransaction.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelTransaction.Name = "btnCancelTransaction";
             this.btnCancelTransaction.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
@@ -248,11 +248,42 @@
             this.txtDescription.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.txtDescription.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.txtDescription.Location = new System.Drawing.Point(151, 304);
+            this.txtDescription.Location = new System.Drawing.Point(150, 265);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(185, 105);
             this.txtDescription.TabIndex = 11;
+            // 
+            // ddlCategory
+            // 
+            this.ddlCategory.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ddlCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.ddlCategory.BorderRadius = 1;
+            this.ddlCategory.Color = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.ddlCategory.Direction = Bunifu.UI.WinForms.BunifuDropdown.Directions.Down;
+            this.ddlCategory.DisabledColor = System.Drawing.Color.Gray;
+            this.ddlCategory.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ddlCategory.DropdownBorderThickness = Bunifu.UI.WinForms.BunifuDropdown.BorderThickness.Thick;
+            this.ddlCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ddlCategory.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
+            this.ddlCategory.FillDropDown = false;
+            this.ddlCategory.FillIndicator = false;
+            this.ddlCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ddlCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.ddlCategory.FormattingEnabled = true;
+            this.ddlCategory.Icon = null;
+            this.ddlCategory.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.ddlCategory.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
+            this.ddlCategory.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.ddlCategory.ItemBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.ddlCategory.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.ddlCategory.ItemHeight = 26;
+            this.ddlCategory.ItemHighLightColor = System.Drawing.Color.Thistle;
+            this.ddlCategory.Location = new System.Drawing.Point(150, 197);
+            this.ddlCategory.Name = "ddlCategory";
+            this.ddlCategory.Size = new System.Drawing.Size(185, 32);
+            this.ddlCategory.TabIndex = 8;
+            this.ddlCategory.Text = null;
             // 
             // lblDescription
             // 
@@ -261,7 +292,7 @@
             this.lblDescription.CursorType = null;
             this.lblDescription.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblDescription.Location = new System.Drawing.Point(18, 313);
+            this.lblDescription.Location = new System.Drawing.Point(17, 274);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblDescription.Size = new System.Drawing.Size(91, 23);
@@ -277,7 +308,7 @@
             this.lblCategory.CursorType = null;
             this.lblCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblCategory.Location = new System.Drawing.Point(35, 245);
+            this.lblCategory.Location = new System.Drawing.Point(34, 206);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblCategory.Size = new System.Drawing.Size(74, 23);
@@ -340,7 +371,7 @@
             this.lblAmount.CursorType = null;
             this.lblAmount.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblAmount.Location = new System.Drawing.Point(43, 173);
+            this.lblAmount.Location = new System.Drawing.Point(42, 134);
             this.lblAmount.Name = "lblAmount";
             this.lblAmount.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblAmount.Size = new System.Drawing.Size(66, 23);
@@ -454,10 +485,6 @@
             this.dgvTransaction.RowTemplate.Height = 60;
             this.dgvTransaction.Size = new System.Drawing.Size(656, 628);
             this.dgvTransaction.TabIndex = 6;
-            this.dgvTransaction.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellContentClick);
-            this.dgvTransaction.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellContentClick);
-            this.dgvTransaction.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvTransaction_RowHeaderMouseClick);
-            this.dgvTransaction.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvTransaction_RowHeaderMouseClick);
             // 
             // pnlSearchByDate
             // 

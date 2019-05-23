@@ -29,8 +29,8 @@ namespace Tick.DAL
                         command.Parameters.Add("@prmTaskID", SqlDbType.Int).Value = model.TaskID;
                         command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = model.Description;
                        command.Parameters.Add("@prmDate", SqlDbType.DateTime).Value = model.Date;
-                       command.Parameters.Add("@prmStartTime", SqlDbType.Time).Value = model.StartTime.TimeOfDay;
-                        command.Parameters.Add("@prmEndTime", SqlDbType.Time).Value = model.EndTime.TimeOfDay;
+                       command.Parameters.Add("@prmStartTime", SqlDbType.DateTime).Value = model.StartTime;
+                        command.Parameters.Add("@prmEndTime", SqlDbType.DateTime).Value = model.EndTime;
 
 
                         var result = command.ExecuteNonQuery();
@@ -94,8 +94,8 @@ namespace Tick.DAL
                         command.Parameters.Add("@prmTaskID", SqlDbType.Int).Value = model.TaskID;
                         command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = model.Description;
                         command.Parameters.Add("@prmDate", SqlDbType.DateTime).Value = model.Date;
-                        command.Parameters.Add("@prmStartTime", SqlDbType.Time).Value = model.StartTime.TimeOfDay;
-                        command.Parameters.Add("@prmEndTime", SqlDbType.Time).Value = model.EndTime.TimeOfDay;
+                        command.Parameters.Add("@prmStartTime", SqlDbType.DateTime).Value = model.StartTime;
+                        command.Parameters.Add("@prmEndTime", SqlDbType.DateTime).Value = model.EndTime;
 
 
                         var result = command.ExecuteNonQuery();

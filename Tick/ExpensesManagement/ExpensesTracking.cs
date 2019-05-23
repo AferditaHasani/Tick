@@ -33,7 +33,7 @@ namespace Tick.ExpensesManagement
             pnlAddTransaction.Visible = true;
             dgvTransaction.Size = new Size(680, 697);
             transaction = null;
-            
+            FillCombo();
         }
         
         private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
@@ -180,6 +180,9 @@ namespace Tick.ExpensesManagement
                         string[] colors = c.Split(',');
                         dgvTransaction.Rows[i].HeaderCell.Style.BackColor =
                             Color.FromArgb(int.Parse(colors[1]), int.Parse(colors[2]), int.Parse(colors[3]));
+
+
+
                     }
                 }
 

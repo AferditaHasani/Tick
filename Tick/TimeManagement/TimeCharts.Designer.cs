@@ -40,11 +40,10 @@
             this.btnPreviousMonth = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnPreviousDay = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnNextDay = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.dtpDataGridTime = new Syncfusion.Windows.Forms.Tools.DateTimePickerAdv();
             this.TimePiechart = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.dtpDataGridTime = new Syncfusion.WinForms.Input.SfDateTimeEdit();
             ((System.ComponentModel.ISupportInitialize)(this.TimeLineChart)).BeginInit();
             this.pnlSearchByDate.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpDataGridTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimePiechart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
@@ -101,11 +100,11 @@
             // 
             this.pnlSearchByDate.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pnlSearchByDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlSearchByDate.Controls.Add(this.dtpDataGridTime);
             this.pnlSearchByDate.Controls.Add(this.btnNextMonth);
             this.pnlSearchByDate.Controls.Add(this.btnPreviousMonth);
             this.pnlSearchByDate.Controls.Add(this.btnPreviousDay);
             this.pnlSearchByDate.Controls.Add(this.btnNextDay);
-            this.pnlSearchByDate.Controls.Add(this.dtpDataGridTime);
             this.pnlSearchByDate.Location = new System.Drawing.Point(44, 9);
             this.pnlSearchByDate.Name = "pnlSearchByDate";
             this.pnlSearchByDate.Size = new System.Drawing.Size(512, 38);
@@ -251,39 +250,6 @@
             this.btnNextDay.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNextDay.Click += new System.EventHandler(this.btnNextDay_Click);
             // 
-            // dtpDataGridTime
-            // 
-            this.dtpDataGridTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.dtpDataGridTime.Border3DStyle = System.Windows.Forms.Border3DStyle.Flat;
-            this.dtpDataGridTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.dtpDataGridTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dtpDataGridTime.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.dtpDataGridTime.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.dtpDataGridTime.CalendarSize = new System.Drawing.Size(399, 220);
-            this.dtpDataGridTime.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.dtpDataGridTime.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dtpDataGridTime.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dtpDataGridTime.DropDownImage = null;
-            this.dtpDataGridTime.DropDownNormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.dtpDataGridTime.DropDownPressedColor = System.Drawing.Color.DimGray;
-            this.dtpDataGridTime.DropDownSelectedColor = System.Drawing.Color.DimGray;
-            this.dtpDataGridTime.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDataGridTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.dtpDataGridTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataGridTime.Location = new System.Drawing.Point(81, 2);
-            this.dtpDataGridTime.MaxValue = new System.DateTime(2019, 5, 10, 15, 27, 2, 0);
-            this.dtpDataGridTime.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.dtpDataGridTime.MinValue = new System.DateTime(((long)(0)));
-            this.dtpDataGridTime.Name = "dtpDataGridTime";
-            this.dtpDataGridTime.ShowCheckBox = false;
-            this.dtpDataGridTime.ShowUpDownOnFocus = true;
-            this.dtpDataGridTime.Size = new System.Drawing.Size(351, 30);
-            this.dtpDataGridTime.StretchDropDownImage = true;
-            this.dtpDataGridTime.Style = Syncfusion.Windows.Forms.VisualStyle.Office2016DarkGray;
-            this.dtpDataGridTime.TabIndex = 4;
-            this.dtpDataGridTime.Value = new System.DateTime(2019, 5, 10, 15, 27, 2, 0);
-            this.dtpDataGridTime.ValueChanged += new System.EventHandler(this.dtpDataGridTime_ValueChanged);
-            // 
             // TimePiechart
             // 
             this.TimePiechart.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -332,12 +298,22 @@
             this.TimePiechart.TabIndex = 5;
             this.TimePiechart.Text = "TimePieChart";
             // 
+            // dtpDataGridTime
+            // 
+            this.dtpDataGridTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpDataGridTime.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.dtpDataGridTime.Location = new System.Drawing.Point(81, 3);
+            this.dtpDataGridTime.Name = "dtpDataGridTime";
+            this.dtpDataGridTime.Size = new System.Drawing.Size(351, 31);
+            this.dtpDataGridTime.TabIndex = 7;
+            // 
             // TimeCharts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(629, 616);
+            this.ClientSize = new System.Drawing.Size(637, 646);
             this.Controls.Add(this.TimePiechart);
             this.Controls.Add(this.pnlSearchByDate);
             this.Controls.Add(this.TimeLineChart);
@@ -352,7 +328,6 @@
             this.Load += new System.EventHandler(this.TimeCharts_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TimeLineChart)).EndInit();
             this.pnlSearchByDate.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtpDataGridTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.TimePiechart)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
@@ -365,9 +340,9 @@
         private System.Windows.Forms.Panel pnlSearchByDate;
         private Bunifu.Framework.UI.BunifuFlatButton btnPreviousDay;
         private Bunifu.Framework.UI.BunifuFlatButton btnNextDay;
-       public Syncfusion.Windows.Forms.Tools.DateTimePickerAdv dtpDataGridTime;
         private Bunifu.Framework.UI.BunifuFlatButton btnNextMonth;
         private Bunifu.Framework.UI.BunifuFlatButton btnPreviousMonth;
         private System.Windows.Forms.DataVisualization.Charting.Chart TimePiechart;
+        public Syncfusion.WinForms.Input.SfDateTimeEdit dtpDataGridTime;
     }
 }
