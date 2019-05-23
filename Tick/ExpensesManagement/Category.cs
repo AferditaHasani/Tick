@@ -3,6 +3,7 @@ using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using Tick.BLL;
+using Utilities.BunifuCheckBox.Transitions;
 
 namespace Tick.ExpensesManagement
 {
@@ -93,20 +94,22 @@ namespace Tick.ExpensesManagement
                 DataTable t = categoryBLL_service.GetAll();
                 if (t != null)
                 {
+                   
                     dgvCategory.DataSource = t;
 
                     dgvCategory.Columns["Color"].Visible = false;
-                
-
-
+                   // dgvCategory.Columns["IsExpenses"].Visible = false;
+                   
+               
                     for (int i = 0; i < dgvCategory.RowCount; i++)
                     {
                         DataGridViewRow row = dgvCategory.Rows[i];
                         string c = row.Cells["Color"].Value.ToString();
-
+                        
                         string[] colors = c.Split(',');
                         dgvCategory.Rows[i].HeaderCell.Style.BackColor =
-                            Color.FromArgb(int.Parse(colors[1]), int.Parse(colors[2]), int.Parse(colors[3]));
+                        Color.FromArgb(int.Parse(colors[1]), int.Parse(colors[2]), int.Parse(colors[3]));
+                     
                     }
                 }
                 else

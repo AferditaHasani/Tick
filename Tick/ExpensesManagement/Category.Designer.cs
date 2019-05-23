@@ -106,9 +106,9 @@
             this.pnlAddCategory.Controls.Add(this.txtName);
             this.pnlAddCategory.Controls.Add(this.lblChoose);
             this.pnlAddCategory.Controls.Add(this.lblName);
-            this.pnlAddCategory.Location = new System.Drawing.Point(540, 10);
+            this.pnlAddCategory.Location = new System.Drawing.Point(637, 12);
             this.pnlAddCategory.Name = "pnlAddCategory";
-            this.pnlAddCategory.Size = new System.Drawing.Size(349, 750);
+            this.pnlAddCategory.Size = new System.Drawing.Size(313, 750);
             this.pnlAddCategory.TabIndex = 3;
             // 
             // lblColor
@@ -118,7 +118,7 @@
             this.lblColor.CursorType = null;
             this.lblColor.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblColor.Location = new System.Drawing.Point(26, 361);
+            this.lblColor.Location = new System.Drawing.Point(8, 361);
             this.lblColor.Name = "lblColor";
             this.lblColor.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblColor.Size = new System.Drawing.Size(47, 23);
@@ -162,7 +162,7 @@
             this.btnSaveCategory.IconVisible = true;
             this.btnSaveCategory.IconZoom = 50D;
             this.btnSaveCategory.IsTab = false;
-            this.btnSaveCategory.Location = new System.Drawing.Point(233, 89);
+            this.btnSaveCategory.Location = new System.Drawing.Point(215, 89);
             this.btnSaveCategory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSaveCategory.Name = "btnSaveCategory";
             this.btnSaveCategory.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
@@ -201,7 +201,7 @@
             this.btnDeleteCategory.IconVisible = true;
             this.btnDeleteCategory.IconZoom = 50D;
             this.btnDeleteCategory.IsTab = false;
-            this.btnDeleteCategory.Location = new System.Drawing.Point(123, 89);
+            this.btnDeleteCategory.Location = new System.Drawing.Point(105, 89);
             this.btnDeleteCategory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeleteCategory.Name = "btnDeleteCategory";
             this.btnDeleteCategory.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
@@ -240,7 +240,7 @@
             this.btnCancelCategory.IconVisible = true;
             this.btnCancelCategory.IconZoom = 50D;
             this.btnCancelCategory.IsTab = false;
-            this.btnCancelCategory.Location = new System.Drawing.Point(11, 89);
+            this.btnCancelCategory.Location = new System.Drawing.Point(-7, 89);
             this.btnCancelCategory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelCategory.Name = "btnCancelCategory";
             this.btnCancelCategory.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
@@ -262,7 +262,7 @@
             this.lblIncome.CursorType = null;
             this.lblIncome.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIncome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblIncome.Location = new System.Drawing.Point(270, 294);
+            this.lblIncome.Location = new System.Drawing.Point(252, 294);
             this.lblIncome.Name = "lblIncome";
             this.lblIncome.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblIncome.Size = new System.Drawing.Size(58, 23);
@@ -279,7 +279,7 @@
             this.lblExpense.CursorType = null;
             this.lblExpense.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExpense.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblExpense.Location = new System.Drawing.Point(140, 300);
+            this.lblExpense.Location = new System.Drawing.Point(122, 300);
             this.lblExpense.Name = "lblExpense";
             this.lblExpense.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblExpense.Size = new System.Drawing.Size(63, 23);
@@ -297,7 +297,7 @@
             this.cbxIncome.Checked = false;
             this.cbxIncome.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.cbxIncome.ForeColor = System.Drawing.Color.White;
-            this.cbxIncome.Location = new System.Drawing.Point(244, 297);
+            this.cbxIncome.Location = new System.Drawing.Point(226, 297);
             this.cbxIncome.Name = "cbxIncome";
             this.cbxIncome.Size = new System.Drawing.Size(20, 20);
             this.cbxIncome.TabIndex = 16;
@@ -311,7 +311,7 @@
             this.cbxExpense.Checked = true;
             this.cbxExpense.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.cbxExpense.ForeColor = System.Drawing.Color.White;
-            this.cbxExpense.Location = new System.Drawing.Point(114, 300);
+            this.cbxExpense.Location = new System.Drawing.Point(96, 300);
             this.cbxExpense.Name = "cbxExpense";
             this.cbxExpense.Size = new System.Drawing.Size(20, 20);
             this.cbxExpense.TabIndex = 15;
@@ -342,7 +342,7 @@
             this.txtName.IconPadding = 10;
             this.txtName.IconRight = null;
             this.txtName.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txtName.Location = new System.Drawing.Point(105, 233);
+            this.txtName.Location = new System.Drawing.Point(87, 233);
             this.txtName.MaxLength = 32767;
             this.txtName.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtName.Modified = false;
@@ -368,7 +368,7 @@
             this.lblChoose.CursorType = null;
             this.lblChoose.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChoose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblChoose.Location = new System.Drawing.Point(40, 297);
+            this.lblChoose.Location = new System.Drawing.Point(22, 297);
             this.lblChoose.Name = "lblChoose";
             this.lblChoose.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblChoose.Size = new System.Drawing.Size(33, 23);
@@ -384,7 +384,7 @@
             this.lblName.CursorType = null;
             this.lblName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblName.Location = new System.Drawing.Point(23, 245);
+            this.lblName.Location = new System.Drawing.Point(5, 245);
             this.lblName.Name = "lblName";
             this.lblName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblName.Size = new System.Drawing.Size(50, 23);
@@ -472,7 +472,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(816, 788);
+            this.ClientSize = new System.Drawing.Size(824, 788);
             this.Controls.Add(this.dgvCategory);
             this.Controls.Add(this.pnlAddCategory);
             this.Controls.Add(this.btnAddCategory);

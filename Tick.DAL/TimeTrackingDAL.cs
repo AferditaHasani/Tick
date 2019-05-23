@@ -17,9 +17,8 @@ namespace Tick.DAL
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(
-                    @"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
-                )
+                using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+               // using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")    )
                 {
                    
                     String sql = "dbo.usp_TimeTracking_Insert";
@@ -48,13 +47,11 @@ namespace Tick.DAL
 
         public DataTable GetByDate(DateTime dt)
         {
-            try
+            try { 
+            using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+            //using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework") )
             {
-                using (SqlConnection conn = new SqlConnection(
-                    @"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
-                )
-                {
-                    String sql = "dbo.usp_TimeTrackin_ByDate";
+                String sql = "dbo.usp_TimeTrackin_ByDate";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         conn.Open();
@@ -83,9 +80,8 @@ namespace Tick.DAL
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(
-                    @"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
-                )
+                using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+               // using (SqlConnection conn = new SqlConnection( @"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
                 {
                     String sql = "dbo.usp_TimeTracking_Update";
                     using (SqlCommand command = new SqlCommand(sql, conn))
@@ -118,9 +114,8 @@ namespace Tick.DAL
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(
-                    @"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
-                )
+                using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                //  using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework") )
                 {
                     String sql = "dbo.usp_TimeTrackin_Delete";
                     using (SqlCommand command = new SqlCommand(sql, conn))
@@ -148,9 +143,8 @@ namespace Tick.DAL
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(
-                    @"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
-                )
+                using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+               // using (SqlConnection conn = new SqlConnection( @"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
                 {
                     String sql = "dbo.usp_Task_GetComboBox";
                     using (SqlCommand command = new SqlCommand(sql, conn))
@@ -182,9 +176,8 @@ namespace Tick.DAL
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(
-                    @"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
-                )
+                using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                //     using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework") )
                 {
                     String sql = "dbo.usp_TimeTrackin_ByMonth";
                     using (SqlCommand command = new SqlCommand(sql, conn))
@@ -215,9 +208,8 @@ namespace Tick.DAL
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(
-                    @"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
-                )
+                using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+          //      using (SqlConnection conn = new SqlConnection( @"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework") )
                 {
                     String sql = "dbo.usp_TimeTrackin_PieChart";
                     using (SqlCommand command = new SqlCommand(sql, conn))

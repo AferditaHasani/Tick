@@ -23,9 +23,9 @@ namespace Tick.BLL
             return ETrackingDAL_db.Add(track);
         }
 
-        public DataTable GetAll()
+        public DataTable GetByDate(DateTime dt)
         {
-            return ETrackingDAL_db.GetAll();
+            return ETrackingDAL_db.GetByDate(dt);
         }
 
         public bool Update(ExpensesTracking tsk)
@@ -40,6 +40,7 @@ namespace Tick.BLL
         {
             return ETrackingDAL_db.GetComboBox();
         }
+       
 
     }
 }
