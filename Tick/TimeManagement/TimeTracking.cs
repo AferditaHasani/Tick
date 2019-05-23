@@ -15,7 +15,8 @@ namespace Tick.TimeManagement
         public TimeTracking()
         {
             InitializeComponent();
-       
+
+
         }
         private TimeTrackingBLL timeBLL_service = new TimeTrackingBLL();
         BO.TimeTracking time = new BO.TimeTracking();
@@ -37,12 +38,8 @@ namespace Tick.TimeManagement
         private void ClearTxt()
         {
             
-            ddTask.Text = "";
-            rtxtTimeDescription.Text = "";
-            ddStartHour.Text = "";
-            ddStartMinute.Text = "";
-            ddEndHour.Text = "";
-            ddEndMinute.Text = "";
+            ddTask.Text = rtxtTimeDescription.Text = ddStartHour.Text = ddStartMinute.Text = ddEndHour.Text = ddEndMinute.Text = "";
+          
         }
 
         private void btnSaveTimeTracking_Click(object sender, EventArgs e)
@@ -76,10 +73,20 @@ namespace Tick.TimeManagement
                 time.Description = rtxtTimeDescription.Text;
                 time.Date = dpTimeTrackingDate.Value;
               
+
                 time.StartTime = new DateTime(int.Parse(date[2]), int.Parse(date[1]), int.Parse(date[0]),
                     int.Parse(ddStartHour.Text), int.Parse(ddStartMinute.Text), 0);
-                time.EndTime= new DateTime(int.Parse(date[2]), int.Parse(date[1]), int.Parse(date[0]),
-                       int.Parse(ddEndHour.Text), int.Parse(ddEndMinute.Text), 0) ;
+                if (int.Parse(ddStartHour.Text)> int.Parse(ddEndHour.Text)||(int.Parse(ddStartHour.Text) == int.Parse(ddEndHour.Text)&& int.Parse(ddStartMinute.Text) > int.Parse(ddEndMinute.Text)))
+                {
+                    time.EndTime = new DateTime(int.Parse(date[2]), int.Parse(date[1]), int.Parse(date[0])+1,
+                        int.Parse(ddEndHour.Text), int.Parse(ddEndMinute.Text), 0);
+                }
+                else
+                {
+                    time.EndTime = new DateTime(int.Parse(date[2]), int.Parse(date[1]), int.Parse(date[0]),
+                        int.Parse(ddEndHour.Text), int.Parse(ddEndMinute.Text), 0);
+                }
+             
 
                 var saved = timeBLL_service.Update(time);
             
@@ -138,8 +145,10 @@ namespace Tick.TimeManagement
                             Color.FromArgb(int.Parse(colors[1]), int.Parse(colors[2]), int.Parse(colors[3]));
 
 
+                     
 
                     }
+                 
                 }
                 else
                 {
@@ -200,7 +209,14 @@ namespace Tick.TimeManagement
 
 
                 };
-                MessageBox.Show(t.StartTime+"");
+                if (int.Parse(ddStartHour.Text) > int.Parse(ddEndHour.Text) ||
+                    (int.Parse(ddStartHour.Text) == int.Parse(ddEndHour.Text) &&
+                     int.Parse(ddStartMinute.Text) > int.Parse(ddEndMinute.Text)))
+                {
+                    t.EndTime = new DateTime(int.Parse(date[2]), int.Parse(date[1]), int.Parse(date[0])+1,
+                        int.Parse(ddEndHour.Text), int.Parse(ddEndMinute.Text), 0);
+                }
+                    MessageBox.Show(t.StartTime+"");
                 return t;
             }
             catch (Exception e)
@@ -241,10 +257,21 @@ namespace Tick.TimeManagement
 
 
                 a = row.Cells["EndTime"].Value.ToString().Split(':');
-               
-                time.EndTime = new DateTime(int.Parse(date[2]), int.Parse(date[1]), int.Parse(date[0]), int.Parse(a[0]),
+                time.EndTime = new DateTime(int.Parse(date[2]), int.Parse(date[1]), int.Parse(date[0]) ,
+                    int.Parse(a[0]),
                     int.Parse(a[1]), 0);
 
+                if (int.Parse(ddStartHour.Text) > int.Parse(a[0]) ||
+                    (int.Parse(ddStartHour.Text) == int.Parse(a[0]) &&
+                     int.Parse(ddStartMinute.Text) > int.Parse(a[1])))
+                {
+
+                    time.EndTime = new DateTime(int.Parse(date[2]), int.Parse(date[1]), int.Parse(date[0]) + 1,
+                        int.Parse(a[0]),
+                        int.Parse(a[1]), 0);
+
+                }
+                
 
                 ddTask.SelectedValue = time.TaskID;
                 rtxtTimeDescription.Text = time.Description;
@@ -287,9 +314,20 @@ namespace Tick.TimeManagement
 
 
                 a = row.Cells["EndTime"].Value.ToString().Split(':');
-
-                time.EndTime = new DateTime(int.Parse(date[2]), int.Parse(date[1]), int.Parse(date[0]), int.Parse(a[0]),
+                time.EndTime = new DateTime(int.Parse(date[2]), int.Parse(date[1]), int.Parse(date[0]),
+                    int.Parse(a[0]),
                     int.Parse(a[1]), 0);
+
+                if (int.Parse(ddStartHour.Text) > int.Parse(a[0]) ||
+                    (int.Parse(ddStartHour.Text) == int.Parse(a[0]) &&
+                     int.Parse(ddStartMinute.Text) > int.Parse(a[1])))
+                {
+
+                    time.EndTime = new DateTime(int.Parse(date[2]), int.Parse(date[1]), int.Parse(date[0]) + 1,
+                        int.Parse(a[0]),
+                        int.Parse(a[1]), 0);
+
+                }
 
 
                 ddTask.SelectedValue = time.TaskID;
@@ -349,10 +387,10 @@ namespace Tick.TimeManagement
         }
         private void TimeTracking_Load(object sender, EventArgs e)
         {
-            dateForGrid=dtpDataGridTime.Value;
-            DisplayToDGrid(dateForGrid);
             FillCombo();
-       
+            dateForGrid = (DateTime)dtpDataGridTime.Value;
+            DisplayToDGrid(dateForGrid);
+          
         }
 
         private void btnDeleteTimeTracking_Click(object sender, EventArgs e)
@@ -362,12 +400,24 @@ namespace Tick.TimeManagement
             DisplayToDGrid(dateForGrid);
         }
 
-        private void dtpDataGridTime_ValueChanged(object sender, EventArgs e)
+        
+
+        private void dtpDataGridTime_ValueChanged(object sender, Syncfusion.WinForms.Input.Events.DateTimeValueChangedEventArgs e)
         {
-            dateForGrid = dtpDataGridTime.Value;
+            dateForGrid = (DateTime)dtpDataGridTime.Value;
             DisplayToDGrid(dateForGrid);
         }
 
-     
+        private void btnPreviousDay_Click(object sender, EventArgs e)
+        {
+            dateForGrid = new DateTime(dtpDataGridTime.Value.Value.Year, dtpDataGridTime.Value.Value.Month, dtpDataGridTime.Value.Value.Day-1);
+            dtpDataGridTime.Value = dateForGrid;
+        }
+
+        private void btnNextDay_Click(object sender, EventArgs e)
+        {
+            dateForGrid = new DateTime(dtpDataGridTime.Value.Value.Year, dtpDataGridTime.Value.Value.Month, dtpDataGridTime.Value.Value.Day +1);
+            dtpDataGridTime.Value = dateForGrid;
+        }
     }
 }

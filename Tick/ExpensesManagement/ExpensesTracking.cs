@@ -31,6 +31,7 @@ namespace Tick.ExpensesManagement
             pnlAddTransaction.Visible = true;
             dgvTransaction.Size = new Size(680, 697);
             transaction = null;
+            FillCombo();
         }
         
         private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
@@ -157,21 +158,21 @@ namespace Tick.ExpensesManagement
 
                     this.dgvTransaction.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                     this.dgvTransaction.Columns["Description"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-                  
-
-
-                    //for (int i = 0; i < dgvTransaction.RowCount; i++)
-                    //{
-                    //    DataGridViewRow row = dgvTransaction.Rows[i];
-                    //    string c = row.Cells["Color"].Value.ToString();
-
-                    //    string[] colors = c.Split(',');
-                    //    dgvTransaction.Rows[i].HeaderCell.Style.BackColor =
-                    //        Color.FromArgb(int.Parse(colors[1]), int.Parse(colors[2]), int.Parse(colors[3]));
 
 
 
-                    //}
+                    for (int i = 0; i < dgvTransaction.RowCount; i++)
+                    {
+                        DataGridViewRow row = dgvTransaction.Rows[i];
+                        string c = row.Cells["Color"].Value.ToString();
+
+                        string[] colors = c.Split(',');
+                        dgvTransaction.Rows[i].HeaderCell.Style.BackColor =
+                            Color.FromArgb(int.Parse(colors[1]), int.Parse(colors[2]), int.Parse(colors[3]));
+
+
+
+                    }
                 }
 
                 else

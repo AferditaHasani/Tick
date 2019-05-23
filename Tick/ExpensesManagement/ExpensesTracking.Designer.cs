@@ -54,6 +54,7 @@
             // pnlAddTransaction
             // 
             this.pnlAddTransaction.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pnlAddTransaction.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlAddTransaction.Controls.Add(this.btnSaveTransaction);
             this.pnlAddTransaction.Controls.Add(this.btnDeleteTransaction);
             this.pnlAddTransaction.Controls.Add(this.btnCancelTransaction);
@@ -63,9 +64,9 @@
             this.pnlAddTransaction.Controls.Add(this.lblCategory);
             this.pnlAddTransaction.Controls.Add(this.txtAmount);
             this.pnlAddTransaction.Controls.Add(this.lblAmount);
-            this.pnlAddTransaction.Location = new System.Drawing.Point(540, 10);
+            this.pnlAddTransaction.Location = new System.Drawing.Point(540, 57);
             this.pnlAddTransaction.Name = "pnlAddTransaction";
-            this.pnlAddTransaction.Size = new System.Drawing.Size(349, 750);
+            this.pnlAddTransaction.Size = new System.Drawing.Size(349, 675);
             this.pnlAddTransaction.TabIndex = 2;
             // 
             // btnSaveTransaction
@@ -92,7 +93,7 @@
             this.btnSaveTransaction.IconVisible = true;
             this.btnSaveTransaction.IconZoom = 50D;
             this.btnSaveTransaction.IsTab = false;
-            this.btnSaveTransaction.Location = new System.Drawing.Point(251, 47);
+            this.btnSaveTransaction.Location = new System.Drawing.Point(250, 8);
             this.btnSaveTransaction.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSaveTransaction.Name = "btnSaveTransaction";
             this.btnSaveTransaction.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
@@ -131,7 +132,7 @@
             this.btnDeleteTransaction.IconVisible = true;
             this.btnDeleteTransaction.IconZoom = 50D;
             this.btnDeleteTransaction.IsTab = false;
-            this.btnDeleteTransaction.Location = new System.Drawing.Point(123, 47);
+            this.btnDeleteTransaction.Location = new System.Drawing.Point(122, 8);
             this.btnDeleteTransaction.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeleteTransaction.Name = "btnDeleteTransaction";
             this.btnDeleteTransaction.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
@@ -170,7 +171,7 @@
             this.btnCancelTransaction.IconVisible = true;
             this.btnCancelTransaction.IconZoom = 50D;
             this.btnCancelTransaction.IsTab = false;
-            this.btnCancelTransaction.Location = new System.Drawing.Point(-7, 47);
+            this.btnCancelTransaction.Location = new System.Drawing.Point(-8, 8);
             this.btnCancelTransaction.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelTransaction.Name = "btnCancelTransaction";
             this.btnCancelTransaction.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
@@ -192,7 +193,7 @@
             this.txtDescription.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.txtDescription.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.txtDescription.Location = new System.Drawing.Point(151, 304);
+            this.txtDescription.Location = new System.Drawing.Point(150, 265);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(185, 105);
@@ -223,7 +224,7 @@
             this.ddlCategory.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.ddlCategory.ItemHeight = 26;
             this.ddlCategory.ItemHighLightColor = System.Drawing.Color.Thistle;
-            this.ddlCategory.Location = new System.Drawing.Point(151, 236);
+            this.ddlCategory.Location = new System.Drawing.Point(150, 197);
             this.ddlCategory.Name = "ddlCategory";
             this.ddlCategory.Size = new System.Drawing.Size(185, 32);
             this.ddlCategory.TabIndex = 8;
@@ -236,7 +237,7 @@
             this.lblDescription.CursorType = null;
             this.lblDescription.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblDescription.Location = new System.Drawing.Point(18, 313);
+            this.lblDescription.Location = new System.Drawing.Point(17, 274);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblDescription.Size = new System.Drawing.Size(91, 23);
@@ -252,7 +253,7 @@
             this.lblCategory.CursorType = null;
             this.lblCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblCategory.Location = new System.Drawing.Point(35, 245);
+            this.lblCategory.Location = new System.Drawing.Point(34, 206);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblCategory.Size = new System.Drawing.Size(74, 23);
@@ -286,7 +287,7 @@
             this.txtAmount.IconPadding = 10;
             this.txtAmount.IconRight = null;
             this.txtAmount.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txtAmount.Location = new System.Drawing.Point(151, 161);
+            this.txtAmount.Location = new System.Drawing.Point(150, 122);
             this.txtAmount.MaxLength = 4000;
             this.txtAmount.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtAmount.Modified = false;
@@ -315,7 +316,7 @@
             this.lblAmount.CursorType = null;
             this.lblAmount.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblAmount.Location = new System.Drawing.Point(43, 173);
+            this.lblAmount.Location = new System.Drawing.Point(42, 134);
             this.lblAmount.Name = "lblAmount";
             this.lblAmount.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblAmount.Size = new System.Drawing.Size(66, 23);
@@ -362,7 +363,7 @@
             // 
             // dgvTransaction
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.dgvTransaction.AllowUserToAddRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
@@ -376,18 +377,17 @@
             this.dgvTransaction.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvTransaction.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.dgvTransaction.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvTransaction.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvTransaction.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvTransaction.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(15);
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(15, 20, 15, 20);
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.dgvTransaction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
@@ -398,14 +398,14 @@
             this.dgvTransaction.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTransaction.DoubleBuffered = true;
             this.dgvTransaction.EnableHeadersVisualStyles = false;
-            this.dgvTransaction.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.dgvTransaction.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.dgvTransaction.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.dgvTransaction.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dgvTransaction.Location = new System.Drawing.Point(12, 67);
+            this.dgvTransaction.Location = new System.Drawing.Point(12, 57);
             this.dgvTransaction.Name = "dgvTransaction";
-            this.dgvTransaction.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dgvTransaction.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dgvTransaction.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
@@ -413,8 +413,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvTransaction.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvTransaction.RowHeadersWidth = 5;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgvTransaction.RowHeadersWidth = 17;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
@@ -422,7 +421,6 @@
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.dgvTransaction.RowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvTransaction.RowTemplate.DefaultCellStyle.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dgvTransaction.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.dgvTransaction.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvTransaction.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
@@ -431,17 +429,14 @@
             this.dgvTransaction.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.dgvTransaction.RowTemplate.Height = 60;
             this.dgvTransaction.Size = new System.Drawing.Size(656, 675);
-            this.dgvTransaction.TabIndex = 5;
-            this.dgvTransaction.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellContentClick);
-            this.dgvTransaction.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellContentClick);
-            this.dgvTransaction.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvTransaction_RowHeaderMouseClick);
+            this.dgvTransaction.TabIndex = 6;
             // 
             // ExpensesTracking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(776, 788);
+            this.ClientSize = new System.Drawing.Size(792, 788);
             this.Controls.Add(this.dgvTransaction);
             this.Controls.Add(this.pnlAddTransaction);
             this.Controls.Add(this.btnAddTransaction);
