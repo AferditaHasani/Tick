@@ -41,7 +41,7 @@ namespace Tick.DAL
             }
         }
 
-        public DataTable GetAll()
+        public DataTable GetAll(int id)
         {
             try
             {
@@ -51,7 +51,8 @@ namespace Tick.DAL
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         conn.Open();
-
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add("@prmUserID", SqlDbType.Int).Value = id;
 
 
                         SqlDataAdapter sqlDataAdap = new SqlDataAdapter(command);

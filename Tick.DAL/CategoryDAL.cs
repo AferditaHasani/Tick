@@ -27,7 +27,7 @@ namespace Tick.DAL
                         command.Parameters.Add("@prmName", SqlDbType.VarChar).Value = model.Name;
                         command.Parameters.Add("@prmIsExpenses", SqlDbType.VarChar).Value = model.IsExpenses;
                         command.Parameters.Add("@prmColor", SqlDbType.VarChar).Value = model.Color;
-                        command.Parameters.Add("@prmInsertBy", SqlDbType.VarChar).Value = 1;
+                        command.Parameters.Add("@prmInsertBy", SqlDbType.VarChar).Value = model.InsertBy;
 
 
 
@@ -45,7 +45,7 @@ namespace Tick.DAL
     
      
 
-        public DataTable GetAll()
+        public DataTable GetAll(int id)
         {
             try
             {
@@ -56,7 +56,8 @@ namespace Tick.DAL
                     {
                         conn.Open();
 
-
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add("@prmUserId", SqlDbType.Int).Value = id;
 
                         SqlDataAdapter sqlDataAdap = new SqlDataAdapter(command);
 

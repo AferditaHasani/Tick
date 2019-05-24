@@ -27,6 +27,8 @@ namespace Tick.DAL
                     {
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add("@prmUserID", SqlDbType.Int).Value = model.UserID;
+                        command.Parameters.Add("@prmInsertBy", SqlDbType.Int).Value = model.InsertBy;
                         command.Parameters.Add("@prmTaskID", SqlDbType.Int).Value = model.TaskID;
                         command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = model.Description;
                        command.Parameters.Add("@prmDate", SqlDbType.DateTime).Value = model.Date;
@@ -46,7 +48,7 @@ namespace Tick.DAL
             }
         }
 
-        public DataTable GetByDate(DateTime dt)
+        public DataTable GetByDate(DateTime dt,int id)
         {
             try
             {
@@ -61,6 +63,7 @@ namespace Tick.DAL
 
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.Add("@prmDate", SqlDbType.DateTime).Value = dt;
+                        command.Parameters.Add("@prmUserID", SqlDbType.Int).Value = id;
 
                         SqlDataAdapter sqlDataAdap = new SqlDataAdapter(command);
 
@@ -144,7 +147,7 @@ namespace Tick.DAL
             }
         }
 
-        public DataTable GetComboBox()
+        public DataTable GetComboBox(int id)
         {
             try
             {
@@ -156,6 +159,8 @@ namespace Tick.DAL
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         conn.Open();
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add("@prmUserID", SqlDbType.Int).Value = id;
 
 
                         SqlDataReader reader;
@@ -178,7 +183,7 @@ namespace Tick.DAL
             }
         }
 
-        public DataTable GetByMonth(DateTime dt)
+        public DataTable GetByMonth(DateTime dt, int id)
         {
             try
             {
@@ -193,6 +198,7 @@ namespace Tick.DAL
 
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.Add("@prmMonth", SqlDbType.DateTime).Value = dt;
+                        command.Parameters.Add("@prmUserID", SqlDbType.Int).Value = id;
 
                         SqlDataAdapter sqlDataAdap = new SqlDataAdapter(command);
 
@@ -211,7 +217,7 @@ namespace Tick.DAL
             }
         }
 
-        public DataTable GetForPie(DateTime dt)
+        public DataTable GetForPie(DateTime dt, int id)
         {
             try
             {
@@ -226,6 +232,7 @@ namespace Tick.DAL
 
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.Add("@prmDate", SqlDbType.DateTime).Value = dt;
+                        command.Parameters.Add("@prmUserID", SqlDbType.Int).Value = id;
 
                         SqlDataAdapter sqlDataAdap = new SqlDataAdapter(command);
 

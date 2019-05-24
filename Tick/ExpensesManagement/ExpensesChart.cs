@@ -15,17 +15,13 @@ namespace Tick.ExpensesManagement
 {
     public partial class ExpensesChart : Telerik.WinControls.UI.RadForm
     {
-        private User user;
+        public User user;
 
         public ExpensesChart()
         {
             InitializeComponent();
         }
-        public ExpensesChart(User u)
-        {
-            InitializeComponent();
-            user=u;
-        }
+      
 
         
         private ExpensesTrackingBLL tt_service = new ExpensesTrackingBLL();
@@ -34,7 +30,7 @@ namespace Tick.ExpensesManagement
 
         public void FillLineChart(DateTime dt)
         {
-            DataTable t = tt_service.GetByMonth(dt);
+            DataTable t = tt_service.GetByMonth(dt,user.UserID);
 
             if (t != null)
             {
@@ -90,7 +86,7 @@ namespace Tick.ExpensesManagement
 
         public void FillPieChart(DateTime dt)
         {
-            DataTable t = tt_service.GetForPie(dt);
+            DataTable t = tt_service.GetForPie(dt,user.UserID);
 
 
             ExpensesPiechart.Series.Clear();

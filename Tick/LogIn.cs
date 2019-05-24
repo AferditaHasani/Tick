@@ -21,27 +21,27 @@ namespace Tick
         {
             InitializeComponent();
 
-        user = null;
+     
          }
 
         private UserBLL userBLL = new UserBLL();
         public User activeUser = new User();
-        private User user;
+   
 
      
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            user = new User
+            activeUser = new User
             {
                 Username = txtUsername.Text,
                 Password = txtPassword.Text,
             };
-            user = userBLL.GetLogIn(user);
-            if (user!=null)
+            activeUser = userBLL.GetLogIn(activeUser);
+            if (activeUser != null)
             {
        
-                menu = new Menu(user);
+                menu = new Menu(activeUser, this);
                 this.Hide();
 
                 menu.Closed += (s, args) => this.Close();
@@ -51,6 +51,7 @@ namespace Tick
             else
             {
                 MessageBox.Show("Log In failed");
+                ClearText();
             }
         }
 
@@ -110,7 +111,7 @@ namespace Tick
             if (SaveSigIn())
             {
 
-                menu=new Menu(user);
+                menu=new Menu(activeUser, this);
                 this.Hide();
               
                 menu.Closed += (s, args) => this.Close();
@@ -119,11 +120,12 @@ namespace Tick
             else
             {
                 MessageBox.Show("Sign In failed");
+                ClearText();
             }
 
             this.Close();
         }
-        public bool SaveSigIn()
+        private bool SaveSigIn()
         {
             try
             {
@@ -146,11 +148,11 @@ namespace Tick
             }
         }
 
-        public User GetSignInUser()
+        private User GetSignInUser()
         {
             try
             {
-                user = new User
+                User user = new User
                 {
 
                     Name = txtName.Text,
@@ -170,5 +172,12 @@ namespace Tick
                 return null;
             }
         }
+
+        public void ClearText()
+        {
+            txtName.Text = txtLastname.Text = txtUsername.Text = txtPassword.Text = "";
+            activeUser = null;
+        }
+
     }
 }

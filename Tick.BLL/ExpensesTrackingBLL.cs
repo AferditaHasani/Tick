@@ -23,9 +23,9 @@ namespace Tick.BLL
             return ETrackingDAL_db.Add(track);
         }
 
-        public DataTable GetAll()
+        public DataTable GetAll(int id)
         {
-            return ETrackingDAL_db.GetAll();
+            return ETrackingDAL_db.GetAll(id);
         }
 
         public bool Update(ExpensesTracking tsk)
@@ -36,17 +36,17 @@ namespace Tick.BLL
         {
             return ETrackingDAL_db.Delete(tsk);
         }
-        public DataTable GetComboBox()
+        public DataTable GetComboBox(int id)
         {
-            return ETrackingDAL_db.GetComboBox();
+            return ETrackingDAL_db.GetComboBox(id);
         }
-        public DataTable GetByMonth(DateTime dt)
+        public DataTable GetByMonth(DateTime dt,int id)
         {
-            return ETrackingDAL_db.GetByMonth(dt);
+            return ETrackingDAL_db.GetByMonth(dt,id);
         }
-        public DataTable GetForPie(DateTime dt)
+        public DataTable GetForPie(DateTime dt,int id)
         {
-            return ETrackingDAL_db.GetForPie(dt);
+            return ETrackingDAL_db.GetForPie(dt,id);
         }
 
     }

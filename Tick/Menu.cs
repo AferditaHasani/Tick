@@ -20,29 +20,30 @@ namespace Tick
     public partial class Menu : Telerik.WinControls.UI.RadForm
     {
         static User user;
+        private static LogIn parent;
         public Menu()
         {
             InitializeComponent();
 
         }
 
-        public Menu(User u)
+        public Menu(User u,LogIn p)
         {
 
             InitializeComponent();
             this.Bounds = Screen.PrimaryScreen.Bounds;
             user = u;
             lblUsername.Text = user.Name;
-
+            parent = p;
         }
 
 
-        ExpensesTracking et = new ExpensesTracking(user);
-        TimeTracking t = new TimeTracking(user);
-        Category ct = new Category(user);
-        Tasks tsk = new Tasks(user);
-        TimeCharts tch = new TimeCharts(user);
-        ExpensesChart ech = new ExpensesChart(user);
+        ExpensesTracking et = new ExpensesTracking();
+        TimeTracking t = new TimeTracking();
+        Category ct = new Category();
+        Tasks tsk = new Tasks();
+        TimeCharts tch = new TimeCharts();
+        ExpensesChart ech = new ExpensesChart();
 
 
         //Metoda e cila vendos nje vije para objektit i cili  e therret
@@ -133,11 +134,10 @@ namespace Tick
 
         }
 
-
         private void btnTimeTracking_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
-
+            t.user = user;
             FillContentPanel(t);
 
         }
@@ -145,32 +145,36 @@ namespace Tick
         private void btnExpensesTracking_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
-
+            et.user = user;
             FillContentPanel(et);
         }
 
         private void btnTimeCharts_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
+            tch.user = user;
             FillContentPanel(tch);
         }
 
         private void btnExpensesChart_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
+            ech.user = user;
+
             FillContentPanel(ech);
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
+            this.Hide();
+            parent.Show();
 
         }
 
         private void btnTasks_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
-
-
+            tsk.user = user;
             FillContentPanel(tsk);
 
         }
@@ -178,7 +182,7 @@ namespace Tick
         private void btnCategory_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
-
+            ct.user = user;
             FillContentPanel(ct);
         }
 

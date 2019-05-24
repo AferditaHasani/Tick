@@ -14,17 +14,13 @@ namespace Tick.TimeManagement
 {
     public partial class Tasks : Telerik.WinControls.UI.RadForm
     {
-        private User user;
+        public User user;
         public Tasks()
         {
             InitializeComponent();
 
         }
-        public Tasks(User u)
-        {
-            InitializeComponent();
-            user = u;
-        }
+      
 
         private TaskBLL taskBLL_service = new TaskBLL();
         Task tsk = new Task();
@@ -93,7 +89,7 @@ namespace Tick.TimeManagement
             try
             {
                 dgvTasks.Refresh();
-                DataTable t = taskBLL_service.GetAll();
+                DataTable t = taskBLL_service.GetAll(user.UserID);
                 if (t != null)
                 {
                     dgvTasks.DataSource = t;

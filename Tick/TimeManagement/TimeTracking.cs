@@ -13,19 +13,14 @@ namespace Tick.TimeManagement
 {
     public partial class TimeTracking : Telerik.WinControls.UI.RadForm
     {
-        private User user;
+        public User user;
         public TimeTracking()
         {
             InitializeComponent();
 
 
         }
-        public TimeTracking(User u)
-        {
-            InitializeComponent();
-
-            user = u;
-        }
+      
         private TimeTrackingBLL timeBLL_service = new TimeTrackingBLL();
         BO.TimeTracking time = new BO.TimeTracking();
         private DateTime dateForGrid = new DateTime();
@@ -112,7 +107,9 @@ namespace Tick.TimeManagement
 
             ddTask.ValueMember = "TaskID";
             ddTask.DisplayMember = "Name";
-            ddTask.DataSource = timeBLL_service.GetComboBox();
+
+              ddTask.DataSource = timeBLL_service.GetComboBox(user.UserID);
+            
         }
         public void DisplayToDGrid(DateTime dt)
         {
@@ -120,7 +117,7 @@ namespace Tick.TimeManagement
             {
           
                 dgvWorkUnits.Refresh();
-                DataTable t = timeBLL_service.GetByDate(dt);
+                DataTable t = timeBLL_service.GetByDate(dt,user.UserID);
                 if (t != null)
                 {
                    dgvWorkUnits.DataSource = t;
@@ -205,14 +202,14 @@ namespace Tick.TimeManagement
                 {
 
                     TaskID = (int) ddTask.SelectedValue,
-                    
+                    UserID = user.UserID,
                     Description = rtxtTimeDescription.Text,
                     Date= dpTimeTrackingDate.Value,
                    StartTime = new DateTime(int.Parse(date[2]), int.Parse(date[1]), int.Parse(date[0]) ,
                     int.Parse(ddStartHour.Text), int.Parse(ddStartMinute.Text),0),
                    EndTime = new DateTime(int.Parse(date[2]), int.Parse(date[1]), int.Parse(date[0]),
                        int.Parse(ddEndHour.Text), int.Parse(ddEndMinute.Text), 0),
-                    InsertBy = 1,
+                    InsertBy = user.UserID,
                     InsertDate = DateTime.Now
 
 

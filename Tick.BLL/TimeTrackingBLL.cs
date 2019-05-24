@@ -23,9 +23,9 @@ namespace Tick.BLL
             return timeDAL_db.Add(model);
         }
 
-        public DataTable GetByDate(DateTime dt)
+        public DataTable GetByDate(DateTime dt,int id)
         {
-            return timeDAL_db.GetByDate(dt);
+            return timeDAL_db.GetByDate(dt,id);
         }
 
         public bool Update(TimeTracking model)
@@ -37,17 +37,17 @@ namespace Tick.BLL
         {
             return timeDAL_db.Delete(model);
         }
-        public DataTable GetComboBox()
+        public DataTable GetComboBox(int id)
         {
-            return timeDAL_db.GetComboBox();
+            return timeDAL_db.GetComboBox(id);
         }
-        public DataTable GetByMonth(DateTime dt)
+        public DataTable GetByMonth(DateTime dt, int id)
         {
-            return timeDAL_db.GetByMonth(dt);
+            return timeDAL_db.GetByMonth(dt, id);
         }
-        public DataTable GetForPie(DateTime dt)
+        public DataTable GetForPie(DateTime dt, int id)
         {
-            return timeDAL_db.GetForPie(dt);
+            return timeDAL_db.GetForPie(dt,id);
         }
     }
 }

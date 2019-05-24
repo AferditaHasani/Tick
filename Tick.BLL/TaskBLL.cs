@@ -23,9 +23,9 @@ namespace Tick.BLL
             return taskDAL_db.Add(task);
         }
 
-        public DataTable GetAll()
+        public DataTable GetAll(int id)
         {
-            return taskDAL_db.GetAll();
+            return taskDAL_db.GetAll(id);
         }
 
         public bool Update(Task tsk)

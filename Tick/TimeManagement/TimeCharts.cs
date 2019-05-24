@@ -15,16 +15,12 @@ namespace Tick.TimeManagement
 {
     public partial class TimeCharts : Telerik.WinControls.UI.RadForm
     {
-        private User user;
+        public User user;
         public TimeCharts()
         {
             InitializeComponent();
         }
-        public TimeCharts(User u)
-        {
-            InitializeComponent();
-            user = u;
-        }
+     
 
         private TimeTrackingBLL tt_service = new TimeTrackingBLL();
 
@@ -35,7 +31,7 @@ namespace Tick.TimeManagement
 
        public  void FillLineChart(DateTime dt)
         {
-            DataTable t = tt_service.GetByMonth(dt);
+            DataTable t = tt_service.GetByMonth(dt,user.UserID);
 
             if (t != null)
             {
@@ -91,7 +87,7 @@ namespace Tick.TimeManagement
 
         public void FillPieChart(DateTime dt)
         {
-            DataTable t = tt_service.GetForPie(dt);
+            DataTable t = tt_service.GetForPie(dt,user.UserID);
 
 
             TimePiechart.Series.Clear();

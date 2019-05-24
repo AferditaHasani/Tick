@@ -12,17 +12,13 @@ namespace Tick.ExpensesManagement
         private bool isExpense=true;
         private CategoryBLL categoryBLL_service = new CategoryBLL();
         private BO.Category cat= new BO.Category();
-        private User user;
+        public User user;
 
         public Category()
         {
             InitializeComponent();
         }
-        public Category(User u)
-        {
-            InitializeComponent();
-            user=u;
-        }
+    
 
         private void btnAddCategory_Click(object sender, EventArgs e)
         {
@@ -95,7 +91,7 @@ namespace Tick.ExpensesManagement
             try
             {
                 dgvCategory.Refresh();
-                DataTable t = categoryBLL_service.GetAll();
+                DataTable t = categoryBLL_service.GetAll(user.UserID);
                 if (t != null)
                 {
                     dgvCategory.DataSource = t;
@@ -182,7 +178,7 @@ namespace Tick.ExpensesManagement
                 {
                     Name=txtName.Text,
                     IsExpenses = isExpense,
-                    InsertBy = 1,
+                    InsertBy = user.UserID,
                     InsertDate = DateTime.Now,
                     Color = $"{color[0]},{color[1]},{color[2]},{color[3]}"
 

@@ -23,11 +23,11 @@ namespace Tick.DAL
                     {
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.Add("@prmUserID", SqlDbType.Int).Value = 1;
+                        command.Parameters.Add("@prmUserID", SqlDbType.Int).Value = model.UserID;
                         command.Parameters.Add("@prmAmount", SqlDbType.VarChar).Value = model.Amount;
                         command.Parameters.Add("@prmCategoryID", SqlDbType.VarChar).Value = model.CategoryID;
                         command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = model.Description;
-                        command.Parameters.Add("@prmInsertBy", SqlDbType.Int).Value = 1;
+                        command.Parameters.Add("@prmInsertBy", SqlDbType.Int).Value = model.InsertBy;
 
 
 
@@ -43,7 +43,7 @@ namespace Tick.DAL
             }
         }
 
-        public DataTable GetAll()
+        public DataTable GetAll(int id)
         {
             try
             {
@@ -53,7 +53,8 @@ namespace Tick.DAL
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         conn.Open();
-
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add("@prmUserID", SqlDbType.Int).Value = id;
 
 
                         SqlDataAdapter sqlDataAdap = new SqlDataAdapter(command);
@@ -72,7 +73,7 @@ namespace Tick.DAL
                 return null;
             }
         }
-        public DataTable GetComboBox()
+        public DataTable GetComboBox(int id)
         {
             try
             {
@@ -82,6 +83,8 @@ namespace Tick.DAL
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         conn.Open();
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add("@prmUserID", SqlDbType.Int).Value = id;
 
 
                         SqlDataReader reader;
@@ -119,7 +122,7 @@ namespace Tick.DAL
                         command.Parameters.Add("@prmAmount", SqlDbType.VarChar).Value = model.Amount;
                         command.Parameters.Add("@prmCategoryID", SqlDbType.VarChar).Value = model.CategoryID;
                         command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = model.Description;
-                        command.Parameters.Add("@prmLUB", SqlDbType.Int).Value = 1;
+                        command.Parameters.Add("@prmLUB", SqlDbType.Int).Value = model.UserID;
 
 
 
@@ -162,7 +165,7 @@ namespace Tick.DAL
                 return false;
             }
         }
-        public DataTable GetByMonth(DateTime dt)
+        public DataTable GetByMonth(DateTime dt, int id)
         {
             try
             {
@@ -177,7 +180,7 @@ namespace Tick.DAL
 
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.Add("@prmMonth", SqlDbType.DateTime).Value = dt;
-
+                        command.Parameters.Add("@prmUserID", SqlDbType.Int).Value = id;
                         SqlDataAdapter sqlDataAdap = new SqlDataAdapter(command);
 
                         DataTable dtRecord = new DataTable();
@@ -195,7 +198,7 @@ namespace Tick.DAL
             }
         }
 
-        public DataTable GetForPie(DateTime dt)
+        public DataTable GetForPie(DateTime dt, int id)
         {
             try
             {
@@ -210,7 +213,7 @@ namespace Tick.DAL
 
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.Add("@prmDate", SqlDbType.DateTime).Value = dt;
-
+                        command.Parameters.Add("@prmUserID", SqlDbType.Int).Value = id;
                         SqlDataAdapter sqlDataAdap = new SqlDataAdapter(command);
 
                         DataTable dtRecord = new DataTable();

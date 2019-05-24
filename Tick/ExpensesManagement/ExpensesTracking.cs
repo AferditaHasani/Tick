@@ -9,16 +9,12 @@ namespace Tick.ExpensesManagement
 {
     public partial class ExpensesTracking : Telerik.WinControls.UI.RadForm
     {
-        private User user;
+        public User user;
         public ExpensesTracking()
         {
             InitializeComponent();
         }
-        public ExpensesTracking(User u)
-        {
-            InitializeComponent();
-            user=u;
-        }
+     
 
         private ExpensesTrackingBLL eTracking_service=new ExpensesTrackingBLL();
         BO.ExpensesTracking transaction= new BO.ExpensesTracking();
@@ -88,9 +84,11 @@ namespace Tick.ExpensesManagement
              
                 BO.ExpensesTracking expenses = new BO.ExpensesTracking()
                 {
+                    UserID = user.UserID,
                     Amount =decimal.Parse(txtAmount.Text),
                     Description = txtDescription.Text,
-                    CategoryID = (int)ddlCategory.SelectedValue
+                    CategoryID = (int)ddlCategory.SelectedValue,
+                    InsertBy = user.UserID
                 };
                 return expenses;
             }
@@ -105,7 +103,7 @@ namespace Tick.ExpensesManagement
 
             ddlCategory.ValueMember = "CategoryID";
             ddlCategory.DisplayMember = "Name";
-            ddlCategory.DataSource = eTracking_service.GetComboBox();
+            ddlCategory.DataSource = eTracking_service.GetComboBox(user.UserID);
         }
 
 
@@ -129,10 +127,13 @@ namespace Tick.ExpensesManagement
                 {
                     MessageBox.Show("Error");
                     return;
-                }            
+                }
+
+                transaction.UserID = user.UserID;
                 transaction.Amount = decimal.Parse(txtAmount.Text);
                 transaction.CategoryID = (int)ddlCategory.SelectedValue;
                 transaction.Description = txtDescription.Text;
+                transaction.InsertBy = user.UserID;
                 var saved = eTracking_service.Update(transaction);
                 MessageBox.Show(saved ? "Updated Successfully" : "Updating failed , please try again");
             }
@@ -148,7 +149,7 @@ namespace Tick.ExpensesManagement
             try
             {
                 dgvTransaction.Refresh();
-                DataTable t = eTracking_service.GetAll();
+                DataTable t = eTracking_service.GetAll(user.UserID);
                 if (t != null)
                 {
                     dgvTransaction.DataSource = t;

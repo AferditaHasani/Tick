@@ -23,9 +23,9 @@ namespace Tick.BLL
             return categoryDAL_db.Add(category);
         }
 
-        public DataTable GetAll()
+        public DataTable GetAll(int id)
         {
-            return categoryDAL_db.GetAll();
+            return categoryDAL_db.GetAll(id);
         }
 
         public bool Update(Category category)
