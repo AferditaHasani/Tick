@@ -40,6 +40,7 @@ namespace Tick.BLL
         {
             return ETrackingDAL_db.GetComboBox();
         }
+
         public DataTable GetByMonth(DateTime dt)
         {
             return ETrackingDAL_db.GetByMonth(dt);
@@ -48,6 +49,7 @@ namespace Tick.BLL
         {
             return ETrackingDAL_db.GetForPie(dt);
         }
+
 
     }
 }

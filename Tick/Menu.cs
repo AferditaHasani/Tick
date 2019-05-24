@@ -37,7 +37,7 @@ namespace Tick
         Category ct = new Category();
         Tasks tsk = new Tasks();
         private TimeCharts tch = new TimeCharts();
-        private ExpensesChart ech = new ExpensesChart();
+      //  private ExpensesChart ech = new ExpensesChart();
 
 
         //Metoda e cila vendos nje vije para objektit i cili  e therret
@@ -64,28 +64,28 @@ namespace Tick
                     ct.Hide();
                     tsk.Hide();
                     tch.Hide();
-                    ech.Hide();
+            //        ech.Hide();
                     break;
                 case TimeTracking _:
                     et.Hide();
                     ct.Hide();
                     tsk.Hide();
                     tch.Hide();
-                    ech.Hide();
+              //      ech.Hide();
                     break;
                 case Tasks _:
                     et.Hide();
                     ct.Hide();
                     t.Hide();
                     tch.Hide();
-                    ech.Hide();
+                //    ech.Hide();
                     break;
                 case Category _:
                     et.Hide();
                     t.Hide();
                     tsk.Hide();
                     tch.Hide();
-                    ech.Hide();
+                  //  ech.Hide();
                     break;
                 case TimeCharts _:
 
@@ -97,21 +97,21 @@ namespace Tick
                     t.Hide();
                     tsk.Hide();
                     ct.Hide();
-                    ech.Hide();
+                    //ech.Hide();
                     break;
-                case ExpensesChart _:
+                //case ExpensesChart _:
 
-                    ExpensesChart e= (ExpensesChart)f;
+                //    ExpensesChart e= (ExpensesChart)f;
 
-                    e.FillLineChart(e.dtpDataGridExpenses.Value.Value);
-                    e.FillPieChart(e.dtpDataGridExpenses.Value.Value);
+                //    e.FillLineChart(e.dtpDataGridExpenses.Value.Value);
+                //    e.FillPieChart(e.dtpDataGridExpenses.Value.Value);
 
-                    t.Hide();
-                    ct.Hide();
-                    tsk.Hide();
-                    tch.Hide();
-                    et.Hide();
-                    break;
+                //    t.Hide();
+                //    ct.Hide();
+                //    tsk.Hide();
+                //    tch.Hide();
+                //    et.Hide();
+                //    break;
             }
    
 
@@ -150,11 +150,11 @@ namespace Tick
             FillContentPanel(tch);
         }
 
-        private void btnExpensesChart_Click(object sender, EventArgs e)
-        {
-            SeparatorClick(sender);
-            FillContentPanel(ech);
-        }
+        //private void btnExpensesChart_Click(object sender, EventArgs e)
+        //{
+        //    SeparatorClick(sender);
+        //    FillContentPanel(ech);
+        //}
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {

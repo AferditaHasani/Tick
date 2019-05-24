@@ -13,6 +13,7 @@ namespace Tick.ExpensesManagement
         public ExpensesTracking()
         {
             InitializeComponent();
+            FillCombo();
         }
 
         private ExpensesTrackingBLL eTracking_service=new ExpensesTrackingBLL();
@@ -25,6 +26,7 @@ namespace Tick.ExpensesManagement
             dgvTransaction.Visible = true;
             dgvTransaction.Size = new Size(708, 697);
             FillCombo();
+            dateForGrid = (DateTime)dtpDataGridTime.Value;
             DisplayToDGrid(dateForGrid);
         }
 
@@ -82,11 +84,12 @@ namespace Tick.ExpensesManagement
         {
             try {
 
-                string[] date = dpExpensesTrackingDate.Value.ToString().Split(' ');
-                date = date[0].Split('/');
+              //  string[] date = dpExpensesTrackingDate.Value.ToString().Split(' ');
+              
                 BO.ExpensesTracking expenses = new BO.ExpensesTracking()
                 {
                  
+
                     Amount =decimal.Parse(txtAmount.Text),
                     Description = txtDescription.Text,
                     CategoryID = (int)ddlCategory.SelectedValue,
@@ -119,6 +122,8 @@ namespace Tick.ExpensesManagement
                 Update();
 
             DisplayToDGrid(dateForGrid);
+            pnlAddTransaction.Visible = false;
+            dgvTransaction.Size = new Size(708, 697);
             Clear();
             transaction = null;
         }
@@ -127,8 +132,8 @@ namespace Tick.ExpensesManagement
         {
             try
             {
-                string[] date = dpExpensesTrackingDate.Value.ToString().Split(' ');
-                date = date[0].Split('/');
+                
+             
                 if (transaction == null)
                 {
                     MessageBox.Show("Error");
@@ -179,7 +184,7 @@ namespace Tick.ExpensesManagement
 
                         string[] colors = c.Split(',');
                         dgvTransaction.Rows[i].HeaderCell.Style.BackColor =
-                            Color.FromArgb(int.Parse(colors[1]), int.Parse(colors[2]), int.Parse(colors[3]));
+                        Color.FromArgb(int.Parse(colors[1]), int.Parse(colors[2]), int.Parse(colors[3]));
 
 
 
@@ -243,6 +248,7 @@ namespace Tick.ExpensesManagement
                 DataGridViewRow row = this.dgvTransaction.Rows[e.RowIndex];
                 string[] date = row.Cells["Date"].Value.ToString().Split(' ');
                 date = date[0].Split('/');
+
                 transaction.ETrackingID = int.Parse(row.Cells["ETrackingID"].Value.ToString());
                 transaction.Amount =decimal.Parse(row.Cells["Amount"].Value.ToString());
                 ddlCategory.DisplayMember = row.Cells["Category"].Value.ToString();
@@ -250,6 +256,7 @@ namespace Tick.ExpensesManagement
                 transaction.Description = row.Cells["Description"].Value.ToString();
                 transaction.Date=new DateTime(int.Parse(date[2]), int.Parse(date[1]), int.Parse(date[0]));
                 dpExpensesTrackingDate.Value = transaction.Date;
+               
             }
         }
 
@@ -272,6 +279,7 @@ namespace Tick.ExpensesManagement
                 transaction.Description = row.Cells["Description"].Value.ToString();
                 transaction.Date = new DateTime(int.Parse(date[2]), int.Parse(date[1]), int.Parse(date[0]));
                 dpExpensesTrackingDate.Value = transaction.Date;
+           
             }
         }
 
@@ -300,8 +308,22 @@ namespace Tick.ExpensesManagement
 
         private void dtpDataGridTime_ValueChanged(object sender, EventArgs e)
         {
-            dateForGrid = dtpDataGridTime.Value;
+            dateForGrid = (DateTime)dtpDataGridTime.Value;
             DisplayToDGrid(dateForGrid);
+        }
+
+        private void btnPreviousDay_Click(object sender, EventArgs e)
+        {
+            dateForGrid = new DateTime(dtpDataGridTime.Value.Year, dtpDataGridTime.Value.Month, dtpDataGridTime.Value.Day - 1);
+            dtpDataGridTime.Value = dateForGrid;
+
+        }
+
+        private void btnNextDay_Click(object sender, EventArgs e)
+        {
+            dateForGrid = new DateTime(dtpDataGridTime.Value.Year, dtpDataGridTime.Value.Month, dtpDataGridTime.Value.Day + 1);
+            dtpDataGridTime.Value = dateForGrid;
+
         }
     }
 }
