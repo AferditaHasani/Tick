@@ -20,8 +20,9 @@ namespace Tick
         public LogIn()
         {
             InitializeComponent();
-           
-        }
+
+        user = null;
+         }
 
         private UserBLL userBLL = new UserBLL();
         public User activeUser = new User();
@@ -31,13 +32,16 @@ namespace Tick
 
         private void btnLogIn_Click(object sender, EventArgs e)
         {
-            var user = new User();
-            user.Username = txtUsername.Text;
-            user.Password = txtPassword.Text;
-            
-            if (userBLL.GetLogIn(user))
+            user = new User
             {
-                menu = new Menu(user.Name);
+                Username = txtUsername.Text,
+                Password = txtPassword.Text,
+            };
+            user = userBLL.GetLogIn(user);
+            if (user!=null)
+            {
+       
+                menu = new Menu(user);
                 this.Hide();
 
                 menu.Closed += (s, args) => this.Close();
@@ -106,7 +110,7 @@ namespace Tick
             if (SaveSigIn())
             {
 
-                menu=new Menu(user.Name);
+                menu=new Menu(user);
                 this.Hide();
               
                 menu.Closed += (s, args) => this.Close();

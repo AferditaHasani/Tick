@@ -22,7 +22,7 @@ namespace Tick.BLL
             return userDAL_db.Add(user);
         }
 
-        public bool GetLogIn(User user)
+        public User GetLogIn(User user)
         {
             return userDAL_db.GetLogIn(user);
         }

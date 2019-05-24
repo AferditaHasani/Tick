@@ -3,20 +3,25 @@ using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using Tick.BLL;
+using Tick.BO;
 
 namespace Tick.ExpensesManagement
 {
     public partial class Category : Telerik.WinControls.UI.RadForm
     {
-        bool isExpense=true;
-      
-     
+        private bool isExpense=true;
         private CategoryBLL categoryBLL_service = new CategoryBLL();
-        BO.Category cat= new BO.Category();
+        private BO.Category cat= new BO.Category();
+        private User user;
 
         public Category()
         {
             InitializeComponent();
+        }
+        public Category(User u)
+        {
+            InitializeComponent();
+            user=u;
         }
 
         private void btnAddCategory_Click(object sender, EventArgs e)

@@ -7,16 +7,24 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using Tick.BLL;
+using Tick.BO;
 
 namespace Tick.TimeManagement
 {
     public partial class TimeTracking : Telerik.WinControls.UI.RadForm
     {
+        private User user;
         public TimeTracking()
         {
             InitializeComponent();
 
 
+        }
+        public TimeTracking(User u)
+        {
+            InitializeComponent();
+
+            user = u;
         }
         private TimeTrackingBLL timeBLL_service = new TimeTrackingBLL();
         BO.TimeTracking time = new BO.TimeTracking();

@@ -7,37 +7,42 @@ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using Telerik.WinControls.Layouts;
+using Tick.BO;
 using Tick.ExpensesManagement;
 using Tick.TimeManagement;
-
+using Category = Tick.ExpensesManagement.Category;
+using ExpensesTracking = Tick.ExpensesManagement.ExpensesTracking;
+using TimeTracking = Tick.TimeManagement.TimeTracking;
 
 
 namespace Tick
 {
     public partial class Menu : Telerik.WinControls.UI.RadForm
     {
-       
+        static User user;
         public Menu()
         {
             InitializeComponent();
-           
+
         }
 
-        public Menu(string user)
+        public Menu(User u)
         {
+
             InitializeComponent();
             this.Bounds = Screen.PrimaryScreen.Bounds;
-            lblUsername.Text = user;
+            user = u;
+            lblUsername.Text = user.Name;
 
         }
 
-       
-        ExpensesTracking et = new ExpensesTracking();
-        TimeTracking t = new TimeTracking();
-        Category ct = new Category();
-        Tasks tsk = new Tasks();
-        private TimeCharts tch = new TimeCharts();
-        private ExpensesChart ech = new ExpensesChart();
+
+        ExpensesTracking et = new ExpensesTracking(user);
+        TimeTracking t = new TimeTracking(user);
+        Category ct = new Category(user);
+        Tasks tsk = new Tasks(user);
+        TimeCharts tch = new TimeCharts(user);
+        ExpensesChart ech = new ExpensesChart(user);
 
 
         //Metoda e cila vendos nje vije para objektit i cili  e therret
@@ -89,9 +94,9 @@ namespace Tick
                     break;
                 case TimeCharts _:
 
-                    TimeCharts tc=(TimeCharts)f;
+                    TimeCharts tc = (TimeCharts)f;
 
-                tc.FillLineChart(tc.dtpDataGridTime.Value.Value);
+                    tc.FillLineChart(tc.dtpDataGridTime.Value.Value);
                     tc.FillPieChart(tc.dtpDataGridTime.Value.Value);
                     et.Hide();
                     t.Hide();
@@ -101,7 +106,7 @@ namespace Tick
                     break;
                 case ExpensesChart _:
 
-                    ExpensesChart e= (ExpensesChart)f;
+                    ExpensesChart e = (ExpensesChart)f;
 
                     e.FillLineChart(e.dtpDataGridExpenses.Value.Value);
                     e.FillPieChart(e.dtpDataGridExpenses.Value.Value);
@@ -113,7 +118,7 @@ namespace Tick
                     et.Hide();
                     break;
             }
-   
+
 
         }
 
@@ -127,12 +132,12 @@ namespace Tick
             this.Close();
 
         }
-    
+
 
         private void btnTimeTracking_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
-         
+
             FillContentPanel(t);
 
         }
@@ -140,7 +145,7 @@ namespace Tick
         private void btnExpensesTracking_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
-          
+
             FillContentPanel(et);
         }
 
@@ -158,7 +163,7 @@ namespace Tick
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
-          
+
         }
 
         private void btnTasks_Click(object sender, EventArgs e)
@@ -173,12 +178,12 @@ namespace Tick
         private void btnCategory_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
-           
+
             FillContentPanel(ct);
         }
 
-     
 
-   
+
+
     }
 }

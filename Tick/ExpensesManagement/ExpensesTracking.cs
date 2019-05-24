@@ -3,15 +3,21 @@ using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 using Tick.BLL;
+using Tick.BO;
 
 namespace Tick.ExpensesManagement
 {
     public partial class ExpensesTracking : Telerik.WinControls.UI.RadForm
     {
-    
+        private User user;
         public ExpensesTracking()
         {
             InitializeComponent();
+        }
+        public ExpensesTracking(User u)
+        {
+            InitializeComponent();
+            user=u;
         }
 
         private ExpensesTrackingBLL eTracking_service=new ExpensesTrackingBLL();

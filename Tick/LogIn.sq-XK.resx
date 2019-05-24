@@ -119,7 +119,7 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>910, 788</value>
+    <value>926, 788</value>
   </data>
   <data name="btnSignIn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -189,6 +189,9 @@
         zEIAOi50++sfj27+Nin6L8JD4j9dAdBB6Qj++j/t5o0xxpzWKYofVjNAs2IAucQAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="separator1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>182, 181</value>
+  </data>
   <data name="txtUsername.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAXsAAAAsCAYAAACEwhjwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -224,16 +227,19 @@
 </value>
   </data>
   <data name="separator.Location" type="System.Drawing.Point, System.Drawing">
-    <value>306, 178</value>
+    <value>337, 181</value>
   </data>
   <data name="btnChooseLogIn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>326, 178</value>
+    <value>357, 181</value>
   </data>
   <data name="btnChooseLogIn.Text" xml:space="preserve">
     <value>  Kyqu</value>
   </data>
+  <data name="btnChooseSigIn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>198, 181</value>
+  </data>
   <data name="btnChooseSigIn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>123, 50</value>
+    <value>149, 50</value>
   </data>
   <data name="btnChooseSigIn.Text" xml:space="preserve">
     <value>Regjistrohu</value>
@@ -256,8 +262,11 @@
   <data name="pbLogIn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
+  <data name="pbLogIn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>271, 67</value>
+  </data>
   <data name="pnlLogInContent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>593, 743</value>
+    <value>628, 743</value>
   </data>
   <data name="pnlSide.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

@@ -15,11 +15,19 @@ namespace Tick.ExpensesManagement
 {
     public partial class ExpensesChart : Telerik.WinControls.UI.RadForm
     {
+        private User user;
+
         public ExpensesChart()
         {
             InitializeComponent();
         }
+        public ExpensesChart(User u)
+        {
+            InitializeComponent();
+            user=u;
+        }
 
+        
         private ExpensesTrackingBLL tt_service = new ExpensesTrackingBLL();
 
        

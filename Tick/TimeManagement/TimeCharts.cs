@@ -9,17 +9,21 @@ using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using Telerik.WinControls;
 using Tick.BLL;
+using Tick.BO;
 
 namespace Tick.TimeManagement
 {
     public partial class TimeCharts : Telerik.WinControls.UI.RadForm
     {
+        private User user;
         public TimeCharts()
         {
             InitializeComponent();
-          
-         
-
+        }
+        public TimeCharts(User u)
+        {
+            InitializeComponent();
+            user = u;
         }
 
         private TimeTrackingBLL tt_service = new TimeTrackingBLL();

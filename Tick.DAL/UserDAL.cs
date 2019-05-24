@@ -43,12 +43,13 @@ namespace Tick.DAL
                 return false;
             }
         }
-        public bool GetLogIn(User model)
+        public User GetLogIn(User model)
         {
             try
             {
                 using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
                 {
+                    SqlDataReader rdr = null;
                     String sql = "dbo.uso_User_Get";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
@@ -58,19 +59,26 @@ namespace Tick.DAL
                         command.Parameters.Add("@prmUsername", SqlDbType.VarChar).Value = model.Username;
                         command.Parameters.Add("@prmPassword", SqlDbType.VarChar).Value = model.Password;
 
-                        int count=0;
-                        foreach (var item in command.ExecuteReader())
+                        rdr = command.ExecuteReader();
+
+                        User user = new User();
+                        while (rdr.Read())
                         {
-                            count++;
+                            user.Name = rdr["Name"].ToString();
+                           user.UserID=int.Parse( rdr["UserID"].ToString());
                         }
-                        return count >=1;
+
+                        user.Username = model.Username;
+                        user.Password = model.Password;
+
+                        return user;
                     }
                 }
             }
             catch (Exception e)
             {
                 MessageBox.Show(e.Message);
-                return false;
+                return null;
             }
         }
     }
