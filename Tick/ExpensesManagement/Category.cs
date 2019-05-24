@@ -2,7 +2,9 @@
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using Telerik.WinControls.UI;
 using Tick.BLL;
+using Utilities.BunifuCheckBox.Transitions;
 using Tick.BO;
 
 namespace Tick.ExpensesManagement
@@ -51,6 +53,8 @@ namespace Tick.ExpensesManagement
                 Update();
 
             DisplayToDGrid();
+            pnlAddCategory.Visible = true;
+            dgvCategory.Size = new Size(680, 697);
             Clear();
         }
         
@@ -94,10 +98,15 @@ namespace Tick.ExpensesManagement
                 DataTable t = categoryBLL_service.GetAll(user.UserID);
                 if (t != null)
                 {
+                   
+
                     dgvCategory.DataSource = t;
 
                     dgvCategory.Columns["Color"].Visible = false;
-                
+                    //dgvCategory.Columns["IsExpenses"].Visible = false;
+
+                  //  dgvCategory.Columns.Add("Type", "Type");
+
 
 
                     for (int i = 0; i < dgvCategory.RowCount; i++)
@@ -108,7 +117,10 @@ namespace Tick.ExpensesManagement
                         string[] colors = c.Split(',');
                         dgvCategory.Rows[i].HeaderCell.Style.BackColor =
                             Color.FromArgb(int.Parse(colors[1]), int.Parse(colors[2]), int.Parse(colors[3]));
+                        
+
                     }
+                   
                 }
                 else
                 {
@@ -246,6 +258,7 @@ namespace Tick.ExpensesManagement
                 cat.Name = row.Cells["Name"].Value.ToString();
                 cat.IsExpenses = (bool)row.Cells["IsExpenses"].Value;
             }
+
         }
 
         private void Delete()

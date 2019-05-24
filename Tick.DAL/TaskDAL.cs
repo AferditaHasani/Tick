@@ -15,7 +15,8 @@ namespace Tick.DAL
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                // using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
                 {
                     String sql = "dbo.usp_Task_Insert";
                     using (SqlCommand command = new SqlCommand(sql, conn))
@@ -45,7 +46,8 @@ namespace Tick.DAL
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                // using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
                 {
                     String sql = "dbo.usp_Task_GetAll";
                     using (SqlCommand command = new SqlCommand(sql, conn))
@@ -76,7 +78,8 @@ namespace Tick.DAL
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                //using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
                 {
                     String sql = "dbo.usp_Task_Update";
                     using (SqlCommand command = new SqlCommand(sql, conn))
@@ -107,7 +110,8 @@ namespace Tick.DAL
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+               // using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
                 {
                     String sql = "dbo.usp_Task_Delete";
                     using (SqlCommand command = new SqlCommand(sql, conn))

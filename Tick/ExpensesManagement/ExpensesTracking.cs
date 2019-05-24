@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Windows.Forms;
 using Tick.BLL;
 using Tick.BO;
@@ -13,11 +14,13 @@ namespace Tick.ExpensesManagement
         public ExpensesTracking()
         {
             InitializeComponent();
+            FillCombo();
         }
      
 
         private ExpensesTrackingBLL eTracking_service=new ExpensesTrackingBLL();
         BO.ExpensesTracking transaction= new BO.ExpensesTracking();
+        private DateTime dateForGrid = new DateTime();
 
         private void ExpensesTracking_Load(object sender, EventArgs e)
         {
@@ -25,7 +28,8 @@ namespace Tick.ExpensesManagement
             dgvTransaction.Visible = true;
             dgvTransaction.Size = new Size(708, 697);
             FillCombo();
-            DisplayToDGrid();
+            dateForGrid = (DateTime)dtpDataGridTime.Value;
+            DisplayToDGrid(dateForGrid);
         }
 
         private void btnAddTransaction_Click(object sender, EventArgs e)
@@ -80,8 +84,10 @@ namespace Tick.ExpensesManagement
 
         public BO.ExpensesTracking Get()
         {
-            try { 
-             
+            try {
+
+              //  string[] date = dpExpensesTrackingDate.Value.ToString().Split(' ');
+              
                 BO.ExpensesTracking expenses = new BO.ExpensesTracking()
                 {
                     UserID = user.UserID,
@@ -89,6 +95,10 @@ namespace Tick.ExpensesManagement
                     Description = txtDescription.Text,
                     CategoryID = (int)ddlCategory.SelectedValue,
                     InsertBy = user.UserID
+            
+                    Date = dpExpensesTrackingDate.Value,
+                   
+                    InsertDate = DateTime.Now
                 };
                 return expenses;
             }
@@ -114,7 +124,9 @@ namespace Tick.ExpensesManagement
             else
                 Update();
 
-            DisplayToDGrid();
+            DisplayToDGrid(dateForGrid);
+            pnlAddTransaction.Visible = false;
+            dgvTransaction.Size = new Size(708, 697);
             Clear();
             transaction = null;
         }
@@ -122,7 +134,9 @@ namespace Tick.ExpensesManagement
         private void Update()
         {
             try
-            {           
+            {
+                
+             
                 if (transaction == null)
                 {
                     MessageBox.Show("Error");
@@ -133,6 +147,7 @@ namespace Tick.ExpensesManagement
                 transaction.Amount = decimal.Parse(txtAmount.Text);
                 transaction.CategoryID = (int)ddlCategory.SelectedValue;
                 transaction.Description = txtDescription.Text;
+                transaction.Date = dpExpensesTrackingDate.Value;
                 transaction.InsertBy = user.UserID;
                 var saved = eTracking_service.Update(transaction);
                 MessageBox.Show(saved ? "Updated Successfully" : "Updating failed , please try again");
@@ -144,12 +159,12 @@ namespace Tick.ExpensesManagement
             }
         }
 
-        public void DisplayToDGrid()
+        public void DisplayToDGrid(DateTime dt)
         {
             try
             {
                 dgvTransaction.Refresh();
-                DataTable t = eTracking_service.GetAll(user.UserID);
+                DataTable t = eTracking_service.GetByDate(dt,user.UserID);
                 if (t != null)
                 {
                     dgvTransaction.DataSource = t;
@@ -175,7 +190,7 @@ namespace Tick.ExpensesManagement
 
                         string[] colors = c.Split(',');
                         dgvTransaction.Rows[i].HeaderCell.Style.BackColor =
-                            Color.FromArgb(int.Parse(colors[1]), int.Parse(colors[2]), int.Parse(colors[3]));
+                        Color.FromArgb(int.Parse(colors[1]), int.Parse(colors[2]), int.Parse(colors[3]));
 
 
 
@@ -225,37 +240,52 @@ namespace Tick.ExpensesManagement
         {
             Delete();
             transaction = null;
-            DisplayToDGrid();
+            DisplayToDGrid(dateForGrid);
         }
 
         private void dgvTransaction_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             transaction = new BO.ExpensesTracking();
-         
+            pnlAddTransaction.Visible = true;
+            dgvTransaction.Size = new Size(680, 697);
             if (e.RowIndex >= 0)
             {
 
                 DataGridViewRow row = this.dgvTransaction.Rows[e.RowIndex];
-                transaction.ETrackingID = int.Parse(row.Cells["ExpensesTrackingID"].Value.ToString());
+                string[] date = row.Cells["Date"].Value.ToString().Split(' ');
+                date = date[0].Split('/');
+
+                transaction.ETrackingID = int.Parse(row.Cells["ETrackingID"].Value.ToString());
                 transaction.Amount =decimal.Parse(row.Cells["Amount"].Value.ToString());
                 ddlCategory.DisplayMember = row.Cells["Category"].Value.ToString();
                 transaction.CategoryID = (int)ddlCategory.SelectedValue;
                 transaction.Description = row.Cells["Description"].Value.ToString();
+                transaction.Date=new DateTime(int.Parse(date[2]), int.Parse(date[1]), int.Parse(date[0]));
+                dpExpensesTrackingDate.Value = transaction.Date;
+               
             }
         }
 
         private void dgvTransaction_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             transaction = new BO.ExpensesTracking();
-        
+            transaction = new BO.ExpensesTracking();
+            pnlAddTransaction.Visible = true;
+
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dgvTransaction.Rows[e.RowIndex];
-                transaction.ETrackingID = int.Parse(row.Cells["ExpensesTrackingID"].Value.ToString());
+                string[] date = row.Cells["Date"].Value.ToString().Split(' ');
+                date = date[0].Split('/');
+
+                transaction.ETrackingID = int.Parse(row.Cells["ETrackingID"].Value.ToString());
                 transaction.Amount = decimal.Parse(row.Cells["Amount"].Value.ToString());
                 ddlCategory.DisplayMember = row.Cells["Category"].Value.ToString();
                 transaction.CategoryID = (int)ddlCategory.SelectedValue;
                 transaction.Description = row.Cells["Description"].Value.ToString();
+                transaction.Date = new DateTime(int.Parse(date[2]), int.Parse(date[1]), int.Parse(date[0]));
+                dpExpensesTrackingDate.Value = transaction.Date;
+           
             }
         }
 
@@ -275,11 +305,31 @@ namespace Tick.ExpensesManagement
 
         private void txtAmount_Leave(object sender, EventArgs e)
         {
-            //Double value;
-            //if (Double.TryParse(txtAmount.Text, out value))
-            //    txtAmount.Text = String.Format("{0:C2}", value);
-            //else
-            //    txtAmount.Text = String.Empty;
+        //    Double value;
+        //    if (Double.TryParse(txtAmount.Text, out value))
+        //        txtAmount.Text = String.Format(CultureInfo.CreateSpecificCulture(null), "{0:C2}", value);
+        //    else
+        //        txtAmount.Text = String.Empty;
+        }
+
+        private void dtpDataGridTime_ValueChanged(object sender, EventArgs e)
+        {
+            dateForGrid = (DateTime)dtpDataGridTime.Value;
+            DisplayToDGrid(dateForGrid);
+        }
+
+        private void btnPreviousDay_Click(object sender, EventArgs e)
+        {
+            dateForGrid = new DateTime(dtpDataGridTime.Value.Year, dtpDataGridTime.Value.Month, dtpDataGridTime.Value.Day - 1);
+            dtpDataGridTime.Value = dateForGrid;
+
+        }
+
+        private void btnNextDay_Click(object sender, EventArgs e)
+        {
+            dateForGrid = new DateTime(dtpDataGridTime.Value.Year, dtpDataGridTime.Value.Month, dtpDataGridTime.Value.Day + 1);
+            dtpDataGridTime.Value = dateForGrid;
+
         }
     }
 }
