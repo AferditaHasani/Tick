@@ -205,7 +205,7 @@
             this.btnExpensesChart.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnExpensesChart.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.btnExpensesChart.TextFont = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-          //  this.btnExpensesChart.Click += new System.EventHandler(this.btnExpensesChart_Click);
+            this.btnExpensesChart.Click += new System.EventHandler(this.btnExpensesChart_Click);
             // 
             // btnTimeCharts
             // 

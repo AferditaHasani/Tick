@@ -182,14 +182,17 @@
   <data name="&gt;&gt;btnSignIn.Parent" xml:space="preserve">
     <value>pnlLogInContent</value>
   </data>
-  <data name="txtUsername.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>100, 35</value>
+  <data name="pbLogIn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 72</value>
+  </data>
+  <data name="btnChooseLogIn.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="separator1.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
   </data>
   <data name="&gt;&gt;btnChooseSigIn.Name" xml:space="preserve">
     <value>btnChooseSigIn</value>
-  </data>
-  <data name="txtName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 12</value>
   </data>
   <data name="pnlLogInContent.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -214,14 +217,17 @@
   <data name="&gt;&gt;pbLogo.Name" xml:space="preserve">
     <value>pbLogo</value>
   </data>
-  <data name="txtPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 106</value>
-  </data>
   <data name="&gt;&gt;pnlLogInContent.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
+  <data name="&gt;&gt;separator1.Parent" xml:space="preserve">
+    <value>pnlLogInContent</value>
+  </data>
   <data name="pnlLogInContent.Size" type="System.Drawing.Size, System.Drawing">
     <value>579, 743</value>
+  </data>
+  <data name="btnChooseSigIn.Text" xml:space="preserve">
+    <value>  SIGN IN</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Semibold, 12pt, style=Bold</value>
@@ -232,11 +238,23 @@
   <data name="$this.Text" xml:space="preserve">
     <value>RadForm1</value>
   </data>
+  <data name="&gt;&gt;separator.Parent" xml:space="preserve">
+    <value>pnlLogInContent</value>
+  </data>
   <data name="btnChooseSigIn.TabIndex" type="System.Int32, mscorlib">
     <value>17</value>
   </data>
-  <data name="pnlForSignIn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>431, 165</value>
+  <data name="pnlSide.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAXpJREFUKFMVw2cz23EAwPHf26HGXc0HtPSuJWLEKhK1IuGsiLuEoAQxHrRq9K7U
+        CJEQQSRCrNg0qjWj6t18++/n7iOirTKirBlEzsmJnM8kYj6LCFs2L2w5hC8oCLcrCLPnIhIdBSQ6CklY
+        fE/8UpG0mDhnCbFOJbHLKmJcKl66ShFvXOWkrlSQslJJymoVr9fU0mpeuTUku7Ukr2tJ8tQg5J465N56
+        MrwNyDYakfmaSPfpSNtslup5t6Xnrb8FUeg3UOA3kr/dSv5OG3k7JvJ228nd7UCx14liv5Oc/Y+IsoCZ
+        skAPHw56KT3sk1pQHfWjPBpAeTxIyckgxSdDiNrTT9ScfkZ7Noz2fBjN+Rc0FyNUX4yi/jGGOjhOVfAr
+        Qh/8hv5ygubLSXQ/pVffabqaovHXtHSGht+z1F9bER3XNtpvFjDd2DHd2mm7c0gXab1fwnjvxPiwjCHk
+        QlhCa1hCbvoe1+n987+Hnicv5qcNzH99dD9v0vW8xT9QwABgncB/ogAAAABJRU5ErkJggg==
+</value>
   </data>
   <data name="pbLogo.Size" type="System.Drawing.Size, System.Drawing">
     <value>221, 203</value>
@@ -247,6 +265,9 @@
   <data name="&gt;&gt;pbLogIn.Type" xml:space="preserve">
     <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="btnX.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
   <data name="txtLastname.Location" type="System.Drawing.Point, System.Drawing">
     <value>16, 106</value>
   </data>
@@ -255,6 +276,9 @@
   </data>
   <data name="&gt;&gt;btnLogIn.Type" xml:space="preserve">
     <value>Bunifu.UI.WinForms.BunifuButton.BunifuButton, Bunifu.UI.WinForms.BunifuButton, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="pnlForLogIn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>79, 438</value>
   </data>
   <data name="&gt;&gt;pnlForLogIn.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -271,20 +295,11 @@
   <data name="&gt;&gt;txtName.Name" xml:space="preserve">
     <value>txtName</value>
   </data>
-  <data name="pnlLogInContent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>297, 1</value>
-  </data>
   <data name="pnlSide.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
-  <data name="pnlForSignIn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>79, 267</value>
-  </data>
   <data name="&gt;&gt;pnlLogInContent.Name" xml:space="preserve">
     <value>pnlLogInContent</value>
-  </data>
-  <data name="pbLogo.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
   </data>
   <data name="&gt;&gt;dragpnlSide.Type" xml:space="preserve">
     <value>Bunifu.Framework.UI.BunifuDragControl, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
@@ -310,8 +325,8 @@
   <data name="separator.Location" type="System.Drawing.Point, System.Drawing">
     <value>290, 178</value>
   </data>
-  <data name="pnlForLogIn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>79, 438</value>
+  <data name="txtLastname.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;btnChooseSigIn.Parent" xml:space="preserve">
     <value>pnlLogInContent</value>
@@ -351,11 +366,8 @@
   <data name="&gt;&gt;btnSignIn.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;pnlForLogIn.Parent" xml:space="preserve">
-    <value>pnlLogInContent</value>
-  </data>
-  <data name="&gt;&gt;separator1.Parent" xml:space="preserve">
-    <value>pnlLogInContent</value>
+  <data name="pnlLogInContent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>297, 1</value>
   </data>
   <data name="&gt;&gt;bunifuDragControl1.Name" xml:space="preserve">
     <value>bunifuDragControl1</value>
@@ -366,17 +378,17 @@
   <data name="&gt;&gt;btnChooseSigIn.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
-  <data name="btnChooseSigIn.Text" xml:space="preserve">
-    <value>  SIGN IN</value>
+  <data name="pnlForSignIn.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
   </data>
   <data name="&gt;&gt;txtUsername.Parent" xml:space="preserve">
     <value>pnlForLogIn</value>
   </data>
+  <data name="pbLogo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
   <data name="&gt;&gt;btnMini.Name" xml:space="preserve">
     <value>btnMini</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>886, 775</value>
   </data>
   <data name="separator1.Size" type="System.Drawing.Size, System.Drawing">
     <value>10, 50</value>
@@ -450,9 +462,6 @@
   <data name="pnlForLogIn.TabIndex" type="System.Int32, mscorlib">
     <value>20</value>
   </data>
-  <data name="txtLastname.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
   <data name="txtPassword.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
@@ -488,11 +497,8 @@
   <data name="&gt;&gt;btnSignIn.Type" xml:space="preserve">
     <value>Bunifu.UI.WinForms.BunifuButton.BunifuButton, Bunifu.UI.WinForms.BunifuButton, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
   </data>
-  <data name="pnlForSignIn.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;btnX.Type" xml:space="preserve">
-    <value>Bunifu.UI.WinForms.BunifuButton.BunifuButton, Bunifu.UI.WinForms.BunifuButton, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  <data name="pnlForSignIn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>431, 165</value>
   </data>
   <data name="txtName.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -511,17 +517,8 @@
         KfovwkPiP10B0EHpCP76P+3mjTHGnNYpih9WM0CzYgC5xAAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="pnlSide.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAXpJREFUKFMVw2cz23EAwPHf26HGXc0HtPSuJWLEKhK1IuGsiLuEoAQxHrRq9K7U
-        CJEQQSRCrNg0qjWj6t18++/n7iOirTKirBlEzsmJnM8kYj6LCFs2L2w5hC8oCLcrCLPnIhIdBSQ6CklY
-        fE/8UpG0mDhnCbFOJbHLKmJcKl66ShFvXOWkrlSQslJJymoVr9fU0mpeuTUku7Ukr2tJ8tQg5J465N56
-        MrwNyDYakfmaSPfpSNtslup5t6Xnrb8FUeg3UOA3kr/dSv5OG3k7JvJ228nd7UCx14liv5Oc/Y+IsoCZ
-        skAPHw56KT3sk1pQHfWjPBpAeTxIyckgxSdDiNrTT9ScfkZ7Noz2fBjN+Rc0FyNUX4yi/jGGOjhOVfAr
-        Qh/8hv5ygubLSXQ/pVffabqaovHXtHSGht+z1F9bER3XNtpvFjDd2DHd2mm7c0gXab1fwnjvxPiwjCHk
-        QlhCa1hCbvoe1+n987+Hnicv5qcNzH99dD9v0vW8xT9QwABgncB/ogAAAABJRU5ErkJggg==
-</value>
+  <data name="txtPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 106</value>
   </data>
   <data name="&gt;&gt;btnSignIn.Name" xml:space="preserve">
     <value>btnSignIn</value>
@@ -571,14 +568,17 @@
   <data name="&gt;&gt;separator1.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
+  <data name="&gt;&gt;btnX.Name" xml:space="preserve">
+    <value>btnX</value>
+  </data>
   <data name="&gt;&gt;pnlLogInContent.Type" xml:space="preserve">
     <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnChooseLogIn.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
-  <data name="&gt;&gt;separator.Parent" xml:space="preserve">
-    <value>pnlLogInContent</value>
+  <data name="txtUsername.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>100, 35</value>
   </data>
   <data name="pbLogIn.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
     <value>StretchImage</value>
@@ -662,8 +662,8 @@
   <data name="pbLogIn.TabIndex" type="System.Int32, mscorlib">
     <value>22</value>
   </data>
-  <data name="pbLogo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>886, 775</value>
   </data>
   <data name="&gt;&gt;pbLogIn.ZOrder" xml:space="preserve">
     <value>10</value>
@@ -671,8 +671,8 @@
   <data name="&gt;&gt;pnlForSignIn.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="pbLogIn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 72</value>
+  <data name="pnlForSignIn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>79, 267</value>
   </data>
   <data name="&gt;&gt;txtLastname.Name" xml:space="preserve">
     <value>txtLastname</value>
@@ -683,20 +683,20 @@
   <data name="txtUsername.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
-  <data name="btnChooseLogIn.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
+  <data name="&gt;&gt;btnX.Type" xml:space="preserve">
+    <value>Bunifu.UI.WinForms.BunifuButton.BunifuButton, Bunifu.UI.WinForms.BunifuButton, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
   </data>
   <data name="&gt;&gt;separator.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="separator1.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
+  <data name="pbLogo.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
   </data>
   <data name="btnChooseSigIn.Location" type="System.Drawing.Point, System.Drawing">
     <value>193, 178</value>
   </data>
-  <data name="&gt;&gt;btnX.Name" xml:space="preserve">
-    <value>btnX</value>
+  <data name="txtName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 12</value>
   </data>
   <data name="$this.Location" type="System.Drawing.Point, System.Drawing">
     <value>250, 0</value>
@@ -725,8 +725,8 @@
   <data name="txtName.Size" type="System.Drawing.Size, System.Drawing">
     <value>379, 44</value>
   </data>
-  <data name="btnX.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
+  <data name="&gt;&gt;pnlForLogIn.Parent" xml:space="preserve">
+    <value>pnlLogInContent</value>
   </data>
   <metadata name="dragLogIn.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

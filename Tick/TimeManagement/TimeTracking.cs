@@ -31,6 +31,7 @@ namespace Tick.TimeManagement
             OpenAddTimePannel();
             time = null;
             ClearTxt();
+            FillCombo();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

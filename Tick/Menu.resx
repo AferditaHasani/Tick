@@ -121,28 +121,28 @@
   <data name="btnTasks.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
-  <data name="btnX.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
   <data name="btnExpensesTracking.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>971, 788</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="btnTasks.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
+  <data name="btnExpensesChart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>220, 56</value>
+  </data>
   <data name="btnExpensesChart.Text" xml:space="preserve">
     <value>      Expenses Chart</value>
   </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="separator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>10, 56</value>
+  <data name="&gt;&gt;pnlMenu.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="&gt;&gt;separator.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuSeparator, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
-  </data>
-  <data name="lblUsername.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="btnLogOut.Size" type="System.Drawing.Size, System.Drawing">
+    <value>227, 60</value>
   </data>
   <data name="btnCategory.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 373</value>
@@ -150,8 +150,8 @@
   <data name="lblUsername.Size" type="System.Drawing.Size, System.Drawing">
     <value>83, 21</value>
   </data>
-  <data name="&gt;&gt;btnMini.Name" xml:space="preserve">
-    <value>btnMini</value>
+  <data name="&gt;&gt;btnExpensesChart.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
   </data>
   <data name="btnExpensesTracking.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 317</value>
@@ -165,9 +165,6 @@
   <data name="btnTimeCharts.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;btnTimeCharts.Name" xml:space="preserve">
-    <value>btnTimeCharts</value>
-  </data>
   <data name="&gt;&gt;btnCategory.Name" xml:space="preserve">
     <value>btnCategory</value>
   </data>
@@ -177,11 +174,11 @@
   <data name="btnTimeTracking.Location" type="System.Drawing.Point, System.Drawing">
     <value>12, 212</value>
   </data>
-  <data name="&gt;&gt;btnCategory.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="&gt;&gt;btnMini.Type" xml:space="preserve">
     <value>Bunifu.UI.WinForms.BunifuButton.BunifuButton, Bunifu.UI.WinForms.BunifuButton, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="btnTimeTracking.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
   <data name="pnlContent.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
@@ -193,8 +190,8 @@
         cAbBGQRnEJxBcAbBGcTfmWTsLqBJxr68uWungA5ArgAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="btnMini.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="pnlContent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>712, 715</value>
   </data>
   <data name="&gt;&gt;btnLogOut.Name" xml:space="preserve">
     <value>btnLogOut</value>
@@ -205,6 +202,9 @@
   <data name="btnX.Size" type="System.Drawing.Size, System.Drawing">
     <value>27, 25</value>
   </data>
+  <data name="&gt;&gt;dragMenuForm.Name" xml:space="preserve">
+    <value>dragMenuForm</value>
+  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>6, 13</value>
   </data>
@@ -214,14 +214,8 @@
   <data name="pnlMenu.Size" type="System.Drawing.Size, System.Drawing">
     <value>233, 788</value>
   </data>
-  <data name="btnExpensesTracking.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
   <data name="separator.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="separator.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 212</value>
   </data>
   <data name="&gt;&gt;btnExpensesTracking.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -232,6 +226,9 @@
   <data name="&gt;&gt;btnTimeTracking.ZOrder" xml:space="preserve">
     <value>7</value>
   </data>
+  <data name="&gt;&gt;btnMini.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <data name="btnCategory.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 56</value>
   </data>
@@ -241,29 +238,26 @@
   <data name="&gt;&gt;btnTimeCharts.Parent" xml:space="preserve">
     <value>pnlMenu</value>
   </data>
-  <data name="btnTimeTracking.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;btnExpensesChart.Name" xml:space="preserve">
+    <value>btnExpensesChart</value>
   </data>
   <data name="&gt;&gt;dragMenuForm.Type" xml:space="preserve">
     <value>Bunifu.Framework.UI.BunifuDragControl, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
   </data>
-  <data name="&gt;&gt;btnTimeTracking.Parent" xml:space="preserve">
-    <value>pnlMenu</value>
-  </data>
   <data name="btnCategory.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
+  </data>
+  <data name="&gt;&gt;pnlMenu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;btnLogOut.Type" xml:space="preserve">
     <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
   </data>
-  <data name="&gt;&gt;btnExpensesChart.Name" xml:space="preserve">
-    <value>btnExpensesChart</value>
+  <data name="pnlMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
   </data>
   <data name="btnCategory.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
-  </data>
-  <data name="pnlContent.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
   </data>
   <data name="&gt;&gt;dragPnlMenu.Name" xml:space="preserve">
     <value>dragPnlMenu</value>
@@ -274,11 +268,8 @@
   <data name="&gt;&gt;btnLogOut.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;btnTimeCharts.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
-  </data>
-  <data name="pnlMenu.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
+  <data name="&gt;&gt;btnTimeCharts.ZOrder" xml:space="preserve">
+    <value>5</value>
   </data>
   <data name="&gt;&gt;lblUsername.Parent" xml:space="preserve">
     <value>pnlMenu</value>
@@ -292,20 +283,29 @@
   <data name="&gt;&gt;btnExpensesChart.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
+  <data name="&gt;&gt;btnX.Name" xml:space="preserve">
+    <value>btnX</value>
+  </data>
   <data name="btnMini.Location" type="System.Drawing.Point, System.Drawing">
     <value>869, 12</value>
   </data>
   <data name="&gt;&gt;lblUsername.Name" xml:space="preserve">
     <value>lblUsername</value>
   </data>
-  <data name="&gt;&gt;btnTasks.Name" xml:space="preserve">
-    <value>btnTasks</value>
+  <data name="&gt;&gt;btnTasks.Parent" xml:space="preserve">
+    <value>pnlMenu</value>
+  </data>
+  <data name="&gt;&gt;dragPnlContent.Name" xml:space="preserve">
+    <value>dragPnlContent</value>
   </data>
   <data name="&gt;&gt;btnTasks.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="btnMini.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
+  <data name="separator.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnTimeTracking.Parent" xml:space="preserve">
+    <value>pnlMenu</value>
   </data>
   <data name="&gt;&gt;btnExpensesChart.Parent" xml:space="preserve">
     <value>pnlMenu</value>
@@ -313,20 +313,23 @@
   <data name="btnX.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Semibold, 11.25pt, style=Bold</value>
   </data>
-  <data name="&gt;&gt;btnTasks.Parent" xml:space="preserve">
-    <value>pnlMenu</value>
+  <data name="pnlMenu.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="btnCategory.Text" xml:space="preserve">
     <value>      Category</value>
   </data>
-  <data name="&gt;&gt;btnExpensesTracking.Parent" xml:space="preserve">
-    <value>pnlMenu</value>
+  <data name="btnLogOut.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 725</value>
   </data>
-  <data name="btnTimeTracking.Text" xml:space="preserve">
-    <value>      Time Tracking</value>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadForm, Telerik.WinControls.UI, Version=2019.1.219.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
   <data name="btnMini.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI Semibold, 11.25pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;pnlContent.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
   <data name="&gt;&gt;separator.Name" xml:space="preserve">
     <value>separator</value>
@@ -337,17 +340,14 @@
   <data name="&gt;&gt;btnExpensesTracking.Name" xml:space="preserve">
     <value>btnExpensesTracking</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>Menu</value>
-  </data>
   <data name="btnTimeTracking.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 8.25pt</value>
   </data>
   <data name="&gt;&gt;btnX.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <data name="pnlContent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>239, 43</value>
+  <data name="btnExpensesChart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 485</value>
   </data>
   <data name="btnX.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -368,17 +368,20 @@
   <data name="btnTasks.Text" xml:space="preserve">
     <value>      Tasks</value>
   </data>
+  <data name="&gt;&gt;btnTasks.Name" xml:space="preserve">
+    <value>btnTasks</value>
+  </data>
   <data name="btnTimeTracking.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
   </data>
-  <data name="btnTimeCharts.Text" xml:space="preserve">
-    <value>      Time Charts</value>
+  <data name="&gt;&gt;btnTasks.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
   </data>
   <data name="&gt;&gt;btnLogOut.Parent" xml:space="preserve">
     <value>pnlMenu</value>
   </data>
-  <data name="&gt;&gt;pnlMenu.Name" xml:space="preserve">
-    <value>pnlMenu</value>
+  <data name="&gt;&gt;pnlMenu.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="btnX.Location" type="System.Drawing.Point, System.Drawing">
     <value>915, 12</value>
@@ -386,14 +389,14 @@
   <data name="&gt;&gt;separator.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="&gt;&gt;dragPnlMenu.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuDragControl, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  <data name="btnX.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="btnExpensesTracking.Text" xml:space="preserve">
     <value>      Expenses Tracking</value>
   </data>
-  <data name="btnExpensesChart.Size" type="System.Drawing.Size, System.Drawing">
-    <value>220, 56</value>
+  <data name="&gt;&gt;btnExpensesTracking.Parent" xml:space="preserve">
+    <value>pnlMenu</value>
   </data>
   <data name="&gt;&gt;pnlContent.Name" xml:space="preserve">
     <value>pnlContent</value>
@@ -404,17 +407,14 @@
   <data name="&gt;&gt;lblUsername.Type" xml:space="preserve">
     <value>Bunifu.Framework.UI.BunifuCustomLabel, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
   </data>
-  <data name="&gt;&gt;btnCategory.Parent" xml:space="preserve">
-    <value>pnlMenu</value>
-  </data>
   <data name="btnTasks.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 56</value>
   </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadForm, Telerik.WinControls.UI, Version=2019.1.219.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  <data name="btnMini.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
   </data>
-  <data name="lblUsername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>74, 114</value>
+  <data name="&gt;&gt;btnCategory.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="btnExpensesTracking.Size" type="System.Drawing.Size, System.Drawing">
     <value>220, 56</value>
@@ -422,8 +422,8 @@
   <data name="pnlMenu.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="&gt;&gt;dragMenuForm.Name" xml:space="preserve">
-    <value>dragMenuForm</value>
+  <data name="pnlContent.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
   <data name="btnLogOut.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -433,9 +433,6 @@
   </data>
   <data name="btnLogOut.Text" xml:space="preserve">
     <value>    LOG OUT</value>
-  </data>
-  <data name="lblUsername.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
   </data>
   <data name="&gt;&gt;btnMini.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -449,83 +446,86 @@
   <data name="btnMini.Size" type="System.Drawing.Size, System.Drawing">
     <value>27, 25</value>
   </data>
-  <data name="&gt;&gt;btnMini.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="lblUsername.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="btnMini.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="&gt;&gt;dragPnlContent.Type" xml:space="preserve">
     <value>Bunifu.Framework.UI.BunifuDragControl, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
   </data>
-  <data name="&gt;&gt;btnTasks.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  <data name="&gt;&gt;dragPnlMenu.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuDragControl, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
   </data>
-  <data name="pnlContent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>712, 715</value>
+  <data name="separator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 56</value>
   </data>
-  <data name="&gt;&gt;btnCategory.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
-  </data>
-  <data name="pnlMenu.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="btnTimeTracking.Text" xml:space="preserve">
+    <value>      Time Tracking</value>
   </data>
   <data name="$this.Location" type="System.Drawing.Point, System.Drawing">
     <value>1, 0</value>
   </data>
-  <data name="&gt;&gt;pnlMenu.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="btnTimeCharts.Text" xml:space="preserve">
+    <value>      Time Charts</value>
   </data>
   <data name="btnX.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
   </data>
-  <data name="btnLogOut.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 725</value>
+  <data name="&gt;&gt;btnTimeCharts.Name" xml:space="preserve">
+    <value>btnTimeCharts</value>
   </data>
-  <data name="&gt;&gt;pnlMenu.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="btnExpensesTracking.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
   </data>
   <data name="&gt;&gt;btnX.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="&gt;&gt;pnlContent.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="lblUsername.Location" type="System.Drawing.Point, System.Drawing">
+    <value>74, 114</value>
   </data>
-  <data name="separator.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;btnMini.Name" xml:space="preserve">
+    <value>btnMini</value>
+  </data>
+  <data name="&gt;&gt;separator.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuSeparator, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="lblUsername.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
-  </data>
-  <data name="btnLogOut.Size" type="System.Drawing.Size, System.Drawing">
-    <value>227, 60</value>
-  </data>
-  <data name="&gt;&gt;pnlMenu.ZOrder" xml:space="preserve">
-    <value>3</value>
   </data>
   <data name="btnLogOut.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
+  <data name="&gt;&gt;btnCategory.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="separator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 212</value>
+  </data>
+  <data name="btnMini.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="pnlContent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>239, 43</value>
+  </data>
   <data name="&gt;&gt;btnTimeTracking.Name" xml:space="preserve">
     <value>btnTimeTracking</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>971, 788</value>
-  </data>
-  <data name="btnExpensesChart.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 485</value>
-  </data>
-  <data name="&gt;&gt;dragPnlContent.Name" xml:space="preserve">
-    <value>dragPnlContent</value>
-  </data>
-  <data name="&gt;&gt;btnX.Name" xml:space="preserve">
-    <value>btnX</value>
-  </data>
-  <data name="&gt;&gt;btnTimeCharts.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="&gt;&gt;btnTimeCharts.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
   </data>
   <data name="btnExpensesChart.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
-  <data name="&gt;&gt;btnExpensesChart.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  <data name="&gt;&gt;btnCategory.Parent" xml:space="preserve">
+    <value>pnlMenu</value>
   </data>
-  <data name="btnMini.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="&gt;&gt;pnlMenu.Name" xml:space="preserve">
+    <value>pnlMenu</value>
   </data>
   <data name="btnExpensesChart.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>

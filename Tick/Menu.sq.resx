@@ -135,31 +135,4 @@
         lpabVpx5bm/WhRmcQXAGwRkEZxCcQXAGwRnE35lk7C6gSca+vLlrp4AOQK4AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btnExpensesChart.Text" xml:space="preserve">
-    <value>      Grafi per shpenzime</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>Menu</value>
-  </data>
-  <data name="lblUsername.Text" xml:space="preserve">
-    <value>Nofka</value>
-  </data>
-  <data name="btnCategory.Text" xml:space="preserve">
-    <value>      Kategori</value>
-  </data>
-  <data name="btnExpensesTracking.Text" xml:space="preserve">
-    <value>      Menaxhimi i       shpenzimeve</value>
-  </data>
-  <data name="btnLogOut.Text" xml:space="preserve">
-    <value>    Dilni</value>
-  </data>
-  <data name="btnTimeTracking.Text" xml:space="preserve">
-    <value>      Menaxhimi i kohes</value>
-  </data>
-  <data name="btnTimeCharts.Text" xml:space="preserve">
-    <value>      Grafi per kohe</value>
-  </data>
-  <data name="btnTasks.Text" xml:space="preserve">
-    <value>      Aktiviteti</value>
-  </data>
 </root>

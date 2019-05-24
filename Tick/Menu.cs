@@ -25,6 +25,7 @@ namespace Tick
         {
             InitializeComponent();
 
+            
         }
 
         public Menu(User u,LogIn p)
@@ -34,6 +35,8 @@ namespace Tick
             this.Bounds = Screen.PrimaryScreen.Bounds;
             user = u;
             lblUsername.Text = user.Name;
+            et.user =t.user=ct.user=tsk.user=tch.user=ech.user= u;
+           
             parent = p;
         }
 
@@ -137,7 +140,7 @@ namespace Tick
         private void btnTimeTracking_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
-            t.user = user;
+         
             FillContentPanel(t);
 
         }
@@ -145,21 +148,21 @@ namespace Tick
         private void btnExpensesTracking_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
-            et.user = user;
+          
             FillContentPanel(et);
         }
 
         private void btnTimeCharts_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
-            tch.user = user;
+            
             FillContentPanel(tch);
         }
 
         private void btnExpensesChart_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
-            ech.user = user;
+        
 
             FillContentPanel(ech);
         }
@@ -167,6 +170,7 @@ namespace Tick
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             this.Hide();
+            parent.ClearText();
             parent.Show();
 
         }
@@ -174,7 +178,7 @@ namespace Tick
         private void btnTasks_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
-            tsk.user = user;
+           
             FillContentPanel(tsk);
 
         }
@@ -182,7 +186,7 @@ namespace Tick
         private void btnCategory_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
-            ct.user = user;
+           
             FillContentPanel(ct);
         }
 

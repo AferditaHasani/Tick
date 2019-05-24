@@ -118,7 +118,7 @@
             // 
             resources.ApplyResources(this.btnSignIn, "btnSignIn");
             this.btnSignIn.BackColor = System.Drawing.Color.Transparent;
-            this.btnSignIn.ButtonText = "Regjistrohu";
+            this.btnSignIn.ButtonText = "SIGN IN";
             this.btnSignIn.ButtonTextMarginLeft = 0;
             this.btnSignIn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.btnSignIn.DisabledFillColor = System.Drawing.Color.DimGray;
@@ -149,7 +149,7 @@
             // 
             resources.ApplyResources(this.btnLogIn, "btnLogIn");
             this.btnLogIn.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogIn.ButtonText = "Kyqu";
+            this.btnLogIn.ButtonText = "LOG IN";
             this.btnLogIn.ButtonTextMarginLeft = 0;
             this.btnLogIn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.btnLogIn.DisabledFillColor = System.Drawing.Color.DimGray;
@@ -220,7 +220,7 @@
             this.txtName.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtName.TextMarginLeft = 5;
-            this.txtName.TextPlaceholder = "Emri";
+            this.txtName.TextPlaceholder = "Name";
             this.txtName.UseSystemPasswordChar = false;
             // 
             // txtLastname
@@ -260,7 +260,7 @@
             this.txtLastname.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtLastname.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtLastname.TextMarginLeft = 5;
-            this.txtLastname.TextPlaceholder = "Mbiemri";
+            this.txtLastname.TextPlaceholder = "Lastname";
             this.txtLastname.UseSystemPasswordChar = false;
             // 
             // separator1
@@ -317,7 +317,7 @@
             this.txtUsername.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtUsername.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtUsername.TextMarginLeft = 5;
-            this.txtUsername.TextPlaceholder = "Nofka";
+            this.txtUsername.TextPlaceholder = "Username";
             this.txtUsername.UseSystemPasswordChar = false;
             // 
             // txtPassword
@@ -357,7 +357,7 @@
             this.txtPassword.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
             this.txtPassword.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPassword.TextMarginLeft = 5;
-            this.txtPassword.TextPlaceholder = "Fjalkalimi";
+            this.txtPassword.TextPlaceholder = "Password";
             this.txtPassword.UseSystemPasswordChar = false;
             // 
             // separator
@@ -377,7 +377,7 @@
             this.btnChooseLogIn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnChooseLogIn.BackColor = System.Drawing.Color.Transparent;
             this.btnChooseLogIn.BorderRadius = 0;
-            this.btnChooseLogIn.ButtonText = "  Kyqu";
+            this.btnChooseLogIn.ButtonText = " Log In";
             this.btnChooseLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChooseLogIn.DisabledColor = System.Drawing.Color.Gray;
             this.btnChooseLogIn.Iconcolor = System.Drawing.Color.Transparent;
@@ -409,7 +409,7 @@
             this.btnChooseSigIn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnChooseSigIn.BackColor = System.Drawing.Color.Transparent;
             this.btnChooseSigIn.BorderRadius = 0;
-            this.btnChooseSigIn.ButtonText = "Regjistrohu";
+            this.btnChooseSigIn.ButtonText = "Sign In";
             this.btnChooseSigIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChooseSigIn.DisabledColor = System.Drawing.Color.Gray;
             this.btnChooseSigIn.Iconcolor = System.Drawing.Color.Transparent;

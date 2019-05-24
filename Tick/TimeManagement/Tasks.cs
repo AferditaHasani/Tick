@@ -175,7 +175,7 @@ namespace Tick.TimeManagement
                     Name = txtTaskName.Text,
                     Description = rtxtTaskDescription.Text,
                     Color = $"{color[0]},{color[1]},{color[2]},{color[3]}",
-                    InsertBy = 1,
+                    InsertBy = user.UserID,
                     InsertDate = DateTime.Now
 
 

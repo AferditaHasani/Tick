@@ -100,12 +100,26 @@ namespace Tick.ExpensesManagement
                 {
                    
 
+                    t.Columns.Add("Type", typeof(string));
+                    int j = 0;
+                    foreach (var row in t.Rows)
+                    {
+                        if((bool)t.Rows[j]["IsExpenses"])
+                        { t.Rows[j]["Type"] = "Expense";}
+                        else
+                        {
+                            t.Rows[j]["Type"] = "Income";
+                        }
+
+
+
+                        j++;
+                    }
                     dgvCategory.DataSource = t;
 
                     dgvCategory.Columns["Color"].Visible = false;
-                    //dgvCategory.Columns["IsExpenses"].Visible = false;
 
-                  //  dgvCategory.Columns.Add("Type", "Type");
+                    dgvCategory.Columns["IsExpenses"].Visible = false;
 
 
 

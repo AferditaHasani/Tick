@@ -14,7 +14,8 @@ namespace Tick.ExpensesManagement
         public ExpensesTracking()
         {
             InitializeComponent();
-            FillCombo();
+           
+         
         }
      
 
@@ -151,6 +152,7 @@ namespace Tick.ExpensesManagement
                 transaction.InsertBy = user.UserID;
                 var saved = eTracking_service.Update(transaction);
                 MessageBox.Show(saved ? "Updated Successfully" : "Updating failed , please try again");
+                DisplayToDGrid(dtpDataGridTime.Value);
             }
 
             catch (Exception e)
@@ -262,7 +264,13 @@ namespace Tick.ExpensesManagement
                 transaction.Description = row.Cells["Description"].Value.ToString();
                 transaction.Date=new DateTime(int.Parse(date[2]), int.Parse(date[1]), int.Parse(date[0]));
                 dpExpensesTrackingDate.Value = transaction.Date;
-               
+                txtAmount.Text = transaction.Amount.ToString();
+                txtDescription.Text = transaction.Description;
+            
+
+
+
+
             }
         }
 
@@ -284,8 +292,11 @@ namespace Tick.ExpensesManagement
                 transaction.CategoryID = (int)ddlCategory.SelectedValue;
                 transaction.Description = row.Cells["Description"].Value.ToString();
                 transaction.Date = new DateTime(int.Parse(date[2]), int.Parse(date[1]), int.Parse(date[0]));
+             
                 dpExpensesTrackingDate.Value = transaction.Date;
-           
+                txtAmount.Text = transaction.Amount.ToString();
+                txtDescription.Text = transaction.Description;
+
             }
         }
 
