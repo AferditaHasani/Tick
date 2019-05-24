@@ -94,7 +94,7 @@ namespace Tick.ExpensesManagement
                     Amount =decimal.Parse(txtAmount.Text),
                     Description = txtDescription.Text,
                     CategoryID = (int)ddlCategory.SelectedValue,
-                    InsertBy = user.UserID
+                    InsertBy = user.UserID,
             
                     Date = dpExpensesTrackingDate.Value,
                    

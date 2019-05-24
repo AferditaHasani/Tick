@@ -24,10 +24,13 @@ namespace Tick.BLL
         }
 
         public DataTable GetAll(int id)
-        public DataTable GetByDate(DateTime dt)
         {
             return ETrackingDAL_db.GetAll(id);
-            return ETrackingDAL_db.GetByDate(dt);
+        }
+        public DataTable GetByDate(DateTime dt,int id)
+        {
+            
+            return ETrackingDAL_db.GetByDate(dt,id);
         }
 
         public bool Update(ExpensesTracking tsk)
