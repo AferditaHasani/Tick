@@ -180,5 +180,10 @@ namespace Tick.ExpensesManagement
             FillLineChart(dtpDataGridExpenses.Value.Value);
             FillPieChart(dtpDataGridExpenses.Value.Value);
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

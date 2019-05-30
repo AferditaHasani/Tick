@@ -25,7 +25,7 @@ namespace Tick.DAL
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.Add("@prmUserID", SqlDbType.Int).Value = model.UserID;
-                        command.Parameters.Add("@prmAmount", SqlDbType.VarChar).Value = model.Amount;
+                        command.Parameters.Add("@prmAmount", SqlDbType.Decimal).Value = model.Amount;
                         command.Parameters.Add("@prmCategoryID", SqlDbType.VarChar).Value = model.CategoryID;
                         command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = model.Description;
                         command.Parameters.Add("@prmDate", SqlDbType.DateTime).Value = model.Date;

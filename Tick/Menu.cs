@@ -36,7 +36,7 @@ namespace Tick
             user = u;
             lblUsername.Text = user.Name;
             et.user =t.user=ct.user=tsk.user=tch.user=ech.user= u;
-           
+           p.ClearText();
             parent = p;
         }
 

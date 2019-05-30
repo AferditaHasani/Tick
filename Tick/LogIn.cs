@@ -116,6 +116,8 @@ namespace Tick
               
                 menu.Closed += (s, args) => this.Close();
                 menu.Show();
+
+             
             }
             else
             {
@@ -123,7 +125,7 @@ namespace Tick
                 ClearText();
             }
 
-            this.Close();
+          
         }
         private bool SaveSigIn()
         {
