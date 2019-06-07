@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExpensesTracking));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExpensesTracking));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.pnlAddTransaction = new System.Windows.Forms.Panel();
+            this.dpExpensesTrackingDate = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.ddlCategory = new Bunifu.UI.WinForms.BunifuDropdown();
             this.lblDate = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnSaveTransaction = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -55,7 +57,7 @@
             this.lblExpenses = new System.Windows.Forms.Label();
             this.lblIncome = new System.Windows.Forms.Label();
             this.line = new System.Windows.Forms.Panel();
-            this.dpExpensesTrackingDate = new Bunifu.UI.WinForms.BunifuDatePicker();
+            this.btnHelpETracking = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pnlAddTransaction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).BeginInit();
             this.pnlSearchByDate.SuspendLayout();
@@ -82,6 +84,34 @@
             this.pnlAddTransaction.Size = new System.Drawing.Size(10, 748);
             this.pnlAddTransaction.TabIndex = 2;
             this.pnlAddTransaction.Visible = false;
+            // 
+            // dpExpensesTrackingDate
+            // 
+            this.dpExpensesTrackingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.dpExpensesTrackingDate.BorderRadius = 5;
+            this.dpExpensesTrackingDate.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpExpensesTrackingDate.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dpExpensesTrackingDate.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.dpExpensesTrackingDate.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.dpExpensesTrackingDate.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dpExpensesTrackingDate.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dpExpensesTrackingDate.Color = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dpExpensesTrackingDate.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thick;
+            this.dpExpensesTrackingDate.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.dpExpensesTrackingDate.DisabledColor = System.Drawing.Color.Gray;
+            this.dpExpensesTrackingDate.DisplayWeekNumbers = false;
+            this.dpExpensesTrackingDate.DPHeight = 0;
+            this.dpExpensesTrackingDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dpExpensesTrackingDate.FillDatePicker = false;
+            this.dpExpensesTrackingDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dpExpensesTrackingDate.Icon = ((System.Drawing.Image)(resources.GetObject("dpExpensesTrackingDate.Icon")));
+            this.dpExpensesTrackingDate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
+            this.dpExpensesTrackingDate.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.dpExpensesTrackingDate.Location = new System.Drawing.Point(151, 464);
+            this.dpExpensesTrackingDate.MinimumSize = new System.Drawing.Size(185, 35);
+            this.dpExpensesTrackingDate.Name = "dpExpensesTrackingDate";
+            this.dpExpensesTrackingDate.Size = new System.Drawing.Size(185, 35);
+            this.dpExpensesTrackingDate.TabIndex = 22;
             // 
             // ddlCategory
             // 
@@ -606,40 +636,49 @@
             this.line.Size = new System.Drawing.Size(583, 3);
             this.line.TabIndex = 21;
             // 
-            // dpExpensesTrackingDate
+            // btnHelpETracking
             // 
-            this.dpExpensesTrackingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.dpExpensesTrackingDate.BorderRadius = 5;
-            this.dpExpensesTrackingDate.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpExpensesTrackingDate.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dpExpensesTrackingDate.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.dpExpensesTrackingDate.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.dpExpensesTrackingDate.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dpExpensesTrackingDate.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dpExpensesTrackingDate.Color = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dpExpensesTrackingDate.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thick;
-            this.dpExpensesTrackingDate.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.dpExpensesTrackingDate.DisabledColor = System.Drawing.Color.Gray;
-            this.dpExpensesTrackingDate.DisplayWeekNumbers = false;
-            this.dpExpensesTrackingDate.DPHeight = 0;
-            this.dpExpensesTrackingDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dpExpensesTrackingDate.FillDatePicker = false;
-            this.dpExpensesTrackingDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dpExpensesTrackingDate.Icon = ((System.Drawing.Image)(resources.GetObject("dpExpensesTrackingDate.Icon")));
-            this.dpExpensesTrackingDate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.dpExpensesTrackingDate.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.dpExpensesTrackingDate.Location = new System.Drawing.Point(151, 464);
-            this.dpExpensesTrackingDate.MinimumSize = new System.Drawing.Size(185, 35);
-            this.dpExpensesTrackingDate.Name = "dpExpensesTrackingDate";
-            this.dpExpensesTrackingDate.Size = new System.Drawing.Size(185, 35);
-            this.dpExpensesTrackingDate.TabIndex = 22;
+            this.btnHelpETracking.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHelpETracking.BackColor = System.Drawing.Color.Transparent;
+            this.btnHelpETracking.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHelpETracking.BackgroundImage")));
+            this.btnHelpETracking.ButtonText = "";
+            this.btnHelpETracking.ButtonTextMarginLeft = 0;
+            this.btnHelpETracking.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnHelpETracking.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnHelpETracking.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnHelpETracking.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnHelpETracking.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnHelpETracking.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnHelpETracking.IconPadding = 0;
+            this.btnHelpETracking.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnHelpETracking.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnHelpETracking.IdleBorderRadius = 1;
+            this.btnHelpETracking.IdleBorderThickness = 0;
+            this.btnHelpETracking.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnHelpETracking.IdleIconLeftImage = global::Tick.Properties.Resources.icons8_help_48;
+            this.btnHelpETracking.IdleIconRightImage = null;
+            this.btnHelpETracking.Location = new System.Drawing.Point(758, 12);
+            this.btnHelpETracking.Name = "btnHelpETracking";
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties1.BorderRadius = 1;
+            stateProperties1.BorderThickness = 1;
+            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties1.IconLeftImage = null;
+            stateProperties1.IconRightImage = null;
+            this.btnHelpETracking.onHoverState = stateProperties1;
+            this.btnHelpETracking.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnHelpETracking.Size = new System.Drawing.Size(30, 25);
+            this.btnHelpETracking.TabIndex = 22;
+            this.btnHelpETracking.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnHelpETracking.Click += new System.EventHandler(this.btnHelpETracking_Click);
             // 
             // ExpensesTracking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(792, 788);
+            this.ClientSize = new System.Drawing.Size(800, 788);
+            this.Controls.Add(this.btnHelpETracking);
             this.Controls.Add(this.line);
             this.Controls.Add(this.lblBalance);
             this.Controls.Add(this.lblExpenses);
@@ -694,5 +733,6 @@
         private System.Windows.Forms.Label lblIncome;
         private System.Windows.Forms.Panel line;
         private Bunifu.UI.WinForms.BunifuDatePicker dpExpensesTrackingDate;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnHelpETracking;
     }
 }

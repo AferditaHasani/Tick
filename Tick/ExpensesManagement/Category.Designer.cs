@@ -50,7 +50,7 @@
             this.lblName = new Bunifu.UI.WinForms.BunifuLabel();
             this.dgvCategory = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.btnAddCategory = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnHelpCategory = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pnlAddCategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbTaskColor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).BeginInit();
@@ -473,41 +473,41 @@
             this.btnAddCategory.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
-            // bunifuButton1
+            // btnHelpCategory
             // 
-            this.bunifuButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
-            this.bunifuButton1.ButtonText = "";
-            this.bunifuButton1.ButtonTextMarginLeft = 0;
-            this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.bunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.bunifuButton1.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.bunifuButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
-            this.bunifuButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.bunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton1.IconPadding = 0;
-            this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.bunifuButton1.IdleBorderRadius = 1;
-            this.bunifuButton1.IdleBorderThickness = 0;
-            this.bunifuButton1.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.bunifuButton1.IdleIconLeftImage = global::Tick.Properties.Resources.icons8_help_48;
-            this.bunifuButton1.IdleIconRightImage = null;
-            this.bunifuButton1.Location = new System.Drawing.Point(742, 12);
-            this.bunifuButton1.Name = "bunifuButton1";
+            this.btnHelpCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHelpCategory.BackColor = System.Drawing.Color.Transparent;
+            this.btnHelpCategory.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHelpCategory.BackgroundImage")));
+            this.btnHelpCategory.ButtonText = "";
+            this.btnHelpCategory.ButtonTextMarginLeft = 0;
+            this.btnHelpCategory.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnHelpCategory.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnHelpCategory.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnHelpCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnHelpCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnHelpCategory.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnHelpCategory.IconPadding = 0;
+            this.btnHelpCategory.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnHelpCategory.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnHelpCategory.IdleBorderRadius = 1;
+            this.btnHelpCategory.IdleBorderThickness = 0;
+            this.btnHelpCategory.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnHelpCategory.IdleIconLeftImage = global::Tick.Properties.Resources.icons8_help_48;
+            this.btnHelpCategory.IdleIconRightImage = null;
+            this.btnHelpCategory.Location = new System.Drawing.Point(742, 12);
+            this.btnHelpCategory.Name = "btnHelpCategory";
             stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
             stateProperties1.BorderRadius = 1;
             stateProperties1.BorderThickness = 1;
             stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
             stateProperties1.IconLeftImage = null;
             stateProperties1.IconRightImage = null;
-            this.bunifuButton1.onHoverState = stateProperties1;
-            this.bunifuButton1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.bunifuButton1.Size = new System.Drawing.Size(30, 25);
-            this.bunifuButton1.TabIndex = 12;
-            this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
+            this.btnHelpCategory.onHoverState = stateProperties1;
+            this.btnHelpCategory.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnHelpCategory.Size = new System.Drawing.Size(30, 25);
+            this.btnHelpCategory.TabIndex = 12;
+            this.btnHelpCategory.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnHelpCategory.Click += new System.EventHandler(this.bunifuButton1_Click);
             // 
             // Category
             // 
@@ -515,7 +515,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.ClientSize = new System.Drawing.Size(784, 788);
-            this.Controls.Add(this.bunifuButton1);
+            this.Controls.Add(this.btnHelpCategory);
             this.Controls.Add(this.dgvCategory);
             this.Controls.Add(this.pnlAddCategory);
             this.Controls.Add(this.btnAddCategory);
@@ -555,6 +555,6 @@
         private Bunifu.UI.WinForms.BunifuLabel lblColor;
         private Telerik.WinControls.UI.RadColorBox cbTaskColor;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvCategory;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnHelpCategory;
     }
 }

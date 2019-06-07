@@ -184,6 +184,10 @@ namespace Tick.ExpensesManagement
       
         }
 
-       
+        private void btnHelpECharts_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "file:\\C:\\Users\\dita9\\Documents\\Tick\\Tick\\Tick.chm", HelpNavigator.Topic, "IDH_Topic100.htm");
+
+        }
     }
 }

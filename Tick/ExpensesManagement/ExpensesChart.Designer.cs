@@ -47,6 +47,8 @@ namespace Tick.ExpensesManagement
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExpensesChart));
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.ExpensesPiechart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnlSearchByDate = new System.Windows.Forms.Panel();
             this.dtpDataGridExpenses = new Syncfusion.WinForms.Input.SfDateTimeEdit();
@@ -56,6 +58,7 @@ namespace Tick.ExpensesManagement
             this.btnNextDay = new Bunifu.Framework.UI.BunifuFlatButton();
             this.ExpensesLineChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnHelpECharts = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             ((System.ComponentModel.ISupportInitialize)(this.ExpensesPiechart)).BeginInit();
             this.pnlSearchByDate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ExpensesLineChart)).BeginInit();
@@ -353,12 +356,49 @@ namespace Tick.ExpensesManagement
             this.panel1.Size = new System.Drawing.Size(583, 3);
             this.panel1.TabIndex = 13;
             // 
+            // btnHelpECharts
+            // 
+            this.btnHelpECharts.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHelpECharts.BackColor = System.Drawing.Color.Transparent;
+            this.btnHelpECharts.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnHelpECharts.BackgroundImage")));
+            this.btnHelpECharts.ButtonText = "";
+            this.btnHelpECharts.ButtonTextMarginLeft = 0;
+            this.btnHelpECharts.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnHelpECharts.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnHelpECharts.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnHelpECharts.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btnHelpECharts.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.btnHelpECharts.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnHelpECharts.IconPadding = 0;
+            this.btnHelpECharts.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnHelpECharts.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnHelpECharts.IdleBorderRadius = 1;
+            this.btnHelpECharts.IdleBorderThickness = 0;
+            this.btnHelpECharts.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnHelpECharts.IdleIconLeftImage = global::Tick.Properties.Resources.icons8_help_48;
+            this.btnHelpECharts.IdleIconRightImage = null;
+            this.btnHelpECharts.Location = new System.Drawing.Point(635, 12);
+            this.btnHelpECharts.Name = "btnHelpECharts";
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties1.BorderRadius = 1;
+            stateProperties1.BorderThickness = 1;
+            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties1.IconLeftImage = null;
+            stateProperties1.IconRightImage = null;
+            this.btnHelpECharts.onHoverState = stateProperties1;
+            this.btnHelpECharts.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnHelpECharts.Size = new System.Drawing.Size(30, 25);
+            this.btnHelpECharts.TabIndex = 14;
+            this.btnHelpECharts.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnHelpECharts.Click += new System.EventHandler(this.btnHelpECharts_Click);
+            // 
             // ExpensesChart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(669, 766);
+            this.ClientSize = new System.Drawing.Size(677, 788);
+            this.Controls.Add(this.btnHelpECharts);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.ExpensesPiechart);
             this.Controls.Add(this.pnlSearchByDate);
@@ -389,5 +429,6 @@ namespace Tick.ExpensesManagement
         private Bunifu.Framework.UI.BunifuFlatButton btnNextDay;
         private System.Windows.Forms.DataVisualization.Charting.Chart ExpensesLineChart;
         private Panel panel1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnHelpECharts;
     }
 }
