@@ -55,5 +55,13 @@ namespace Tick.BLL
         }
 
 
+        public decimal GetIncome( int id)
+        {
+            return ETrackingDAL_db.GetIncome(id);
+        }
+        public decimal GetExpenses(int id)
+        {
+            return ETrackingDAL_db.GetExpenses(id);
+        }
     }
 }

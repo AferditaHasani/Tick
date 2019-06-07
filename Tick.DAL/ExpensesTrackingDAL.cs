@@ -12,24 +12,23 @@ namespace Tick.DAL
 {
     public class ExpensesTrackingDAL
     {
-        public bool Add(ExpensesTracking model)
+        public bool Add(ExpensesTracking expensesTracking)
         {
             try
             {
-                //    using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
-                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
                 {
                     String sql = "dbo.usp_ExpensesTracking_Insert";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.Add("@prmUserID", SqlDbType.Int).Value = model.UserID;
-                        command.Parameters.Add("@prmAmount", SqlDbType.Decimal).Value = model.Amount;
-                        command.Parameters.Add("@prmCategoryID", SqlDbType.VarChar).Value = model.CategoryID;
-                        command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = model.Description;
-                        command.Parameters.Add("@prmDate", SqlDbType.DateTime).Value = model.Date;
-                        command.Parameters.Add("@prmInsertBy", SqlDbType.Int).Value = model.InsertBy;
+                        command.Parameters.Add("@prmUserID", SqlDbType.Int).Value = expensesTracking.UserID;
+                        command.Parameters.Add("@prmAmount", SqlDbType.Decimal).Value = expensesTracking.Amount;
+                        command.Parameters.Add("@prmCategoryID", SqlDbType.VarChar).Value = expensesTracking.CategoryID;
+                        command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = expensesTracking.Description;
+                        command.Parameters.Add("@prmDate", SqlDbType.DateTime).Value = expensesTracking.Date;
+                        command.Parameters.Add("@prmInsertBy", SqlDbType.Int).Value = expensesTracking.InsertBy;
 
 
 
@@ -49,7 +48,7 @@ namespace Tick.DAL
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
                 {
                     String sql = "dbo.usp_ETracking_GetAll";
                     using (SqlCommand command = new SqlCommand(sql, conn))
@@ -79,7 +78,7 @@ namespace Tick.DAL
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
                 {
                     String sql = "dbo.usp_GetComboBox";
                     using (SqlCommand command = new SqlCommand(sql, conn))
@@ -108,25 +107,24 @@ namespace Tick.DAL
                 return null;
             }
         }
-        
-        public bool Update(ExpensesTracking model)
+
+        public bool Update(ExpensesTracking expensesTracking)
         {
             try
             {
-               // using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
-                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
                 {
                     String sql = "dbo.usp_ETracking_Update";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.Add("@prmExpensesID", SqlDbType.Int).Value = model.ETrackingID;
-                        command.Parameters.Add("@prmAmount", SqlDbType.Decimal).Value = model.Amount;
-                        command.Parameters.Add("@prmCategoryID", SqlDbType.Int).Value = model.CategoryID;
-                        command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = model.Description;
-                        command.Parameters.Add("@prmDate", SqlDbType.DateTime).Value = model.Date;
-                        command.Parameters.Add("@prmLUB", SqlDbType.Int).Value = model.UserID;
+                        command.Parameters.Add("@prmExpensesID", SqlDbType.Int).Value = expensesTracking.ETrackingID;
+                        command.Parameters.Add("@prmAmount", SqlDbType.Decimal).Value = expensesTracking.Amount;
+                        command.Parameters.Add("@prmCategoryID", SqlDbType.Int).Value = expensesTracking.CategoryID;
+                        command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = expensesTracking.Description;
+                        command.Parameters.Add("@prmDate", SqlDbType.DateTime).Value = expensesTracking.Date;
+                        command.Parameters.Add("@prmLUB", SqlDbType.Int).Value = expensesTracking.UserID;
 
 
 
@@ -142,19 +140,18 @@ namespace Tick.DAL
             }
         }
 
-        public bool Delete(ExpensesTracking model)
+        public bool Delete(ExpensesTracking expensesTracking)
         {
             try
             {
-                //  using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
-                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
                 {
                     String sql = "dbo.usp_ETracking_Delete";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.Add("@prmETrackingID", SqlDbType.Int).Value = model.ETrackingID;
+                        command.Parameters.Add("@prmETrackingID", SqlDbType.Int).Value = expensesTracking.ETrackingID;
 
 
 
@@ -174,9 +171,7 @@ namespace Tick.DAL
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(
-                    @"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
-                )
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
                 {
                     String sql = "dbo.usp_ExpensesTracking_ByMonth";
                     using (SqlCommand command = new SqlCommand(sql, conn))
@@ -207,9 +202,7 @@ namespace Tick.DAL
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection(
-                    @"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")
-                )
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
                 {
                     String sql = "dbo.usp_ExpensesTracking_PieChart";
                     using (SqlCommand command = new SqlCommand(sql, conn))
@@ -235,13 +228,12 @@ namespace Tick.DAL
                 return null;
             }
         }
-        public DataTable GetByDate(DateTime dt,int id)
+        public DataTable GetByDate(DateTime dt, int id)
         {
             try
             {
-                //using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
-                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework") )
-                {
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
+               {
                     String sql = "dbo.usp_ExpensesTracking_ByDate";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
@@ -264,6 +256,79 @@ namespace Tick.DAL
             {
                 MessageBox.Show(e.Message);
                 return null;
+            }
+        }
+
+        public decimal GetIncome(int id)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
+                {
+                    String sql = "dbo.usp_ETracking_GetIncome";
+                    using (SqlCommand command = new SqlCommand(sql, conn))
+                    {
+                        conn.Open();
+
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add("@prmUserID", SqlDbType.Int).Value = id;
+
+                        using (var reader = command.ExecuteReader())
+                        {
+
+                            if (reader.Read())
+                            {
+
+                                return reader.GetDecimal(0);
+                            }
+                            return 0;
+
+                        }
+
+
+
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+
+                return 0;
+            }
+        }
+        public decimal GetExpenses(int id)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
+                {
+                    String sql = "dbo.usp_ETracking_GetExpenses";
+                    using (SqlCommand command = new SqlCommand(sql, conn))
+                    {
+                        conn.Open();
+
+                        command.CommandType = CommandType.StoredProcedure;
+                        command.Parameters.Add("@prmUserID", SqlDbType.Int).Value = id;
+
+
+                        using (var reader = command.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+
+                                return reader.GetDecimal(0);
+                            }
+                            return 0;
+
+
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+
+                return 0;
             }
         }
     }

@@ -29,17 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogIn));
             this.dragLogIn = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.dragpnlSide = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.pnlSide = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.pnlLogInContent = new System.Windows.Forms.Panel();
+            this.btnSq = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnSignIn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.btnEng = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnLogIn = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pnlForSignIn = new System.Windows.Forms.Panel();
             this.txtName = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
@@ -55,6 +60,7 @@
             this.btnX = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pbLogIn = new System.Windows.Forms.PictureBox();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pnlSide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.pnlLogInContent.SuspendLayout();
@@ -91,17 +97,19 @@
             // 
             // pbLogo
             // 
-            resources.ApplyResources(this.pbLogo, "pbLogo");
             this.pbLogo.BackColor = System.Drawing.Color.Transparent;
             this.pbLogo.Image = global::Tick.Properties.Resources.logo1;
+            resources.ApplyResources(this.pbLogo, "pbLogo");
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.TabStop = false;
             // 
             // pnlLogInContent
             // 
-            resources.ApplyResources(this.pnlLogInContent, "pnlLogInContent");
             this.pnlLogInContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.pnlLogInContent.Controls.Add(this.bunifuButton1);
+            this.pnlLogInContent.Controls.Add(this.btnSq);
             this.pnlLogInContent.Controls.Add(this.btnSignIn);
+            this.pnlLogInContent.Controls.Add(this.btnEng);
             this.pnlLogInContent.Controls.Add(this.btnLogIn);
             this.pnlLogInContent.Controls.Add(this.pnlForSignIn);
             this.pnlLogInContent.Controls.Add(this.separator1);
@@ -112,13 +120,45 @@
             this.pnlLogInContent.Controls.Add(this.btnMini);
             this.pnlLogInContent.Controls.Add(this.btnX);
             this.pnlLogInContent.Controls.Add(this.pbLogIn);
+            resources.ApplyResources(this.pnlLogInContent, "pnlLogInContent");
             this.pnlLogInContent.Name = "pnlLogInContent";
+            // 
+            // btnSq
+            // 
+            this.btnSq.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btnSq, "btnSq");
+            this.btnSq.ButtonText = "";
+            this.btnSq.ButtonTextMarginLeft = 0;
+            this.btnSq.CausesValidation = false;
+            this.btnSq.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
+            this.btnSq.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
+            this.btnSq.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnSq.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnSq.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnSq.IconPadding = 0;
+            this.btnSq.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnSq.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
+            this.btnSq.IdleBorderRadius = 1;
+            this.btnSq.IdleBorderThickness = 0;
+            this.btnSq.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
+            this.btnSq.IdleIconLeftImage = global::Tick.Properties.Resources.sq;
+            this.btnSq.IdleIconRightImage = null;
+            this.btnSq.Name = "btnSq";
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties2.BorderRadius = 1;
+            stateProperties2.BorderThickness = 1;
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties2.IconLeftImage = null;
+            stateProperties2.IconRightImage = null;
+            this.btnSq.onHoverState = stateProperties2;
+            this.btnSq.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnSq.Click += new System.EventHandler(this.btnSq_Click);
             // 
             // btnSignIn
             // 
-            resources.ApplyResources(this.btnSignIn, "btnSignIn");
             this.btnSignIn.BackColor = System.Drawing.Color.Transparent;
-            this.btnSignIn.ButtonText = "SIGN IN";
+            resources.ApplyResources(this.btnSignIn, "btnSignIn");
+            this.btnSignIn.ButtonText = "SIGNUP";
             this.btnSignIn.ButtonTextMarginLeft = 0;
             this.btnSignIn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.btnSignIn.DisabledFillColor = System.Drawing.Color.DimGray;
@@ -134,22 +174,53 @@
             this.btnSignIn.IdleIconLeftImage = null;
             this.btnSignIn.IdleIconRightImage = null;
             this.btnSignIn.Name = "btnSignIn";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties1.BorderRadius = 1;
-            stateProperties1.BorderThickness = 2;
-            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            stateProperties1.IconLeftImage = null;
-            stateProperties1.IconRightImage = null;
-            this.btnSignIn.onHoverState = stateProperties1;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties3.BorderRadius = 1;
+            stateProperties3.BorderThickness = 2;
+            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            stateProperties3.IconLeftImage = null;
+            stateProperties3.IconRightImage = null;
+            this.btnSignIn.onHoverState = stateProperties3;
             this.btnSignIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSignIn.Click += new System.EventHandler(this.btnSignIn_Click);
             this.btnSignIn.Enter += new System.EventHandler(this.btnSignIn_Click);
             // 
+            // btnEng
+            // 
+            this.btnEng.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btnEng, "btnEng");
+            this.btnEng.ButtonText = "";
+            this.btnEng.ButtonTextMarginLeft = 0;
+            this.btnEng.CausesValidation = false;
+            this.btnEng.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
+            this.btnEng.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
+            this.btnEng.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnEng.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.btnEng.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.btnEng.IconPadding = 0;
+            this.btnEng.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.btnEng.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
+            this.btnEng.IdleBorderRadius = 1;
+            this.btnEng.IdleBorderThickness = 0;
+            this.btnEng.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
+            this.btnEng.IdleIconLeftImage = global::Tick.Properties.Resources.uk;
+            this.btnEng.IdleIconRightImage = null;
+            this.btnEng.Name = "btnEng";
+            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties4.BorderRadius = 1;
+            stateProperties4.BorderThickness = 1;
+            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties4.IconLeftImage = null;
+            stateProperties4.IconRightImage = null;
+            this.btnEng.onHoverState = stateProperties4;
+            this.btnEng.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnEng.Click += new System.EventHandler(this.btnEng_Click);
+            // 
             // btnLogIn
             // 
-            resources.ApplyResources(this.btnLogIn, "btnLogIn");
             this.btnLogIn.BackColor = System.Drawing.Color.Transparent;
-            this.btnLogIn.ButtonText = "LOG IN";
+            resources.ApplyResources(this.btnLogIn, "btnLogIn");
+            this.btnLogIn.ButtonText = "LOGIN";
             this.btnLogIn.ButtonTextMarginLeft = 0;
             this.btnLogIn.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.btnLogIn.DisabledFillColor = System.Drawing.Color.DimGray;
@@ -165,32 +236,32 @@
             this.btnLogIn.IdleIconLeftImage = null;
             this.btnLogIn.IdleIconRightImage = null;
             this.btnLogIn.Name = "btnLogIn";
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties2.BorderRadius = 1;
-            stateProperties2.BorderThickness = 2;
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            stateProperties2.IconLeftImage = null;
-            stateProperties2.IconRightImage = null;
-            this.btnLogIn.onHoverState = stateProperties2;
+            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties5.BorderRadius = 1;
+            stateProperties5.BorderThickness = 2;
+            stateProperties5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            stateProperties5.IconLeftImage = null;
+            stateProperties5.IconRightImage = null;
+            this.btnLogIn.onHoverState = stateProperties5;
             this.btnLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnLogIn.Click += new System.EventHandler(this.btnLogIn_Click);
             this.btnLogIn.Enter += new System.EventHandler(this.btnLogIn_Click);
             // 
             // pnlForSignIn
             // 
-            resources.ApplyResources(this.pnlForSignIn, "pnlForSignIn");
             this.pnlForSignIn.Controls.Add(this.txtName);
             this.pnlForSignIn.Controls.Add(this.txtLastname);
+            resources.ApplyResources(this.pnlForSignIn, "pnlForSignIn");
             this.pnlForSignIn.Name = "pnlForSignIn";
             // 
             // txtName
             // 
             this.txtName.AcceptsReturn = false;
             this.txtName.AcceptsTab = false;
-            resources.ApplyResources(this.txtName, "txtName");
             this.txtName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
             this.txtName.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.txtName, "txtName");
             this.txtName.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.txtName.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.txtName.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
@@ -227,10 +298,10 @@
             // 
             this.txtLastname.AcceptsReturn = false;
             this.txtLastname.AcceptsTab = false;
-            resources.ApplyResources(this.txtLastname, "txtLastname");
             this.txtLastname.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtLastname.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
             this.txtLastname.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.txtLastname, "txtLastname");
             this.txtLastname.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.txtLastname.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.txtLastname.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
@@ -265,29 +336,29 @@
             // 
             // separator1
             // 
-            resources.ApplyResources(this.separator1, "separator1");
             this.separator1.BackColor = System.Drawing.Color.Transparent;
             this.separator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
             this.separator1.LineThickness = 5;
+            resources.ApplyResources(this.separator1, "separator1");
             this.separator1.Name = "separator1";
             this.separator1.Transparency = 255;
             this.separator1.Vertical = true;
             // 
             // pnlForLogIn
             // 
-            resources.ApplyResources(this.pnlForLogIn, "pnlForLogIn");
             this.pnlForLogIn.Controls.Add(this.txtUsername);
             this.pnlForLogIn.Controls.Add(this.txtPassword);
+            resources.ApplyResources(this.pnlForLogIn, "pnlForLogIn");
             this.pnlForLogIn.Name = "pnlForLogIn";
             // 
             // txtUsername
             // 
             this.txtUsername.AcceptsReturn = false;
             this.txtUsername.AcceptsTab = false;
-            resources.ApplyResources(this.txtUsername, "txtUsername");
             this.txtUsername.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtUsername.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
             this.txtUsername.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.txtUsername, "txtUsername");
             this.txtUsername.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.txtUsername.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.txtUsername.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
@@ -324,10 +395,10 @@
             // 
             this.txtPassword.AcceptsReturn = false;
             this.txtPassword.AcceptsTab = false;
-            resources.ApplyResources(this.txtPassword, "txtPassword");
             this.txtPassword.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
             this.txtPassword.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
             this.txtPassword.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.txtPassword, "txtPassword");
             this.txtPassword.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.txtPassword.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.txtPassword.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(107)))), ((int)(((byte)(107)))));
@@ -362,22 +433,22 @@
             // 
             // separator
             // 
-            resources.ApplyResources(this.separator, "separator");
             this.separator.BackColor = System.Drawing.Color.Transparent;
             this.separator.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
             this.separator.LineThickness = 5;
+            resources.ApplyResources(this.separator, "separator");
             this.separator.Name = "separator";
             this.separator.Transparency = 255;
             this.separator.Vertical = true;
             // 
             // btnChooseLogIn
             // 
-            resources.ApplyResources(this.btnChooseLogIn, "btnChooseLogIn");
             this.btnChooseLogIn.Active = false;
             this.btnChooseLogIn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnChooseLogIn.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btnChooseLogIn, "btnChooseLogIn");
             this.btnChooseLogIn.BorderRadius = 0;
-            this.btnChooseLogIn.ButtonText = " Log In";
+            this.btnChooseLogIn.ButtonText = "LogIn";
             this.btnChooseLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChooseLogIn.DisabledColor = System.Drawing.Color.Gray;
             this.btnChooseLogIn.Iconcolor = System.Drawing.Color.Transparent;
@@ -404,12 +475,12 @@
             // 
             // btnChooseSigIn
             // 
-            resources.ApplyResources(this.btnChooseSigIn, "btnChooseSigIn");
             this.btnChooseSigIn.Active = false;
             this.btnChooseSigIn.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnChooseSigIn.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btnChooseSigIn, "btnChooseSigIn");
             this.btnChooseSigIn.BorderRadius = 0;
-            this.btnChooseSigIn.ButtonText = "Sign In";
+            this.btnChooseSigIn.ButtonText = "SignUp";
             this.btnChooseSigIn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnChooseSigIn.DisabledColor = System.Drawing.Color.Gray;
             this.btnChooseSigIn.Iconcolor = System.Drawing.Color.Transparent;
@@ -436,8 +507,8 @@
             // 
             // btnMini
             // 
-            resources.ApplyResources(this.btnMini, "btnMini");
             this.btnMini.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btnMini, "btnMini");
             this.btnMini.ButtonText = "-";
             this.btnMini.ButtonTextMarginLeft = 0;
             this.btnMini.CausesValidation = false;
@@ -455,20 +526,20 @@
             this.btnMini.IdleIconLeftImage = null;
             this.btnMini.IdleIconRightImage = null;
             this.btnMini.Name = "btnMini";
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties3.BorderRadius = 1;
-            stateProperties3.BorderThickness = 1;
-            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties3.IconLeftImage = null;
-            stateProperties3.IconRightImage = null;
-            this.btnMini.onHoverState = stateProperties3;
+            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties6.BorderRadius = 1;
+            stateProperties6.BorderThickness = 1;
+            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties6.IconLeftImage = null;
+            stateProperties6.IconRightImage = null;
+            this.btnMini.onHoverState = stateProperties6;
             this.btnMini.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnMini.Click += new System.EventHandler(this.btnMini_Click);
             // 
             // btnX
             // 
-            resources.ApplyResources(this.btnX, "btnX");
             this.btnX.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.btnX, "btnX");
             this.btnX.ButtonText = "X";
             this.btnX.ButtonTextMarginLeft = 0;
             this.btnX.DisabledBorderColor = System.Drawing.Color.MediumSpringGreen;
@@ -485,21 +556,21 @@
             this.btnX.IdleIconLeftImage = null;
             this.btnX.IdleIconRightImage = null;
             this.btnX.Name = "btnX";
-            stateProperties4.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties4.BorderRadius = 1;
-            stateProperties4.BorderThickness = 1;
-            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties4.IconLeftImage = null;
-            stateProperties4.IconRightImage = null;
-            this.btnX.onHoverState = stateProperties4;
+            stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties7.BorderRadius = 1;
+            stateProperties7.BorderThickness = 1;
+            stateProperties7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties7.IconLeftImage = null;
+            stateProperties7.IconRightImage = null;
+            this.btnX.onHoverState = stateProperties7;
             this.btnX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
             // 
             // pbLogIn
             // 
-            resources.ApplyResources(this.pbLogIn, "pbLogIn");
             this.pbLogIn.BackColor = System.Drawing.Color.Transparent;
             this.pbLogIn.Image = global::Tick.Properties.Resources.Power;
+            resources.ApplyResources(this.pbLogIn, "pbLogIn");
             this.pbLogIn.Name = "pbLogIn";
             this.pbLogIn.TabStop = false;
             // 
@@ -509,6 +580,36 @@
             this.bunifuDragControl1.Horizontal = true;
             this.bunifuDragControl1.TargetControl = this.pnlLogInContent;
             this.bunifuDragControl1.Vertical = true;
+            // 
+            // bunifuButton1
+            // 
+            resources.ApplyResources(this.bunifuButton1, "bunifuButton1");
+            this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuButton1.ButtonText = "";
+            this.bunifuButton1.ButtonTextMarginLeft = 0;
+            this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.bunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.bunifuButton1.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.bunifuButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.bunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton1.IconPadding = 0;
+            this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.bunifuButton1.IdleBorderRadius = 1;
+            this.bunifuButton1.IdleBorderThickness = 0;
+            this.bunifuButton1.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.bunifuButton1.IdleIconLeftImage = global::Tick.Properties.Resources.icons8_help_48;
+            this.bunifuButton1.IdleIconRightImage = null;
+            this.bunifuButton1.Name = "bunifuButton1";
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties1.BorderRadius = 1;
+            stateProperties1.BorderThickness = 1;
+            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties1.IconLeftImage = null;
+            stateProperties1.IconRightImage = null;
+            this.bunifuButton1.onHoverState = stateProperties1;
+            this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click_1);
             // 
             // LogIn
             // 
@@ -559,5 +660,8 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnX;
         private System.Windows.Forms.PictureBox pbLogIn;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnEng;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnSq;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
     }
 }

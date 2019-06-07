@@ -118,8 +118,14 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="lblUsername.Size" type="System.Drawing.Size, System.Drawing">
+    <value>54, 21</value>
+  </data>
+  <data name="lblUsername.Text" xml:space="preserve">
+    <value>Nofka</value>
+  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>979, 788</value>
+    <value>987, 788</value>
   </data>
   <data name="btnMini.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -134,5 +140,29 @@
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABFSURBVEhL7c0xAQAgCAVRE0ElskAQm0A0NQDjx+kPb7rh
         lpabVpx5bm/WhRmcQXAGwRkEZxCcQXAGwRnE35lk7C6gSca+vLlrp4AOQK4AAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="btnExpensesChart.Text" xml:space="preserve">
+    <value>Grafet e Shpenzimeve</value>
+  </data>
+  <data name="btnCategory.Text" xml:space="preserve">
+    <value>Categorite</value>
+  </data>
+  <data name="btnTasks.Text" xml:space="preserve">
+    <value>Aktivitetet</value>
+  </data>
+  <data name="btnExpensesTracking.Text" xml:space="preserve">
+    <value>Menaxhimi i Shpenzimeve</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Menu</value>
+  </data>
+  <data name="btnLogOut.Text" xml:space="preserve">
+    <value>Dil</value>
+  </data>
+  <data name="btnTimeTracking.Text" xml:space="preserve">
+    <value>Menaxhimi i kohes</value>
+  </data>
+  <data name="btnTimeCharts.Text" xml:space="preserve">
+    <value>Grafet e kohes</value>
   </data>
 </root>

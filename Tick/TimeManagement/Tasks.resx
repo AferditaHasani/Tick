@@ -117,7 +117,63 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="pnlAddTask.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="cbTaskColor.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="cbTaskColor.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="cbTaskColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 402</value>
+  </data>
+  <data name="cbTaskColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 27</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="cbTaskColor.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;cbTaskColor.Name" xml:space="preserve">
+    <value>cbTaskColor</value>
+  </data>
+  <data name="&gt;&gt;cbTaskColor.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadColorBox, Telerik.WinControls.UI, Version=2019.1.219.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <data name="&gt;&gt;cbTaskColor.Parent" xml:space="preserve">
+    <value>pnlAddTask</value>
+  </data>
+  <data name="&gt;&gt;cbTaskColor.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="rtxtTaskDescription.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12.75pt, style=Bold</value>
+  </data>
+  <data name="rtxtTaskDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 231</value>
+  </data>
+  <data name="rtxtTaskDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 96</value>
+  </data>
+  <data name="rtxtTaskDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;rtxtTaskDescription.Name" xml:space="preserve">
+    <value>rtxtTaskDescription</value>
+  </data>
+  <data name="&gt;&gt;rtxtTaskDescription.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RichTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rtxtTaskDescription.Parent" xml:space="preserve">
+    <value>pnlAddTask</value>
+  </data>
+  <data name="&gt;&gt;rtxtTaskDescription.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="txtTaskName.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQIAAAAjCAYAAAB/yAR3AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -129,5 +185,357 @@
         88X2347SIaBMZ6eDZj6f/6R9j93v5wysJv0H2joGwFZ4z+u/OakOcTP9XgAULHb9JK+9Mcakqapfiqy1
         3prTnckAAAAASUVORK5CYII=
 </value>
+  </data>
+  <data name="txtTaskName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 140</value>
+  </data>
+  <data name="txtTaskName.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>100, 35</value>
+  </data>
+  <data name="txtTaskName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>258, 35</value>
+  </data>
+  <data name="txtTaskName.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;txtTaskName.Name" xml:space="preserve">
+    <value>txtTaskName</value>
+  </data>
+  <data name="&gt;&gt;txtTaskName.Type" xml:space="preserve">
+    <value>Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox, Bunifu.UI.WinForms.BunifuTextbox, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;txtTaskName.Parent" xml:space="preserve">
+    <value>pnlAddTask</value>
+  </data>
+  <data name="&gt;&gt;txtTaskName.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnCancelTask.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btnCancelTask.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="btnCancelTask.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 22</value>
+  </data>
+  <data name="btnCancelTask.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="btnCancelTask.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 47</value>
+  </data>
+  <data name="btnCancelTask.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="btnCancelTask.Text" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="&gt;&gt;btnCancelTask.Name" xml:space="preserve">
+    <value>btnCancelTask</value>
+  </data>
+  <data name="&gt;&gt;btnCancelTask.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;btnCancelTask.Parent" xml:space="preserve">
+    <value>pnlAddTask</value>
+  </data>
+  <data name="&gt;&gt;btnCancelTask.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblTaskColor.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblTaskColor.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="lblTaskColor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 357</value>
+  </data>
+  <data name="lblTaskColor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 21</value>
+  </data>
+  <data name="lblTaskColor.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="lblTaskColor.Text" xml:space="preserve">
+    <value>Color</value>
+  </data>
+  <data name="&gt;&gt;lblTaskColor.Name" xml:space="preserve">
+    <value>lblTaskColor</value>
+  </data>
+  <data name="&gt;&gt;lblTaskColor.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuCustomLabel, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;lblTaskColor.Parent" xml:space="preserve">
+    <value>pnlAddTask</value>
+  </data>
+  <data name="&gt;&gt;lblTaskColor.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblDescription.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblDescription.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="lblDescription.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 193</value>
+  </data>
+  <data name="lblDescription.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 21</value>
+  </data>
+  <data name="lblDescription.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="lblDescription.Text" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="&gt;&gt;lblDescription.Name" xml:space="preserve">
+    <value>lblDescription</value>
+  </data>
+  <data name="&gt;&gt;lblDescription.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuCustomLabel, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;lblDescription.Parent" xml:space="preserve">
+    <value>pnlAddTask</value>
+  </data>
+  <data name="&gt;&gt;lblDescription.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="lblTaskName.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="lblTaskName.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="lblTaskName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>32, 103</value>
+  </data>
+  <data name="lblTaskName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 21</value>
+  </data>
+  <data name="lblTaskName.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="lblTaskName.Text" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="&gt;&gt;lblTaskName.Name" xml:space="preserve">
+    <value>lblTaskName</value>
+  </data>
+  <data name="&gt;&gt;lblTaskName.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuCustomLabel, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;lblTaskName.Parent" xml:space="preserve">
+    <value>pnlAddTask</value>
+  </data>
+  <data name="&gt;&gt;lblTaskName.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="btnDeleteTask.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btnDeleteTask.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="btnDeleteTask.Location" type="System.Drawing.Point, System.Drawing">
+    <value>111, 22</value>
+  </data>
+  <data name="btnDeleteTask.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="btnDeleteTask.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 47</value>
+  </data>
+  <data name="btnDeleteTask.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnDeleteTask.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteTask.Name" xml:space="preserve">
+    <value>btnDeleteTask</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteTask.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteTask.Parent" xml:space="preserve">
+    <value>pnlAddTask</value>
+  </data>
+  <data name="&gt;&gt;btnDeleteTask.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="btnSaveTask.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btnSaveTask.Enabled" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="btnSaveTask.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="btnSaveTask.Location" type="System.Drawing.Point, System.Drawing">
+    <value>223, 22</value>
+  </data>
+  <data name="btnSaveTask.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="btnSaveTask.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 47</value>
+  </data>
+  <data name="btnSaveTask.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="btnSaveTask.Text" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="&gt;&gt;btnSaveTask.Name" xml:space="preserve">
+    <value>btnSaveTask</value>
+  </data>
+  <data name="&gt;&gt;btnSaveTask.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;btnSaveTask.Parent" xml:space="preserve">
+    <value>pnlAddTask</value>
+  </data>
+  <data name="&gt;&gt;btnSaveTask.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="pnlAddTask.Location" type="System.Drawing.Point, System.Drawing">
+    <value>690, 12</value>
+  </data>
+  <data name="pnlAddTask.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 621</value>
+  </data>
+  <data name="pnlAddTask.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;pnlAddTask.Name" xml:space="preserve">
+    <value>pnlAddTask</value>
+  </data>
+  <data name="&gt;&gt;pnlAddTask.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlAddTask.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlAddTask.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="dgvTasks.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left, Right</value>
+  </data>
+  <data name="dgvTasks.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 85</value>
+  </data>
+  <data name="dgvTasks.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>No</value>
+  </data>
+  <data name="dgvTasks.RowHeadersWidth" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="dgvTasks.Size" type="System.Drawing.Size, System.Drawing">
+    <value>656, 675</value>
+  </data>
+  <data name="dgvTasks.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;dgvTasks.Name" xml:space="preserve">
+    <value>dgvTasks</value>
+  </data>
+  <data name="&gt;&gt;dgvTasks.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuCustomDataGrid, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;dgvTasks.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;dgvTasks.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnAddTask.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btnAddTask.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
+  </data>
+  <data name="btnAddTask.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 36</value>
+  </data>
+  <data name="btnAddTask.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnAddTask.Text" xml:space="preserve">
+    <value>   Add Task</value>
+  </data>
+  <data name="&gt;&gt;btnAddTask.Name" xml:space="preserve">
+    <value>btnAddTask</value>
+  </data>
+  <data name="&gt;&gt;btnAddTask.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;btnAddTask.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnAddTask.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="bunifuButton1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="bunifuButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAZCAYAAAAmNZ4aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABCSURBVEhL7c2hEQAgDMXQrkMPBJ2IzToqHL6WYL54KiI2
+        PFb32KT7tCoQNMZojNEYozFGY4zGGI0xH8dtZhWeajMPWlx3v07kjywAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="bunifuButton1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 11.25pt, style=Bold</value>
+  </data>
+  <data name="bunifuButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>758, 12</value>
+  </data>
+  <data name="bunifuButton1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="bunifuButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 25</value>
+  </data>
+  <data name="bunifuButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;bunifuButton1.Name" xml:space="preserve">
+    <value>bunifuButton1</value>
+  </data>
+  <data name="&gt;&gt;bunifuButton1.Type" xml:space="preserve">
+    <value>Bunifu.UI.WinForms.BunifuButton.BunifuButton, Bunifu.UI.WinForms.BunifuButton, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;bunifuButton1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;bunifuButton1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 788</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Task</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>Tasks</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadForm, Telerik.WinControls.UI, Version=2019.1.219.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
   </data>
 </root>

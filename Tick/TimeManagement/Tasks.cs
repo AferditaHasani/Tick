@@ -301,5 +301,15 @@ namespace Tick.TimeManagement
         {
             DisplayToDGrid();
         }
+
+        private void cbTaskColor_ValueChanged(object sender, EventArgs e)
+        {
+            btnSaveTask.Enabled = true;
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "file:\\C:\\Users\\dita9\\Documents\\Tick\\Tick\\Tick.chm", HelpNavigator.Topic, "IDH_Topic40.htm");
+        }
     }
 }

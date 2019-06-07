@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.btnCategory = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnTasks = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -48,14 +49,15 @@
             this.dragPnlMenu = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.btnMini = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btnX = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pnlMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMenu
             // 
-            resources.ApplyResources(this.pnlMenu, "pnlMenu");
             this.pnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
+            this.pnlMenu.Controls.Add(this.bunifuButton1);
             this.pnlMenu.Controls.Add(this.btnCategory);
             this.pnlMenu.Controls.Add(this.btnTasks);
             this.pnlMenu.Controls.Add(this.btnLogOut);
@@ -65,14 +67,15 @@
             this.pnlMenu.Controls.Add(this.btnExpensesTracking);
             this.pnlMenu.Controls.Add(this.btnTimeTracking);
             this.pnlMenu.Controls.Add(this.lblUsername);
+            resources.ApplyResources(this.pnlMenu, "pnlMenu");
             this.pnlMenu.Name = "pnlMenu";
             // 
             // btnCategory
             // 
-            resources.ApplyResources(this.btnCategory, "btnCategory");
             this.btnCategory.Active = false;
             this.btnCategory.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.btnCategory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
+            resources.ApplyResources(this.btnCategory, "btnCategory");
             this.btnCategory.BorderRadius = 0;
             this.btnCategory.ButtonText = "      Category";
             this.btnCategory.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -101,10 +104,10 @@
             // 
             // btnTasks
             // 
-            resources.ApplyResources(this.btnTasks, "btnTasks");
             this.btnTasks.Active = false;
             this.btnTasks.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.btnTasks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
+            resources.ApplyResources(this.btnTasks, "btnTasks");
             this.btnTasks.BorderRadius = 0;
             this.btnTasks.ButtonText = "      Tasks";
             this.btnTasks.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -133,9 +136,9 @@
             // 
             // btnLogOut
             // 
-            resources.ApplyResources(this.btnLogOut, "btnLogOut");
             this.btnLogOut.Active = true;
             this.btnLogOut.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            resources.ApplyResources(this.btnLogOut, "btnLogOut");
             this.btnLogOut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
             this.btnLogOut.BorderRadius = 0;
             this.btnLogOut.ButtonText = "    LOG OUT";
@@ -166,21 +169,21 @@
             // 
             // separator
             // 
-            resources.ApplyResources(this.separator, "separator");
             this.separator.BackColor = System.Drawing.Color.Transparent;
             this.separator.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
             this.separator.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
             this.separator.LineThickness = 5;
+            resources.ApplyResources(this.separator, "separator");
             this.separator.Name = "separator";
             this.separator.Transparency = 255;
             this.separator.Vertical = true;
             // 
             // btnExpensesChart
             // 
-            resources.ApplyResources(this.btnExpensesChart, "btnExpensesChart");
             this.btnExpensesChart.Active = false;
             this.btnExpensesChart.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.btnExpensesChart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
+            resources.ApplyResources(this.btnExpensesChart, "btnExpensesChart");
             this.btnExpensesChart.BorderRadius = 0;
             this.btnExpensesChart.ButtonText = "      Expenses Chart";
             this.btnExpensesChart.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -209,10 +212,10 @@
             // 
             // btnTimeCharts
             // 
-            resources.ApplyResources(this.btnTimeCharts, "btnTimeCharts");
             this.btnTimeCharts.Active = false;
             this.btnTimeCharts.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.btnTimeCharts.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
+            resources.ApplyResources(this.btnTimeCharts, "btnTimeCharts");
             this.btnTimeCharts.BorderRadius = 0;
             this.btnTimeCharts.ButtonText = "      Time Charts";
             this.btnTimeCharts.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -241,10 +244,10 @@
             // 
             // btnExpensesTracking
             // 
-            resources.ApplyResources(this.btnExpensesTracking, "btnExpensesTracking");
             this.btnExpensesTracking.Active = false;
             this.btnExpensesTracking.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.btnExpensesTracking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
+            resources.ApplyResources(this.btnExpensesTracking, "btnExpensesTracking");
             this.btnExpensesTracking.BorderRadius = 0;
             this.btnExpensesTracking.ButtonText = "      Expenses Tracking";
             this.btnExpensesTracking.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -273,10 +276,10 @@
             // 
             // btnTimeTracking
             // 
-            resources.ApplyResources(this.btnTimeTracking, "btnTimeTracking");
             this.btnTimeTracking.Active = false;
             this.btnTimeTracking.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.btnTimeTracking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(31)))), ((int)(((byte)(37)))));
+            resources.ApplyResources(this.btnTimeTracking, "btnTimeTracking");
             this.btnTimeTracking.BorderRadius = 0;
             this.btnTimeTracking.ButtonText = "      Time Tracking";
             this.btnTimeTracking.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -355,13 +358,13 @@
             this.btnMini.IdleIconLeftImage = null;
             this.btnMini.IdleIconRightImage = null;
             this.btnMini.Name = "btnMini";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties1.BorderRadius = 1;
-            stateProperties1.BorderThickness = 1;
-            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties1.IconLeftImage = null;
-            stateProperties1.IconRightImage = null;
-            this.btnMini.onHoverState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties2.BorderRadius = 1;
+            stateProperties2.BorderThickness = 1;
+            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties2.IconLeftImage = null;
+            stateProperties2.IconRightImage = null;
+            this.btnMini.onHoverState = stateProperties2;
             this.btnMini.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnMini.Click += new System.EventHandler(this.btnMini_Click);
             // 
@@ -385,15 +388,45 @@
             this.btnX.IdleIconLeftImage = null;
             this.btnX.IdleIconRightImage = null;
             this.btnX.Name = "btnX";
-            stateProperties2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties2.BorderRadius = 1;
-            stateProperties2.BorderThickness = 1;
-            stateProperties2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
-            stateProperties2.IconLeftImage = null;
-            stateProperties2.IconRightImage = null;
-            this.btnX.onHoverState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties3.BorderRadius = 1;
+            stateProperties3.BorderThickness = 1;
+            stateProperties3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties3.IconLeftImage = null;
+            stateProperties3.IconRightImage = null;
+            this.btnX.onHoverState = stateProperties3;
             this.btnX.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnX.Click += new System.EventHandler(this.btnX_Click);
+            // 
+            // bunifuButton1
+            // 
+            resources.ApplyResources(this.bunifuButton1, "bunifuButton1");
+            this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuButton1.ButtonText = "";
+            this.bunifuButton1.ButtonTextMarginLeft = 0;
+            this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.bunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.bunifuButton1.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.bunifuButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.bunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton1.IconPadding = 0;
+            this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.bunifuButton1.IdleBorderRadius = 1;
+            this.bunifuButton1.IdleBorderThickness = 0;
+            this.bunifuButton1.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.bunifuButton1.IdleIconLeftImage = global::Tick.Properties.Resources.icons8_help_48;
+            this.bunifuButton1.IdleIconRightImage = null;
+            this.bunifuButton1.Name = "bunifuButton1";
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties1.BorderRadius = 1;
+            stateProperties1.BorderThickness = 1;
+            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties1.IconLeftImage = null;
+            stateProperties1.IconRightImage = null;
+            this.bunifuButton1.onHoverState = stateProperties1;
+            this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
             // 
             // Menu
             // 
@@ -437,5 +470,6 @@
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnMini;
         public Bunifu.Framework.UI.BunifuFlatButton btnTasks;
         public Bunifu.Framework.UI.BunifuFlatButton btnCategory;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
     }
 }

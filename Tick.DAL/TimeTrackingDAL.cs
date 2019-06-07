@@ -13,12 +13,11 @@ namespace Tick.DAL
 {
     public class TimeTrackingDAL
     {
-        public bool Add(BO.TimeTracking model)
+        public bool Add(BO.TimeTracking timeTracking)
         {
             try
             {
-                // using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
-                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework")    )
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
                 {
 
                     String sql = "dbo.usp_TimeTracking_Insert";
@@ -26,13 +25,13 @@ namespace Tick.DAL
                     {
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.Add("@prmUserID", SqlDbType.Int).Value = model.UserID;
-                        command.Parameters.Add("@prmInsertBy", SqlDbType.Int).Value = model.InsertBy;
-                        command.Parameters.Add("@prmTaskID", SqlDbType.Int).Value = model.TaskID;
-                        command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = model.Description;
-                       command.Parameters.Add("@prmDate", SqlDbType.DateTime).Value = model.Date;
-                       command.Parameters.Add("@prmStartTime", SqlDbType.DateTime).Value = model.StartTime;
-                        command.Parameters.Add("@prmEndTime", SqlDbType.DateTime).Value = model.EndTime;
+                        command.Parameters.Add("@prmUserID", SqlDbType.Int).Value = timeTracking.UserID;
+                        command.Parameters.Add("@prmInsertBy", SqlDbType.Int).Value = timeTracking.InsertBy;
+                        command.Parameters.Add("@prmTaskID", SqlDbType.Int).Value = timeTracking.TaskID;
+                        command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = timeTracking.Description;
+                        command.Parameters.Add("@prmDate", SqlDbType.DateTime).Value = timeTracking.Date;
+                        command.Parameters.Add("@prmStartTime", SqlDbType.DateTime).Value = timeTracking.StartTime;
+                        command.Parameters.Add("@prmEndTime", SqlDbType.DateTime).Value = timeTracking.EndTime;
 
 
                         var result = command.ExecuteNonQuery();
@@ -47,13 +46,13 @@ namespace Tick.DAL
             }
         }
 
-        public DataTable GetByDate(DateTime dt,int id)
+        public DataTable GetByDate(DateTime dt, int id)
         {
-            try { 
-           // using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
-            using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework") )
+            try
             {
-                String sql = "dbo.usp_TimeTrackin_ByDate";
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
+                {
+                    String sql = "dbo.usp_TimeTrackin_ByDate";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         conn.Open();
@@ -79,12 +78,11 @@ namespace Tick.DAL
             }
         }
 
-        public bool Update(BO.TimeTracking model)
+        public bool Update(BO.TimeTracking timeTracking)
         {
             try
             {
-                //  using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
-                 using (SqlConnection conn = new SqlConnection( @"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
                 {
                     String sql = "dbo.usp_TimeTracking_Update";
                     using (SqlCommand command = new SqlCommand(sql, conn))
@@ -92,13 +90,13 @@ namespace Tick.DAL
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
 
-                        command.Parameters.Add("@prmTTrackingID", SqlDbType.Int).Value = model.TTrackingID;
+                        command.Parameters.Add("@prmTTrackingID", SqlDbType.Int).Value = timeTracking.TTrackingID;
 
-                        command.Parameters.Add("@prmTaskID", SqlDbType.Int).Value = model.TaskID;
-                        command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = model.Description;
-                        command.Parameters.Add("@prmDate", SqlDbType.DateTime).Value = model.Date;
-                        command.Parameters.Add("@prmStartTime", SqlDbType.DateTime).Value = model.StartTime;
-                        command.Parameters.Add("@prmEndTime", SqlDbType.DateTime).Value = model.EndTime;
+                        command.Parameters.Add("@prmTaskID", SqlDbType.Int).Value = timeTracking.TaskID;
+                        command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = timeTracking.Description;
+                        command.Parameters.Add("@prmDate", SqlDbType.DateTime).Value = timeTracking.Date;
+                        command.Parameters.Add("@prmStartTime", SqlDbType.DateTime).Value = timeTracking.StartTime;
+                        command.Parameters.Add("@prmEndTime", SqlDbType.DateTime).Value = timeTracking.EndTime;
 
 
                         var result = command.ExecuteNonQuery();
@@ -113,19 +111,18 @@ namespace Tick.DAL
             }
         }
 
-        public bool Delete(TimeTracking model)
+        public bool Delete(TimeTracking timeTracking)
         {
             try
             {
-                //  using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
-                 using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework") )
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
                 {
                     String sql = "dbo.usp_TimeTrackin_Delete";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.Add("@prmTTID", SqlDbType.Int).Value = model.TTrackingID;
+                        command.Parameters.Add("@prmTTID", SqlDbType.Int).Value = timeTracking.TTrackingID;
 
 
 
@@ -146,8 +143,7 @@ namespace Tick.DAL
         {
             try
             {
-                // using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
-                using (SqlConnection conn = new SqlConnection( @"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
                 {
                     String sql = "dbo.usp_Task_GetComboBox";
                     using (SqlCommand command = new SqlCommand(sql, conn))
@@ -181,8 +177,7 @@ namespace Tick.DAL
         {
             try
             {
-                //  using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
-                 using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework") )
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
                 {
                     String sql = "dbo.usp_TimeTrackin_ByMonth";
                     using (SqlCommand command = new SqlCommand(sql, conn))
@@ -214,8 +209,7 @@ namespace Tick.DAL
         {
             try
             {
-              //  using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
-               using (SqlConnection conn = new SqlConnection( @"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework") )
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
                 {
                     String sql = "dbo.usp_TimeTrackin_PieChart";
                     using (SqlCommand command = new SqlCommand(sql, conn))

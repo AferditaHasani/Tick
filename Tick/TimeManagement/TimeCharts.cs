@@ -180,6 +180,11 @@ namespace Tick.TimeManagement
             FillPieChart(dtpDataGridTime.Value.Value);
 
         }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "file:\\C:\\Users\\dita9\\Documents\\Tick\\Tick\\Tick.chm", HelpNavigator.Topic, "IDH_Topic60.htm");
+        }
     }
 }
 

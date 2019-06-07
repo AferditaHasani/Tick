@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.pnlAddWorkUnit = new System.Windows.Forms.Panel();
             this.rtxtTimeDescription = new System.Windows.Forms.RichTextBox();
             this.btnCancel = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -56,6 +57,7 @@
             this.btnNextDay = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnAddTimeTracking = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dgvWorkUnits = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pnlAddWorkUnit.SuspendLayout();
             this.pnlSearchByDate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWorkUnits)).BeginInit();
@@ -64,8 +66,7 @@
             // 
             // pnlAddWorkUnit
             // 
-            this.pnlAddWorkUnit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.pnlAddWorkUnit, "pnlAddWorkUnit");
             this.pnlAddWorkUnit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.pnlAddWorkUnit.Controls.Add(this.rtxtTimeDescription);
             this.pnlAddWorkUnit.Controls.Add(this.btnCancel);
@@ -82,34 +83,26 @@
             this.pnlAddWorkUnit.Controls.Add(this.btnDeleteTimeTracking);
             this.pnlAddWorkUnit.Controls.Add(this.btnSaveTimeTracking);
             this.pnlAddWorkUnit.Controls.Add(this.ddTask);
-            this.pnlAddWorkUnit.Location = new System.Drawing.Point(666, 12);
             this.pnlAddWorkUnit.Name = "pnlAddWorkUnit";
-            this.pnlAddWorkUnit.Size = new System.Drawing.Size(10, 748);
-            this.pnlAddWorkUnit.TabIndex = 2;
             // 
             // rtxtTimeDescription
             // 
             this.rtxtTimeDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.rtxtTimeDescription.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.rtxtTimeDescription.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.rtxtTimeDescription, "rtxtTimeDescription");
             this.rtxtTimeDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.rtxtTimeDescription.Location = new System.Drawing.Point(36, 231);
             this.rtxtTimeDescription.Name = "rtxtTimeDescription";
-            this.rtxtTimeDescription.Size = new System.Drawing.Size(258, 96);
-            this.rtxtTimeDescription.TabIndex = 18;
-            this.rtxtTimeDescription.Text = "";
             // 
             // btnCancel
             // 
             this.btnCancel.Active = false;
             this.btnCancel.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.BorderRadius = 0;
             this.btnCancel.ButtonText = "Cancel";
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.DisabledColor = System.Drawing.Color.Gray;
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Iconcolor = System.Drawing.Color.Transparent;
             this.btnCancel.Iconimage = global::Tick.Properties.Resources.cancel;
             this.btnCancel.Iconimage_right = null;
@@ -122,16 +115,11 @@
             this.btnCancel.IconVisible = true;
             this.btnCancel.IconZoom = 50D;
             this.btnCancel.IsTab = false;
-            this.btnCancel.Location = new System.Drawing.Point(16, 22);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.btnCancel.OnHovercolor = System.Drawing.Color.DimGray;
             this.btnCancel.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.btnCancel.selected = false;
-            this.btnCancel.Size = new System.Drawing.Size(101, 47);
-            this.btnCancel.TabIndex = 15;
-            this.btnCancel.Text = "Cancel";
             this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnCancel.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.btnCancel.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -151,85 +139,78 @@
             this.ddEndMinute.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.ddEndMinute.FillDropDown = false;
             this.ddEndMinute.FillIndicator = false;
-            this.ddEndMinute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ddEndMinute.Font = new System.Drawing.Font("Segoe UI", 12F);
+            resources.ApplyResources(this.ddEndMinute, "ddEndMinute");
             this.ddEndMinute.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.ddEndMinute.FormattingEnabled = true;
             this.ddEndMinute.Icon = null;
             this.ddEndMinute.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
             this.ddEndMinute.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.ddEndMinute.IntegralHeight = false;
             this.ddEndMinute.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.ddEndMinute.ItemBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.ddEndMinute.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.ddEndMinute.ItemHeight = 26;
             this.ddEndMinute.ItemHighLightColor = System.Drawing.Color.DimGray;
             this.ddEndMinute.Items.AddRange(new object[] {
-            "00",
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31",
-            "32",
-            "33",
-            "34",
-            "35",
-            "36",
-            "37",
-            "38",
-            "39",
-            "40",
-            "41",
-            "42",
-            "43",
-            "44",
-            "45",
-            "46",
-            "47",
-            "48",
-            "49",
-            "50",
-            "51",
-            "52",
-            "53",
-            "54",
-            "55",
-            "56",
-            "57",
-            "58",
-            "59"});
-            this.ddEndMinute.Location = new System.Drawing.Point(166, 596);
+            resources.GetString("ddEndMinute.Items"),
+            resources.GetString("ddEndMinute.Items1"),
+            resources.GetString("ddEndMinute.Items2"),
+            resources.GetString("ddEndMinute.Items3"),
+            resources.GetString("ddEndMinute.Items4"),
+            resources.GetString("ddEndMinute.Items5"),
+            resources.GetString("ddEndMinute.Items6"),
+            resources.GetString("ddEndMinute.Items7"),
+            resources.GetString("ddEndMinute.Items8"),
+            resources.GetString("ddEndMinute.Items9"),
+            resources.GetString("ddEndMinute.Items10"),
+            resources.GetString("ddEndMinute.Items11"),
+            resources.GetString("ddEndMinute.Items12"),
+            resources.GetString("ddEndMinute.Items13"),
+            resources.GetString("ddEndMinute.Items14"),
+            resources.GetString("ddEndMinute.Items15"),
+            resources.GetString("ddEndMinute.Items16"),
+            resources.GetString("ddEndMinute.Items17"),
+            resources.GetString("ddEndMinute.Items18"),
+            resources.GetString("ddEndMinute.Items19"),
+            resources.GetString("ddEndMinute.Items20"),
+            resources.GetString("ddEndMinute.Items21"),
+            resources.GetString("ddEndMinute.Items22"),
+            resources.GetString("ddEndMinute.Items23"),
+            resources.GetString("ddEndMinute.Items24"),
+            resources.GetString("ddEndMinute.Items25"),
+            resources.GetString("ddEndMinute.Items26"),
+            resources.GetString("ddEndMinute.Items27"),
+            resources.GetString("ddEndMinute.Items28"),
+            resources.GetString("ddEndMinute.Items29"),
+            resources.GetString("ddEndMinute.Items30"),
+            resources.GetString("ddEndMinute.Items31"),
+            resources.GetString("ddEndMinute.Items32"),
+            resources.GetString("ddEndMinute.Items33"),
+            resources.GetString("ddEndMinute.Items34"),
+            resources.GetString("ddEndMinute.Items35"),
+            resources.GetString("ddEndMinute.Items36"),
+            resources.GetString("ddEndMinute.Items37"),
+            resources.GetString("ddEndMinute.Items38"),
+            resources.GetString("ddEndMinute.Items39"),
+            resources.GetString("ddEndMinute.Items40"),
+            resources.GetString("ddEndMinute.Items41"),
+            resources.GetString("ddEndMinute.Items42"),
+            resources.GetString("ddEndMinute.Items43"),
+            resources.GetString("ddEndMinute.Items44"),
+            resources.GetString("ddEndMinute.Items45"),
+            resources.GetString("ddEndMinute.Items46"),
+            resources.GetString("ddEndMinute.Items47"),
+            resources.GetString("ddEndMinute.Items48"),
+            resources.GetString("ddEndMinute.Items49"),
+            resources.GetString("ddEndMinute.Items50"),
+            resources.GetString("ddEndMinute.Items51"),
+            resources.GetString("ddEndMinute.Items52"),
+            resources.GetString("ddEndMinute.Items53"),
+            resources.GetString("ddEndMinute.Items54"),
+            resources.GetString("ddEndMinute.Items55"),
+            resources.GetString("ddEndMinute.Items56"),
+            resources.GetString("ddEndMinute.Items57"),
+            resources.GetString("ddEndMinute.Items58"),
+            resources.GetString("ddEndMinute.Items59")});
             this.ddEndMinute.Name = "ddEndMinute";
-            this.ddEndMinute.Size = new System.Drawing.Size(128, 32);
-            this.ddEndMinute.TabIndex = 14;
-            this.ddEndMinute.Text = " ";
             // 
             // ddEndHour
             // 
@@ -245,60 +226,47 @@
             this.ddEndHour.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.ddEndHour.FillDropDown = false;
             this.ddEndHour.FillIndicator = false;
-            this.ddEndHour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ddEndHour.Font = new System.Drawing.Font("Segoe UI", 12F);
+            resources.ApplyResources(this.ddEndHour, "ddEndHour");
             this.ddEndHour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.ddEndHour.FormattingEnabled = true;
             this.ddEndHour.Icon = null;
             this.ddEndHour.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
             this.ddEndHour.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.ddEndHour.IntegralHeight = false;
             this.ddEndHour.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.ddEndHour.ItemBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.ddEndHour.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.ddEndHour.ItemHeight = 26;
             this.ddEndHour.ItemHighLightColor = System.Drawing.Color.DimGray;
             this.ddEndHour.Items.AddRange(new object[] {
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "00"});
-            this.ddEndHour.Location = new System.Drawing.Point(36, 596);
-            this.ddEndHour.MaxDropDownItems = 5;
+            resources.GetString("ddEndHour.Items"),
+            resources.GetString("ddEndHour.Items1"),
+            resources.GetString("ddEndHour.Items2"),
+            resources.GetString("ddEndHour.Items3"),
+            resources.GetString("ddEndHour.Items4"),
+            resources.GetString("ddEndHour.Items5"),
+            resources.GetString("ddEndHour.Items6"),
+            resources.GetString("ddEndHour.Items7"),
+            resources.GetString("ddEndHour.Items8"),
+            resources.GetString("ddEndHour.Items9"),
+            resources.GetString("ddEndHour.Items10"),
+            resources.GetString("ddEndHour.Items11"),
+            resources.GetString("ddEndHour.Items12"),
+            resources.GetString("ddEndHour.Items13"),
+            resources.GetString("ddEndHour.Items14"),
+            resources.GetString("ddEndHour.Items15"),
+            resources.GetString("ddEndHour.Items16"),
+            resources.GetString("ddEndHour.Items17"),
+            resources.GetString("ddEndHour.Items18"),
+            resources.GetString("ddEndHour.Items19"),
+            resources.GetString("ddEndHour.Items20"),
+            resources.GetString("ddEndHour.Items21"),
+            resources.GetString("ddEndHour.Items22"),
+            resources.GetString("ddEndHour.Items23")});
             this.ddEndHour.Name = "ddEndHour";
-            this.ddEndHour.Size = new System.Drawing.Size(128, 32);
-            this.ddEndHour.TabIndex = 13;
-            this.ddEndHour.Text = " ";
             // 
             // lblEndTime
             // 
-            this.lblEndTime.AutoSize = true;
-            this.lblEndTime.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEndTime.Location = new System.Drawing.Point(32, 557);
+            resources.ApplyResources(this.lblEndTime, "lblEndTime");
             this.lblEndTime.Name = "lblEndTime";
-            this.lblEndTime.Size = new System.Drawing.Size(77, 21);
-            this.lblEndTime.TabIndex = 12;
-            this.lblEndTime.Text = "End Time";
             // 
             // ddStartMinute
             // 
@@ -314,85 +282,78 @@
             this.ddStartMinute.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.ddStartMinute.FillDropDown = false;
             this.ddStartMinute.FillIndicator = false;
-            this.ddStartMinute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ddStartMinute.Font = new System.Drawing.Font("Segoe UI", 12F);
+            resources.ApplyResources(this.ddStartMinute, "ddStartMinute");
             this.ddStartMinute.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.ddStartMinute.FormattingEnabled = true;
             this.ddStartMinute.Icon = null;
             this.ddStartMinute.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
             this.ddStartMinute.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.ddStartMinute.IntegralHeight = false;
             this.ddStartMinute.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.ddStartMinute.ItemBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.ddStartMinute.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.ddStartMinute.ItemHeight = 26;
             this.ddStartMinute.ItemHighLightColor = System.Drawing.Color.DimGray;
             this.ddStartMinute.Items.AddRange(new object[] {
-            "00",
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31",
-            "32",
-            "33",
-            "34",
-            "35",
-            "36",
-            "37",
-            "38",
-            "39",
-            "40",
-            "41",
-            "42",
-            "43",
-            "44",
-            "45",
-            "46",
-            "47",
-            "48",
-            "49",
-            "50",
-            "51",
-            "52",
-            "53",
-            "54",
-            "55",
-            "56",
-            "57",
-            "58",
-            "59"});
-            this.ddStartMinute.Location = new System.Drawing.Point(166, 484);
+            resources.GetString("ddStartMinute.Items"),
+            resources.GetString("ddStartMinute.Items1"),
+            resources.GetString("ddStartMinute.Items2"),
+            resources.GetString("ddStartMinute.Items3"),
+            resources.GetString("ddStartMinute.Items4"),
+            resources.GetString("ddStartMinute.Items5"),
+            resources.GetString("ddStartMinute.Items6"),
+            resources.GetString("ddStartMinute.Items7"),
+            resources.GetString("ddStartMinute.Items8"),
+            resources.GetString("ddStartMinute.Items9"),
+            resources.GetString("ddStartMinute.Items10"),
+            resources.GetString("ddStartMinute.Items11"),
+            resources.GetString("ddStartMinute.Items12"),
+            resources.GetString("ddStartMinute.Items13"),
+            resources.GetString("ddStartMinute.Items14"),
+            resources.GetString("ddStartMinute.Items15"),
+            resources.GetString("ddStartMinute.Items16"),
+            resources.GetString("ddStartMinute.Items17"),
+            resources.GetString("ddStartMinute.Items18"),
+            resources.GetString("ddStartMinute.Items19"),
+            resources.GetString("ddStartMinute.Items20"),
+            resources.GetString("ddStartMinute.Items21"),
+            resources.GetString("ddStartMinute.Items22"),
+            resources.GetString("ddStartMinute.Items23"),
+            resources.GetString("ddStartMinute.Items24"),
+            resources.GetString("ddStartMinute.Items25"),
+            resources.GetString("ddStartMinute.Items26"),
+            resources.GetString("ddStartMinute.Items27"),
+            resources.GetString("ddStartMinute.Items28"),
+            resources.GetString("ddStartMinute.Items29"),
+            resources.GetString("ddStartMinute.Items30"),
+            resources.GetString("ddStartMinute.Items31"),
+            resources.GetString("ddStartMinute.Items32"),
+            resources.GetString("ddStartMinute.Items33"),
+            resources.GetString("ddStartMinute.Items34"),
+            resources.GetString("ddStartMinute.Items35"),
+            resources.GetString("ddStartMinute.Items36"),
+            resources.GetString("ddStartMinute.Items37"),
+            resources.GetString("ddStartMinute.Items38"),
+            resources.GetString("ddStartMinute.Items39"),
+            resources.GetString("ddStartMinute.Items40"),
+            resources.GetString("ddStartMinute.Items41"),
+            resources.GetString("ddStartMinute.Items42"),
+            resources.GetString("ddStartMinute.Items43"),
+            resources.GetString("ddStartMinute.Items44"),
+            resources.GetString("ddStartMinute.Items45"),
+            resources.GetString("ddStartMinute.Items46"),
+            resources.GetString("ddStartMinute.Items47"),
+            resources.GetString("ddStartMinute.Items48"),
+            resources.GetString("ddStartMinute.Items49"),
+            resources.GetString("ddStartMinute.Items50"),
+            resources.GetString("ddStartMinute.Items51"),
+            resources.GetString("ddStartMinute.Items52"),
+            resources.GetString("ddStartMinute.Items53"),
+            resources.GetString("ddStartMinute.Items54"),
+            resources.GetString("ddStartMinute.Items55"),
+            resources.GetString("ddStartMinute.Items56"),
+            resources.GetString("ddStartMinute.Items57"),
+            resources.GetString("ddStartMinute.Items58"),
+            resources.GetString("ddStartMinute.Items59")});
             this.ddStartMinute.Name = "ddStartMinute";
-            this.ddStartMinute.Size = new System.Drawing.Size(128, 32);
-            this.ddStartMinute.TabIndex = 10;
-            this.ddStartMinute.Text = " ";
             // 
             // ddStartHour
             // 
@@ -408,66 +369,53 @@
             this.ddStartHour.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.ddStartHour.FillDropDown = false;
             this.ddStartHour.FillIndicator = false;
-            this.ddStartHour.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ddStartHour.Font = new System.Drawing.Font("Segoe UI", 12F);
+            resources.ApplyResources(this.ddStartHour, "ddStartHour");
             this.ddStartHour.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.ddStartHour.FormattingEnabled = true;
             this.ddStartHour.Icon = null;
             this.ddStartHour.IndicatorColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
             this.ddStartHour.IndicatorLocation = Bunifu.UI.WinForms.BunifuDropdown.Indicator.Right;
-            this.ddStartHour.IntegralHeight = false;
             this.ddStartHour.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.ddStartHour.ItemBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.ddStartHour.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.ddStartHour.ItemHeight = 26;
             this.ddStartHour.ItemHighLightColor = System.Drawing.Color.DimGray;
             this.ddStartHour.Items.AddRange(new object[] {
-            "01",
-            "02",
-            "03",
-            "04",
-            "05",
-            "06",
-            "07",
-            "08",
-            "09",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "00"});
-            this.ddStartHour.Location = new System.Drawing.Point(36, 484);
-            this.ddStartHour.MaxDropDownItems = 5;
+            resources.GetString("ddStartHour.Items"),
+            resources.GetString("ddStartHour.Items1"),
+            resources.GetString("ddStartHour.Items2"),
+            resources.GetString("ddStartHour.Items3"),
+            resources.GetString("ddStartHour.Items4"),
+            resources.GetString("ddStartHour.Items5"),
+            resources.GetString("ddStartHour.Items6"),
+            resources.GetString("ddStartHour.Items7"),
+            resources.GetString("ddStartHour.Items8"),
+            resources.GetString("ddStartHour.Items9"),
+            resources.GetString("ddStartHour.Items10"),
+            resources.GetString("ddStartHour.Items11"),
+            resources.GetString("ddStartHour.Items12"),
+            resources.GetString("ddStartHour.Items13"),
+            resources.GetString("ddStartHour.Items14"),
+            resources.GetString("ddStartHour.Items15"),
+            resources.GetString("ddStartHour.Items16"),
+            resources.GetString("ddStartHour.Items17"),
+            resources.GetString("ddStartHour.Items18"),
+            resources.GetString("ddStartHour.Items19"),
+            resources.GetString("ddStartHour.Items20"),
+            resources.GetString("ddStartHour.Items21"),
+            resources.GetString("ddStartHour.Items22"),
+            resources.GetString("ddStartHour.Items23")});
             this.ddStartHour.Name = "ddStartHour";
-            this.ddStartHour.Size = new System.Drawing.Size(128, 32);
-            this.ddStartHour.TabIndex = 9;
-            this.ddStartHour.Text = " ";
             // 
             // lblStartTime
             // 
-            this.lblStartTime.AutoSize = true;
-            this.lblStartTime.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblStartTime.Location = new System.Drawing.Point(32, 445);
+            resources.ApplyResources(this.lblStartTime, "lblStartTime");
             this.lblStartTime.Name = "lblStartTime";
-            this.lblStartTime.Size = new System.Drawing.Size(85, 21);
-            this.lblStartTime.TabIndex = 8;
-            this.lblStartTime.Text = "Start Time";
             // 
             // dpTimeTrackingDate
             // 
             this.dpTimeTrackingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.dpTimeTrackingDate.BorderRadius = 5;
-            this.dpTimeTrackingDate.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            resources.ApplyResources(this.dpTimeTrackingDate, "dpTimeTrackingDate");
             this.dpTimeTrackingDate.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.dpTimeTrackingDate.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.dpTimeTrackingDate.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
@@ -479,59 +427,38 @@
             this.dpTimeTrackingDate.DisabledColor = System.Drawing.Color.Gray;
             this.dpTimeTrackingDate.DisplayWeekNumbers = false;
             this.dpTimeTrackingDate.DPHeight = 0;
-            this.dpTimeTrackingDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dpTimeTrackingDate.FillDatePicker = false;
             this.dpTimeTrackingDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.dpTimeTrackingDate.Icon = ((System.Drawing.Image)(resources.GetObject("dpTimeTrackingDate.Icon")));
             this.dpTimeTrackingDate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
             this.dpTimeTrackingDate.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.dpTimeTrackingDate.Location = new System.Drawing.Point(36, 378);
-            this.dpTimeTrackingDate.MinimumSize = new System.Drawing.Size(258, 35);
             this.dpTimeTrackingDate.Name = "dpTimeTrackingDate";
-            this.dpTimeTrackingDate.Size = new System.Drawing.Size(258, 35);
-            this.dpTimeTrackingDate.TabIndex = 7;
             // 
             // lblTimeTrackingDate
             // 
-            this.lblTimeTrackingDate.AutoSize = true;
-            this.lblTimeTrackingDate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimeTrackingDate.Location = new System.Drawing.Point(32, 345);
+            resources.ApplyResources(this.lblTimeTrackingDate, "lblTimeTrackingDate");
             this.lblTimeTrackingDate.Name = "lblTimeTrackingDate";
-            this.lblTimeTrackingDate.Size = new System.Drawing.Size(44, 21);
-            this.lblTimeTrackingDate.TabIndex = 6;
-            this.lblTimeTrackingDate.Text = "Date";
             // 
             // lblDescription
             // 
-            this.lblDescription.AutoSize = true;
-            this.lblDescription.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescription.Location = new System.Drawing.Point(32, 193);
+            resources.ApplyResources(this.lblDescription, "lblDescription");
             this.lblDescription.Name = "lblDescription";
-            this.lblDescription.Size = new System.Drawing.Size(94, 21);
-            this.lblDescription.TabIndex = 5;
-            this.lblDescription.Text = "Description";
             // 
             // lblTask
             // 
-            this.lblTask.AutoSize = true;
-            this.lblTask.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTask.Location = new System.Drawing.Point(32, 103);
+            resources.ApplyResources(this.lblTask, "lblTask");
             this.lblTask.Name = "lblTask";
-            this.lblTask.Size = new System.Drawing.Size(40, 21);
-            this.lblTask.TabIndex = 4;
-            this.lblTask.Text = "Task";
             // 
             // btnDeleteTimeTracking
             // 
             this.btnDeleteTimeTracking.Active = false;
             this.btnDeleteTimeTracking.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.btnDeleteTimeTracking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.btnDeleteTimeTracking.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            resources.ApplyResources(this.btnDeleteTimeTracking, "btnDeleteTimeTracking");
             this.btnDeleteTimeTracking.BorderRadius = 0;
             this.btnDeleteTimeTracking.ButtonText = "Delete";
             this.btnDeleteTimeTracking.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeleteTimeTracking.DisabledColor = System.Drawing.Color.Gray;
-            this.btnDeleteTimeTracking.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeleteTimeTracking.Iconcolor = System.Drawing.Color.Transparent;
             this.btnDeleteTimeTracking.Iconimage = global::Tick.Properties.Resources.delete;
             this.btnDeleteTimeTracking.Iconimage_right = null;
@@ -544,16 +471,11 @@
             this.btnDeleteTimeTracking.IconVisible = true;
             this.btnDeleteTimeTracking.IconZoom = 50D;
             this.btnDeleteTimeTracking.IsTab = false;
-            this.btnDeleteTimeTracking.Location = new System.Drawing.Point(111, 22);
-            this.btnDeleteTimeTracking.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeleteTimeTracking.Name = "btnDeleteTimeTracking";
             this.btnDeleteTimeTracking.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.btnDeleteTimeTracking.OnHovercolor = System.Drawing.Color.DimGray;
             this.btnDeleteTimeTracking.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.btnDeleteTimeTracking.selected = false;
-            this.btnDeleteTimeTracking.Size = new System.Drawing.Size(104, 47);
-            this.btnDeleteTimeTracking.TabIndex = 2;
-            this.btnDeleteTimeTracking.Text = "Delete";
             this.btnDeleteTimeTracking.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnDeleteTimeTracking.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.btnDeleteTimeTracking.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -564,12 +486,11 @@
             this.btnSaveTimeTracking.Active = false;
             this.btnSaveTimeTracking.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.btnSaveTimeTracking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.btnSaveTimeTracking.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            resources.ApplyResources(this.btnSaveTimeTracking, "btnSaveTimeTracking");
             this.btnSaveTimeTracking.BorderRadius = 0;
             this.btnSaveTimeTracking.ButtonText = "Save";
             this.btnSaveTimeTracking.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSaveTimeTracking.DisabledColor = System.Drawing.Color.Gray;
-            this.btnSaveTimeTracking.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveTimeTracking.Iconcolor = System.Drawing.Color.Transparent;
             this.btnSaveTimeTracking.Iconimage = global::Tick.Properties.Resources.save;
             this.btnSaveTimeTracking.Iconimage_right = null;
@@ -582,16 +503,11 @@
             this.btnSaveTimeTracking.IconVisible = true;
             this.btnSaveTimeTracking.IconZoom = 50D;
             this.btnSaveTimeTracking.IsTab = false;
-            this.btnSaveTimeTracking.Location = new System.Drawing.Point(223, 22);
-            this.btnSaveTimeTracking.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSaveTimeTracking.Name = "btnSaveTimeTracking";
             this.btnSaveTimeTracking.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.btnSaveTimeTracking.OnHovercolor = System.Drawing.Color.DimGray;
             this.btnSaveTimeTracking.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.btnSaveTimeTracking.selected = false;
-            this.btnSaveTimeTracking.Size = new System.Drawing.Size(101, 47);
-            this.btnSaveTimeTracking.TabIndex = 1;
-            this.btnSaveTimeTracking.Text = "Save";
             this.btnSaveTimeTracking.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnSaveTimeTracking.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.btnSaveTimeTracking.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -610,8 +526,7 @@
             this.ddTask.DropDownTextAlign = Bunifu.UI.WinForms.BunifuDropdown.TextAlign.Left;
             this.ddTask.FillDropDown = false;
             this.ddTask.FillIndicator = false;
-            this.ddTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ddTask.Font = new System.Drawing.Font("Segoe UI", 12F);
+            resources.ApplyResources(this.ddTask, "ddTask");
             this.ddTask.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.ddTask.FormattingEnabled = true;
             this.ddTask.Icon = null;
@@ -620,17 +535,12 @@
             this.ddTask.ItemBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.ddTask.ItemBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.ddTask.ItemForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.ddTask.ItemHeight = 26;
             this.ddTask.ItemHighLightColor = System.Drawing.Color.DimGray;
             this.ddTask.Items.AddRange(new object[] {
-            "one",
-            "two",
-            "three"});
-            this.ddTask.Location = new System.Drawing.Point(36, 139);
+            resources.GetString("ddTask.Items"),
+            resources.GetString("ddTask.Items1"),
+            resources.GetString("ddTask.Items2")});
             this.ddTask.Name = "ddTask";
-            this.ddTask.Size = new System.Drawing.Size(258, 32);
-            this.ddTask.TabIndex = 0;
-            this.ddTask.Text = " ";
             // 
             // pnlSearchByDate
             // 
@@ -638,20 +548,13 @@
             this.pnlSearchByDate.Controls.Add(this.dtpDataGridTime);
             this.pnlSearchByDate.Controls.Add(this.btnPreviousDay);
             this.pnlSearchByDate.Controls.Add(this.btnNextDay);
-            this.pnlSearchByDate.Location = new System.Drawing.Point(64, 70);
+            resources.ApplyResources(this.pnlSearchByDate, "pnlSearchByDate");
             this.pnlSearchByDate.Name = "pnlSearchByDate";
-            this.pnlSearchByDate.Size = new System.Drawing.Size(490, 40);
-            this.pnlSearchByDate.TabIndex = 3;
             // 
             // dtpDataGridTime
             // 
-            this.dtpDataGridTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dtpDataGridTime.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.dtpDataGridTime.Location = new System.Drawing.Point(44, 4);
+            resources.ApplyResources(this.dtpDataGridTime, "dtpDataGridTime");
             this.dtpDataGridTime.Name = "dtpDataGridTime";
-            this.dtpDataGridTime.Size = new System.Drawing.Size(399, 31);
-            this.dtpDataGridTime.TabIndex = 6;
             this.dtpDataGridTime.ValueChanged += new Syncfusion.WinForms.Input.Events.DateTimeValueChangedEventHandler(this.dtpDataGridTime_ValueChanged);
             // 
             // btnPreviousDay
@@ -659,7 +562,7 @@
             this.btnPreviousDay.Active = false;
             this.btnPreviousDay.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnPreviousDay.BackColor = System.Drawing.Color.Transparent;
-            this.btnPreviousDay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            resources.ApplyResources(this.btnPreviousDay, "btnPreviousDay");
             this.btnPreviousDay.BorderRadius = 0;
             this.btnPreviousDay.ButtonText = "";
             this.btnPreviousDay.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -676,14 +579,11 @@
             this.btnPreviousDay.IconVisible = true;
             this.btnPreviousDay.IconZoom = 80D;
             this.btnPreviousDay.IsTab = false;
-            this.btnPreviousDay.Location = new System.Drawing.Point(4, 3);
             this.btnPreviousDay.Name = "btnPreviousDay";
             this.btnPreviousDay.Normalcolor = System.Drawing.Color.Transparent;
             this.btnPreviousDay.OnHovercolor = System.Drawing.Color.Gray;
             this.btnPreviousDay.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.btnPreviousDay.selected = false;
-            this.btnPreviousDay.Size = new System.Drawing.Size(34, 32);
-            this.btnPreviousDay.TabIndex = 5;
             this.btnPreviousDay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPreviousDay.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.btnPreviousDay.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -694,7 +594,7 @@
             this.btnNextDay.Active = false;
             this.btnNextDay.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnNextDay.BackColor = System.Drawing.Color.Transparent;
-            this.btnNextDay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            resources.ApplyResources(this.btnNextDay, "btnNextDay");
             this.btnNextDay.BorderRadius = 0;
             this.btnNextDay.ButtonText = "";
             this.btnNextDay.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -711,14 +611,11 @@
             this.btnNextDay.IconVisible = true;
             this.btnNextDay.IconZoom = 80D;
             this.btnNextDay.IsTab = false;
-            this.btnNextDay.Location = new System.Drawing.Point(449, 3);
             this.btnNextDay.Name = "btnNextDay";
             this.btnNextDay.Normalcolor = System.Drawing.Color.Transparent;
             this.btnNextDay.OnHovercolor = System.Drawing.Color.Gray;
             this.btnNextDay.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.btnNextDay.selected = false;
-            this.btnNextDay.Size = new System.Drawing.Size(34, 32);
-            this.btnNextDay.TabIndex = 4;
             this.btnNextDay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnNextDay.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.btnNextDay.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -729,7 +626,7 @@
             this.btnAddTimeTracking.Active = false;
             this.btnAddTimeTracking.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
             this.btnAddTimeTracking.BackColor = System.Drawing.Color.Transparent;
-            this.btnAddTimeTracking.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            resources.ApplyResources(this.btnAddTimeTracking, "btnAddTimeTracking");
             this.btnAddTimeTracking.BorderRadius = 0;
             this.btnAddTimeTracking.ButtonText = "Add Work Unit";
             this.btnAddTimeTracking.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -746,15 +643,11 @@
             this.btnAddTimeTracking.IconVisible = true;
             this.btnAddTimeTracking.IconZoom = 80D;
             this.btnAddTimeTracking.IsTab = false;
-            this.btnAddTimeTracking.Location = new System.Drawing.Point(12, 12);
             this.btnAddTimeTracking.Name = "btnAddTimeTracking";
             this.btnAddTimeTracking.Normalcolor = System.Drawing.Color.Transparent;
             this.btnAddTimeTracking.OnHovercolor = System.Drawing.Color.Gray;
             this.btnAddTimeTracking.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.btnAddTimeTracking.selected = false;
-            this.btnAddTimeTracking.Size = new System.Drawing.Size(161, 36);
-            this.btnAddTimeTracking.TabIndex = 0;
-            this.btnAddTimeTracking.Text = "Add Work Unit";
             this.btnAddTimeTracking.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnAddTimeTracking.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.btnAddTimeTracking.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -770,9 +663,7 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.dgvWorkUnits.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvWorkUnits.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.dgvWorkUnits, "dgvWorkUnits");
             this.dgvWorkUnits.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvWorkUnits.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.dgvWorkUnits.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -800,9 +691,7 @@
             this.dgvWorkUnits.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.dgvWorkUnits.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.dgvWorkUnits.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dgvWorkUnits.Location = new System.Drawing.Point(12, 131);
             this.dgvWorkUnits.Name = "dgvWorkUnits";
-            this.dgvWorkUnits.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvWorkUnits.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 8.25F);
@@ -812,7 +701,6 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvWorkUnits.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvWorkUnits.RowHeadersWidth = 17;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
@@ -827,18 +715,43 @@
             this.dgvWorkUnits.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.DimGray;
             this.dgvWorkUnits.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.dgvWorkUnits.RowTemplate.Height = 60;
-            this.dgvWorkUnits.Size = new System.Drawing.Size(648, 675);
-            this.dgvWorkUnits.TabIndex = 5;
-            this.dgvWorkUnits.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWorkUnits_CellContentClick);
-            this.dgvWorkUnits.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvWorkUnits_CellContentClick);
-            this.dgvWorkUnits.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvdgvWorkUnits_RowHeaderMouseClick);
+            // 
+            // bunifuButton1
+            // 
+            resources.ApplyResources(this.bunifuButton1, "bunifuButton1");
+            this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuButton1.ButtonText = "";
+            this.bunifuButton1.ButtonTextMarginLeft = 0;
+            this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.bunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.bunifuButton1.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.bunifuButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.bunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton1.IconPadding = 0;
+            this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.bunifuButton1.IdleBorderRadius = 1;
+            this.bunifuButton1.IdleBorderThickness = 0;
+            this.bunifuButton1.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.bunifuButton1.IdleIconLeftImage = global::Tick.Properties.Resources.icons8_help_48;
+            this.bunifuButton1.IdleIconRightImage = null;
+            this.bunifuButton1.Name = "bunifuButton1";
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties1.BorderRadius = 1;
+            stateProperties1.BorderThickness = 1;
+            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties1.IconLeftImage = null;
+            stateProperties1.IconRightImage = null;
+            this.bunifuButton1.onHoverState = stateProperties1;
+            this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
             // 
             // TimeTracking
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(760, 788);
+            this.Controls.Add(this.bunifuButton1);
             this.Controls.Add(this.dgvWorkUnits);
             this.Controls.Add(this.pnlSearchByDate);
             this.Controls.Add(this.pnlAddWorkUnit);
@@ -850,7 +763,6 @@
             // 
             // 
             this.RootElement.ApplyShapeToControl = true;
-            this.Text = "TimeTracking";
             this.Load += new System.EventHandler(this.TimeTracking_Load);
             this.pnlAddWorkUnit.ResumeLayout(false);
             this.pnlAddWorkUnit.PerformLayout();
@@ -883,7 +795,8 @@
         private System.Windows.Forms.Panel pnlSearchByDate;
         private Bunifu.Framework.UI.BunifuFlatButton btnNextDay;
         private Bunifu.Framework.UI.BunifuFlatButton btnPreviousDay;
-        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvWorkUnits;
         private Syncfusion.WinForms.Input.SfDateTimeEdit dtpDataGridTime;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dgvWorkUnits;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
     }
 }

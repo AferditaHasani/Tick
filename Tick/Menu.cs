@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
+using System.Resources;
 using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
@@ -21,6 +23,8 @@ namespace Tick
     {
         static User user;
         private static LogIn parent;
+      static  private CultureInfo c;
+       static private ResourceManager rm;
         public Menu()
         {
             InitializeComponent();
@@ -28,7 +32,7 @@ namespace Tick
             
         }
 
-        public Menu(User u,LogIn p)
+        public Menu(User u,LogIn p ,CultureInfo ci, ResourceManager r)
         {
 
             InitializeComponent();
@@ -38,6 +42,12 @@ namespace Tick
             et.user =t.user=ct.user=tsk.user=tch.user=ech.user= u;
            p.ClearText();
             parent = p;
+            c = ci;
+            rm = r;
+            ChangeLanguage(r.GetString("btnExpensesChart.Text", ci),
+                r.GetString("btnTimeCharts.Text", ci), r.GetString("btnCategory.Text", ci),
+                r.GetString("btnTasks.Text", ci), r.GetString("btnExpensesTracking.Text", ci),
+                r.GetString("btnLogOut.Text", ci), r.GetString("btnTimeTracking.Text", ci));
         }
 
 
@@ -48,7 +58,16 @@ namespace Tick
         TimeCharts tch = new TimeCharts();
         ExpensesChart ech = new ExpensesChart();
 
-
+        public void  ChangeLanguage(string eChart,string tChart, string category,string task, string eTrack,string logout,string tTrack)
+        {
+            btnExpensesChart.Text = eChart;
+            btnTimeCharts.Text = tChart;
+            btnCategory.Text = category;
+            btnTasks.Text = task;
+            btnExpensesTracking.Text = eTrack;
+            btnLogOut.Text = logout;
+            btnTimeTracking.Text = tTrack;
+        }
         //Metoda e cila vendos nje vije para objektit i cili  e therret
         private void SeparatorClick(object sender)
         {
@@ -140,8 +159,9 @@ namespace Tick
         private void btnTimeTracking_Click(object sender, EventArgs e)
         {
             SeparatorClick(sender);
+         t.ChangeLanguage(c);
          
-            FillContentPanel(t);
+         FillContentPanel(t);
 
         }
 
@@ -190,8 +210,9 @@ namespace Tick
             FillContentPanel(ct);
         }
 
-
-
-
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "file:\\C:\\Users\\dita9\\Documents\\Tick\\Tick\\Tick.chm");
+        }
     }
 }

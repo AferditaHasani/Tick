@@ -119,7 +119,14 @@
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>934, 788</value>
+    <value>882, 747</value>
+  </data>
+  <data name="btnSq.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAZCAYAAAAmNZ4aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABCSURBVEhL7c2hDQAgDAXRbkNIQLQTsVlHheBrOcwXT504
+        my3W6LFJ92lVIGiM0RijMUZjjMYYjTEaY36OPavwlucB2tZ0z0uYgYIAAAAASUVORK5CYII=
+</value>
   </data>
   <data name="btnSignIn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -136,6 +143,13 @@
         /u6aQ7dph7QX4+/KDLt4tX07+QIgW5sb8RLYwR2ZJ2f5Y9Pv5PsPua8eRfA/LEPcqms+hZzT4y7QXEbu
         bj5Wb7b9C9z2D2Rj547fhN2Hkbgp27h/O5qkpjLtxB5XDmLoQMZs2EenHkvOGh+6qaf2Je4fQUBWwpF6
         /Y92bYaRN6PRTwjLKCUIDEDjAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnEng.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAZCAYAAAAmNZ4aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABCSURBVEhL7c2hDQAgDAXRbkNIQLQTsVlHheBrOcwXT504
+        my3W6LFJ92lVIGiM0RijMUZjjMYYjTEaY36OPavwlucB2tZ0z0uYgYIAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnLogIn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -190,7 +204,7 @@
 </value>
   </data>
   <data name="separator1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>182, 181</value>
+    <value>161, 178</value>
   </data>
   <data name="txtUsername.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -226,23 +240,17 @@
         zEIAOi50++sfj27+Nin6L8JD4j9dAdBB6Qj++j/t5o0xxpzWKYofVjNAs2IAucQAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="separator.Location" type="System.Drawing.Point, System.Drawing">
-    <value>337, 181</value>
-  </data>
-  <data name="btnChooseLogIn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>357, 181</value>
-  </data>
   <data name="btnChooseLogIn.Text" xml:space="preserve">
-    <value> Log In</value>
+    <value>Kyqu</value>
   </data>
   <data name="btnChooseSigIn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>198, 181</value>
+    <value>177, 178</value>
   </data>
   <data name="btnChooseSigIn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>149, 50</value>
+    <value>102, 50</value>
   </data>
   <data name="btnChooseSigIn.Text" xml:space="preserve">
-    <value>Sign In</value>
+    <value>Regjistrohu</value>
   </data>
   <data name="btnMini.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -258,16 +266,6 @@
         lpabVpx5bm/WhRmcQXAGwRkEZxCcQXAGwRnE35lk7C6gSca+vLlrp4AOQK4AAAAASUVORK5CYII=
 </value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="pbLogIn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="pbLogIn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>271, 67</value>
-  </data>
-  <data name="pnlLogInContent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>628, 743</value>
-  </data>
   <data name="pnlSide.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -281,10 +279,7 @@
         RK5CYII=
 </value>
   </data>
-  <data name="pbLogo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="pnlSide.Size" type="System.Drawing.Size, System.Drawing">
-    <value>299, 788</value>
+    <value>299, 747</value>
   </data>
 </root>

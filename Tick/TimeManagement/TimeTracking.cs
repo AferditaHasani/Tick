@@ -1,9 +1,13 @@
-﻿using System;
+﻿
+ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Text;
+ using System.Globalization;
+ using System.Reflection;
+ using System.Resources;
+ using System.Text;
 using System.Windows.Forms;
 using Telerik.WinControls;
 using Tick.BLL;
@@ -14,13 +18,29 @@ namespace Tick.TimeManagement
     public partial class TimeTracking : Telerik.WinControls.UI.RadForm
     {
         public User user;
+      
         public TimeTracking()
         {
             InitializeComponent();
-
-
+           
         }
-      
+
+        public void ChangeLanguage(CultureInfo c)
+        {
+            Assembly a = Assembly.Load("Tick");
+            ResourceManager rm = new ResourceManager("Tick.TimeManagement.TimeTracking", a);
+
+            btnAddTimeTracking.Text = rm.GetString("btnAddTimeTracking.Text", c);
+            btnSaveTimeTracking.Text = rm.GetString("btnSaveTimeTracking.Text", c);
+            btnDeleteTimeTracking.Text = rm.GetString("btnDeleteTimeTracking.Text", c);
+            lblTask.Text = rm.GetString("lblTask.Text", c);
+            lblDescription.Text = rm.GetString("lblDescription.Text", c);
+            lblTimeTrackingDate.Text = rm.GetString("lblTimeTrackingDate.Text", c);
+            lblStartTime.Text = rm.GetString("lblStartTime.Text", c);
+            lblEndTime.Text = rm.GetString("lblEndTime.Text", c);
+            btnCancel.Text = rm.GetString("btnCancel.Text", c);
+        }
+
         private TimeTrackingBLL timeBLL_service = new TimeTrackingBLL();
         BO.TimeTracking time = new BO.TimeTracking();
         private DateTime dateForGrid = new DateTime();
@@ -196,6 +216,7 @@ namespace Tick.TimeManagement
         {
             try
             {
+               
                 string[] date = dpTimeTrackingDate.Value.ToString().Split(' ');
                 date = date[0].Split('/');
             
@@ -222,7 +243,7 @@ namespace Tick.TimeManagement
                     t.EndTime = new DateTime(int.Parse(date[2]), int.Parse(date[1]), int.Parse(date[0])+1,
                         int.Parse(ddEndHour.Text), int.Parse(ddEndMinute.Text), 0);
                 }
-                    MessageBox.Show(t.StartTime+"");
+                  
                 return t;
             }
             catch (Exception e)
@@ -352,23 +373,24 @@ namespace Tick.TimeManagement
         private void OpenAddTimePannel()
         {
 
-            if (pnlAddWorkUnit.Size != new Size(328, 756))
+            if (pnlAddWorkUnit.Size != new Size(328, 683))
             {
-                pnlAddWorkUnit.Size = new Size(328, 756);
+                pnlAddWorkUnit.Size = new Size(328, 683);
 
                 dgvWorkUnits.Size = new Size(dgvWorkUnits.Width - 258, 683);
-                pnlAddWorkUnit.Location = new Point(dgvWorkUnits.Width + 2, 12);
-
+                pnlAddWorkUnit.Location = new Point(dgvWorkUnits.Width + 20, 12);
+                pnlAddWorkUnit.BorderStyle = BorderStyle.FixedSingle;
             }
         }
 
         private void CloseAddTimePannel()
         {
-            pnlAddWorkUnit.Size = new Size(10, 756);
+            pnlAddWorkUnit.Size = new Size(10, 683);
 
             dgvWorkUnits.Size = new Size(dgvWorkUnits.Width + 258, 683);
-            pnlAddWorkUnit.Location = new Point(dgvWorkUnits.Width + 2, 12);
+            pnlAddWorkUnit.Location = new Point(dgvWorkUnits.Width + 20, 12);
             time = new BO.TimeTracking();
+            pnlAddWorkUnit.BorderStyle = BorderStyle.None;
         }
         private void Delete()
         {
@@ -424,6 +446,11 @@ namespace Tick.TimeManagement
         {
             dateForGrid = new DateTime(dtpDataGridTime.Value.Value.Year, dtpDataGridTime.Value.Value.Month, dtpDataGridTime.Value.Value.Day +1);
             dtpDataGridTime.Value = dateForGrid;
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "file:\\C:\\Users\\dita9\\Documents\\Tick\\Tick\\Tick.chm", HelpNavigator.Topic, "IDH_Topic50.htm"); 
         }
     }
 }

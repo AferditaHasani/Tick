@@ -25,22 +25,64 @@ namespace Tick.ExpensesManagement
 
         private void ExpensesTracking_Load(object sender, EventArgs e)
         {
-            pnlAddTransaction.Visible = false;
-            dgvTransaction.Visible = true;
-            dgvTransaction.Size = new Size(708, 697);
+           
             FillCombo();
             dateForGrid = (DateTime)dtpDataGridTime.Value;
             DisplayToDGrid(dateForGrid);
+            FillBalanceLbl();
+
+
+
         }
 
         private void btnAddTransaction_Click(object sender, EventArgs e)
         {
-            pnlAddTransaction.Visible = true;
-            dgvTransaction.Size = new Size(680, 697);
+            OpenAddTransactionPannel();
             transaction = null;
             FillCombo();
+           
         }
-        
+        private void OpenAddTransactionPannel()
+        {
+
+            if (pnlAddTransaction.Size != new Size(355, 683))
+            {
+                pnlAddTransaction.Visible = true;
+                pnlAddTransaction.Size = new Size(355, 683);
+
+                dgvTransaction.Size = new Size(dgvTransaction.Width - 255, 558);
+                pnlAddTransaction.Location = new Point(dgvTransaction.Width + 20, 12);
+                line.Width = dgvTransaction.Width;
+
+            }
+        }
+        public void FillBalanceLbl()
+        {
+            try
+            {
+                decimal income = eTracking_service.GetIncome(user.UserID);
+                lblIncome.Text = " Income: " + income;
+                decimal expenses = eTracking_service.GetExpenses(user.UserID);
+                lblExpenses.Text = " Expenses: " + expenses;
+                lblBalance.Text = " Balance: " + (income - expenses);
+            }
+            catch (Exception e)
+            {
+
+            }
+        }
+        private void CloseAddTimePannel()
+        {
+            pnlAddTransaction.Size = new Size(10, 683);
+
+            dgvTransaction.Size = new Size(dgvTransaction.Width + 255, 558);
+            pnlAddTransaction.Location = new Point(dgvTransaction.Width +20, 12);
+            pnlAddTransaction.Visible = false;
+            line.Width = dgvTransaction.Width;
+
+
+        }
+
         private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar)
@@ -87,7 +129,7 @@ namespace Tick.ExpensesManagement
         {
             try {
 
-              //  string[] date = dpExpensesTrackingDate.Value.ToString().Split(' ');
+             
               
                 BO.ExpensesTracking expenses = new BO.ExpensesTracking()
                 {
@@ -126,10 +168,11 @@ namespace Tick.ExpensesManagement
                 Update();
 
             DisplayToDGrid(dateForGrid);
-            pnlAddTransaction.Visible = false;
-            dgvTransaction.Size = new Size(708, 697);
+           
             Clear();
             transaction = null;
+            CloseAddTimePannel();
+            FillBalanceLbl();
         }
 
         private void Update()
@@ -152,7 +195,8 @@ namespace Tick.ExpensesManagement
                 transaction.InsertBy = user.UserID;
                 var saved = eTracking_service.Update(transaction);
                 MessageBox.Show(saved ? "Updated Successfully" : "Updating failed , please try again");
-                DisplayToDGrid(dtpDataGridTime.Value);
+                DisplayToDGrid((DateTime)dtpDataGridTime.Value);
+                OpenAddTransactionPannel();
             }
 
             catch (Exception e)
@@ -213,8 +257,7 @@ namespace Tick.ExpensesManagement
 
         private void btnCancelTransaction_Click(object sender, EventArgs e)
         {
-            pnlAddTransaction.Visible = false;
-            dgvTransaction.Size = new Size(817, 697);
+            CloseAddTimePannel();
             transaction = null;
         }
 
@@ -243,12 +286,15 @@ namespace Tick.ExpensesManagement
             Delete();
             transaction = null;
             DisplayToDGrid(dateForGrid);
+            CloseAddTimePannel();
+            FillBalanceLbl();
         }
 
         private void dgvTransaction_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             transaction = new BO.ExpensesTracking();
             pnlAddTransaction.Visible = true;
+            OpenAddTransactionPannel();
             dgvTransaction.Size = new Size(680, 697);
             if (e.RowIndex >= 0)
             {
@@ -279,6 +325,7 @@ namespace Tick.ExpensesManagement
             transaction = new BO.ExpensesTracking();
             transaction = new BO.ExpensesTracking();
             pnlAddTransaction.Visible = true;
+            OpenAddTransactionPannel();
 
             if (e.RowIndex >= 0)
             {
@@ -323,24 +370,27 @@ namespace Tick.ExpensesManagement
         //        txtAmount.Text = String.Empty;
         }
 
-        private void dtpDataGridTime_ValueChanged(object sender, EventArgs e)
-        {
-            dateForGrid = (DateTime)dtpDataGridTime.Value;
-            DisplayToDGrid(dateForGrid);
-        }
+       
+
 
         private void btnPreviousDay_Click(object sender, EventArgs e)
         {
-            dateForGrid = new DateTime(dtpDataGridTime.Value.Year, dtpDataGridTime.Value.Month, dtpDataGridTime.Value.Day - 1);
+            dateForGrid = new DateTime(dtpDataGridTime.Value.Value.Year, dtpDataGridTime.Value.Value.Month, dtpDataGridTime.Value.Value.Day - 1);
             dtpDataGridTime.Value = dateForGrid;
 
         }
 
         private void btnNextDay_Click(object sender, EventArgs e)
         {
-            dateForGrid = new DateTime(dtpDataGridTime.Value.Year, dtpDataGridTime.Value.Month, dtpDataGridTime.Value.Day + 1);
+            dateForGrid = new DateTime(dtpDataGridTime.Value.Value.Year, dtpDataGridTime.Value.Value.Month, dtpDataGridTime.Value.Value.Day + 1);
             dtpDataGridTime.Value = dateForGrid;
 
+        }
+
+        private void dtpDataGridTime_ValueChanged(object sender, Syncfusion.WinForms.Input.Events.DateTimeValueChangedEventArgs e)
+        {
+            dateForGrid = (DateTime)dtpDataGridTime.Value;
+            DisplayToDGrid(dateForGrid);
         }
     }
 }

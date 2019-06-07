@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
-
+using System.Reflection;
+using System.Resources;
 using Tick.BLL;
 using Tick.BO;
 
@@ -24,10 +27,16 @@ namespace Tick
      
          }
 
+        CultureInfo ci = new CultureInfo("sq");
+        CultureInfo ciEng = new CultureInfo("en-US");
+        Assembly a = Assembly.Load("Tick");
+    
+       
+
         private UserBLL userBLL = new UserBLL();
         public User activeUser = new User();
-   
 
+        private bool lang = false;
      
 
         private void btnLogIn_Click(object sender, EventArgs e)
@@ -40,8 +49,16 @@ namespace Tick
             activeUser = userBLL.GetLogIn(activeUser);
             if (activeUser != null)
             {
-       
-                menu = new Menu(activeUser, this);
+                ResourceManager r = new ResourceManager("Tick.Menu", a);
+
+                if (lang)
+                {
+                    menu = new Menu(activeUser, this, ci, r);
+                }
+                else
+                {
+                    menu = new Menu(activeUser, this, ciEng, r);
+                }
                 this.Hide();
 
                 menu.Closed += (s, args) => this.Close();
@@ -110,8 +127,16 @@ namespace Tick
         {
             if (SaveSigIn())
             {
+                ResourceManager r = new ResourceManager("Tick.Menu", a);
 
-                menu=new Menu(activeUser, this);
+                if (lang)
+                {
+                    menu = new Menu(activeUser, this, ci, r);
+                }
+                else
+                {
+                    menu = new Menu(activeUser, this, ciEng, r);
+                }
                 this.Hide();
               
                 menu.Closed += (s, args) => this.Close();
@@ -132,20 +157,21 @@ namespace Tick
             try
             {
                 activeUser= GetSignInUser();
-                if (activeUser == null)
+                if (activeUser != null)
                 {
-                    MessageBox.Show("Error");
-                    throw new Exception();
+
+
+                    var saved = userBLL.Insert(activeUser);
+
+                    MessageBox.Show(saved ? "Saved Successfully" : "Saving failed , please try again");
+                    return true;
                 }
 
-                var saved = userBLL.Insert(activeUser);
-
-                MessageBox.Show(saved ? "Saved Successfully" : "Saving failed , please try again");
-                return true;
+                return false;
             }
             catch (Exception e)
             {
-                MessageBox.Show(e.Message);
+             
                 return false;
             }
         }
@@ -154,20 +180,37 @@ namespace Tick
         {
             try
             {
-                User user = new User
+                if (txtName.Text!=""&& txtLastname.Text!=""&& txtUsername.Text!="" && txtPassword.Text!="")
                 {
 
-                    Name = txtName.Text,
-                   Lastname = txtLastname.Text,
-                   
-                    Username = txtUsername.Text,
-                    Password= txtPassword.Text,
-                    InsertBy = 1,
-                    InsertDate = DateTime.Now
+
+                    User user = new User
+                    {
+
+                        Name = txtName.Text,
+                        Lastname = txtLastname.Text,
+
+                        Username = txtUsername.Text,
+                        Password = txtPassword.Text,
+                        InsertBy = 1,
+                        InsertDate = DateTime.Now
 
 
-                };
-                return user;
+                    };
+                    return user;
+                }
+                
+                    if (txtPassword.Text.Length < 6)
+                    {
+                        MessageBox.Show("Password should be 6 characters or longer");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Fill all fields");
+                    }
+
+                    return null;
+
             }
             catch (Exception e)
             {
@@ -181,5 +224,37 @@ namespace Tick
             activeUser = null;
         }
 
+        private void btnEng_Click(object sender, EventArgs e)
+        {
+            ResourceManager rm = new ResourceManager("Tick.LogIn", a);
+
+            btnChooseLogIn.Text = rm.GetString("btnChooseLogIn.Text", ciEng);
+            btnChooseSigIn.Text = rm.GetString("btnChooseSigIn.Text", ciEng);
+
+
+            lang = false;
+        }
+
+        private void btnSq_Click(object sender, EventArgs e)
+        {
+            ResourceManager rm = new ResourceManager("Tick.LogIn", a);
+
+            btnChooseLogIn.Text = rm.GetString("btnChooseLogIn.Text", ci);
+            btnChooseSigIn.Text = rm.GetString("btnChooseSigIn.Text", ci);
+           
+         
+          
+
+           
+           
+            lang = true;
+        }
+
+    
+
+        private void bunifuButton1_Click_1(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "file:\\C:\\Users\\dita9\\Documents\\Tick\\Tick\\Tick.chm",HelpNavigator.Topic, "IDH_Topic20.htm");
+        }
     }
 }

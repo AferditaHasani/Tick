@@ -11,22 +11,21 @@ namespace Tick.DAL
 {
     public class TaskDAL
     {
-        public bool Add(Task model)
+        public bool Add(Task task)
         {
             try
             {
-                // using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
-                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
                 {
                     String sql = "dbo.usp_Task_Insert";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.Add("@prmName", SqlDbType.VarChar).Value = model.Name;
-                        command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = model.Description;
-                        command.Parameters.Add("@prmColor", SqlDbType.VarChar).Value = model.Color;
-                        command.Parameters.Add("@prmInsBy", SqlDbType.Int).Value = model.InsertBy;
+                        command.Parameters.Add("@prmName", SqlDbType.VarChar).Value = task.Name;
+                        command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = task.Description;
+                        command.Parameters.Add("@prmColor", SqlDbType.VarChar).Value = task.Color;
+                        command.Parameters.Add("@prmInsBy", SqlDbType.Int).Value = task.InsertBy;
 
 
 
@@ -46,8 +45,7 @@ namespace Tick.DAL
         {
             try
             {
-                // using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
-                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
                 {
                     String sql = "dbo.usp_Task_GetAll";
                     using (SqlCommand command = new SqlCommand(sql, conn))
@@ -74,22 +72,21 @@ namespace Tick.DAL
             }
         }
 
-        public bool Update(Task model)
+        public bool Update(Task task)
         {
             try
             {
-                //using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
-                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
                 {
                     String sql = "dbo.usp_Task_Update";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.Add("@prmTasID", SqlDbType.Int).Value = model.TaskID;
-                        command.Parameters.Add("@prmName", SqlDbType.VarChar).Value = model.Name;
-                        command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = model.Description;
-                        command.Parameters.Add("@prmColor", SqlDbType.VarChar).Value = model.Color;
+                        command.Parameters.Add("@prmTasID", SqlDbType.Int).Value = task.TaskID;
+                        command.Parameters.Add("@prmName", SqlDbType.VarChar).Value = task.Name;
+                        command.Parameters.Add("@prmDescription", SqlDbType.VarChar).Value = task.Description;
+                        command.Parameters.Add("@prmColor", SqlDbType.VarChar).Value = task.Color;
                         command.Parameters.Add("@prmLUB", SqlDbType.Int).Value =1;
 
 
@@ -106,19 +103,18 @@ namespace Tick.DAL
             }
         }
 
-        public bool Delete(Task model)
+        public bool Delete(Task task)
         {
             try
             {
-                //  using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
-                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
                 {
                     String sql = "dbo.usp_Task_Delete";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.Add("@prmTasID", SqlDbType.Int).Value = model.TaskID;
+                        command.Parameters.Add("@prmTasID", SqlDbType.Int).Value = task.TaskID;
                     
 
 

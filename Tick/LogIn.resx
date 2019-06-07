@@ -117,631 +117,740 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnMini.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABsAAAAZCAYAAADAHFVeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAEVJREFUSEvtzTEBACAIBVETQSWyQBCbQDQ1AOPH6Q9vuuGWlptWnHlub9aFGZxB
-        cAbBGQRnEJxBcAbBGcTfmWTsLqBJxr68uWungA5ArgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="&gt;&gt;pnlForSignIn.Parent" xml:space="preserve">
-    <value>pnlLogInContent</value>
-  </data>
-  <data name="btnMini.Size" type="System.Drawing.Size, System.Drawing">
-    <value>27, 25</value>
-  </data>
-  <data name="&gt;&gt;btnLogIn.Parent" xml:space="preserve">
-    <value>pnlLogInContent</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btnChooseLogIn.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="btnLogIn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>326, 628</value>
-  </data>
-  <data name="&gt;&gt;txtName.Parent" xml:space="preserve">
-    <value>pnlForSignIn</value>
-  </data>
-  <data name="&gt;&gt;txtUsername.Name" xml:space="preserve">
-    <value>txtUsername</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="separator.TabIndex" type="System.Int32, mscorlib">
-    <value>26</value>
-  </data>
-  <data name="&gt;&gt;txtLastname.Parent" xml:space="preserve">
-    <value>pnlForSignIn</value>
-  </data>
-  <data name="btnX.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABsAAAAZCAYAAADAHFVeAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAEVJREFUSEvtzTEBACAIBVETQSWyQBCbQDQ1AOPH6Q9vuuGWlptWnHlub9aFGZxB
-        cAbBGQRnEJxBcAbBGcTfmWTsLqBJxr68uWungA5ArgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="&gt;&gt;pbLogIn.Parent" xml:space="preserve">
-    <value>pnlLogInContent</value>
-  </data>
-  <data name="&gt;&gt;pnlSide.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnMini.Type" xml:space="preserve">
-    <value>Bunifu.UI.WinForms.BunifuButton.BunifuButton, Bunifu.UI.WinForms.BunifuButton, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
-  </data>
-  <data name="&gt;&gt;txtUsername.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="txtUsername.Size" type="System.Drawing.Size, System.Drawing">
-    <value>379, 44</value>
-  </data>
-  <data name="&gt;&gt;btnLogIn.Name" xml:space="preserve">
-    <value>btnLogIn</value>
-  </data>
-  <data name="&gt;&gt;btnSignIn.Parent" xml:space="preserve">
-    <value>pnlLogInContent</value>
-  </data>
-  <data name="pbLogIn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>76, 72</value>
-  </data>
-  <data name="btnChooseLogIn.TabIndex" type="System.Int32, mscorlib">
-    <value>18</value>
-  </data>
-  <data name="separator1.TabIndex" type="System.Int32, mscorlib">
-    <value>27</value>
-  </data>
-  <data name="&gt;&gt;btnChooseSigIn.Name" xml:space="preserve">
-    <value>btnChooseSigIn</value>
-  </data>
-  <data name="pnlLogInContent.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="btnSignIn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAALgAAAA2CAYAAAB0iVNvAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAoNJREFUeF7t3TFrFEEYgOErLS3ttJRwOxM04NlIhBRCmoCIgiDXSEQCaiEaUC63
-        u5DCxkYECy21sLG12Cn9CfkJKVOmXGfm5sYsToJWzny+HzxNltnqZZjbFDNimP96tJmd16ZZt/aAXCjT
-        3LJtXgqZ/t1cNLNzumv3ddcc2pf1QK5U1xzZTj+vmNmFkO/ZU5l2YhccDF7y4UlfvZ726vl94N/bfeCb
-        1N/ng9Ddrh4yTo+Pexn2lxf9eHOjH69cAfJ180avPz6LoWtTT0POw1kcSxY7t3r7uB9fvZZ+IZAht7P7
-        wLvmOHk2tw/ex51bryVfAuRMvdsJkdc/Qta/xh/W7UOOJSjW5Ho8lw9+dI7N7LIv/9ur9EKgEHEXN/VW
-        yNt966633B/dw9QioBTuC4tv2cxfhrxd4P7juX+YWgSUonp6N+zgzV7I+0Tg9pdoahFQivg1hcAhEYFD
-        NAKHaAQO0QgcohE4RCNwiEbgEI3AIRqBQzQCh2gEDtEIHKIROEQjcIhG4BCNwCEagUM0AodoBA7RCByi
-        EThEI3CIRuAQjcAhGoFDNAKHaAQO0QgcohE4RCNwiEbgEC0ZuDLzRz5wd31gYhFQilNueGhX/R/dFYKJ
-        RUAp3CbtN2tT3wt5x0tgj90DdxVbaiGQPb3W66+7YQdvV0Pei1FdbXz5HFNQqHj+7ppDt2mHtBfj78oM
-        u3i1fTv5AiBbmxvxEtjBHZknZ/lj0+/k+w+5rx5F8D8sQ9yqaz6FnNPjLtBcRu5uPlZvtv0L3PYPZGPn
-        jt+E3YeRuCnbuH87mqSmMu3EHlcOYuhAxmzYR6ceS84aH7qpp/Yl7h9BQFbCkXr9j3ZthpE3o9FPCMso
-        JQgMQOMAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="&gt;&gt;pbLogo.Name" xml:space="preserve">
-    <value>pbLogo</value>
-  </data>
-  <data name="&gt;&gt;pnlLogInContent.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;separator1.Parent" xml:space="preserve">
-    <value>pnlLogInContent</value>
-  </data>
-  <data name="pnlLogInContent.Size" type="System.Drawing.Size, System.Drawing">
-    <value>579, 743</value>
-  </data>
-  <data name="btnChooseSigIn.Text" xml:space="preserve">
-    <value>  SIGN IN</value>
-  </data>
-  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 12pt, style=Bold</value>
-  </data>
-  <data name="btnChooseSigIn.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>RadForm1</value>
-  </data>
-  <data name="&gt;&gt;separator.Parent" xml:space="preserve">
-    <value>pnlLogInContent</value>
-  </data>
-  <data name="btnChooseSigIn.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
-  </data>
-  <data name="pnlSide.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAXpJREFUKFMVw2cz23EAwPHf26HGXc0HtPSuJWLEKhK1IuGsiLuEoAQxHrRq9K7U
-        CJEQQSRCrNg0qjWj6t18++/n7iOirTKirBlEzsmJnM8kYj6LCFs2L2w5hC8oCLcrCLPnIhIdBSQ6CklY
-        fE/8UpG0mDhnCbFOJbHLKmJcKl66ShFvXOWkrlSQslJJymoVr9fU0mpeuTUku7Ukr2tJ8tQg5J465N56
-        MrwNyDYakfmaSPfpSNtslup5t6Xnrb8FUeg3UOA3kr/dSv5OG3k7JvJ228nd7UCx14liv5Oc/Y+IsoCZ
-        skAPHw56KT3sk1pQHfWjPBpAeTxIyckgxSdDiNrTT9ScfkZ7Noz2fBjN+Rc0FyNUX4yi/jGGOjhOVfAr
-        Qh/8hv5ygubLSXQ/pVffabqaovHXtHSGht+z1F9bER3XNtpvFjDd2DHd2mm7c0gXab1fwnjvxPiwjCHk
-        QlhCa1hCbvoe1+n987+Hnicv5qcNzH99dD9v0vW8xT9QwABgncB/ogAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="pbLogo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>221, 203</value>
-  </data>
-  <data name="btnLogIn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 54</value>
-  </data>
-  <data name="&gt;&gt;pbLogIn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="btnX.TabIndex" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="txtLastname.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 106</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="&gt;&gt;btnLogIn.Type" xml:space="preserve">
-    <value>Bunifu.UI.WinForms.BunifuButton.BunifuButton, Bunifu.UI.WinForms.BunifuButton, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
-  </data>
-  <data name="pnlForLogIn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>79, 438</value>
-  </data>
-  <data name="&gt;&gt;pnlForLogIn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="pbLogIn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>249, 71</value>
-  </data>
-  <data name="&gt;&gt;pnlSide.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;dragLogIn.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuDragControl, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
-  </data>
-  <data name="&gt;&gt;txtName.Name" xml:space="preserve">
-    <value>txtName</value>
-  </data>
-  <data name="pnlSide.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
-    <value>Stretch</value>
-  </data>
-  <data name="&gt;&gt;pnlLogInContent.Name" xml:space="preserve">
-    <value>pnlLogInContent</value>
-  </data>
-  <data name="&gt;&gt;dragpnlSide.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuDragControl, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
-  </data>
-  <data name="btnSignIn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>184, 54</value>
-  </data>
-  <data name="&gt;&gt;pnlForLogIn.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="txtLastname.Size" type="System.Drawing.Size, System.Drawing">
-    <value>379, 44</value>
-  </data>
-  <data name="&gt;&gt;btnX.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="&gt;&gt;separator1.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuSeparator, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
-  </data>
-  <data name="btnMini.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 11.25pt, style=Bold</value>
-  </data>
-  <data name="separator.Location" type="System.Drawing.Point, System.Drawing">
-    <value>290, 178</value>
-  </data>
-  <data name="txtLastname.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;btnChooseSigIn.Parent" xml:space="preserve">
-    <value>pnlLogInContent</value>
-  </data>
-  <data name="btnX.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
-  </data>
-  <data name="&gt;&gt;pbLogo.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="txtUsername.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAXsAAAAsCAYAAACEwhjwAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAqBJREFUeF7t279OFEEcwPEtLS0tLYkh5IIGMSbGQuMREP8LSvQEBW6XS2gt7XwE
-        S0sfw9JH8BEsLe1cZ85ZOWQ12u0yn1/yCWH3ZstvhrmlMMYYY4rDw8OzBwcH14M3AHRLVVXD/f398ynZ
-        /zej0ehMeMjb4EtQA9BtIfpfgw/BuZTyv894PF4OH/48+5CtrWf1nfX79drqHQA6Yv32vWmfy7L6PfrD
-        lPT2iaFvFmxv79RXlq/V8xcWAei4pUtX6+fPRrPRf5HSfnzi0U2zo9/ceFoPFpZaHwhAd8Udfwr+t9az
-        /Mlk8i5+IO7oF+Yvtj4EgO578mSrCf6nlPijiec88aajG4B+Wxxc/nWOH9p+9IVt2NXPxYu7u3utCwHo
-        l2Z3X5bl3ZT6ooi/xIvxZtsiAPolvqmTdvavU+qLIlyIL+dPb7YtAqBfVoZrzbn9m5T6o9jHb3HbFgHQ
-        LzNv5Yg9wGkl9gAZEHuADIg9QAbEHiADYg+QAbEHyIDYA2RA7AEyIPYAGRB7gAyIPUAGxB4gA2IPkAGx
-        B8iA2ANkQOwBMiD2ABkQe4AMiD1ABsQeIANiD5CB1tiXZTmOFzc3nrYuAqBfVoZrJ2NfVdUgXtze3mld
-        BEC/xM17iv1mSn1RjEajM+HCt3hjcXC5dSEA/bAwf7F+9fLVNPZxM59S/3PChY/xhqMcgH6bOa//Ejfz
-        KfM/ZzKZzIUb0939zRsrrQ8AoNuuLF+ry7L8Hlseft5NiT8+zRe10cMHj+vBwlLrwwDonvilbBP64H1K
-        e/tUVfW6Cf7u7l796OHG9AHxzwIAumV4a3W6OY8v2DTtjqE/cXzTNuPxeDlE//PMQgA6LnT76x+Pbv42
-        KfovwkPiP10B0EHpCP76P+3mjTHGnNYpih9WM0CzYgC5xAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>LogIn</value>
-  </data>
-  <data name="txtPassword.Size" type="System.Drawing.Size, System.Drawing">
-    <value>379, 44</value>
-  </data>
-  <data name="&gt;&gt;dragpnlSide.Name" xml:space="preserve">
-    <value>dragpnlSide</value>
-  </data>
-  <data name="&gt;&gt;btnSignIn.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="pnlLogInContent.Location" type="System.Drawing.Point, System.Drawing">
-    <value>297, 1</value>
-  </data>
-  <data name="&gt;&gt;bunifuDragControl1.Name" xml:space="preserve">
-    <value>bunifuDragControl1</value>
-  </data>
-  <data name="&gt;&gt;pnlForLogIn.Name" xml:space="preserve">
-    <value>pnlForLogIn</value>
-  </data>
-  <data name="&gt;&gt;btnChooseSigIn.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="pnlForSignIn.TabIndex" type="System.Int32, mscorlib">
-    <value>19</value>
-  </data>
-  <data name="&gt;&gt;txtUsername.Parent" xml:space="preserve">
-    <value>pnlForLogIn</value>
-  </data>
-  <data name="pbLogo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="&gt;&gt;btnMini.Name" xml:space="preserve">
-    <value>btnMini</value>
-  </data>
-  <data name="separator1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>10, 50</value>
-  </data>
-  <data name="btnSignIn.TabIndex" type="System.Int32, mscorlib">
-    <value>21</value>
-  </data>
-  <data name="separator.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="pnlForLogIn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>431, 165</value>
-  </data>
-  <data name="pnlSide.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Left</value>
-  </data>
-  <data name="btnChooseLogIn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>75, 50</value>
-  </data>
-  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
-    <value>Manual</value>
-  </data>
-  <data name="&gt;&gt;dragLogIn.Name" xml:space="preserve">
-    <value>dragLogIn</value>
-  </data>
-  <data name="&gt;&gt;txtPassword.Type" xml:space="preserve">
-    <value>Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox, Bunifu.UI.WinForms.BunifuTextbox, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
-  </data>
-  <data name="separator1.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="&gt;&gt;btnChooseLogIn.Parent" xml:space="preserve">
-    <value>pnlLogInContent</value>
-  </data>
-  <data name="btnChooseLogIn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>306, 178</value>
-  </data>
-  <data name="btnMini.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
-  </data>
-  <data name="&gt;&gt;pnlForSignIn.Name" xml:space="preserve">
-    <value>pnlForSignIn</value>
-  </data>
-  <data name="txtPassword.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>100, 35</value>
-  </data>
-  <data name="&gt;&gt;txtPassword.Name" xml:space="preserve">
-    <value>txtPassword</value>
-  </data>
-  <data name="&gt;&gt;txtLastname.Type" xml:space="preserve">
-    <value>Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox, Bunifu.UI.WinForms.BunifuTextbox, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
-  </data>
-  <data name="btnSignIn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>40, 628</value>
-  </data>
-  <data name="btnX.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 11.25pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;pnlSide.Name" xml:space="preserve">
-    <value>pnlSide</value>
-  </data>
-  <data name="btnLogIn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 9.75pt, style=Bold</value>
-  </data>
-  <data name="&gt;&gt;separator.Name" xml:space="preserve">
-    <value>separator</value>
-  </data>
-  <data name="btnChooseLogIn.Text" xml:space="preserve">
-    <value>  LOG IN</value>
-  </data>
-  <data name="pnlForLogIn.TabIndex" type="System.Int32, mscorlib">
-    <value>20</value>
-  </data>
-  <data name="txtPassword.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="txtPassword.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAXsAAAAsCAYAAACEwhjwAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAqBJREFUeF7t279OFEEcwPEtLS0tLYkh5IIGMSbGQuMREP8LSvQEBW6XS2gt7XwE
-        S0sfw9JH8BEsLe1cZ85ZOWQ12u0yn1/yCWH3ZstvhrmlMMYYY4rDw8OzBwcH14M3AHRLVVXD/f398ynZ
-        /zej0ehMeMjb4EtQA9BtIfpfgw/BuZTyv894PF4OH/48+5CtrWf1nfX79drqHQA6Yv32vWmfy7L6PfrD
-        lPT2iaFvFmxv79RXlq/V8xcWAei4pUtX6+fPRrPRf5HSfnzi0U2zo9/ceFoPFpZaHwhAd8Udfwr+t9az
-        /Mlk8i5+IO7oF+Yvtj4EgO578mSrCf6nlPijiec88aajG4B+Wxxc/nWOH9p+9IVt2NXPxYu7u3utCwHo
-        l2Z3X5bl3ZT6ooi/xIvxZtsiAPolvqmTdvavU+qLIlyIL+dPb7YtAqBfVoZrzbn9m5T6o9jHb3HbFgHQ
-        LzNv5Yg9wGkl9gAZEHuADIg9QAbEHiADYg+QAbEHyIDYA2RA7AEyIPYAGRB7gAyIPUAGxB4gA2IPkAGx
-        B8iA2ANkQOwBMiD2ABkQe4AMiD1ABsQeIANiD5CB1tiXZTmOFzc3nrYuAqBfVoZrJ2NfVdUgXtze3mld
-        BEC/xM17iv1mSn1RjEajM+HCt3hjcXC5dSEA/bAwf7F+9fLVNPZxM59S/3PChY/xhqMcgH6bOa//Ejfz
-        KfM/ZzKZzIUb0939zRsrrQ8AoNuuLF+ry7L8Hlseft5NiT8+zRe10cMHj+vBwlLrwwDonvilbBP64H1K
-        e/tUVfW6Cf7u7l796OHG9AHxzwIAumV4a3W6OY8v2DTtjqE/cXzTNuPxeDlE//PMQgA6LnT76x+Pbv42
-        KfovwkPiP10B0EHpCP76P+3mjTHGnNYpih9WM0CzYgC5xAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnChooseSigIn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>86, 50</value>
-  </data>
-  <data name="&gt;&gt;btnMini.ZOrder" xml:space="preserve">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;txtName.Type" xml:space="preserve">
-    <value>Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox, Bunifu.UI.WinForms.BunifuTextbox, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
-  </data>
-  <data name="btnLogIn.TabIndex" type="System.Int32, mscorlib">
-    <value>23</value>
-  </data>
-  <data name="&gt;&gt;btnSignIn.Type" xml:space="preserve">
-    <value>Bunifu.UI.WinForms.BunifuButton.BunifuButton, Bunifu.UI.WinForms.BunifuButton, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
-  </data>
-  <data name="pnlForSignIn.Size" type="System.Drawing.Size, System.Drawing">
-    <value>431, 165</value>
-  </data>
-  <data name="txtName.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAXsAAAAsCAYAAACEwhjwAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAqBJREFUeF7t279OFEEcwPEtLS0tLYkh5IIGMSbGQuMREP8LSvQEBW6XS2gt7XwE
-        S0sfw9JH8BEsLe1cZ85ZOWQ12u0yn1/yCWH3ZstvhrmlMMYYY4rDw8OzBwcH14M3AHRLVVXD/f398ynZ
-        /zej0ehMeMjb4EtQA9BtIfpfgw/BuZTyv894PF4OH/48+5CtrWf1nfX79drqHQA6Yv32vWmfy7L6PfrD
-        lPT2iaFvFmxv79RXlq/V8xcWAei4pUtX6+fPRrPRf5HSfnzi0U2zo9/ceFoPFpZaHwhAd8Udfwr+t9az
-        /Mlk8i5+IO7oF+Yvtj4EgO578mSrCf6nlPijiec88aajG4B+Wxxc/nWOH9p+9IVt2NXPxYu7u3utCwHo
-        l2Z3X5bl3ZT6ooi/xIvxZtsiAPolvqmTdvavU+qLIlyIL+dPb7YtAqBfVoZrzbn9m5T6o9jHb3HbFgHQ
-        LzNv5Yg9wGkl9gAZEHuADIg9QAbEHiADYg+QAbEHyIDYA2RA7AEyIPYAGRB7gAyIPUAGxB4gA2IPkAGx
-        B8iA2ANkQOwBMiD2ABkQe4AMiD1ABsQeIANiD5CB1tiXZTmOFzc3nrYuAqBfVoZrJ2NfVdUgXtze3mld
-        BEC/xM17iv1mSn1RjEajM+HCt3hjcXC5dSEA/bAwf7F+9fLVNPZxM59S/3PChY/xhqMcgH6bOa//Ejfz
-        KfM/ZzKZzIUb0939zRsrrQ8AoNuuLF+ry7L8Hlseft5NiT8+zRe10cMHj+vBwlLrwwDonvilbBP64H1K
-        e/tUVfW6Cf7u7l796OHG9AHxzwIAumV4a3W6OY8v2DTtjqE/cXzTNuPxeDlE//PMQgA6LnT76x+Pbv42
-        KfovwkPiP10B0EHpCP76P+3mjTHGnNYpih9WM0CzYgC5xAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="txtPassword.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 106</value>
-  </data>
-  <data name="&gt;&gt;btnSignIn.Name" xml:space="preserve">
-    <value>btnSignIn</value>
-  </data>
-  <data name="&gt;&gt;btnX.Parent" xml:space="preserve">
-    <value>pnlLogInContent</value>
-  </data>
-  <data name="&gt;&gt;pbLogo.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="txtLastname.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>100, 35</value>
-  </data>
-  <data name="&gt;&gt;txtLastname.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="txtUsername.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 12</value>
-  </data>
-  <data name="&gt;&gt;separator.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuSeparator, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
-  </data>
-  <data name="btnMini.Location" type="System.Drawing.Point, System.Drawing">
-    <value>483, 11</value>
-  </data>
-  <data name="pnlSide.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pbLogo.Parent" xml:space="preserve">
-    <value>pnlSide</value>
-  </data>
-  <data name="pnlSide.Size" type="System.Drawing.Size, System.Drawing">
-    <value>299, 775</value>
-  </data>
-  <data name="pbLogo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>36, 172</value>
-  </data>
-  <data name="&gt;&gt;txtUsername.Type" xml:space="preserve">
-    <value>Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox, Bunifu.UI.WinForms.BunifuTextbox, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>Telerik.WinControls.UI.RadForm, Telerik.WinControls.UI, Version=2019.1.219.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
-  </data>
-  <data name="&gt;&gt;btnChooseLogIn.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
-  </data>
-  <data name="&gt;&gt;separator1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;btnX.Name" xml:space="preserve">
-    <value>btnX</value>
-  </data>
-  <data name="&gt;&gt;pnlLogInContent.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;btnChooseLogIn.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="txtUsername.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>100, 35</value>
-  </data>
-  <data name="pbLogIn.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
-    <value>StretchImage</value>
-  </data>
-  <data name="txtLastname.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAXsAAAAsCAYAAACEwhjwAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAqBJREFUeF7t279OFEEcwPEtLS0tLYkh5IIGMSbGQuMREP8LSvQEBW6XS2gt7XwE
-        S0sfw9JH8BEsLe1cZ85ZOWQ12u0yn1/yCWH3ZstvhrmlMMYYY4rDw8OzBwcH14M3AHRLVVXD/f398ynZ
-        /zej0ehMeMjb4EtQA9BtIfpfgw/BuZTyv894PF4OH/48+5CtrWf1nfX79drqHQA6Yv32vWmfy7L6PfrD
-        lPT2iaFvFmxv79RXlq/V8xcWAei4pUtX6+fPRrPRf5HSfnzi0U2zo9/ceFoPFpZaHwhAd8Udfwr+t9az
-        /Mlk8i5+IO7oF+Yvtj4EgO578mSrCf6nlPijiec88aajG4B+Wxxc/nWOH9p+9IVt2NXPxYu7u3utCwHo
-        l2Z3X5bl3ZT6ooi/xIvxZtsiAPolvqmTdvavU+qLIlyIL+dPb7YtAqBfVoZrzbn9m5T6o9jHb3HbFgHQ
-        LzNv5Yg9wGkl9gAZEHuADIg9QAbEHiADYg+QAbEHyIDYA2RA7AEyIPYAGRB7gAyIPUAGxB4gA2IPkAGx
-        B8iA2ANkQOwBMiD2ABkQe4AMiD1ABsQeIANiD5CB1tiXZTmOFzc3nrYuAqBfVoZrJ2NfVdUgXtze3mld
-        BEC/xM17iv1mSn1RjEajM+HCt3hjcXC5dSEA/bAwf7F+9fLVNPZxM59S/3PChY/xhqMcgH6bOa//Ejfz
-        KfM/ZzKZzIUb0939zRsrrQ8AoNuuLF+ry7L8Hlseft5NiT8+zRe10cMHj+vBwlLrwwDonvilbBP64H1K
-        e/tUVfW6Cf7u7l796OHG9AHxzwIAumV4a3W6OY8v2DTtjqE/cXzTNuPxeDlE//PMQgA6LnT76x+Pbv42
-        KfovwkPiP10B0EHpCP76P+3mjTHGnNYpih9WM0CzYgC5xAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="&gt;&gt;txtName.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;pnlLogInContent.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;separator1.Name" xml:space="preserve">
-    <value>separator1</value>
-  </data>
-  <data name="btnLogIn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAALgAAAA2CAYAAAB0iVNvAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAoNJREFUeF7t3TFrFEEYgOErLS3ttJRwOxM04NlIhBRCmoCIgiDXSEQCaiEaUC63
-        u5DCxkYECy21sLG12Cn9CfkJKVOmXGfm5sYsToJWzny+HzxNltnqZZjbFDNimP96tJmd16ZZt/aAXCjT
-        3LJtXgqZ/t1cNLNzumv3ddcc2pf1QK5U1xzZTj+vmNmFkO/ZU5l2YhccDF7y4UlfvZ726vl94N/bfeCb
-        1N/ng9Ddrh4yTo+Pexn2lxf9eHOjH69cAfJ180avPz6LoWtTT0POw1kcSxY7t3r7uB9fvZZ+IZAht7P7
-        wLvmOHk2tw/ex51bryVfAuRMvdsJkdc/Qta/xh/W7UOOJSjW5Ho8lw9+dI7N7LIv/9ur9EKgEHEXN/VW
-        yNt966633B/dw9QioBTuC4tv2cxfhrxd4P7juX+YWgSUonp6N+zgzV7I+0Tg9pdoahFQivg1hcAhEYFD
-        NAKHaAQO0QgcohE4RCNwiEbgEI3AIRqBQzQCh2gEDtEIHKIROEQjcIhG4BCNwCEagUM0AodoBA7RCByi
-        EThEI3CIRuAQjcAhGoFDNAKHaAQO0QgcohE4RCNwiEbgEC0ZuDLzRz5wd31gYhFQilNueGhX/R/dFYKJ
-        RUAp3CbtN2tT3wt5x0tgj90DdxVbaiGQPb3W66+7YQdvV0Pei1FdbXz5HFNQqHj+7ppDt2mHtBfj78oM
-        u3i1fTv5AiBbmxvxEtjBHZknZ/lj0+/k+w+5rx5F8D8sQ9yqaz6FnNPjLtBcRu5uPlZvtv0L3PYPZGPn
-        jt+E3YeRuCnbuH87mqSmMu3EHlcOYuhAxmzYR6ceS84aH7qpp/Yl7h9BQFbCkXr9j3ZthpE3o9FPCMso
-        JQgMQOMAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="&gt;&gt;txtPassword.Parent" xml:space="preserve">
-    <value>pnlForLogIn</value>
-  </data>
-  <data name="pnlSide.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;btnLogIn.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="separator1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>177, 178</value>
-  </data>
-  <data name="txtName.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnMini.Parent" xml:space="preserve">
-    <value>pnlLogInContent</value>
-  </data>
-  <data name="&gt;&gt;bunifuDragControl1.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuDragControl, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
-  </data>
-  <data name="&gt;&gt;pnlSide.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuGradientPanel, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
-  </data>
-  <data name="&gt;&gt;btnChooseSigIn.Type" xml:space="preserve">
-    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
-  </data>
-  <data name="btnX.Size" type="System.Drawing.Size, System.Drawing">
-    <value>27, 25</value>
-  </data>
-  <data name="&gt;&gt;pnlForSignIn.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="pbLogIn.TabIndex" type="System.Int32, mscorlib">
-    <value>22</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>886, 775</value>
-  </data>
-  <data name="&gt;&gt;pbLogIn.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;pnlForSignIn.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="pnlForSignIn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>79, 267</value>
-  </data>
-  <data name="&gt;&gt;txtLastname.Name" xml:space="preserve">
-    <value>txtLastname</value>
-  </data>
-  <data name="&gt;&gt;btnChooseLogIn.Name" xml:space="preserve">
-    <value>btnChooseLogIn</value>
-  </data>
-  <data name="txtUsername.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;btnX.Type" xml:space="preserve">
-    <value>Bunifu.UI.WinForms.BunifuButton.BunifuButton, Bunifu.UI.WinForms.BunifuButton, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
-  </data>
-  <data name="&gt;&gt;separator.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="pbLogo.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="btnChooseSigIn.Location" type="System.Drawing.Point, System.Drawing">
-    <value>193, 178</value>
-  </data>
-  <data name="txtName.Location" type="System.Drawing.Point, System.Drawing">
-    <value>16, 12</value>
-  </data>
-  <data name="$this.Location" type="System.Drawing.Point, System.Drawing">
-    <value>250, 0</value>
-  </data>
-  <data name="separator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>10, 50</value>
-  </data>
-  <data name="&gt;&gt;pbLogIn.Name" xml:space="preserve">
-    <value>pbLogIn</value>
-  </data>
-  <data name="btnSignIn.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI Semibold, 9.75pt, style=Bold</value>
-  </data>
-  <data name="btnX.Location" type="System.Drawing.Point, System.Drawing">
-    <value>532, 11</value>
-  </data>
-  <data name="&gt;&gt;txtPassword.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="txtName.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>100, 35</value>
-  </data>
-  <data name="btnMini.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
-    <value>Yes</value>
-  </data>
-  <data name="txtName.Size" type="System.Drawing.Size, System.Drawing">
-    <value>379, 44</value>
-  </data>
-  <data name="&gt;&gt;pnlForLogIn.Parent" xml:space="preserve">
-    <value>pnlLogInContent</value>
-  </data>
   <metadata name="dragLogIn.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>sq-XK</value>
-  </metadata>
-  <metadata name="dragpnlSide.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>124, 17</value>
   </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>889, 788</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="bunifuButton1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
+  <data name="bunifuButton1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABwAAAAZCAYAAAAiwE4nAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABESURBVEhL7c2xEQAgCARB2oHRACqyM0rVMSd8NPlgowtO
+        psUaFvuF+5IqdOIQjkM4DuE4hOMQjkM4DuE+DNWzCi3U8wCG4ithypH9/gAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="bunifuButton1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 11.25pt, style=Bold</value>
+  </data>
+  <data name="bunifuButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>446, 11</value>
+  </data>
+  <data name="bunifuButton1.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="bunifuButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>28, 25</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="bunifuButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>31</value>
+  </data>
+  <data name="&gt;&gt;bunifuButton1.Name" xml:space="preserve">
+    <value>bunifuButton1</value>
+  </data>
+  <data name="&gt;&gt;bunifuButton1.Type" xml:space="preserve">
+    <value>Bunifu.UI.WinForms.BunifuButton.BunifuButton, Bunifu.UI.WinForms.BunifuButton, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;bunifuButton1.Parent" xml:space="preserve">
+    <value>pnlLogInContent</value>
+  </data>
+  <data name="&gt;&gt;bunifuButton1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnSq.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAZCAYAAAAmNZ4aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABCSURBVEhL7c2hDQAgDAXRbkNIQLQTsVlHheBrOcwXT504
+        my3W6LFJ92lVIGiM0RijMUZjjMYYjTEaY36OPavwlucB2tZ0z0uYgYIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnSq.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 11.25pt, style=Bold</value>
+  </data>
+  <data name="btnSq.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 3</value>
+  </data>
+  <data name="btnSq.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="btnSq.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 25</value>
+  </data>
+  <data name="btnSq.TabIndex" type="System.Int32, mscorlib">
+    <value>30</value>
+  </data>
+  <data name="&gt;&gt;btnSq.Name" xml:space="preserve">
+    <value>btnSq</value>
+  </data>
+  <data name="&gt;&gt;btnSq.Type" xml:space="preserve">
+    <value>Bunifu.UI.WinForms.BunifuButton.BunifuButton, Bunifu.UI.WinForms.BunifuButton, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;btnSq.Parent" xml:space="preserve">
+    <value>pnlLogInContent</value>
+  </data>
+  <data name="&gt;&gt;btnSq.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="btnSignIn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAALgAAAA2CAYAAAB0iVNvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKDSURBVHhe7d0xaxRBGIDhKy0t7bSUcDsTNODZSIQUQpqA
+        iIIg10hEAmohGlAut7uQwsZGBAsttbCxtdgp/Qn5CSlTplxn5ubGLE6CVs58vh88TZbZ6mWY2xQzYpj/
+        erSZndemWbf2gFwo09yybV4Kmf7dXDSzc7pr93XXHNqX9UCuVNcc2U4/r5jZhZDv2VOZdmIXHAxe8uFJ
+        X72e9ur5feDf233gm9Tf54PQ3a4eMk6Pj3sZ9pcX/Xhzox+vXAHydfNGrz8+i6FrU09DzsNZHEsWO7d6
+        +7gfX72WfiGQIbez+8C75jh5NrcP3sedW68lXwLkTL3bCZHXP0LWv8Yf1u1DjiUo1uR6PJcPfnSOzeyy
+        L//bq/RCoBBxFzf1Vsjbfeuut9wf3cPUIqAU7guLb9nMX4a8XeD+47l/mFoElKJ6ejfs4M1eyPtE4PaX
+        aGoRUIr4NYXAIRGBQzQCh2gEDtEIHKIROEQjcIhG4BCNwCEagUM0AodoBA7RCByiEThEI3CIRuAQjcAh
+        GoFDNAKHaAQO0QgcohE4RCNwiEbgEI3AIRqBQzQCh2gEDtEIHKIROEQjcIhG4BAtGbgy80c+cHd9YGIR
+        UIpTbnhoV/0f3RWCiUVAKdwm7TdrU98LecdLYI/dA3cVW2ohkD291uuvu2EHb1dD3otRXW18+RxTUKh4
+        /u6aQ7dph7QX4+/KDLt4tX07+QIgW5sb8RLYwR2ZJ2f5Y9Pv5PsPua8eRfA/LEPcqms+hZzT4y7QXEbu
+        bj5Wb7b9C9z2D2Rj547fhN2Hkbgp27h/O5qkpjLtxB5XDmLoQMZs2EenHkvOGh+6qaf2Je4fQUBWwpF6
+        /Y92bYaRN6PRTwjLKCUIDEDjAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnSignIn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9.75pt, style=Bold</value>
+  </data>
+  <data name="btnSignIn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>40, 628</value>
+  </data>
+  <data name="btnSignIn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 54</value>
+  </data>
+  <data name="btnSignIn.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;btnSignIn.Name" xml:space="preserve">
+    <value>btnSignIn</value>
+  </data>
+  <data name="&gt;&gt;btnSignIn.Type" xml:space="preserve">
+    <value>Bunifu.UI.WinForms.BunifuButton.BunifuButton, Bunifu.UI.WinForms.BunifuButton, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;btnSignIn.Parent" xml:space="preserve">
+    <value>pnlLogInContent</value>
+  </data>
+  <data name="&gt;&gt;btnSignIn.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnEng.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAZCAYAAAAmNZ4aAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABCSURBVEhL7c2hDQAgDAXRbkNIQLQTsVlHheBrOcwXT504
+        my3W6LFJ92lVIGiM0RijMUZjjMYYjTEaY36OPavwlucB2tZ0z0uYgYIAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnEng.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 11.25pt, style=Bold</value>
+  </data>
+  <data name="btnEng.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 3</value>
+  </data>
+  <data name="btnEng.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="btnEng.Size" type="System.Drawing.Size, System.Drawing">
+    <value>30, 25</value>
+  </data>
+  <data name="btnEng.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
+  </data>
+  <data name="&gt;&gt;btnEng.Name" xml:space="preserve">
+    <value>btnEng</value>
+  </data>
+  <data name="&gt;&gt;btnEng.Type" xml:space="preserve">
+    <value>Bunifu.UI.WinForms.BunifuButton.BunifuButton, Bunifu.UI.WinForms.BunifuButton, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;btnEng.Parent" xml:space="preserve">
+    <value>pnlLogInContent</value>
+  </data>
+  <data name="&gt;&gt;btnEng.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="btnLogIn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAALgAAAA2CAYAAAB0iVNvAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKDSURBVHhe7d0xaxRBGIDhKy0t7bSUcDsTNODZSIQUQpqA
+        iIIg10hEAmohGlAut7uQwsZGBAsttbCxtdgp/Qn5CSlTplxn5ubGLE6CVs58vh88TZbZ6mWY2xQzYpj/
+        erSZndemWbf2gFwo09yybV4Kmf7dXDSzc7pr93XXHNqX9UCuVNcc2U4/r5jZhZDv2VOZdmIXHAxe8uFJ
+        X72e9ur5feDf233gm9Tf54PQ3a4eMk6Pj3sZ9pcX/Xhzox+vXAHydfNGrz8+i6FrU09DzsNZHEsWO7d6
+        +7gfX72WfiGQIbez+8C75jh5NrcP3sedW68lXwLkTL3bCZHXP0LWv8Yf1u1DjiUo1uR6PJcPfnSOzeyy
+        L//bq/RCoBBxFzf1Vsjbfeuut9wf3cPUIqAU7guLb9nMX4a8XeD+47l/mFoElKJ6ejfs4M1eyPtE4PaX
+        aGoRUIr4NYXAIRGBQzQCh2gEDtEIHKIROEQjcIhG4BCNwCEagUM0AodoBA7RCByiEThEI3CIRuAQjcAh
+        GoFDNAKHaAQO0QgcohE4RCNwiEbgEI3AIRqBQzQCh2gEDtEIHKIROEQjcIhG4BAtGbgy80c+cHd9YGIR
+        UIpTbnhoV/0f3RWCiUVAKdwm7TdrU98LecdLYI/dA3cVW2ohkD291uuvu2EHb1dD3otRXW18+RxTUKh4
+        /u6aQ7dph7QX4+/KDLt4tX07+QIgW5sb8RLYwR2ZJ2f5Y9Pv5PsPua8eRfA/LEPcqms+hZzT4y7QXEbu
+        bj5Wb7b9C9z2D2Rj547fhN2Hkbgp27h/O5qkpjLtxB5XDmLoQMZs2EenHkvOGh+6qaf2Je4fQUBWwpF6
+        /Y92bYaRN6PRTwjLKCUIDEDjAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnLogIn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 9.75pt, style=Bold</value>
+  </data>
+  <data name="btnLogIn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>326, 628</value>
+  </data>
+  <data name="btnLogIn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>184, 54</value>
+  </data>
+  <data name="btnLogIn.TabIndex" type="System.Int32, mscorlib">
+    <value>23</value>
+  </data>
+  <data name="&gt;&gt;btnLogIn.Name" xml:space="preserve">
+    <value>btnLogIn</value>
+  </data>
+  <data name="&gt;&gt;btnLogIn.Type" xml:space="preserve">
+    <value>Bunifu.UI.WinForms.BunifuButton.BunifuButton, Bunifu.UI.WinForms.BunifuButton, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;btnLogIn.Parent" xml:space="preserve">
+    <value>pnlLogInContent</value>
+  </data>
+  <data name="&gt;&gt;btnLogIn.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="txtName.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAXsAAAAsCAYAAACEwhjwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKgSURBVHhe7du/ThRBHMDxLS0tLS2JIeSCBjEmxkLjERD/
+        C0r0BAVul0toLe18BEtLH8PSR/ARLC3tXGfOWTlkNdrtMp9f8glh92bLb4a5pTDGGGOKw8PDswcHB9eD
+        NwB0S1VVw/39/fMp2f83o9HoTHjI2+BLUAPQbSH6X4MPwbmU8r/PeDxeDh/+PPuQra1n9Z31+/Xa6h0A
+        OmL99r1pn8uy+j36w5T09omhbxZsb+/UV5av1fMXFgHouKVLV+vnz0az0X+R0n584tFNs6Pf3HhaDxaW
+        Wh8IQHfFHX8K/rfWs/zJZPIufiDu6BfmL7Y+BIDue/Jkqwn+p5T4o4nnPPGmoxuAflscXP51jh/afvSF
+        bdjVz8WLu7t7rQsB6Jdmd1+W5d2U+qKIv8SL8WbbIgD6Jb6pk3b2r1PqiyJciC/nT2+2LQKgX1aGa825
+        /ZuU+qPYx29x2xYB0C8zb+WIPcBpJfYAGRB7gAyIPUAGxB4gA2IPkAGxB8iA2ANkQOwBMiD2ABkQe4AM
+        iD1ABsQeIANiD5ABsQfIgNgDZEDsATIg9gAZEHuADIg9QAbEHiADYg+QgdbYl2U5jhc3N562LgKgX1aG
+        aydjX1XVIF7c3t5pXQRAv8TNe4r9Zkp9UYxGozPhwrd4Y3FwuXUhAP2wMH+xfvXy1TT2cTOfUv9zwoWP
+        8YajHIB+mzmv/xI38ynzP2cymcyFG9Pd/c0bK60PAKDbrixfq8uy/B5bHn7eTYk/Ps0XtdHDB4/rwcJS
+        68MA6J74pWwT+uB9Snv7VFX1ugn+7u5e/ejhxvQB8c8CALpleGt1ujmPL9g07Y6hP3F80zbj8Xg5RP/z
+        zEIAOi50++sfj27+Nin6L8JD4j9dAdBB6Qj++j/t5o0xxpzWKYofVjNAs2IAucQAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="txtName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 12</value>
+  </data>
+  <data name="txtName.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>100, 35</value>
+  </data>
+  <data name="txtName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 44</value>
+  </data>
+  <data name="txtName.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtName.Name" xml:space="preserve">
+    <value>txtName</value>
+  </data>
+  <data name="&gt;&gt;txtName.Type" xml:space="preserve">
+    <value>Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox, Bunifu.UI.WinForms.BunifuTextbox, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;txtName.Parent" xml:space="preserve">
+    <value>pnlForSignIn</value>
+  </data>
+  <data name="&gt;&gt;txtName.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtLastname.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAXsAAAAsCAYAAACEwhjwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKgSURBVHhe7du/ThRBHMDxLS0tLS2JIeSCBjEmxkLjERD/
+        C0r0BAVul0toLe18BEtLH8PSR/ARLC3tXGfOWTlkNdrtMp9f8glh92bLb4a5pTDGGGOKw8PDswcHB9eD
+        NwB0S1VVw/39/fMp2f83o9HoTHjI2+BLUAPQbSH6X4MPwbmU8r/PeDxeDh/+PPuQra1n9Z31+/Xa6h0A
+        OmL99r1pn8uy+j36w5T09omhbxZsb+/UV5av1fMXFgHouKVLV+vnz0az0X+R0n584tFNs6Pf3HhaDxaW
+        Wh8IQHfFHX8K/rfWs/zJZPIufiDu6BfmL7Y+BIDue/Jkqwn+p5T4o4nnPPGmoxuAflscXP51jh/afvSF
+        bdjVz8WLu7t7rQsB6Jdmd1+W5d2U+qKIv8SL8WbbIgD6Jb6pk3b2r1PqiyJciC/nT2+2LQKgX1aGa825
+        /ZuU+qPYx29x2xYB0C8zb+WIPcBpJfYAGRB7gAyIPUAGxB4gA2IPkAGxB8iA2ANkQOwBMiD2ABkQe4AM
+        iD1ABsQeIANiD5ABsQfIgNgDZEDsATIg9gAZEHuADIg9QAbEHiADYg+QgdbYl2U5jhc3N562LgKgX1aG
+        aydjX1XVIF7c3t5pXQRAv8TNe4r9Zkp9UYxGozPhwrd4Y3FwuXUhAP2wMH+xfvXy1TT2cTOfUv9zwoWP
+        8YajHIB+mzmv/xI38ynzP2cymcyFG9Pd/c0bK60PAKDbrixfq8uy/B5bHn7eTYk/Ps0XtdHDB4/rwcJS
+        68MA6J74pWwT+uB9Snv7VFX1ugn+7u5e/ejhxvQB8c8CALpleGt1ujmPL9g07Y6hP3F80zbj8Xg5RP/z
+        zEIAOi50++sfj27+Nin6L8JD4j9dAdBB6Qj++j/t5o0xxpzWKYofVjNAs2IAucQAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="txtLastname.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 106</value>
+  </data>
+  <data name="txtLastname.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>100, 35</value>
+  </data>
+  <data name="txtLastname.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 44</value>
+  </data>
+  <data name="txtLastname.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtLastname.Name" xml:space="preserve">
+    <value>txtLastname</value>
+  </data>
+  <data name="&gt;&gt;txtLastname.Type" xml:space="preserve">
+    <value>Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox, Bunifu.UI.WinForms.BunifuTextbox, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;txtLastname.Parent" xml:space="preserve">
+    <value>pnlForSignIn</value>
+  </data>
+  <data name="&gt;&gt;txtLastname.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlForSignIn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>79, 267</value>
+  </data>
+  <data name="pnlForSignIn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>431, 165</value>
+  </data>
+  <data name="pnlForSignIn.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;pnlForSignIn.Name" xml:space="preserve">
+    <value>pnlForSignIn</value>
+  </data>
+  <data name="&gt;&gt;pnlForSignIn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlForSignIn.Parent" xml:space="preserve">
+    <value>pnlLogInContent</value>
+  </data>
+  <data name="&gt;&gt;pnlForSignIn.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="separator1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>177, 178</value>
+  </data>
+  <data name="separator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 50</value>
+  </data>
+  <data name="separator1.TabIndex" type="System.Int32, mscorlib">
+    <value>27</value>
+  </data>
+  <data name="separator1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;separator1.Name" xml:space="preserve">
+    <value>separator1</value>
+  </data>
+  <data name="&gt;&gt;separator1.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuSeparator, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;separator1.Parent" xml:space="preserve">
+    <value>pnlLogInContent</value>
+  </data>
+  <data name="&gt;&gt;separator1.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="txtUsername.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAXsAAAAsCAYAAACEwhjwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKgSURBVHhe7du/ThRBHMDxLS0tLS2JIeSCBjEmxkLjERD/
+        C0r0BAVul0toLe18BEtLH8PSR/ARLC3tXGfOWTlkNdrtMp9f8glh92bLb4a5pTDGGGOKw8PDswcHB9eD
+        NwB0S1VVw/39/fMp2f83o9HoTHjI2+BLUAPQbSH6X4MPwbmU8r/PeDxeDh/+PPuQra1n9Z31+/Xa6h0A
+        OmL99r1pn8uy+j36w5T09omhbxZsb+/UV5av1fMXFgHouKVLV+vnz0az0X+R0n584tFNs6Pf3HhaDxaW
+        Wh8IQHfFHX8K/rfWs/zJZPIufiDu6BfmL7Y+BIDue/Jkqwn+p5T4o4nnPPGmoxuAflscXP51jh/afvSF
+        bdjVz8WLu7t7rQsB6Jdmd1+W5d2U+qKIv8SL8WbbIgD6Jb6pk3b2r1PqiyJciC/nT2+2LQKgX1aGa825
+        /ZuU+qPYx29x2xYB0C8zb+WIPcBpJfYAGRB7gAyIPUAGxB4gA2IPkAGxB8iA2ANkQOwBMiD2ABkQe4AM
+        iD1ABsQeIANiD5ABsQfIgNgDZEDsATIg9gAZEHuADIg9QAbEHiADYg+QgdbYl2U5jhc3N562LgKgX1aG
+        aydjX1XVIF7c3t5pXQRAv8TNe4r9Zkp9UYxGozPhwrd4Y3FwuXUhAP2wMH+xfvXy1TT2cTOfUv9zwoWP
+        8YajHIB+mzmv/xI38ynzP2cymcyFG9Pd/c0bK60PAKDbrixfq8uy/B5bHn7eTYk/Ps0XtdHDB4/rwcJS
+        68MA6J74pWwT+uB9Snv7VFX1ugn+7u5e/ejhxvQB8c8CALpleGt1ujmPL9g07Y6hP3F80zbj8Xg5RP/z
+        zEIAOi50++sfj27+Nin6L8JD4j9dAdBB6Qj++j/t5o0xxpzWKYofVjNAs2IAucQAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="txtUsername.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 12</value>
+  </data>
+  <data name="txtUsername.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>100, 35</value>
+  </data>
+  <data name="txtUsername.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 44</value>
+  </data>
+  <data name="txtUsername.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;txtUsername.Name" xml:space="preserve">
+    <value>txtUsername</value>
+  </data>
+  <data name="&gt;&gt;txtUsername.Type" xml:space="preserve">
+    <value>Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox, Bunifu.UI.WinForms.BunifuTextbox, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;txtUsername.Parent" xml:space="preserve">
+    <value>pnlForLogIn</value>
+  </data>
+  <data name="&gt;&gt;txtUsername.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtPassword.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAXsAAAAsCAYAAACEwhjwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKgSURBVHhe7du/ThRBHMDxLS0tLS2JIeSCBjEmxkLjERD/
+        C0r0BAVul0toLe18BEtLH8PSR/ARLC3tXGfOWTlkNdrtMp9f8glh92bLb4a5pTDGGGOKw8PDswcHB9eD
+        NwB0S1VVw/39/fMp2f83o9HoTHjI2+BLUAPQbSH6X4MPwbmU8r/PeDxeDh/+PPuQra1n9Z31+/Xa6h0A
+        OmL99r1pn8uy+j36w5T09omhbxZsb+/UV5av1fMXFgHouKVLV+vnz0az0X+R0n584tFNs6Pf3HhaDxaW
+        Wh8IQHfFHX8K/rfWs/zJZPIufiDu6BfmL7Y+BIDue/Jkqwn+p5T4o4nnPPGmoxuAflscXP51jh/afvSF
+        bdjVz8WLu7t7rQsB6Jdmd1+W5d2U+qKIv8SL8WbbIgD6Jb6pk3b2r1PqiyJciC/nT2+2LQKgX1aGa825
+        /ZuU+qPYx29x2xYB0C8zb+WIPcBpJfYAGRB7gAyIPUAGxB4gA2IPkAGxB8iA2ANkQOwBMiD2ABkQe4AM
+        iD1ABsQeIANiD5ABsQfIgNgDZEDsATIg9gAZEHuADIg9QAbEHiADYg+QgdbYl2U5jhc3N562LgKgX1aG
+        aydjX1XVIF7c3t5pXQRAv8TNe4r9Zkp9UYxGozPhwrd4Y3FwuXUhAP2wMH+xfvXy1TT2cTOfUv9zwoWP
+        8YajHIB+mzmv/xI38ynzP2cymcyFG9Pd/c0bK60PAKDbrixfq8uy/B5bHn7eTYk/Ps0XtdHDB4/rwcJS
+        68MA6J74pWwT+uB9Snv7VFX1ugn+7u5e/ejhxvQB8c8CALpleGt1ujmPL9g07Y6hP3F80zbj8Xg5RP/z
+        zEIAOi50++sfj27+Nin6L8JD4j9dAdBB6Qj++j/t5o0xxpzWKYofVjNAs2IAucQAAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="txtPassword.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 106</value>
+  </data>
+  <data name="txtPassword.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>100, 35</value>
+  </data>
+  <data name="txtPassword.Size" type="System.Drawing.Size, System.Drawing">
+    <value>379, 44</value>
+  </data>
+  <data name="txtPassword.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtPassword.Name" xml:space="preserve">
+    <value>txtPassword</value>
+  </data>
+  <data name="&gt;&gt;txtPassword.Type" xml:space="preserve">
+    <value>Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox, Bunifu.UI.WinForms.BunifuTextbox, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;txtPassword.Parent" xml:space="preserve">
+    <value>pnlForLogIn</value>
+  </data>
+  <data name="&gt;&gt;txtPassword.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="pnlForLogIn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>79, 438</value>
+  </data>
+  <data name="pnlForLogIn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>431, 165</value>
+  </data>
+  <data name="pnlForLogIn.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;pnlForLogIn.Name" xml:space="preserve">
+    <value>pnlForLogIn</value>
+  </data>
+  <data name="&gt;&gt;pnlForLogIn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlForLogIn.Parent" xml:space="preserve">
+    <value>pnlLogInContent</value>
+  </data>
+  <data name="&gt;&gt;pnlForLogIn.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="separator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>290, 178</value>
+  </data>
+  <data name="separator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>10, 50</value>
+  </data>
+  <data name="separator.TabIndex" type="System.Int32, mscorlib">
+    <value>26</value>
+  </data>
+  <data name="separator.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;separator.Name" xml:space="preserve">
+    <value>separator</value>
+  </data>
+  <data name="&gt;&gt;separator.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuSeparator, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;separator.Parent" xml:space="preserve">
+    <value>pnlLogInContent</value>
+  </data>
+  <data name="&gt;&gt;separator.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="btnChooseLogIn.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btnChooseLogIn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>306, 178</value>
+  </data>
+  <data name="btnChooseLogIn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>75, 50</value>
+  </data>
+  <data name="btnChooseLogIn.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="btnChooseLogIn.Text" xml:space="preserve">
+    <value>LogIn</value>
+  </data>
+  <data name="&gt;&gt;btnChooseLogIn.Name" xml:space="preserve">
+    <value>btnChooseLogIn</value>
+  </data>
+  <data name="&gt;&gt;btnChooseLogIn.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;btnChooseLogIn.Parent" xml:space="preserve">
+    <value>pnlLogInContent</value>
+  </data>
+  <data name="&gt;&gt;btnChooseLogIn.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="btnChooseSigIn.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="btnChooseSigIn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>193, 178</value>
+  </data>
+  <data name="btnChooseSigIn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>107, 50</value>
+  </data>
+  <data name="btnChooseSigIn.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="btnChooseSigIn.Text" xml:space="preserve">
+    <value>SignUp</value>
+  </data>
+  <data name="&gt;&gt;btnChooseSigIn.Name" xml:space="preserve">
+    <value>btnChooseSigIn</value>
+  </data>
+  <data name="&gt;&gt;btnChooseSigIn.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuFlatButton, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;btnChooseSigIn.Parent" xml:space="preserve">
+    <value>pnlLogInContent</value>
+  </data>
+  <data name="&gt;&gt;btnChooseSigIn.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="btnMini.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABsAAAAZCAYAAADAHFVeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABFSURBVEhL7c0xAQAgCAVRE0ElskAQm0A0NQDjx+kPb7rh
+        lpabVpx5bm/WhRmcQXAGwRkEZxCcQXAGwRnE35lk7C6gSca+vLlrp4AOQK4AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnMini.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 11.25pt, style=Bold</value>
+  </data>
+  <data name="btnMini.Location" type="System.Drawing.Point, System.Drawing">
+    <value>483, 11</value>
+  </data>
+  <data name="btnMini.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="btnMini.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 25</value>
+  </data>
+  <data name="btnMini.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
+  </data>
+  <data name="&gt;&gt;btnMini.Name" xml:space="preserve">
+    <value>btnMini</value>
+  </data>
+  <data name="&gt;&gt;btnMini.Type" xml:space="preserve">
+    <value>Bunifu.UI.WinForms.BunifuButton.BunifuButton, Bunifu.UI.WinForms.BunifuButton, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;btnMini.Parent" xml:space="preserve">
+    <value>pnlLogInContent</value>
+  </data>
+  <data name="&gt;&gt;btnMini.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="btnX.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABsAAAAZCAYAAADAHFVeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABFSURBVEhL7c0xAQAgCAVRE0ElskAQm0A0NQDjx+kPb7rh
+        lpabVpx5bm/WhRmcQXAGwRkEZxCcQXAGwRnE35lk7C6gSca+vLlrp4AOQK4AAAAASUVORK5CYII=
+</value>
+  </data>
+  <data name="btnX.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 11.25pt, style=Bold</value>
+  </data>
+  <data name="btnX.Location" type="System.Drawing.Point, System.Drawing">
+    <value>532, 11</value>
+  </data>
+  <data name="btnX.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
+    <value>Yes</value>
+  </data>
+  <data name="btnX.Size" type="System.Drawing.Size, System.Drawing">
+    <value>27, 25</value>
+  </data>
+  <data name="btnX.TabIndex" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="&gt;&gt;btnX.Name" xml:space="preserve">
+    <value>btnX</value>
+  </data>
+  <data name="&gt;&gt;btnX.Type" xml:space="preserve">
+    <value>Bunifu.UI.WinForms.BunifuButton.BunifuButton, Bunifu.UI.WinForms.BunifuButton, Version=1.9.0.1, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;btnX.Parent" xml:space="preserve">
+    <value>pnlLogInContent</value>
+  </data>
+  <data name="&gt;&gt;btnX.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="pbLogIn.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pbLogIn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>249, 71</value>
+  </data>
+  <data name="pbLogIn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 72</value>
+  </data>
+  <data name="pbLogIn.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pbLogIn.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;pbLogIn.Name" xml:space="preserve">
+    <value>pbLogIn</value>
+  </data>
+  <data name="&gt;&gt;pbLogIn.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbLogIn.Parent" xml:space="preserve">
+    <value>pnlLogInContent</value>
+  </data>
+  <data name="&gt;&gt;pbLogIn.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="pnlLogInContent.Location" type="System.Drawing.Point, System.Drawing">
+    <value>297, 1</value>
+  </data>
+  <data name="pnlLogInContent.Size" type="System.Drawing.Size, System.Drawing">
+    <value>579, 738</value>
+  </data>
+  <data name="pnlLogInContent.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;pnlLogInContent.Name" xml:space="preserve">
+    <value>pnlLogInContent</value>
+  </data>
+  <data name="&gt;&gt;pnlLogInContent.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pnlLogInContent.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlLogInContent.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlSide.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAF6SURBVChTFcNnM9txAMDx39uhxl3NB7T0riVixCoStSLh
+        rIi7hKAEMR60avSu1AiREEEkQqzYNKo1o+rdfPvv5+4joq0yoqwZRM7JiZzPJGI+iwhbNi9sOYQvKAi3
+        Kwiz5yISHQUkOgpJWHxP/FKRtJg4ZwmxTiWxyypiXCpeukoRb1zlpK5UkLJSScpqFa/X1NJqXrk1JLu1
+        JK9rSfLUIOSeOuTeejK8Dcg2GpH5mkj36UjbbJbqebel562/BVHoN1DgN5K/3Ur+Tht5OybydtvJ3e1A
+        sdeJYr+TnP2PiLKAmbJADx8Oeik97JNaUB31ozwaQHk8SMnJIMUnQ4ja00/UnH5GezaM9nwYzfkXNBcj
+        VF+Mov4xhjo4TlXwK0If/Ib+coLmy0l0P6VX32m6mqLx17R0hobfs9RfWxEd1zbabxYw3dgx3dppu3NI
+        F2m9X8J478T4sIwh5EJYQmtYQm76Htfp/fO/h54nL+anDcx/fXQ/b9L1vMU/UMAAYJ3Af6IAAAAASUVO
+        RK5CYII=
+</value>
+  </data>
+  <data name="pnlSide.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
+    <value>Stretch</value>
+  </data>
+  <data name="pbLogo.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pbLogo.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 172</value>
+  </data>
+  <data name="pbLogo.Size" type="System.Drawing.Size, System.Drawing">
+    <value>221, 203</value>
+  </data>
+  <data name="pbLogo.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>StretchImage</value>
+  </data>
+  <data name="pbLogo.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;pbLogo.Name" xml:space="preserve">
+    <value>pbLogo</value>
+  </data>
+  <data name="&gt;&gt;pbLogo.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pbLogo.Parent" xml:space="preserve">
+    <value>pnlSide</value>
+  </data>
+  <data name="&gt;&gt;pbLogo.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="pnlSide.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="pnlSide.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="pnlSide.Size" type="System.Drawing.Size, System.Drawing">
+    <value>299, 788</value>
+  </data>
+  <data name="pnlSide.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;pnlSide.Name" xml:space="preserve">
+    <value>pnlSide</value>
+  </data>
+  <data name="&gt;&gt;pnlSide.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuGradientPanel, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;pnlSide.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pnlSide.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI Semibold, 12pt, style=Bold</value>
+  </data>
+  <data name="$this.Location" type="System.Drawing.Point, System.Drawing">
+    <value>250, 0</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>Manual</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>RadForm1</value>
+  </data>
+  <data name="&gt;&gt;dragLogIn.Name" xml:space="preserve">
+    <value>dragLogIn</value>
+  </data>
+  <data name="&gt;&gt;dragLogIn.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuDragControl, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;dragpnlSide.Name" xml:space="preserve">
+    <value>dragpnlSide</value>
+  </data>
+  <data name="&gt;&gt;dragpnlSide.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuDragControl, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;bunifuDragControl1.Name" xml:space="preserve">
+    <value>bunifuDragControl1</value>
+  </data>
+  <data name="&gt;&gt;bunifuDragControl1.Type" xml:space="preserve">
+    <value>Bunifu.Framework.UI.BunifuDragControl, Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>LogIn</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>Telerik.WinControls.UI.RadForm, Telerik.WinControls.UI, Version=2019.1.219.40, Culture=neutral, PublicKeyToken=5bb2a467cbec794e</value>
+  </data>
+  <metadata name="dragpnlSide.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>124, 17</value>
   </metadata>
   <metadata name="bunifuDragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>241, 17</value>

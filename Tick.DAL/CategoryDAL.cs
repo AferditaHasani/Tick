@@ -13,22 +13,21 @@ namespace Tick.DAL
 {
     public class CategoryDAL
     {
-        public bool Add(Category model)
+        public bool Add(Category category)
         {
             try
             {
-               //using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
-              using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
                 {
                     String sql = "dbo.usp_Category_Insert";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.Add("@prmName", SqlDbType.VarChar).Value = model.Name;
-                        command.Parameters.Add("@prmIsExpenses", SqlDbType.VarChar).Value = model.IsExpenses;
-                        command.Parameters.Add("@prmColor", SqlDbType.VarChar).Value = model.Color;
-                        command.Parameters.Add("@prmInsertBy", SqlDbType.VarChar).Value = model.InsertBy;
+                        command.Parameters.Add("@prmName", SqlDbType.VarChar).Value = category.Name;
+                        command.Parameters.Add("@prmIsExpenses", SqlDbType.VarChar).Value = category.IsExpenses;
+                        command.Parameters.Add("@prmColor", SqlDbType.VarChar).Value = category.Color;
+                        command.Parameters.Add("@prmInsertBy", SqlDbType.VarChar).Value = category.InsertBy;
 
 
 
@@ -50,10 +49,9 @@ namespace Tick.DAL
         {
             try
             {
-                //   using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
-                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
                 {
-                   
+
                     String sql = "dbo.usp_Category_GetAll";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
@@ -79,23 +77,22 @@ namespace Tick.DAL
             }
         }
 
-        public bool Update(Category model)
+        public bool Update(Category category)
         {
             try
             {
-                // using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
-                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
                 {
                     String sql = "dbo.usp_Category_Update";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
-                        MessageBox.Show($"ID {model.CategoryID}   {model.Name}   {model.IsExpenses} ");
+                        MessageBox.Show($"ID {category.CategoryID}   {category.Name}   {category.IsExpenses} ");
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.Add("@prmCategoryID", SqlDbType.Int).Value = model.CategoryID;
-                        command.Parameters.Add("@prmName", SqlDbType.VarChar).Value = model.Name;
-                        command.Parameters.Add("@prmIsExpenses", SqlDbType.VarChar).Value = model.IsExpenses;
-                        command.Parameters.Add("@prmColor", SqlDbType.VarChar).Value = model.Color;
+                        command.Parameters.Add("@prmCategoryID", SqlDbType.Int).Value = category.CategoryID;
+                        command.Parameters.Add("@prmName", SqlDbType.VarChar).Value = category.Name;
+                        command.Parameters.Add("@prmIsExpenses", SqlDbType.VarChar).Value = category.IsExpenses;
+                        command.Parameters.Add("@prmColor", SqlDbType.VarChar).Value = category.Color;
                         command.Parameters.Add("@prmLUB", SqlDbType.Int).Value = 1;
 
 
@@ -111,19 +108,18 @@ namespace Tick.DAL
                 return false;
             }
         }
-        public bool Delete(Category model)
+        public bool Delete(Category category)
         {
             try
             {
-                //   using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
-                using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
                 {
                     String sql = "dbo.usp_Category_Delete";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.Add("@prmCategoryID", SqlDbType.Int).Value = model.CategoryID;
+                        command.Parameters.Add("@prmCategoryID", SqlDbType.Int).Value = category.CategoryID;
 
                         var result = command.ExecuteNonQuery();
                         return result >= 0;

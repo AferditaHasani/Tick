@@ -24,15 +24,36 @@ namespace Tick.ExpensesManagement
 
         private void btnAddCategory_Click(object sender, EventArgs e)
         {
-            pnlAddCategory.Visible = true;
-            dgvCategory.Size=new Size(680,697);
+            OpenAddTransactionPannel();
             cat = null;
         }
 
         private void btnCancelCategory_Click(object sender, EventArgs e)
         {
+            CloseAddTimePannel();
+        }
+        private void OpenAddTransactionPannel()
+        {
+
+            if (pnlAddCategory.Size != new Size(335, 683))
+            {
+                pnlAddCategory.Visible = true;
+                pnlAddCategory.Size = new Size(335, 683);
+
+                dgvCategory.Size = new Size(dgvCategory.Width - 255, 683);
+                pnlAddCategory.Location = new Point(dgvCategory.Width + 20, 12);
+
+            }
+        }
+        private void CloseAddTimePannel()
+        {
+            pnlAddCategory.Size = new Size(10, 683);
+
+            dgvCategory.Size = new Size(dgvCategory.Width + 255, 683);
+            pnlAddCategory.Location = new Point(dgvCategory.Width + 20, 12);
             pnlAddCategory.Visible = false;
-            dgvCategory.Size = new Size(817, 697);
+            Clear();
+
         }
 
         private void btnSaveCategory_Click(object sender, EventArgs e)
@@ -54,6 +75,7 @@ namespace Tick.ExpensesManagement
 
             DisplayToDGrid();
             pnlAddCategory.Visible = true;
+           
             dgvCategory.Size = new Size(680, 697);
             Clear();
         }
@@ -121,8 +143,8 @@ namespace Tick.ExpensesManagement
 
                     dgvCategory.Columns["IsExpenses"].Visible = false;
 
-
-
+                    dgvCategory.Columns["CategoryID"].HeaderText = "ID";
+                    dgvCategory.Columns["CategoryID"].Width = 70;
                     for (int i = 0; i < dgvCategory.RowCount; i++)
                     {
                         DataGridViewRow row = dgvCategory.Rows[i];
@@ -184,6 +206,7 @@ namespace Tick.ExpensesManagement
 
                 cat.Name = txtName.Text;
                 cat.IsExpenses = isExpense;
+                cat.Color = $"{color[0]},{color[1]},{color[2]},{color[3]}";
                 var saved = categoryBLL_service.Update(cat);
                 MessageBox.Show(saved ? "Updated Successfully" : "Updating failed , please try again");
             }
@@ -221,16 +244,13 @@ namespace Tick.ExpensesManagement
         private void Category_Load(object sender, EventArgs e)
         {     
             DisplayToDGrid();
-            pnlAddCategory.Visible = false;
-            dgvCategory.Visible = true;
-            dgvCategory.Size = new Size(708, 697);
+        
         }
 
         private void dgvCategory_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             cat = new BO.Category();
-            dgvCategory.Size = new Size(680, 697);
-            pnlAddCategory.Visible = true;
+     
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dgvCategory.Rows[e.RowIndex];
@@ -243,6 +263,8 @@ namespace Tick.ExpensesManagement
 
 
                 cbTaskColor.Value = Color.FromArgb(int.Parse(colors[0]), int.Parse(colors[1]), int.Parse(colors[2]), int.Parse(colors[3]));
+           
+                OpenAddTransactionPannel();
             }
         }
         private int[] GetArgb(string color)
@@ -271,7 +293,9 @@ namespace Tick.ExpensesManagement
                 cat.CategoryID = int.Parse(row.Cells["CategoryID"].Value.ToString());
                 cat.Name = row.Cells["Name"].Value.ToString();
                 cat.IsExpenses = (bool)row.Cells["IsExpenses"].Value;
+                OpenAddTransactionPannel();
             }
+           
 
         }
 
@@ -287,6 +311,7 @@ namespace Tick.ExpensesManagement
 
                 var deleted = categoryBLL_service.Delete(cat);
                 MessageBox.Show(deleted ? "Deleted Successfully" : "Deleting failed , please try again");
+                
 
             }
 
@@ -301,6 +326,17 @@ namespace Tick.ExpensesManagement
         {
             Delete();
             DisplayToDGrid();
+            CloseAddTimePannel();
+        }
+
+        private void cbTaskColor_ValueChanged(object sender, EventArgs e)
+        {
+            btnSaveCategory.Enabled = true;
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "file:\\C:\\Users\\dita9\\Documents\\Tick\\Tick\\Tick.chm", HelpNavigator.Topic, "IDH_Topic80.htm");
         }
     }
 }

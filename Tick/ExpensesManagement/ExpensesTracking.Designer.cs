@@ -28,16 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExpensesTracking));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlAddTransaction = new System.Windows.Forms.Panel();
             this.ddlCategory = new Bunifu.UI.WinForms.BunifuDropdown();
             this.lblDate = new Bunifu.UI.WinForms.BunifuLabel();
-            this.dpExpensesTrackingDate = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.btnSaveTransaction = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDeleteTransaction = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnCancelTransaction = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -49,13 +48,17 @@
             this.btnAddTransaction = new Bunifu.Framework.UI.BunifuFlatButton();
             this.dgvTransaction = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.pnlSearchByDate = new System.Windows.Forms.Panel();
+            this.dtpDataGridTime = new Syncfusion.WinForms.Input.SfDateTimeEdit();
             this.btnPreviousDay = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnNextDay = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.dtpDataGridTime = new Syncfusion.Windows.Forms.Tools.DateTimePickerAdv();
+            this.lblBalance = new System.Windows.Forms.Label();
+            this.lblExpenses = new System.Windows.Forms.Label();
+            this.lblIncome = new System.Windows.Forms.Label();
+            this.line = new System.Windows.Forms.Panel();
+            this.dpExpensesTrackingDate = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.pnlAddTransaction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).BeginInit();
             this.pnlSearchByDate.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtpDataGridTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,9 +66,9 @@
             // 
             this.pnlAddTransaction.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pnlAddTransaction.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlAddTransaction.Controls.Add(this.dpExpensesTrackingDate);
             this.pnlAddTransaction.Controls.Add(this.ddlCategory);
             this.pnlAddTransaction.Controls.Add(this.lblDate);
-            this.pnlAddTransaction.Controls.Add(this.dpExpensesTrackingDate);
             this.pnlAddTransaction.Controls.Add(this.btnSaveTransaction);
             this.pnlAddTransaction.Controls.Add(this.btnDeleteTransaction);
             this.pnlAddTransaction.Controls.Add(this.btnCancelTransaction);
@@ -74,10 +77,11 @@
             this.pnlAddTransaction.Controls.Add(this.lblCategory);
             this.pnlAddTransaction.Controls.Add(this.txtAmount);
             this.pnlAddTransaction.Controls.Add(this.lblAmount);
-            this.pnlAddTransaction.Location = new System.Drawing.Point(581, 51);
+            this.pnlAddTransaction.Location = new System.Drawing.Point(666, 12);
             this.pnlAddTransaction.Name = "pnlAddTransaction";
-            this.pnlAddTransaction.Size = new System.Drawing.Size(349, 675);
+            this.pnlAddTransaction.Size = new System.Drawing.Size(10, 748);
             this.pnlAddTransaction.TabIndex = 2;
+            this.pnlAddTransaction.Visible = false;
             // 
             // ddlCategory
             // 
@@ -109,7 +113,7 @@
             "one",
             "two",
             "three"});
-            this.ddlCategory.Location = new System.Drawing.Point(150, 197);
+            this.ddlCategory.Location = new System.Drawing.Point(-19, 234);
             this.ddlCategory.Name = "ddlCategory";
             this.ddlCategory.Size = new System.Drawing.Size(185, 32);
             this.ddlCategory.TabIndex = 25;
@@ -122,7 +126,7 @@
             this.lblDate.CursorType = null;
             this.lblDate.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblDate.Location = new System.Drawing.Point(68, 439);
+            this.lblDate.Location = new System.Drawing.Point(-103, 504);
             this.lblDate.Name = "lblDate";
             this.lblDate.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblDate.Size = new System.Drawing.Size(41, 23);
@@ -130,37 +134,6 @@
             this.lblDate.Text = "Date:";
             this.lblDate.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblDate.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // dpExpensesTrackingDate
-            // 
-            this.dpExpensesTrackingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.dpExpensesTrackingDate.BorderRadius = 5;
-            this.dpExpensesTrackingDate.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dpExpensesTrackingDate.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dpExpensesTrackingDate.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.dpExpensesTrackingDate.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.dpExpensesTrackingDate.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dpExpensesTrackingDate.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dpExpensesTrackingDate.Color = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dpExpensesTrackingDate.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thick;
-            this.dpExpensesTrackingDate.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.dpExpensesTrackingDate.DisabledColor = System.Drawing.Color.Gray;
-            this.dpExpensesTrackingDate.DisplayWeekNumbers = false;
-            this.dpExpensesTrackingDate.DPHeight = 0;
-            this.dpExpensesTrackingDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dpExpensesTrackingDate.FillDatePicker = false;
-            this.dpExpensesTrackingDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dpExpensesTrackingDate.Icon = ((System.Drawing.Image)(resources.GetObject("dpExpensesTrackingDate.Icon")));
-            this.dpExpensesTrackingDate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
-            this.dpExpensesTrackingDate.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.dpExpensesTrackingDate.Location = new System.Drawing.Point(150, 427);
-            this.dpExpensesTrackingDate.MaxDate = new System.DateTime(2119, 5, 24, 0, 0, 0, 0);
-            this.dpExpensesTrackingDate.MinDate = new System.DateTime(2019, 1, 1, 0, 0, 0, 0);
-            this.dpExpensesTrackingDate.MinimumSize = new System.Drawing.Size(185, 35);
-            this.dpExpensesTrackingDate.Name = "dpExpensesTrackingDate";
-            this.dpExpensesTrackingDate.Size = new System.Drawing.Size(185, 35);
-            this.dpExpensesTrackingDate.TabIndex = 23;
-            this.dpExpensesTrackingDate.Value = new System.DateTime(2019, 5, 23, 0, 0, 0, 0);
             // 
             // btnSaveTransaction
             // 
@@ -186,7 +159,7 @@
             this.btnSaveTransaction.IconVisible = true;
             this.btnSaveTransaction.IconZoom = 50D;
             this.btnSaveTransaction.IsTab = false;
-            this.btnSaveTransaction.Location = new System.Drawing.Point(250, 8);
+            this.btnSaveTransaction.Location = new System.Drawing.Point(81, 45);
             this.btnSaveTransaction.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSaveTransaction.Name = "btnSaveTransaction";
             this.btnSaveTransaction.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
@@ -225,7 +198,7 @@
             this.btnDeleteTransaction.IconVisible = true;
             this.btnDeleteTransaction.IconZoom = 50D;
             this.btnDeleteTransaction.IsTab = false;
-            this.btnDeleteTransaction.Location = new System.Drawing.Point(122, 8);
+            this.btnDeleteTransaction.Location = new System.Drawing.Point(-47, 45);
             this.btnDeleteTransaction.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeleteTransaction.Name = "btnDeleteTransaction";
             this.btnDeleteTransaction.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
@@ -264,7 +237,7 @@
             this.btnCancelTransaction.IconVisible = true;
             this.btnCancelTransaction.IconZoom = 50D;
             this.btnCancelTransaction.IsTab = false;
-            this.btnCancelTransaction.Location = new System.Drawing.Point(-8, 8);
+            this.btnCancelTransaction.Location = new System.Drawing.Point(-177, 45);
             this.btnCancelTransaction.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelTransaction.Name = "btnCancelTransaction";
             this.btnCancelTransaction.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
@@ -286,7 +259,7 @@
             this.txtDescription.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.txtDescription.Font = new System.Drawing.Font("Segoe UI Semibold", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.txtDescription.Location = new System.Drawing.Point(150, 293);
+            this.txtDescription.Location = new System.Drawing.Point(-19, 330);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(185, 105);
@@ -299,7 +272,7 @@
             this.lblDescription.CursorType = null;
             this.lblDescription.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblDescription.Location = new System.Drawing.Point(17, 293);
+            this.lblDescription.Location = new System.Drawing.Point(-152, 330);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblDescription.Size = new System.Drawing.Size(91, 23);
@@ -315,7 +288,7 @@
             this.lblCategory.CursorType = null;
             this.lblCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategory.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblCategory.Location = new System.Drawing.Point(34, 206);
+            this.lblCategory.Location = new System.Drawing.Point(-135, 243);
             this.lblCategory.Name = "lblCategory";
             this.lblCategory.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblCategory.Size = new System.Drawing.Size(74, 23);
@@ -349,7 +322,7 @@
             this.txtAmount.IconPadding = 10;
             this.txtAmount.IconRight = null;
             this.txtAmount.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txtAmount.Location = new System.Drawing.Point(150, 122);
+            this.txtAmount.Location = new System.Drawing.Point(-19, 159);
             this.txtAmount.MaxLength = 4000;
             this.txtAmount.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtAmount.Modified = false;
@@ -378,7 +351,7 @@
             this.lblAmount.CursorType = null;
             this.lblAmount.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblAmount.Location = new System.Drawing.Point(42, 134);
+            this.lblAmount.Location = new System.Drawing.Point(-127, 171);
             this.lblAmount.Name = "lblAmount";
             this.lblAmount.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblAmount.Size = new System.Drawing.Size(66, 23);
@@ -426,13 +399,13 @@
             // dgvTransaction
             // 
             this.dgvTransaction.AllowUserToAddRows = false;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(15);
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dgvTransaction.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(15);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dgvTransaction.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvTransaction.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -440,49 +413,49 @@
             this.dgvTransaction.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.dgvTransaction.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvTransaction.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(15, 20, 15, 20);
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dgvTransaction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(15, 20, 15, 20);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dgvTransaction.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle13.Padding = new System.Windows.Forms.Padding(15);
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvTransaction.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(15);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvTransaction.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvTransaction.DoubleBuffered = true;
             this.dgvTransaction.EnableHeadersVisualStyles = false;
             this.dgvTransaction.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.dgvTransaction.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.dgvTransaction.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dgvTransaction.Location = new System.Drawing.Point(12, 121);
+            this.dgvTransaction.Location = new System.Drawing.Point(12, 193);
             this.dgvTransaction.Name = "dgvTransaction";
             this.dgvTransaction.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvTransaction.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle14.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvTransaction.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvTransaction.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvTransaction.RowHeadersWidth = 17;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            dataGridViewCellStyle15.Padding = new System.Windows.Forms.Padding(15);
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dgvTransaction.RowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(15);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dgvTransaction.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvTransaction.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.dgvTransaction.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvTransaction.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
@@ -490,8 +463,9 @@
             this.dgvTransaction.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.DimGray;
             this.dgvTransaction.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.dgvTransaction.RowTemplate.Height = 60;
-            this.dgvTransaction.Size = new System.Drawing.Size(656, 564);
+            this.dgvTransaction.Size = new System.Drawing.Size(648, 558);
             this.dgvTransaction.TabIndex = 6;
+            this.dgvTransaction.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellContentClick);
             this.dgvTransaction.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellContentClick);
             this.dgvTransaction.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellContentClick);
             this.dgvTransaction.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvTransaction_RowHeaderMouseClick);
@@ -500,13 +474,24 @@
             // pnlSearchByDate
             // 
             this.pnlSearchByDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlSearchByDate.Controls.Add(this.dtpDataGridTime);
             this.pnlSearchByDate.Controls.Add(this.btnPreviousDay);
             this.pnlSearchByDate.Controls.Add(this.btnNextDay);
-            this.pnlSearchByDate.Controls.Add(this.dtpDataGridTime);
-            this.pnlSearchByDate.Location = new System.Drawing.Point(69, 68);
+            this.pnlSearchByDate.Location = new System.Drawing.Point(72, 127);
             this.pnlSearchByDate.Name = "pnlSearchByDate";
             this.pnlSearchByDate.Size = new System.Drawing.Size(490, 40);
             this.pnlSearchByDate.TabIndex = 7;
+            // 
+            // dtpDataGridTime
+            // 
+            this.dtpDataGridTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpDataGridTime.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.dtpDataGridTime.Location = new System.Drawing.Point(44, 4);
+            this.dtpDataGridTime.Name = "dtpDataGridTime";
+            this.dtpDataGridTime.Size = new System.Drawing.Size(399, 31);
+            this.dtpDataGridTime.TabIndex = 6;
+            this.dtpDataGridTime.ValueChanged += new Syncfusion.WinForms.Input.Events.DateTimeValueChangedEventHandler(this.dtpDataGridTime_ValueChanged);
             // 
             // btnPreviousDay
             // 
@@ -519,7 +504,7 @@
             this.btnPreviousDay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPreviousDay.DisabledColor = System.Drawing.Color.Gray;
             this.btnPreviousDay.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnPreviousDay.Iconimage = global::Tick.Properties.Resources.Previous;
+            this.btnPreviousDay.Iconimage = global::Tick.Properties.Resources.previousDay;
             this.btnPreviousDay.Iconimage_right = null;
             this.btnPreviousDay.Iconimage_right_Selected = null;
             this.btnPreviousDay.Iconimage_Selected = null;
@@ -554,7 +539,7 @@
             this.btnNextDay.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNextDay.DisabledColor = System.Drawing.Color.Gray;
             this.btnNextDay.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnNextDay.Iconimage = global::Tick.Properties.Resources.Next;
+            this.btnNextDay.Iconimage = global::Tick.Properties.Resources.nextDay;
             this.btnNextDay.Iconimage_right = null;
             this.btnNextDay.Iconimage_right_Selected = null;
             this.btnNextDay.Iconimage_Selected = null;
@@ -578,48 +563,87 @@
             this.btnNextDay.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNextDay.Click += new System.EventHandler(this.btnNextDay_Click);
             // 
-            // dtpDataGridTime
+            // lblBalance
             // 
-            this.dtpDataGridTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.dtpDataGridTime.Border3DStyle = System.Windows.Forms.Border3DStyle.Flat;
-            this.dtpDataGridTime.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.dtpDataGridTime.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.dtpDataGridTime.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.dtpDataGridTime.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(102)))), ((int)(((byte)(102)))), ((int)(((byte)(102)))));
-            this.dtpDataGridTime.CalendarSize = new System.Drawing.Size(399, 220);
-            this.dtpDataGridTime.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(88)))), ((int)(((byte)(88)))), ((int)(((byte)(88)))));
-            this.dtpDataGridTime.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dtpDataGridTime.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.dtpDataGridTime.DropDownImage = null;
-            this.dtpDataGridTime.DropDownNormalColor = System.Drawing.Color.FromArgb(((int)(((byte)(212)))), ((int)(((byte)(212)))), ((int)(((byte)(212)))));
-            this.dtpDataGridTime.DropDownPressedColor = System.Drawing.Color.DimGray;
-            this.dtpDataGridTime.DropDownSelectedColor = System.Drawing.Color.DimGray;
-            this.dtpDataGridTime.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDataGridTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.dtpDataGridTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDataGridTime.Location = new System.Drawing.Point(44, 3);
-            this.dtpDataGridTime.MaxValue = new System.DateTime(2119, 5, 24, 0, 0, 0, 0);
-            this.dtpDataGridTime.MetroColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(165)))), ((int)(((byte)(220)))));
-            this.dtpDataGridTime.MinValue = new System.DateTime(((long)(0)));
-            this.dtpDataGridTime.Name = "dtpDataGridTime";
-            this.dtpDataGridTime.ShowCheckBox = false;
-            this.dtpDataGridTime.ShowUpDownOnFocus = true;
-            this.dtpDataGridTime.Size = new System.Drawing.Size(399, 33);
-            this.dtpDataGridTime.StretchDropDownImage = true;
-            this.dtpDataGridTime.Style = Syncfusion.Windows.Forms.VisualStyle.Office2016DarkGray;
-            this.dtpDataGridTime.TabIndex = 4;
-            this.dtpDataGridTime.Value = new System.DateTime(2019, 5, 23, 0, 0, 0, 0);
-            this.dtpDataGridTime.ValueChanged += new System.EventHandler(this.dtpDataGridTime_ValueChanged);
-            this.dgvTransaction.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellContentClick);
-            this.dgvTransaction.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvTransaction_CellContentClick);
-            this.dgvTransaction.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvTransaction_RowHeaderMouseClick);
+            this.lblBalance.AutoSize = true;
+            this.lblBalance.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBalance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.lblBalance.Location = new System.Drawing.Point(450, 75);
+            this.lblBalance.Name = "lblBalance";
+            this.lblBalance.Size = new System.Drawing.Size(54, 17);
+            this.lblBalance.TabIndex = 20;
+            this.lblBalance.Text = "Balance";
+            // 
+            // lblExpenses
+            // 
+            this.lblExpenses.AutoSize = true;
+            this.lblExpenses.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblExpenses.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.lblExpenses.Location = new System.Drawing.Point(249, 75);
+            this.lblExpenses.Name = "lblExpenses";
+            this.lblExpenses.Size = new System.Drawing.Size(64, 17);
+            this.lblExpenses.TabIndex = 19;
+            this.lblExpenses.Text = "Expenses";
+            // 
+            // lblIncome
+            // 
+            this.lblIncome.AutoSize = true;
+            this.lblIncome.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIncome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.lblIncome.Location = new System.Drawing.Point(40, 75);
+            this.lblIncome.Name = "lblIncome";
+            this.lblIncome.Size = new System.Drawing.Size(57, 17);
+            this.lblIncome.TabIndex = 18;
+            this.lblIncome.Text = " Income";
+            // 
+            // line
+            // 
+            this.line.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.line.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.line.Location = new System.Drawing.Point(12, 102);
+            this.line.Name = "line";
+            this.line.Size = new System.Drawing.Size(583, 3);
+            this.line.TabIndex = 21;
+            // 
+            // dpExpensesTrackingDate
+            // 
+            this.dpExpensesTrackingDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.dpExpensesTrackingDate.BorderRadius = 5;
+            this.dpExpensesTrackingDate.CalendarFont = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dpExpensesTrackingDate.CalendarForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dpExpensesTrackingDate.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.dpExpensesTrackingDate.CalendarTitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.dpExpensesTrackingDate.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dpExpensesTrackingDate.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dpExpensesTrackingDate.Color = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dpExpensesTrackingDate.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thick;
+            this.dpExpensesTrackingDate.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
+            this.dpExpensesTrackingDate.DisabledColor = System.Drawing.Color.Gray;
+            this.dpExpensesTrackingDate.DisplayWeekNumbers = false;
+            this.dpExpensesTrackingDate.DPHeight = 0;
+            this.dpExpensesTrackingDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dpExpensesTrackingDate.FillDatePicker = false;
+            this.dpExpensesTrackingDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.dpExpensesTrackingDate.Icon = ((System.Drawing.Image)(resources.GetObject("dpExpensesTrackingDate.Icon")));
+            this.dpExpensesTrackingDate.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(47)))), ((int)(((byte)(191)))), ((int)(((byte)(131)))));
+            this.dpExpensesTrackingDate.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
+            this.dpExpensesTrackingDate.Location = new System.Drawing.Point(151, 464);
+            this.dpExpensesTrackingDate.MinimumSize = new System.Drawing.Size(185, 35);
+            this.dpExpensesTrackingDate.Name = "dpExpensesTrackingDate";
+            this.dpExpensesTrackingDate.Size = new System.Drawing.Size(185, 35);
+            this.dpExpensesTrackingDate.TabIndex = 22;
             // 
             // ExpensesTracking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(800, 788);
+            this.ClientSize = new System.Drawing.Size(792, 788);
+            this.Controls.Add(this.line);
+            this.Controls.Add(this.lblBalance);
+            this.Controls.Add(this.lblExpenses);
+            this.Controls.Add(this.lblIncome);
             this.Controls.Add(this.pnlSearchByDate);
             this.Controls.Add(this.dgvTransaction);
             this.Controls.Add(this.pnlAddTransaction);
@@ -640,9 +664,9 @@
             this.pnlAddTransaction.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTransaction)).EndInit();
             this.pnlSearchByDate.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtpDataGridTime)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -660,11 +684,15 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnSaveTransaction;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvTransaction;
         private Bunifu.UI.WinForms.BunifuLabel lblDate;
-        private Bunifu.UI.WinForms.BunifuDatePicker dpExpensesTrackingDate;
+        private Bunifu.UI.WinForms.BunifuDropdown ddlCategory;
         private System.Windows.Forms.Panel pnlSearchByDate;
+        private Syncfusion.WinForms.Input.SfDateTimeEdit dtpDataGridTime;
         private Bunifu.Framework.UI.BunifuFlatButton btnPreviousDay;
         private Bunifu.Framework.UI.BunifuFlatButton btnNextDay;
-        private Syncfusion.Windows.Forms.Tools.DateTimePickerAdv dtpDataGridTime;
-        private Bunifu.UI.WinForms.BunifuDropdown ddlCategory;
+        private System.Windows.Forms.Label lblBalance;
+        private System.Windows.Forms.Label lblExpenses;
+        private System.Windows.Forms.Label lblIncome;
+        private System.Windows.Forms.Panel line;
+        private Bunifu.UI.WinForms.BunifuDatePicker dpExpensesTrackingDate;
     }
 }

@@ -12,29 +12,28 @@ namespace Tick.DAL
 {
    public class UserDAL
     {
-        public bool Add(User model)
+        public bool Add(User user)
         {
             try
             {
-                // using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
-                 using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
                 {
                     String sql = "dbo.usp_User_Insert";
                     using (SqlCommand command = new SqlCommand(sql, conn))
                     {
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
-                        command.Parameters.Add("@prmName", SqlDbType.VarChar).Value = model.Name;
-                        command.Parameters.Add("@prmLastname", SqlDbType.VarChar).Value = model.Lastname;
-                        command.Parameters.Add("@prmUsername", SqlDbType.VarChar).Value = model.Username;
-                        command.Parameters.Add("@prmPassword", SqlDbType.VarChar).Value = model.Password;
+                        command.Parameters.Add("@prmName", SqlDbType.VarChar).Value = user.Name;
+                        command.Parameters.Add("@prmLastname", SqlDbType.VarChar).Value = user.Lastname;
+                        command.Parameters.Add("@prmUsername", SqlDbType.VarChar).Value = user.Username;
+                        command.Parameters.Add("@prmPassword", SqlDbType.VarChar).Value = user.Password;
                         command.Parameters.Add("@prmInsBy", SqlDbType.VarChar).Value = 1;
                         command.Parameters.Add("@prmRole", SqlDbType.VarChar).Value = 2;
 
 
 
-                       model.UserID = command.ExecuteNonQuery();
-                        return model.UserID > 0;
+                       user.UserID = command.ExecuteNonQuery();
+                        return user.UserID > 0;
                     }
                 }
             }
@@ -44,12 +43,12 @@ namespace Tick.DAL
                 return false;
             }
         }
-        public User GetLogIn(User model)
+        public User GetLogIn(User u)
         {
             try
             {
-                //   using (SqlConnection conn = new SqlConnection(@"data source=ACER-LE6JSUV\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
-                   using (SqlConnection conn = new SqlConnection(@"data source=DESKTOP-U7DSAHH\SQLEXPRESS;initial catalog=Tick;integrated security=True;MultipleActiveResultSets=True;App=EntityFramework"))
+               
+                using (SqlConnection conn = new SqlConnection(Connection.GetConnectionString))
                 {
                     SqlDataReader rdr = null;
                     String sql = "dbo.uso_User_Get";
@@ -58,8 +57,8 @@ namespace Tick.DAL
                         conn.Open();
                         command.CommandType = CommandType.StoredProcedure;
                      
-                        command.Parameters.Add("@prmUsername", SqlDbType.VarChar).Value = model.Username;
-                        command.Parameters.Add("@prmPassword", SqlDbType.VarChar).Value = model.Password;
+                        command.Parameters.Add("@prmUsername", SqlDbType.VarChar).Value = u.Username;
+                        command.Parameters.Add("@prmPassword", SqlDbType.VarChar).Value = u.Password;
 
                         rdr = command.ExecuteReader();
 
@@ -70,8 +69,8 @@ namespace Tick.DAL
                            user.UserID=int.Parse( rdr["UserID"].ToString());
                         }
 
-                        user.Username = model.Username;
-                        user.Password = model.Password;
+                        user.Username = u.Username;
+                        user.Password = u.Password;
 
                         return user;
                     }

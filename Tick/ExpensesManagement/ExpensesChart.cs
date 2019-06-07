@@ -82,7 +82,7 @@ namespace Tick.ExpensesManagement
             }
         }
 
-
+     
 
         public void FillPieChart(DateTime dt)
         {
@@ -162,6 +162,7 @@ namespace Tick.ExpensesManagement
             dtpDataGridExpenses.Value = dt;
             FillLineChart(dtpDataGridExpenses.Value.Value);
             FillPieChart(dtpDataGridExpenses.Value.Value);
+     
 
         }
 
@@ -172,6 +173,7 @@ namespace Tick.ExpensesManagement
             dtpDataGridExpenses.Value = dt;
             FillLineChart(dtpDataGridExpenses.Value.Value);
             FillPieChart(dtpDataGridExpenses.Value.Value);
+           
 
         }
 
@@ -179,11 +181,9 @@ namespace Tick.ExpensesManagement
         {
             FillLineChart(dtpDataGridExpenses.Value.Value);
             FillPieChart(dtpDataGridExpenses.Value.Value);
+      
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

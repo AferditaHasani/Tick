@@ -34,6 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.pnlAddCategory = new System.Windows.Forms.Panel();
             this.lblColor = new Bunifu.UI.WinForms.BunifuLabel();
             this.cbTaskColor = new Telerik.WinControls.UI.RadColorBox();
@@ -49,6 +50,7 @@
             this.lblName = new Bunifu.UI.WinForms.BunifuLabel();
             this.dgvCategory = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.btnAddCategory = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.pnlAddCategory.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbTaskColor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCategory)).BeginInit();
@@ -71,10 +73,11 @@
             this.pnlAddCategory.Controls.Add(this.txtName);
             this.pnlAddCategory.Controls.Add(this.lblChoose);
             this.pnlAddCategory.Controls.Add(this.lblName);
-            this.pnlAddCategory.Location = new System.Drawing.Point(801, 63);
+            this.pnlAddCategory.Location = new System.Drawing.Point(666, 12);
             this.pnlAddCategory.Name = "pnlAddCategory";
-            this.pnlAddCategory.Size = new System.Drawing.Size(15, 665);
+            this.pnlAddCategory.Size = new System.Drawing.Size(10, 748);
             this.pnlAddCategory.TabIndex = 3;
+            this.pnlAddCategory.Visible = false;
             // 
             // lblColor
             // 
@@ -83,7 +86,7 @@
             this.lblColor.CursorType = null;
             this.lblColor.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblColor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblColor.Location = new System.Drawing.Point(-142, 271);
+            this.lblColor.Location = new System.Drawing.Point(-144, 313);
             this.lblColor.Name = "lblColor";
             this.lblColor.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblColor.Size = new System.Drawing.Size(47, 23);
@@ -102,6 +105,7 @@
             this.cbTaskColor.Name = "cbTaskColor";
             this.cbTaskColor.Size = new System.Drawing.Size(223, 27);
             this.cbTaskColor.TabIndex = 22;
+            this.cbTaskColor.ValueChanged += new System.EventHandler(this.cbTaskColor_ValueChanged);
             // 
             // btnSaveCategory
             // 
@@ -114,6 +118,7 @@
             this.btnSaveCategory.ButtonText = "Save";
             this.btnSaveCategory.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSaveCategory.DisabledColor = System.Drawing.Color.Gray;
+            this.btnSaveCategory.Enabled = false;
             this.btnSaveCategory.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSaveCategory.Iconcolor = System.Drawing.Color.Transparent;
             this.btnSaveCategory.Iconimage = global::Tick.Properties.Resources.save;
@@ -127,7 +132,7 @@
             this.btnSaveCategory.IconVisible = true;
             this.btnSaveCategory.IconZoom = 50D;
             this.btnSaveCategory.IsTab = false;
-            this.btnSaveCategory.Location = new System.Drawing.Point(65, -1);
+            this.btnSaveCategory.Location = new System.Drawing.Point(63, 41);
             this.btnSaveCategory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSaveCategory.Name = "btnSaveCategory";
             this.btnSaveCategory.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
@@ -166,7 +171,7 @@
             this.btnDeleteCategory.IconVisible = true;
             this.btnDeleteCategory.IconZoom = 50D;
             this.btnDeleteCategory.IsTab = false;
-            this.btnDeleteCategory.Location = new System.Drawing.Point(-45, -1);
+            this.btnDeleteCategory.Location = new System.Drawing.Point(-47, 41);
             this.btnDeleteCategory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnDeleteCategory.Name = "btnDeleteCategory";
             this.btnDeleteCategory.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
@@ -205,7 +210,7 @@
             this.btnCancelCategory.IconVisible = true;
             this.btnCancelCategory.IconZoom = 50D;
             this.btnCancelCategory.IsTab = false;
-            this.btnCancelCategory.Location = new System.Drawing.Point(-157, -1);
+            this.btnCancelCategory.Location = new System.Drawing.Point(-159, 41);
             this.btnCancelCategory.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelCategory.Name = "btnCancelCategory";
             this.btnCancelCategory.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
@@ -227,7 +232,7 @@
             this.lblIncome.CursorType = null;
             this.lblIncome.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIncome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblIncome.Location = new System.Drawing.Point(102, 204);
+            this.lblIncome.Location = new System.Drawing.Point(100, 246);
             this.lblIncome.Name = "lblIncome";
             this.lblIncome.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblIncome.Size = new System.Drawing.Size(58, 23);
@@ -244,7 +249,7 @@
             this.lblExpense.CursorType = null;
             this.lblExpense.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblExpense.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblExpense.Location = new System.Drawing.Point(-28, 210);
+            this.lblExpense.Location = new System.Drawing.Point(-30, 252);
             this.lblExpense.Name = "lblExpense";
             this.lblExpense.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblExpense.Size = new System.Drawing.Size(63, 23);
@@ -262,7 +267,7 @@
             this.cbxIncome.Checked = false;
             this.cbxIncome.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.cbxIncome.ForeColor = System.Drawing.Color.White;
-            this.cbxIncome.Location = new System.Drawing.Point(76, 207);
+            this.cbxIncome.Location = new System.Drawing.Point(74, 249);
             this.cbxIncome.Name = "cbxIncome";
             this.cbxIncome.Size = new System.Drawing.Size(20, 20);
             this.cbxIncome.TabIndex = 16;
@@ -276,7 +281,7 @@
             this.cbxExpense.Checked = true;
             this.cbxExpense.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
             this.cbxExpense.ForeColor = System.Drawing.Color.White;
-            this.cbxExpense.Location = new System.Drawing.Point(-54, 210);
+            this.cbxExpense.Location = new System.Drawing.Point(-56, 252);
             this.cbxExpense.Name = "cbxExpense";
             this.cbxExpense.Size = new System.Drawing.Size(20, 20);
             this.cbxExpense.TabIndex = 15;
@@ -307,7 +312,7 @@
             this.txtName.IconPadding = 10;
             this.txtName.IconRight = null;
             this.txtName.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.txtName.Location = new System.Drawing.Point(-63, 143);
+            this.txtName.Location = new System.Drawing.Point(-65, 185);
             this.txtName.MaxLength = 32767;
             this.txtName.MinimumSize = new System.Drawing.Size(100, 35);
             this.txtName.Modified = false;
@@ -333,7 +338,7 @@
             this.lblChoose.CursorType = null;
             this.lblChoose.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblChoose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblChoose.Location = new System.Drawing.Point(-128, 207);
+            this.lblChoose.Location = new System.Drawing.Point(-130, 249);
             this.lblChoose.Name = "lblChoose";
             this.lblChoose.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblChoose.Size = new System.Drawing.Size(33, 23);
@@ -349,7 +354,7 @@
             this.lblName.CursorType = null;
             this.lblName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lblName.Location = new System.Drawing.Point(-145, 155);
+            this.lblName.Location = new System.Drawing.Point(-147, 197);
             this.lblName.Name = "lblName";
             this.lblName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblName.Size = new System.Drawing.Size(50, 23);
@@ -398,7 +403,7 @@
             this.dgvCategory.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.dgvCategory.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
             this.dgvCategory.HeaderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.dgvCategory.Location = new System.Drawing.Point(18, 63);
+            this.dgvCategory.Location = new System.Drawing.Point(12, 63);
             this.dgvCategory.Name = "dgvCategory";
             this.dgvCategory.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.dgvCategory.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -425,7 +430,7 @@
             this.dgvCategory.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.DimGray;
             this.dgvCategory.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
             this.dgvCategory.RowTemplate.Height = 60;
-            this.dgvCategory.Size = new System.Drawing.Size(698, 675);
+            this.dgvCategory.Size = new System.Drawing.Size(648, 675);
             this.dgvCategory.TabIndex = 5;
             this.dgvCategory.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategory_CellContentClick);
             this.dgvCategory.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCategory_CellContentClick);
@@ -468,12 +473,49 @@
             this.btnAddCategory.TextFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddCategory.Click += new System.EventHandler(this.btnAddCategory_Click);
             // 
+            // bunifuButton1
+            // 
+            this.bunifuButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
+            this.bunifuButton1.ButtonText = "";
+            this.bunifuButton1.ButtonTextMarginLeft = 0;
+            this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.bunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.bunifuButton1.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.bunifuButton1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.bunifuButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.bunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton1.IconPadding = 0;
+            this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Default;
+            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.bunifuButton1.IdleBorderRadius = 1;
+            this.bunifuButton1.IdleBorderThickness = 0;
+            this.bunifuButton1.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
+            this.bunifuButton1.IdleIconLeftImage = global::Tick.Properties.Resources.icons8_help_48;
+            this.bunifuButton1.IdleIconRightImage = null;
+            this.bunifuButton1.Location = new System.Drawing.Point(742, 12);
+            this.bunifuButton1.Name = "bunifuButton1";
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties1.BorderRadius = 1;
+            stateProperties1.BorderThickness = 1;
+            stateProperties1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(187)))), ((int)(((byte)(128)))));
+            stateProperties1.IconLeftImage = null;
+            stateProperties1.IconRightImage = null;
+            this.bunifuButton1.onHoverState = stateProperties1;
+            this.bunifuButton1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.bunifuButton1.Size = new System.Drawing.Size(30, 25);
+            this.bunifuButton1.TabIndex = 12;
+            this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
+            // 
             // Category
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(42)))), ((int)(((byte)(50)))));
-            this.ClientSize = new System.Drawing.Size(840, 788);
+            this.ClientSize = new System.Drawing.Size(784, 788);
+            this.Controls.Add(this.bunifuButton1);
             this.Controls.Add(this.dgvCategory);
             this.Controls.Add(this.pnlAddCategory);
             this.Controls.Add(this.btnAddCategory);
@@ -513,5 +555,6 @@
         private Bunifu.UI.WinForms.BunifuLabel lblColor;
         private Telerik.WinControls.UI.RadColorBox cbTaskColor;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dgvCategory;
+        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
     }
 }
